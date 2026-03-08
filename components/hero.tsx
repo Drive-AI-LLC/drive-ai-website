@@ -31,8 +31,7 @@ export function Hero() {
     const initNodes = () => {
       nodes = []
       const rect = container.getBoundingClientRect()
-      // Reduced from 50 to 18 nodes (about 65% reduction)
-      const numNodes = 18
+      const numNodes = 40
       for (let i = 0; i < numNodes; i++) {
         const x = Math.random() * rect.width
         const y = Math.random() * rect.height
@@ -43,8 +42,7 @@ export function Hero() {
           baseY: y,
           vx: 0,
           vy: 0,
-          // Smaller dots
-          radius: Math.random() * 1.5 + 0.5,
+          radius: Math.random() * 2.5 + 1.5,
         })
       }
     }
@@ -76,26 +74,18 @@ export function Hero() {
         node.vx *= 0.97
         node.vy *= 0.97
 
-        // Draw connection lines - reduced opacity
-        nodes.forEach((other, j) => {
-          if (i >= j) return
-          const d = Math.sqrt((node.x - other.x) ** 2 + (node.y - other.y) ** 2)
-          if (d < 150) {
-            ctx.beginPath()
-            ctx.moveTo(node.x, node.y)
-            ctx.lineTo(other.x, other.y)
-            // More subtle lines (reduced from 0.08 to 0.04)
-            const opacity = 0.04 * (1 - d / 150)
+// Draw connection lines
+            const opacity = 0.12 * (1 - d / 150)
             ctx.strokeStyle = `rgba(0, 86, 59, ${opacity})`
-            ctx.lineWidth = 0.5
+            ctx.lineWidth = 1
             ctx.stroke()
           }
         })
 
-        // Draw dots - more subtle
+        // Draw dots
         ctx.beginPath()
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2)
-        ctx.fillStyle = "rgba(0, 86, 59, 0.15)"
+        ctx.fillStyle = "rgba(0, 86, 59, 0.35)"
         ctx.fill()
       })
 
@@ -146,7 +136,7 @@ export function Hero() {
       {/* Node network canvas */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none opacity-70"
+        className="absolute inset-0 w-full h-full pointer-events-none"
       />
 
       {/* Main content */}
