@@ -1,11 +1,17 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Libre_Baskerville, Open_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const inter = Inter({ 
+const libreBaskerville = Libre_Baskerville({ 
   subsets: ["latin"],
-  variable: '--font-inter'
+  weight: ["400", "700"],
+  variable: '--font-serif'
+});
+
+const openSans = Open_Sans({ 
+  subsets: ["latin"],
+  variable: '--font-sans'
 });
 
 export const metadata: Metadata = {
@@ -43,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${libreBaskerville.variable} ${openSans.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

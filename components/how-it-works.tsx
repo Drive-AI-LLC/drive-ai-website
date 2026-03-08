@@ -29,7 +29,7 @@ export function HowItWorks() {
           <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">
             How It Works
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-tight font-serif">
             Three simple steps to automation
           </h2>
         </div>

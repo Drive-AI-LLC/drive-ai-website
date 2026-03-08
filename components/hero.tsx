@@ -9,7 +9,7 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="max-w-2xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight text-balance">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight tracking-tight text-balance font-serif">
               AI Solutions That Actually Work for Small Businesses.
             </h1>
             <p className="mt-6 text-lg lg:text-xl text-muted-foreground leading-relaxed">
