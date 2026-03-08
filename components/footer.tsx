@@ -20,7 +20,7 @@ const navigation = {
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-[#1e2a38] text-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand */}
@@ -34,20 +34,20 @@ export function Footer() {
                 className="h-9 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="mt-6 text-background/60 max-w-md leading-relaxed text-base">
+            <p className="mt-6 text-white/60 max-w-md leading-relaxed text-base">
               Drive AI helps small businesses implement practical AI tools and workflow automations to save time, reduce manual work, and operate more efficiently.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="font-semibold text-background mb-5 text-sm uppercase tracking-[0.15em]">Navigation</h3>
+            <h3 className="font-semibold text-white mb-5 text-sm uppercase tracking-[0.15em]">Navigation</h3>
             <ul className="space-y-4">
               {navigation.main.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-background/60 hover:text-background transition-colors duration-200"
+                    className="text-white/60 hover:text-white transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
@@ -58,25 +58,25 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-background mb-5 text-sm uppercase tracking-[0.15em]">Contact</h3>
-            <p className="text-background/60 mb-6">inquiries@driveai.llc</p>
+            <h3 className="font-semibold text-white mb-5 text-sm uppercase tracking-[0.15em]">Contact</h3>
+            <p className="text-white/60 mb-6">inquiries@driveai.llc</p>
             <div className="flex gap-3">
               {navigation.social.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="w-11 h-11 rounded-xl bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors duration-200"
+                  className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-200"
                   aria-label={item.name}
                 >
-                  <item.icon className="w-5 h-5 text-background" />
+                  <item.icon className="w-5 h-5 text-white" />
                 </Link>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-background/10">
-          <p className="text-center text-background/40 text-sm tracking-wide">
+        <div className="mt-16 pt-8 border-t border-white/10">
+          <p className="text-center text-white/40 text-sm tracking-wide">
             © {new Date().getFullYear()} Drive AI. All rights reserved.
           </p>
         </div>
