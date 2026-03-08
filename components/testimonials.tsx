@@ -17,10 +17,10 @@ const testimonials = [
     company: "Clemson Area Chamber of Commerce",
   },
   {
-    quote: "We were skeptical about AI at first, but the team made it incredibly simple. The ROI was clear within the first month.",
-    name: "James Chen",
-    title: "Operations Manager",
-    company: "Chen Engineering Group",
+    quote: "Drive AI was able to find Rowing team contacts from thousands of websites and compile them into an easy-to-read excel sheet with ready-to-contact emails and phone numbers, saving the Chamber over 100 hours of manual labor and improving our employees' ability to make sales calls.",
+    name: "Dylan Johns",
+    title: "Program Coordinator",
+    company: "Clemson Area Chamber of Commerce",
   },
   {
     quote: "The automation solutions they built for us are exactly what we needed. Our team can finally focus on growth instead of paperwork.",
