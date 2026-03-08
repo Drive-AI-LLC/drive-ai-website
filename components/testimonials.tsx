@@ -40,6 +40,18 @@ const testimonials = [
     title: "Co-owner",
     company: "ASCEND Lending",
   },
+  {
+    quote: "Drive AI delivered what they said they would, and more importantly, they showed up as thoughtful, capable partners. I'd confidently recommend them to teams looking for a smart, curious, and dependable group to help bring AI concepts into the real world.",
+    name: "Ryan Yeoman",
+    title: "Co-founder",
+    company: "LeaderReps",
+  },
+  {
+    quote: "What stood out immediately was how they approached the work. Rather than jumping straight to solutions, they asked thoughtful questions, pushed on assumptions, and took the time to truly understand what we were trying to solve. Their process was clear and well-structured, with regular checkpoints that kept the work focused and aligned. Communication was proactive, responsive, and easy throughout.",
+    name: "Ryan Yeoman",
+    title: "Co-founder",
+    company: "LeaderReps",
+  },
 ]
 
 export function Testimonials() {
