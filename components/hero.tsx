@@ -122,7 +122,7 @@ export function Hero() {
   return (
     <section 
       ref={containerRef}
-      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-background pt-20"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-background pt-32 sm:pt-36 lg:pt-40"
     >
       {/* Subtle gradient orb */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
