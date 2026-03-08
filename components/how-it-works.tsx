@@ -5,7 +5,7 @@ const steps = [
     icon: ClipboardList,
     step: "01",
     title: "Pre-Discovery Survey",
-    description: "A short questionnaire identifies where AI can save you time and money before we meet.",
+    description: "A short questionnaire identifies where AI can save you time and money.",
   },
   {
     icon: Phone,
@@ -35,13 +35,13 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-16 lg:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">
+    <section id="how-it-works" className="py-24 lg:py-32 bg-muted/30">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+          <p className="text-primary font-semibold text-sm uppercase tracking-[0.15em] mb-4">
             How It Works
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-tight font-serif">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.02em] font-serif">
             Our Process
           </h2>
         </div>
@@ -49,29 +49,29 @@ export function HowItWorks() {
         {/* Timeline */}
         <div className="relative">
           {/* Horizontal connector line - desktop only */}
-          <div className="hidden lg:block absolute top-12 left-0 right-0 h-0.5 bg-border" />
+          <div className="hidden lg:block absolute top-14 left-[10%] right-[10%] h-px bg-border" />
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6">
             {steps.map((item, index) => (
               <div key={index} className="relative">
                 <div className="flex flex-col items-center text-center">
                   {/* Step circle */}
-                  <div className="relative z-10 w-24 h-24 rounded-2xl bg-primary/10 border-2 border-primary/20 flex items-center justify-center mb-6 group-hover:border-primary transition-colors">
-                    <item.icon className="w-10 h-10 text-primary" />
+                  <div className="relative z-10 w-28 h-28 rounded-3xl bg-background border-2 border-border flex items-center justify-center mb-8 shadow-sm">
+                    <item.icon className="w-12 h-12 text-primary" />
                   </div>
                   
                   {/* Step number */}
-                  <div className="text-xs font-bold text-primary mb-2 uppercase tracking-wider">
+                  <div className="text-xs font-semibold text-primary mb-3 uppercase tracking-[0.2em]">
                     Step {item.step}
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                  <h3 className="text-lg font-semibold text-foreground mb-3 tracking-[-0.01em]">
                     {item.title}
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-[200px]">
                     {item.description}
                   </p>
                 </div>

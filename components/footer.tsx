@@ -20,8 +20,8 @@ const navigation = {
 export function Footer() {
   return (
     <footer className="bg-foreground text-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center">
@@ -30,23 +30,23 @@ export function Footer() {
                 alt="Drive AI"
                 width={140}
                 height={52}
-                className="h-10 w-auto brightness-0 invert"
+                className="h-9 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="mt-4 text-background/70 max-w-md leading-relaxed">
+            <p className="mt-6 text-background/60 max-w-md leading-relaxed text-base">
               Drive AI helps small businesses implement practical AI tools and workflow automations to save time, reduce manual work, and operate more efficiently.
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h3 className="font-semibold text-background mb-4">Navigation</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-background mb-5 text-sm uppercase tracking-[0.15em]">Navigation</h3>
+            <ul className="space-y-4">
               {navigation.main.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-background/70 hover:text-background transition-colors"
+                    className="text-background/60 hover:text-background transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
@@ -57,14 +57,14 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-background mb-4">Contact</h3>
-            <p className="text-background/70 mb-4">inquiries@driveai.llc</p>
-            <div className="flex gap-4">
+            <h3 className="font-semibold text-background mb-5 text-sm uppercase tracking-[0.15em]">Contact</h3>
+            <p className="text-background/60 mb-6">inquiries@driveai.llc</p>
+            <div className="flex gap-3">
               {navigation.social.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
+                  className="w-11 h-11 rounded-xl bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors duration-200"
                   aria-label={item.name}
                 >
                   <item.icon className="w-5 h-5 text-background" />
@@ -74,8 +74,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-background/10">
-          <p className="text-center text-background/50 text-sm">
+        <div className="mt-16 pt-8 border-t border-background/10">
+          <p className="text-center text-background/40 text-sm tracking-wide">
             © {new Date().getFullYear()} Drive AI. All rights reserved.
           </p>
         </div>

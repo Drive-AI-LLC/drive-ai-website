@@ -33,52 +33,52 @@ const caseStudies = [
 
 export function CaseStudies() {
   return (
-    <section id="case-studies" className="py-16 lg:py-24 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">
+    <section id="case-studies" className="py-24 lg:py-32 bg-background">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+          <p className="text-primary font-semibold text-sm uppercase tracking-[0.15em] mb-4">
             Case Studies
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-tight font-serif">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.02em] font-serif">
             Real Results for Real Businesses
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-6 text-lg lg:text-xl text-muted-foreground leading-relaxed">
             See how we have helped businesses like yours save time and operate more efficiently.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
           {caseStudies.map((study, index) => (
             <div
               key={index}
-              className="group p-6 lg:p-8 rounded-2xl bg-background border border-border hover:border-primary/30 hover:shadow-lg transition-all"
+              className="group p-8 lg:p-10 rounded-3xl bg-muted/30 border border-border/50 hover:border-primary/20 hover:bg-muted/50 transition-all duration-300"
             >
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <study.icon className="w-6 h-6 text-primary" />
+              <div className="flex items-start gap-5 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <study.icon className="w-7 h-7 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground">
+                  <h3 className="text-xl font-semibold text-foreground tracking-[-0.01em]">
                     {study.business}
                   </h3>
-                  <p className="text-sm text-muted-foreground mt-1">
+                  <p className="text-muted-foreground mt-1.5 leading-relaxed">
                     {study.problem}
                   </p>
                 </div>
               </div>
               
-              <div className="space-y-3 pt-4 border-t border-border">
+              <div className="space-y-4 pt-6 border-t border-border/50">
                 <div>
-                  <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1">
+                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-[0.15em] mb-2">
                     Solution
                   </p>
                   <p className="text-foreground">{study.solution}</p>
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-1">
+                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-[0.15em] mb-2">
                     Result
                   </p>
-                  <p className="text-primary font-semibold">{study.result}</p>
+                  <p className="text-primary font-semibold text-lg">{study.result}</p>
                 </div>
               </div>
             </div>
