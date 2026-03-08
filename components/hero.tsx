@@ -70,11 +70,19 @@ export function Hero() {
         node.x += node.vx
         node.y += node.vy
 
-        // More damping for slower, smoother motion (increased from 0.94 to 0.97)
+        // More damping for slower, smoother motion
         node.vx *= 0.97
         node.vy *= 0.97
 
-// Draw connection lines
+        // Draw connections to nearby nodes
+        nodes.slice(i + 1).forEach((other) => {
+          const dx = other.x - node.x
+          const dy = other.y - node.y
+          const d = Math.sqrt(dx * dx + dy * dy)
+          if (d < 150) {
+            ctx.beginPath()
+            ctx.moveTo(node.x, node.y)
+            ctx.lineTo(other.x, other.y)
             const opacity = 0.12 * (1 - d / 150)
             ctx.strokeStyle = `rgba(0, 86, 59, ${opacity})`
             ctx.lineWidth = 1
