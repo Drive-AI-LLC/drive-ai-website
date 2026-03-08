@@ -4,16 +4,16 @@ import { Linkedin, Twitter, Mail } from "lucide-react"
 
 const navigation = {
   main: [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "Case Studies", href: "#case-studies" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ],
   social: [
     { name: "LinkedIn", href: "#", icon: Linkedin },
     { name: "Twitter", href: "#", icon: Twitter },
-    { name: "Email", href: "mailto:hello@driveai.com", icon: Mail },
+    { name: "Email", href: "mailto:inquiries@driveai.llc", icon: Mail },
   ],
 }
 
@@ -58,7 +58,7 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h3 className="font-semibold text-background mb-4">Contact</h3>
-            <p className="text-background/70 mb-4">hello@driveai.com</p>
+            <p className="text-background/70 mb-4">inquiries@driveai.llc</p>
             <div className="flex gap-4">
               {navigation.social.map((item) => (
                 <Link

@@ -51,7 +51,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">Email</p>
-                  <p className="text-muted-foreground">hello@driveai.com</p>
+                  <p className="text-muted-foreground">inquiries@driveai.llc</p>
                 </div>
               </div>
 

@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#services", label: "Services" },
-  { href: "#case-studies", label: "Case Studies" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/case-studies", label: "Case Studies" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ]
 
 export function Navbar() {
@@ -49,7 +49,7 @@ export function Navbar() {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button asChild>
-              <Link href="#contact">Schedule a Consultation</Link>
+              <Link href="/contact">Schedule a Consultation</Link>
             </Button>
           </div>
 
@@ -82,7 +82,7 @@ export function Navbar() {
                 </Link>
               ))}
               <Button asChild className="mt-2">
-                <Link href="#contact" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                   Schedule a Consultation
                 </Link>
               </Button>

@@ -15,7 +15,7 @@ export function CTASection() {
           </p>
           <div className="mt-8">
             <Button asChild size="lg" variant="secondary" className="text-base">
-              <Link href="#contact">
+              <Link href="/contact">
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
