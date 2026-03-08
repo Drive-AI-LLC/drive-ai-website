@@ -23,10 +23,10 @@ const testimonials = [
     company: "Clemson Area Chamber of Commerce",
   },
   {
-    quote: "The automation solutions they built for us are exactly what we needed. Our team can finally focus on growth instead of paperwork.",
-    name: "Emily Rodriguez",
-    title: "CEO",
-    company: "Bloom Retail Co.",
+    quote: "They continue to impress with other projects for local businesses and individuals, and it is obvious that they possess the vision and drive to excel in the modern business world. We cannot wait to see where Danika & Reid take their services next, and we cannot recommend them enough if you are looking to dramatically improve workplace efficiency!",
+    name: "Lacy Fahs",
+    title: "Marketing & Events Coordinator",
+    company: "Clemson Area Chamber of Commerce",
   },
   {
     quote: "I never thought our small business could leverage AI the way larger companies do. Drive AI made it accessible and affordable.",
