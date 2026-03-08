@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Linkedin, Twitter, Mail } from "lucide-react"
 
 const navigation = {
@@ -23,11 +24,14 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">D</span>
-              </div>
-              <span className="font-semibold text-xl text-background">Drive AI</span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/logo.png"
+                alt="Drive AI"
+                width={140}
+                height={52}
+                className="h-10 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="mt-4 text-background/70 max-w-md leading-relaxed">
               Drive AI helps small businesses implement practical AI tools and workflow automations to save time, reduce manual work, and operate more efficiently.
