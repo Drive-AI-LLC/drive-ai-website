@@ -40,7 +40,7 @@ export function CaseStudies() {
             Case Studies
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-tight font-serif">
-            Real results for real businesses
+            Real Results for Real Businesses
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             See how we have helped businesses like yours save time and operate more efficiently.

@@ -7,7 +7,6 @@ import { HowItWorks } from "@/components/how-it-works"
 import { CaseStudies } from "@/components/case-studies"
 import { Testimonials } from "@/components/testimonials"
 import { CTASection } from "@/components/cta-section"
-import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
       <CaseStudies />
       <Testimonials />
       <CTASection />
-      <ContactSection />
       <Footer />
     </main>
   )

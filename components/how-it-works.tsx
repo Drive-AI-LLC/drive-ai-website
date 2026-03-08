@@ -1,23 +1,35 @@
-import { Phone, PenTool, Rocket } from "lucide-react"
+import { ClipboardList, Phone, FileText, CheckCircle, Rocket } from "lucide-react"
 
 const steps = [
   {
-    icon: Phone,
+    icon: ClipboardList,
     step: "01",
-    title: "Discovery Call",
-    description: "We learn how your business operates and identify opportunities for automation. No technical knowledge required.",
+    title: "Pre-Discovery Survey",
+    description: "A short questionnaire identifies where AI can save you time and money before we meet.",
   },
   {
-    icon: PenTool,
+    icon: Phone,
     step: "02",
-    title: "Solution Design",
-    description: "We design and build custom AI workflows tailored to your needs. You see exactly what we're building before we build it.",
+    title: "Free Discovery Call",
+    description: "We review your workflows and identify high-impact opportunities.",
+  },
+  {
+    icon: FileText,
+    step: "03",
+    title: "Proposal & Check-In",
+    description: "We present a clear plan outlining the solution, process, and investment.",
+  },
+  {
+    icon: CheckCircle,
+    step: "04",
+    title: "Approval & Onboarding",
+    description: "Once approved, we finalize paperwork and prepare for implementation.",
   },
   {
     icon: Rocket,
-    step: "03",
-    title: "Implementation & Support",
-    description: "We deploy the solution and help your team use it effectively. Ongoing support ensures everything runs smoothly.",
+    step: "05",
+    title: "Project Kickoff",
+    description: "We begin implementation and provide updates every step of the way.",
   },
 ]
 
@@ -30,34 +42,42 @@ export function HowItWorks() {
             How It Works
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-tight font-serif">
-            Three simple steps to automation
+            Our Process
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-          {steps.map((item, index) => (
-            <div key={index} className="relative">
-              {/* Connector Line */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-border -translate-x-1/2 z-0" />
-              )}
-              
-              <div className="relative z-10 text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/10 mb-6">
-                  <item.icon className="w-8 h-8 text-primary" />
+        {/* Timeline */}
+        <div className="relative">
+          {/* Horizontal connector line - desktop only */}
+          <div className="hidden lg:block absolute top-12 left-0 right-0 h-0.5 bg-border" />
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4">
+            {steps.map((item, index) => (
+              <div key={index} className="relative">
+                <div className="flex flex-col items-center text-center">
+                  {/* Step circle */}
+                  <div className="relative z-10 w-24 h-24 rounded-2xl bg-primary/10 border-2 border-primary/20 flex items-center justify-center mb-6 group-hover:border-primary transition-colors">
+                    <item.icon className="w-10 h-10 text-primary" />
+                  </div>
+                  
+                  {/* Step number */}
+                  <div className="text-xs font-bold text-primary mb-2 uppercase tracking-wider">
+                    Step {item.step}
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                    {item.title}
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
-                <div className="text-sm font-bold text-primary mb-2">
-                  Step {item.step}
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {item.description}
-                </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

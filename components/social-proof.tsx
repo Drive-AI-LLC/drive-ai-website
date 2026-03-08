@@ -1,28 +1,49 @@
-export function SocialProof() {
-  const logos = [
-    { name: "Acme Corp", initials: "AC" },
-    { name: "TechFlow", initials: "TF" },
-    { name: "BuildRight", initials: "BR" },
-    { name: "GrowFast", initials: "GF" },
-    { name: "NextLevel", initials: "NL" },
-  ]
+"use client"
 
+import Image from "next/image"
+
+const memberships = [
+  { 
+    name: "Clemson Area Chamber of Commerce", 
+    logo: "/images/memberships/clemson-chamber.png",
+  },
+  { 
+    name: "Oconee Chamber of Commerce", 
+    logo: "/images/memberships/oconee-chamber.png",
+  },
+  { 
+    name: "Easley Chamber of Commerce", 
+    logo: "/images/memberships/easley-chamber.png",
+  },
+  { 
+    name: "Launchpad TV", 
+    logo: "/images/memberships/launchpad-tv.png",
+  },
+  { 
+    name: "Brook T. Smith Launchpad", 
+    logo: "/images/memberships/brook-launchpad.png",
+  },
+]
+
+export function SocialProof() {
   return (
     <section className="py-12 lg:py-16 bg-muted/50 border-y border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-sm font-medium text-muted-foreground uppercase tracking-wider mb-8">
-          Trusted by growing businesses
+          Members of
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-16">
-          {logos.map((logo) => (
+        <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
+          {memberships.map((org) => (
             <div
-              key={logo.name}
-              className="flex items-center gap-2 text-muted-foreground/60 hover:text-muted-foreground transition-colors"
+              key={org.name}
+              className="group relative flex items-center justify-center h-12 w-32 lg:w-40"
             >
-              <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
-                <span className="font-semibold text-sm">{logo.initials}</span>
+              {/* Placeholder - replace with actual logos */}
+              <div className="flex items-center justify-center w-full h-full bg-muted rounded-lg grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
+                <span className="text-xs text-muted-foreground text-center px-2 font-medium">
+                  {org.name}
+                </span>
               </div>
-              <span className="font-medium text-lg hidden sm:inline">{logo.name}</span>
             </div>
           ))}
         </div>
