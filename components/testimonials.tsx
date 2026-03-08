@@ -11,10 +11,10 @@ import {
 
 const testimonials = [
   {
-    quote: "Drive AI transformed how we handle our daily operations. What used to take hours now happens automatically in the background.",
-    name: "Sarah Mitchell",
-    title: "Owner",
-    company: "Mitchell Landscaping",
+    quote: "Clemson is a hub for entrepreneurs but very few dive headfirst into starting a business while they are also full-time students. The Chamber can proudly say that Danika and Reid have not only taken that first step, but they have also delivered hard results that directly increased our efficiency and saved us money.",
+    name: "Bryan Lee",
+    title: "President",
+    company: "Clemson Area Chamber of Commerce",
   },
   {
     quote: "We were skeptical about AI at first, but the team made it incredibly simple. The ROI was clear within the first month.",
