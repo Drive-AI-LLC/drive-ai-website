@@ -34,6 +34,12 @@ const testimonials = [
     title: "Insurance Agent",
     company: "State Farm",
   },
+  {
+    quote: "Did a demo with Drive AI leadership today. If you haven't adopted AI in your business and still have 20+ working years left… you need to have a consultation with DriveAI. Artificial Intelligence is no longer \"AskJeeves\", it's evolving and not slowing down. Don't get left behind. Tactfully integrate AI into your business!",
+    name: "Caitlyn Marcell",
+    title: "Co-owner",
+    company: "ASCEND Lending",
+  },
 ]
 
 export function Testimonials() {
