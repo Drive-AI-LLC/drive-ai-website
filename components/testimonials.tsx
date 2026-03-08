@@ -29,7 +29,7 @@ const testimonials = [
     company: "Clemson Area Chamber of Commerce",
   },
   {
-    quote: "I reached out to Drive AI about SEO, and they quickly got up to speed by asking smart questions and doing real research before recommending anything. Even though we didn't end up moving forward with an implementation, they were transparent about fit/feasibility instead of pushing a project. Their communication and guidance helped us make a better decision. I would certainly recommend Drive AI to anyone who wants a thorough, hardworking, and high-integrity team to help them implement practical AI solutions into their business.",
+    quote: "I reached out to Drive AI about SEO, and they quickly got up to speed by asking smart questions and doing real research before recommending anything. They were transparent about fit/feasibility instead of pushing a project. Their communication and guidance helped us make a better decision. I would certainly recommend Drive AI to anyone who wants a thorough, hardworking, and high-integrity team to help them implement practical AI solutions into their business.",
     name: "Seth Crow",
     title: "Insurance Agent",
     company: "State Farm",
