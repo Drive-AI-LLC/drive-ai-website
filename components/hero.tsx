@@ -3,40 +3,64 @@
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, FileText, Zap, Brain, Database, BarChart3 } from "lucide-react"
+import { ArrowRight, FileText, Mail, Table, FormInput, Database, Brain, BarChart3, Zap } from "lucide-react"
 
-interface WorkflowNode {
+interface ChaoticElement {
   id: number
+  x: number
+  y: number
+  baseX: number
+  baseY: number
+  organizedX: number
+  organizedY: number
+  vx: number
+  vy: number
+  rotation: number
+  rotationSpeed: number
+  scale: number
+  opacity: number
+  type: 'document' | 'email' | 'spreadsheet' | 'form' | 'data'
+  icon: typeof FileText
+  label: string
+  organized: number // 0 = chaotic, 1 = organized
+  connectionStrength: number
+}
+
+interface DataParticle {
   x: number
   y: number
   targetX: number
   targetY: number
+  progress: number
+  speed: number
   opacity: number
-  scale: number
-  type: 'form' | 'trigger' | 'ai' | 'data' | 'report'
-  label: string
-  icon: typeof FileText
-  connections: number[]
-  visible: boolean
-  pulsePhase: number
 }
 
-const nodeTypes = [
-  { type: 'form' as const, label: 'Form Submission', icon: FileText },
-  { type: 'trigger' as const, label: 'Automation Trigger', icon: Zap },
-  { type: 'ai' as const, label: 'AI Processing', icon: Brain },
-  { type: 'data' as const, label: 'Organized Data', icon: Database },
-  { type: 'report' as const, label: 'Report Generated', icon: BarChart3 },
+const elementTypes = [
+  { type: 'document' as const, icon: FileText, label: 'Documents' },
+  { type: 'email' as const, icon: Mail, label: 'Emails' },
+  { type: 'spreadsheet' as const, icon: Table, label: 'Spreadsheets' },
+  { type: 'form' as const, icon: FormInput, label: 'Forms' },
+  { type: 'data' as const, icon: Database, label: 'Data' },
+]
+
+const pipelineStages = [
+  { icon: FormInput, label: 'Input' },
+  { icon: Zap, label: 'Automate' },
+  { icon: Brain, label: 'AI Process' },
+  { icon: BarChart3, label: 'Results' },
 ]
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const [nodes, setNodes] = useState<WorkflowNode[]>([])
+  const [elements, setElements] = useState<ChaoticElement[]>([])
   const [mounted, setMounted] = useState(false)
-  const mouseRef = useRef({ x: 0, y: 0, lastX: 0, lastY: 0 })
-  const nodesRef = useRef<WorkflowNode[]>([])
+  const mouseRef = useRef({ x: 0, y: 0, active: false })
+  const elementsRef = useRef<ChaoticElement[]>([])
+  const particlesRef = useRef<DataParticle[]>([])
   const animationRef = useRef<number>()
+  const organizationRef = useRef(0)
 
   useEffect(() => {
     setMounted(true)
@@ -48,8 +72,6 @@ export function Hero() {
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    let nodeIdCounter = 0
-
     const resize = () => {
       const rect = container.getBoundingClientRect()
       canvas.width = rect.width * window.devicePixelRatio
@@ -57,146 +79,187 @@ export function Hero() {
       ctx.scale(window.devicePixelRatio, window.devicePixelRatio)
     }
 
-    const createNode = (x: number, y: number): WorkflowNode => {
-      const typeInfo = nodeTypes[nodeIdCounter % nodeTypes.length]
-      const node: WorkflowNode = {
-        id: nodeIdCounter++,
-        x: x + (Math.random() - 0.5) * 100,
-        y: y + (Math.random() - 0.5) * 100,
-        targetX: x,
-        targetY: y,
-        opacity: 0,
-        scale: 0,
-        type: typeInfo.type,
-        label: typeInfo.label,
-        icon: typeInfo.icon,
-        connections: [],
-        visible: true,
-        pulsePhase: Math.random() * Math.PI * 2,
+    const initElements = () => {
+      const rect = container.getBoundingClientRect()
+      const centerX = rect.width / 2
+      const centerY = rect.height / 2
+      
+      const newElements: ChaoticElement[] = []
+      
+      // Create scattered elements around the edges
+      for (let i = 0; i < 8; i++) {
+        const angle = (i / 8) * Math.PI * 2 + Math.random() * 0.5
+        const radius = 280 + Math.random() * 120
+        const typeInfo = elementTypes[i % elementTypes.length]
+        
+        // Chaotic positions (scattered)
+        const chaoticX = centerX + Math.cos(angle) * radius + (Math.random() - 0.5) * 100
+        const chaoticY = centerY + Math.sin(angle) * radius + (Math.random() - 0.5) * 100
+        
+        // Organized positions (pipeline layout)
+        const pipelineIndex = Math.floor(i / 2)
+        const row = i % 2
+        const organizedX = centerX - 300 + pipelineIndex * 200
+        const organizedY = centerY + (row === 0 ? -60 : 60) + 180
+        
+        newElements.push({
+          id: i,
+          x: chaoticX,
+          y: chaoticY,
+          baseX: chaoticX,
+          baseY: chaoticY,
+          organizedX,
+          organizedY,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          rotation: Math.random() * 30 - 15,
+          rotationSpeed: (Math.random() - 0.5) * 0.5,
+          scale: 0.9 + Math.random() * 0.2,
+          opacity: 0.4 + Math.random() * 0.3,
+          type: typeInfo.type,
+          icon: typeInfo.icon,
+          label: typeInfo.label,
+          organized: 0,
+          connectionStrength: 0,
+        })
       }
-      return node
+      
+      elementsRef.current = newElements
+      setElements([...newElements])
     }
 
     const animate = () => {
       const rect = container.getBoundingClientRect()
       ctx.clearRect(0, 0, rect.width, rect.height)
 
-      const currentNodes = nodesRef.current
-
-      // Update nodes
-      currentNodes.forEach((node, i) => {
-        // Animate towards target
-        node.x += (node.targetX - node.x) * 0.08
-        node.y += (node.targetY - node.y) * 0.08
-        node.opacity = Math.min(1, node.opacity + 0.03)
-        node.scale = Math.min(1, node.scale + 0.05)
-        node.pulsePhase += 0.02
-
-        // Find nearby nodes to connect
-        currentNodes.forEach((other, j) => {
-          if (i >= j) return
-          const dx = other.x - node.x
-          const dy = other.y - node.y
-          const dist = Math.sqrt(dx * dx + dy * dy)
-          
-          if (dist < 250 && dist > 50) {
-            // Draw connection line
-            const gradient = ctx.createLinearGradient(node.x, node.y, other.x, other.y)
-            const baseOpacity = Math.min(node.opacity, other.opacity) * 0.4 * (1 - dist / 250)
-            gradient.addColorStop(0, `rgba(0, 86, 59, ${baseOpacity})`)
-            gradient.addColorStop(0.5, `rgba(0, 86, 59, ${baseOpacity * 1.5})`)
-            gradient.addColorStop(1, `rgba(0, 86, 59, ${baseOpacity})`)
-            
-            ctx.beginPath()
-            ctx.moveTo(node.x, node.y)
-            ctx.lineTo(other.x, other.y)
-            ctx.strokeStyle = gradient
-            ctx.lineWidth = 2
-            ctx.stroke()
-
-            // Draw animated data flow dots
-            const flowProgress = ((Date.now() / 1500) + i * 0.3) % 1
-            const dotX = node.x + dx * flowProgress
-            const dotY = node.y + dy * flowProgress
-            const dotOpacity = baseOpacity * 2 * Math.sin(flowProgress * Math.PI)
-            
-            ctx.beginPath()
-            ctx.arc(dotX, dotY, 3, 0, Math.PI * 2)
-            ctx.fillStyle = `rgba(0, 86, 59, ${dotOpacity})`
-            ctx.fill()
-          }
-        })
-      })
-
-      // Fade out nodes far from cursor
       const mx = mouseRef.current.x
       const my = mouseRef.current.y
-      currentNodes.forEach((node, i) => {
-        const dx = mx - node.x
-        const dy = my - node.y
-        const dist = Math.sqrt(dx * dx + dy * dy)
-        if (dist > 400) {
-          node.opacity = Math.max(0, node.opacity - 0.005)
-        }
+      const centerX = rect.width / 2
+      const centerY = rect.height / 2
+      
+      // Calculate organization level based on mouse proximity to center
+      const distFromCenter = Math.sqrt((mx - centerX) ** 2 + (my - centerY) ** 2)
+      const maxDist = 500
+      const targetOrg = mouseRef.current.active ? Math.max(0, 1 - distFromCenter / maxDist) : 0
+      organizationRef.current += (targetOrg - organizationRef.current) * 0.02
+      const org = organizationRef.current
+
+      // Update elements
+      elementsRef.current.forEach((el, i) => {
+        // Interpolate between chaotic and organized positions
+        const targetX = el.baseX + (el.organizedX - el.baseX) * org
+        const targetY = el.baseY + (el.organizedY - el.baseY) * org
+        
+        // Add subtle floating motion when chaotic
+        const floatX = Math.sin(Date.now() / 2000 + i) * 8 * (1 - org)
+        const floatY = Math.cos(Date.now() / 2500 + i * 0.7) * 6 * (1 - org)
+        
+        el.x += (targetX + floatX - el.x) * 0.04
+        el.y += (targetY + floatY - el.y) * 0.04
+        
+        // Rotation decreases as organization increases
+        el.rotation += el.rotationSpeed * (1 - org)
+        el.rotation *= 0.98 // Damping
+        
+        // Update organization state
+        el.organized = org
+        el.connectionStrength = org
+        el.opacity = 0.5 + org * 0.4
       })
 
-      // Remove invisible nodes
-      nodesRef.current = currentNodes.filter(n => n.opacity > 0.01)
-      setNodes([...nodesRef.current])
+      // Draw connection lines when organized
+      if (org > 0.1) {
+        const sortedEls = [...elementsRef.current].sort((a, b) => a.organizedX - b.organizedX)
+        
+        for (let i = 0; i < sortedEls.length - 1; i++) {
+          const el1 = sortedEls[i]
+          const el2 = sortedEls[i + 1]
+          
+          const lineOpacity = org * 0.3
+          
+          // Draw curved connection
+          ctx.beginPath()
+          ctx.moveTo(el1.x, el1.y)
+          const cpX = (el1.x + el2.x) / 2
+          const cpY = Math.min(el1.y, el2.y) - 30 * org
+          ctx.quadraticCurveTo(cpX, cpY, el2.x, el2.y)
+          
+          const gradient = ctx.createLinearGradient(el1.x, el1.y, el2.x, el2.y)
+          gradient.addColorStop(0, `rgba(0, 86, 59, ${lineOpacity})`)
+          gradient.addColorStop(0.5, `rgba(0, 86, 59, ${lineOpacity * 1.5})`)
+          gradient.addColorStop(1, `rgba(0, 86, 59, ${lineOpacity})`)
+          
+          ctx.strokeStyle = gradient
+          ctx.lineWidth = 2 * org
+          ctx.stroke()
+          
+          // Animated flow dots
+          if (org > 0.3) {
+            const flowProgress = ((Date.now() / 1200) + i * 0.2) % 1
+            const t = flowProgress
+            const dotX = (1 - t) * (1 - t) * el1.x + 2 * (1 - t) * t * cpX + t * t * el2.x
+            const dotY = (1 - t) * (1 - t) * el1.y + 2 * (1 - t) * t * cpY + t * t * el2.y
+            
+            ctx.beginPath()
+            ctx.arc(dotX, dotY, 4 * org, 0, Math.PI * 2)
+            ctx.fillStyle = `rgba(0, 86, 59, ${org * 0.8 * Math.sin(flowProgress * Math.PI)})`
+            ctx.fill()
+            
+            // Glow effect
+            ctx.beginPath()
+            ctx.arc(dotX, dotY, 8 * org, 0, Math.PI * 2)
+            ctx.fillStyle = `rgba(0, 86, 59, ${org * 0.2 * Math.sin(flowProgress * Math.PI)})`
+            ctx.fill()
+          }
+        }
+      }
 
+      // Draw subtle background nodes when chaotic
+      if (org < 0.8) {
+        const nodeOpacity = (1 - org) * 0.15
+        for (let i = 0; i < 20; i++) {
+          const angle = (i / 20) * Math.PI * 2 + Date.now() / 10000
+          const radius = 200 + Math.sin(i * 1.5 + Date.now() / 3000) * 50
+          const x = centerX + Math.cos(angle) * radius
+          const y = centerY + Math.sin(angle) * radius
+          
+          ctx.beginPath()
+          ctx.arc(x, y, 3, 0, Math.PI * 2)
+          ctx.fillStyle = `rgba(0, 86, 59, ${nodeOpacity})`
+          ctx.fill()
+        }
+      }
+
+      setElements([...elementsRef.current])
       animationRef.current = requestAnimationFrame(animate)
     }
 
     const handleMouseMove = (e: MouseEvent) => {
       const rect = container.getBoundingClientRect()
-      const x = e.clientX - rect.left
-      const y = e.clientY - rect.top
-
-      const dx = x - mouseRef.current.lastX
-      const dy = y - mouseRef.current.lastY
-      const moved = Math.sqrt(dx * dx + dy * dy)
-
-      mouseRef.current = { x, y, lastX: x, lastY: y }
-
-      // Create new nodes based on movement
-      if (moved > 80 && nodesRef.current.length < 12) {
-        const newNode = createNode(x, y)
-        nodesRef.current.push(newNode)
-        setNodes([...nodesRef.current])
+      mouseRef.current = {
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+        active: true,
       }
     }
 
-    // Initialize with a few nodes
-    const initNodes = () => {
-      const rect = container.getBoundingClientRect()
-      const centerX = rect.width / 2
-      const centerY = rect.height / 2
-      
-      const initialPositions = [
-        { x: centerX - 200, y: centerY - 100 },
-        { x: centerX + 180, y: centerY - 80 },
-        { x: centerX - 150, y: centerY + 120 },
-        { x: centerX + 200, y: centerY + 100 },
-      ]
-
-      initialPositions.forEach(pos => {
-        const node = createNode(pos.x, pos.y)
-        nodesRef.current.push(node)
-      })
-      setNodes([...nodesRef.current])
+    const handleMouseLeave = () => {
+      mouseRef.current.active = false
     }
 
     resize()
-    initNodes()
+    initElements()
     animate()
 
     window.addEventListener('resize', resize)
     container.addEventListener('mousemove', handleMouseMove)
+    container.addEventListener('mouseleave', handleMouseLeave)
 
     return () => {
       if (animationRef.current) cancelAnimationFrame(animationRef.current)
       window.removeEventListener('resize', resize)
       container.removeEventListener('mousemove', handleMouseMove)
+      container.removeEventListener('mouseleave', handleMouseLeave)
     }
   }, [])
 
@@ -208,9 +271,9 @@ export function Hero() {
       {/* Subtle gradient background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] rounded-full"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1400px] h-[1400px] rounded-full"
           style={{
-            background: 'radial-gradient(circle, rgba(0,86,59,0.06) 0%, transparent 50%)',
+            background: 'radial-gradient(circle, rgba(0,86,59,0.05) 0%, transparent 60%)',
           }}
         />
       </div>
@@ -221,30 +284,68 @@ export function Hero() {
         className="absolute inset-0 w-full h-full pointer-events-none"
       />
 
-      {/* Workflow nodes */}
-      {mounted && nodes.map((node) => {
-        const IconComponent = node.icon
-        const pulse = Math.sin(node.pulsePhase) * 0.1 + 1
+      {/* Floating chaotic elements */}
+      {mounted && elements.map((el) => {
+        const IconComponent = el.icon
         return (
           <div
-            key={node.id}
-            className="absolute pointer-events-none transition-none"
+            key={el.id}
+            className="absolute pointer-events-none hidden lg:block"
             style={{
-              left: node.x,
-              top: node.y,
-              transform: `translate(-50%, -50%) scale(${node.scale * pulse})`,
-              opacity: node.opacity * 0.85,
+              left: el.x,
+              top: el.y,
+              transform: `translate(-50%, -50%) rotate(${el.rotation * (1 - el.organized)}deg) scale(${el.scale})`,
+              opacity: el.opacity,
+              transition: 'opacity 0.3s ease',
             }}
           >
-            <div className="bg-background/90 backdrop-blur-sm border border-primary/20 rounded-2xl px-4 py-3 shadow-lg shadow-primary/5 flex items-center gap-3">
-              <div className="w-9 h-9 bg-primary/10 rounded-xl flex items-center justify-center">
+            <div 
+              className="bg-background/95 backdrop-blur-sm border rounded-xl px-3 py-2 shadow-lg flex items-center gap-2"
+              style={{
+                borderColor: `rgba(0, 86, 59, ${0.15 + el.organized * 0.2})`,
+                boxShadow: el.organized > 0.5 
+                  ? `0 4px 20px rgba(0, 86, 59, ${el.organized * 0.15})` 
+                  : '0 4px 12px rgba(0, 0, 0, 0.05)',
+              }}
+            >
+              <div 
+                className="w-8 h-8 rounded-lg flex items-center justify-center"
+                style={{
+                  backgroundColor: `rgba(0, 86, 59, ${0.08 + el.organized * 0.12})`,
+                }}
+              >
                 <IconComponent className="w-4 h-4 text-primary" />
               </div>
-              <span className="text-sm font-medium text-foreground whitespace-nowrap">{node.label}</span>
+              <span className="text-xs font-medium text-foreground/80">{el.label}</span>
             </div>
           </div>
         )
       })}
+
+      {/* Pipeline stages indicator - shows when organized */}
+      {mounted && organizationRef.current > 0.5 && (
+        <div 
+          className="absolute bottom-[15%] left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-6"
+          style={{ opacity: Math.max(0, (organizationRef.current - 0.5) * 2) }}
+        >
+          {pipelineStages.map((stage, i) => {
+            const StageIcon = stage.icon
+            return (
+              <div key={i} className="flex items-center gap-6">
+                <div className="flex flex-col items-center gap-2">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+                    <StageIcon className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="text-xs font-medium text-muted-foreground">{stage.label}</span>
+                </div>
+                {i < pipelineStages.length - 1 && (
+                  <ArrowRight className="w-4 h-4 text-primary/40" />
+                )}
+              </div>
+            )
+          })}
+        </div>
+      )}
 
       {/* Main content */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
