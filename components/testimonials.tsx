@@ -1,8 +1,13 @@
 "use client"
 
-import { useState } from "react"
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Quote } from "lucide-react"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel"
 
 const testimonials = [
   {
@@ -23,19 +28,21 @@ const testimonials = [
     title: "CEO",
     company: "Bloom Retail Co.",
   },
+  {
+    quote: "I never thought our small business could leverage AI the way larger companies do. Drive AI made it accessible and affordable.",
+    name: "Michael Thompson",
+    title: "Founder",
+    company: "Thompson Consulting",
+  },
+  {
+    quote: "The custom workflows they built save us over 20 hours per week. It's like having an extra team member.",
+    name: "Lisa Park",
+    title: "Director of Operations",
+    company: "Park & Associates",
+  },
 ]
 
 export function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  const next = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prev = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
-
   return (
     <section className="py-16 lg:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,64 +55,35 @@ export function Testimonials() {
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Desktop: Show all cards */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-2xl bg-muted/50 border border-border"
-              >
-                <Quote className="w-8 h-8 text-primary/30 mb-4" />
-                <p className="text-foreground leading-relaxed mb-6">
-                  {`"${testimonial.quote}"`}
-                </p>
-                <div>
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">
-                    {testimonial.title}, {testimonial.company}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Mobile: Carousel */}
-          <div className="md:hidden">
-            <div className="p-6 rounded-2xl bg-muted/50 border border-border">
-              <Quote className="w-8 h-8 text-primary/30 mb-4" />
-              <p className="text-foreground leading-relaxed mb-6">
-                {`"${testimonials[currentIndex].quote}"`}
-              </p>
-              <div>
-                <p className="font-semibold text-foreground">{testimonials[currentIndex].name}</p>
-                <p className="text-sm text-muted-foreground">
-                  {testimonials[currentIndex].title}, {testimonials[currentIndex].company}
-                </p>
-              </div>
-            </div>
-
-            <div className="flex justify-center items-center gap-4 mt-6">
-              <Button variant="outline" size="icon" onClick={prev} aria-label="Previous testimonial">
-                <ChevronLeft className="w-4 h-4" />
-              </Button>
-              <div className="flex gap-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-colors ${
-                      index === currentIndex ? "bg-primary" : "bg-border"
-                    }`}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                  />
-                ))}
-              </div>
-              <Button variant="outline" size="icon" onClick={next} aria-label="Next testimonial">
-                <ChevronRight className="w-4 h-4" />
-              </Button>
-            </div>
-          </div>
+        <div className="max-w-5xl mx-auto px-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="h-full p-6 rounded-2xl bg-muted/50 border border-border flex flex-col">
+                    <Quote className="w-8 h-8 text-primary/30 mb-4 shrink-0" />
+                    <p className="text-foreground leading-relaxed mb-6 flex-grow">
+                      {`"${testimonial.quote}"`}
+                    </p>
+                    <div className="mt-auto">
+                      <p className="font-semibold text-foreground">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.title}, {testimonial.company}
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-4 md:-left-6" />
+            <CarouselNext className="-right-4 md:-right-6" />
+          </Carousel>
         </div>
       </div>
     </section>
