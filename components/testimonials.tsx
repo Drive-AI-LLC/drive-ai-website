@@ -56,18 +56,18 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 lg:py-32 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <p className="text-primary font-semibold text-sm uppercase tracking-[0.15em] mb-4">
+    <section className="py-20 sm:py-28 lg:py-36 bg-muted/20">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-20">
+          <p className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-[0.2em] mb-4">
             Testimonials
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.02em] font-serif">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.025em] font-serif leading-[1.15]">
             What our clients say
           </h2>
         </div>
 
-        <div className="max-w-5xl mx-auto px-12">
+        <div className="max-w-4xl mx-auto px-8 sm:px-12">
           <Carousel
             opts={{
               align: "start",
@@ -75,17 +75,17 @@ export function Testimonials() {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-6">
+            <CarouselContent className="-ml-4 sm:-ml-6">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-6 basis-full md:basis-1/2">
-                  <div className="h-full p-8 lg:p-10 rounded-3xl bg-background border border-border/50 flex flex-col shadow-sm">
-                    <Quote className="w-10 h-10 text-primary/20 mb-6 shrink-0" />
-                    <p className="text-foreground leading-relaxed mb-8 flex-grow text-base lg:text-lg">
+                <CarouselItem key={index} className="pl-4 sm:pl-6 basis-full md:basis-1/2">
+                  <div className="h-full p-6 sm:p-8 rounded-2xl bg-background border border-border/40 flex flex-col shadow-sm">
+                    <Quote className="w-8 h-8 sm:w-10 sm:h-10 text-primary/20 mb-4 sm:mb-6 shrink-0" />
+                    <p className="text-foreground leading-relaxed mb-6 sm:mb-8 flex-grow text-sm sm:text-base">
                       {`"${testimonial.quote}"`}
                     </p>
-                    <div className="mt-auto pt-6 border-t border-border/50">
-                      <p className="font-semibold text-foreground">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground mt-1">
+                    <div className="mt-auto pt-4 sm:pt-6 border-t border-border/40">
+                      <p className="font-semibold text-foreground text-sm sm:text-base">{testimonial.name}</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
                         {testimonial.title}, {testimonial.company}
                       </p>
                     </div>
@@ -93,8 +93,8 @@ export function Testimonials() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-4 md:-left-6 w-12 h-12" />
-            <CarouselNext className="-right-4 md:-right-6 w-12 h-12" />
+            <CarouselPrevious className="-left-2 sm:-left-4 w-10 h-10 sm:w-12 sm:h-12" />
+            <CarouselNext className="-right-2 sm:-right-4 w-10 h-10 sm:w-12 sm:h-12" />
           </Carousel>
         </div>
       </div>
