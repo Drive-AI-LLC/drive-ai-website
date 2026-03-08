@@ -29,16 +29,10 @@ const testimonials = [
     company: "Clemson Area Chamber of Commerce",
   },
   {
-    quote: "I never thought our small business could leverage AI the way larger companies do. Drive AI made it accessible and affordable.",
-    name: "Michael Thompson",
-    title: "Founder",
-    company: "Thompson Consulting",
-  },
-  {
-    quote: "The custom workflows they built save us over 20 hours per week. It's like having an extra team member.",
-    name: "Lisa Park",
-    title: "Director of Operations",
-    company: "Park & Associates",
+    quote: "I reached out to Drive AI about SEO, and they quickly got up to speed by asking smart questions and doing real research before recommending anything. Even though we didn't end up moving forward with an implementation, they were transparent about fit/feasibility instead of pushing a project. Their communication and guidance helped us make a better decision. I would certainly recommend Drive AI to anyone who wants a thorough, hardworking, and high-integrity team to help them implement practical AI solutions into their business.",
+    name: "Seth Crow",
+    title: "Insurance Agent",
+    company: "State Farm",
   },
 ]
 
