@@ -1,19 +1,14 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Zap, GitBranch, FileText } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const mouseRef = useRef({ x: 0, y: 0 })
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -194,61 +189,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Floating UI Cards - Only 3, positioned farther from headline */}
-      {mounted && (
-        <>
-          {/* Workflow Triggered - top left, far from center */}
-          <div className="absolute top-[12%] left-[5%] hidden lg:block" style={{ animation: 'float 8s ease-in-out infinite' }}>
-            <div className="bg-background/80 backdrop-blur-md border border-border/30 rounded-2xl p-4 shadow-xl shadow-foreground/[0.03]">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">Workflow Triggered</p>
-                  <p className="text-xs text-muted-foreground">2 seconds ago</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Tools Connected - top right, far from center */}
-          <div className="absolute top-[15%] right-[5%] hidden lg:block" style={{ animation: 'float 8s ease-in-out infinite 2s' }}>
-            <div className="bg-background/80 backdrop-blur-md border border-border/30 rounded-2xl p-4 shadow-xl shadow-foreground/[0.03]">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <GitBranch className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">3 Tools Connected</p>
-                  <p className="text-xs text-muted-foreground">Real-time sync</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Report Ready - bottom center-right, far from headline */}
-          <div className="absolute bottom-[12%] right-[12%] hidden lg:block" style={{ animation: 'float 8s ease-in-out infinite 4s' }}>
-            <div className="bg-background/80 backdrop-blur-md border border-border/30 rounded-2xl p-4 shadow-xl shadow-foreground/[0.03]">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <FileText className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-foreground">Report Ready</p>
-                  <p className="text-xs text-muted-foreground">Auto-generated</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </>
-      )}
-
       <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-8px); }
-        }
         @keyframes pulse {
           0%, 100% { opacity: 0.2; transform: scale(1); }
           50% { opacity: 0.25; transform: scale(1.02); }
