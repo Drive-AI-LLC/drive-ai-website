@@ -29,8 +29,8 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 sm:py-28 lg:py-36 bg-background">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Side - Info */}
           <div>
