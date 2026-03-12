@@ -12,9 +12,9 @@ const navigation = {
     { name: "Contact", href: "/contact" },
   ],
   social: [
-    { name: "LinkedIn", href: "#", icon: Linkedin },
-    { name: "Instagram", href: "#", icon: Instagram },
-    { name: "Facebook", href: "#", icon: Facebook },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/drive-ai-llc", icon: Linkedin },
+    { name: "Instagram", href: "https://www.instagram.com/driveai.llc/", icon: Instagram },
+    { name: "Facebook", href: "https://www.facebook.com/driveai.llc/", icon: Facebook },
   ],
 }
 
