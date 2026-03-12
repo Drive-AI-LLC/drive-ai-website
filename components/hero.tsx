@@ -5,60 +5,44 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
-interface Node {
-  x: number
-  y: number
-  baseX: number
-  baseY: number
-  radius: number
-  pulsePhase: number
-}
-
 export function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const mouseRef = useRef({ x: 0, y: 0, active: false })
-  const nodesRef = useRef<Node[]>([])
-  const animationRef = useRef<number>()
+  const containerRef = useRef<HTMLDivElement>(null)
+  const mouseRef = useRef({ x: 0, y: 0 })
 
   useEffect(() => {
-    const container = containerRef.current
     const canvas = canvasRef.current
-    if (!container || !canvas) return
+    const container = containerRef.current
+    if (!canvas || !container) return
 
-    const ctx = canvas.getContext('2d')
+    const ctx = canvas.getContext("2d")
     if (!ctx) return
+
+    let animationId: number
+    let nodes: { x: number; y: number; vx: number; vy: number; radius: number; baseX: number; baseY: number }[] = []
 
     const resize = () => {
       const rect = container.getBoundingClientRect()
       canvas.width = rect.width * window.devicePixelRatio
       canvas.height = rect.height * window.devicePixelRatio
       ctx.scale(window.devicePixelRatio, window.devicePixelRatio)
-      canvas.style.width = `${rect.width}px`
-      canvas.style.height = `${rect.height}px`
     }
 
     const initNodes = () => {
+      nodes = []
       const rect = container.getBoundingClientRect()
-      const centerX = rect.width / 2
-      const centerY = rect.height / 2
-      
-      nodesRef.current = []
-      const numNodes = 10
-      
+      const numNodes = 40
       for (let i = 0; i < numNodes; i++) {
-        const angle = (i / numNodes) * Math.PI * 2 + Math.random() * 0.3
-        const radius = 180 + Math.random() * 180
-        const x = centerX + Math.cos(angle) * radius
-        const y = centerY + Math.sin(angle) * radius
-        
-        nodesRef.current.push({
+        const x = Math.random() * rect.width
+        const y = Math.random() * rect.height
+        nodes.push({
           x,
           y,
           baseX: x,
           baseY: y,
-          radius: 4 + Math.random() * 3,
-          pulsePhase: Math.random() * Math.PI * 2,
+          vx: 0,
+          vy: 0,
+          radius: Math.random() * 2.5 + 1.5,
         })
       }
     }
@@ -66,101 +50,48 @@ export function Hero() {
     const animate = () => {
       const rect = container.getBoundingClientRect()
       ctx.clearRect(0, 0, rect.width, rect.height)
-      
-      const time = Date.now() / 1000
-      const mx = mouseRef.current.x
-      const my = mouseRef.current.y
-      const mouseActive = mouseRef.current.active
 
-      // Update node positions
-      nodesRef.current.forEach((node, i) => {
-        // Gentle floating motion
-        const floatX = Math.sin(time * 0.3 + i * 0.7) * 15
-        const floatY = Math.cos(time * 0.25 + i * 0.9) * 12
-        
-        let targetX = node.baseX + floatX
-        let targetY = node.baseY + floatY
-        
-        // Subtle attraction to mouse
-        if (mouseActive) {
-          const dx = mx - node.baseX
-          const dy = my - node.baseY
-          const dist = Math.sqrt(dx * dx + dy * dy)
-          const maxDist = 300
-          
-          if (dist < maxDist) {
-            const strength = (1 - dist / maxDist) * 25
-            targetX += (dx / dist) * strength
-            targetY += (dy / dist) * strength
-          }
+      nodes.forEach((node, i) => {
+        const dx = mouseRef.current.x - node.x
+        const dy = mouseRef.current.y - node.y
+        const dist = Math.sqrt(dx * dx + dy * dy)
+        if (dist < 150 && dist > 0) {
+          const force = (150 - dist) / 150
+          node.vx -= (dx / dist) * force * 0.15
+          node.vy -= (dy / dist) * force * 0.15
         }
-        
-        // Smooth interpolation
-        node.x += (targetX - node.x) * 0.03
-        node.y += (targetY - node.y) * 0.03
-      })
 
-      // Draw connection lines
-      nodesRef.current.forEach((node, i) => {
-        nodesRef.current.slice(i + 1).forEach((other, j) => {
+        node.vx += (node.baseX - node.x) * 0.008
+        node.vy += (node.baseY - node.y) * 0.008
+
+        node.x += node.vx
+        node.y += node.vy
+
+        node.vx *= 0.97
+        node.vy *= 0.97
+
+        nodes.slice(i + 1).forEach((other) => {
           const dx = other.x - node.x
           const dy = other.y - node.y
-          const dist = Math.sqrt(dx * dx + dy * dy)
-          const maxDist = 220
-          
-          if (dist < maxDist) {
-            const opacity = (1 - dist / maxDist) * 0.25
-            
+          const d = Math.sqrt(dx * dx + dy * dy)
+          if (d < 150) {
             ctx.beginPath()
             ctx.moveTo(node.x, node.y)
             ctx.lineTo(other.x, other.y)
+            const opacity = 0.12 * (1 - d / 150)
             ctx.strokeStyle = `rgba(0, 86, 59, ${opacity})`
             ctx.lineWidth = 1
             ctx.stroke()
-            
-            // Animated pulse traveling along the line
-            const pulseProgress = ((time * 0.4 + i * 0.15 + j * 0.1) % 1)
-            const pulseX = node.x + dx * pulseProgress
-            const pulseY = node.y + dy * pulseProgress
-            const pulseOpacity = Math.sin(pulseProgress * Math.PI) * opacity * 2
-            
-            if (pulseOpacity > 0.05) {
-              ctx.beginPath()
-              ctx.arc(pulseX, pulseY, 2.5, 0, Math.PI * 2)
-              ctx.fillStyle = `rgba(0, 86, 59, ${pulseOpacity})`
-              ctx.fill()
-            }
           }
         })
-      })
 
-      // Draw nodes with glow
-      nodesRef.current.forEach((node, i) => {
-        const pulse = Math.sin(time * 0.8 + node.pulsePhase) * 0.15 + 0.85
-        const nodeRadius = node.radius * pulse
-        
-        // Outer glow
-        const gradient = ctx.createRadialGradient(
-          node.x, node.y, 0,
-          node.x, node.y, nodeRadius * 4
-        )
-        gradient.addColorStop(0, 'rgba(0, 86, 59, 0.2)')
-        gradient.addColorStop(0.5, 'rgba(0, 86, 59, 0.05)')
-        gradient.addColorStop(1, 'rgba(0, 86, 59, 0)')
-        
         ctx.beginPath()
-        ctx.arc(node.x, node.y, nodeRadius * 4, 0, Math.PI * 2)
-        ctx.fillStyle = gradient
-        ctx.fill()
-        
-        // Core node
-        ctx.beginPath()
-        ctx.arc(node.x, node.y, nodeRadius, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(0, 86, 59, ${0.5 + pulse * 0.3})`
+        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2)
+        ctx.fillStyle = "rgba(0, 86, 59, 0.35)"
         ctx.fill()
       })
 
-      animationRef.current = requestAnimationFrame(animate)
+      animationId = requestAnimationFrame(animate)
     }
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -168,30 +99,23 @@ export function Hero() {
       mouseRef.current = {
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
-        active: true,
       }
-    }
-
-    const handleMouseLeave = () => {
-      mouseRef.current.active = false
     }
 
     resize()
     initNodes()
     animate()
 
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       resize()
       initNodes()
     })
-    container.addEventListener('mousemove', handleMouseMove)
-    container.addEventListener('mouseleave', handleMouseLeave)
+    container.addEventListener("mousemove", handleMouseMove)
 
     return () => {
-      if (animationRef.current) cancelAnimationFrame(animationRef.current)
-      window.removeEventListener('resize', resize)
-      container.removeEventListener('mousemove', handleMouseMove)
-      container.removeEventListener('mouseleave', handleMouseLeave)
+      cancelAnimationFrame(animationId)
+      window.removeEventListener("resize", resize)
+      container.removeEventListener("mousemove", handleMouseMove)
     }
   }, [])
 
@@ -200,17 +124,18 @@ export function Hero() {
       ref={containerRef}
       className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-background pt-32 sm:pt-36 lg:pt-40"
     >
-      {/* Subtle gradient background */}
+      {/* Subtle gradient orb */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] rounded-full"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] rounded-full opacity-20"
           style={{
-            background: 'radial-gradient(circle, rgba(0,86,59,0.04) 0%, transparent 50%)',
+            background: 'radial-gradient(circle, rgba(0,86,59,0.08) 0%, transparent 60%)',
+            animation: 'pulse 12s ease-in-out infinite',
           }}
         />
       </div>
 
-      {/* Network canvas */}
+      {/* Node network canvas */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
@@ -253,6 +178,13 @@ export function Hero() {
           </p>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes pulse {
+          0%, 100% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); }
+          50% { opacity: 0.25; transform: translate(-50%, -50%) scale(1.02); }
+        }
+      `}</style>
     </section>
   )
 }
