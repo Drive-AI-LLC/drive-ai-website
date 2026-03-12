@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Linkedin, Twitter, Mail } from "lucide-react"
+import { Linkedin, Instagram, Facebook } from "lucide-react"
 
 const navigation = {
   main: [
@@ -13,8 +13,8 @@ const navigation = {
   ],
   social: [
     { name: "LinkedIn", href: "#", icon: Linkedin },
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "Email", href: "mailto:inquiries@driveai.llc", icon: Mail },
+    { name: "Instagram", href: "#", icon: Instagram },
+    { name: "Facebook", href: "#", icon: Facebook },
   ],
 }
 
