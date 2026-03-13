@@ -42,10 +42,10 @@ export function SocialProof() {
                 height={56}
                 className="w-auto h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
               />
-      </Container>
+            </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }
