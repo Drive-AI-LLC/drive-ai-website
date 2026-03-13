@@ -21,7 +21,7 @@ const memberships = [
   },
   {
     name: "Brook T. Smith Launchpad",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Brook%20t%20smith-hWylcdvv8cNgkbrk619H1UiYnX6TLP.png",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Brook%20t%20smith-A7FT4LZNHI7doie3LlCSkNF2hnY62g.png",
   },
 ]
 
@@ -36,14 +36,14 @@ export function SocialProof() {
           {memberships.map((org) => (
             <div
               key={org.name}
-              className="group relative flex items-center justify-center h-12 sm:h-14"
+              className="group relative flex items-center justify-center w-24 sm:w-28 h-16 sm:h-20"
             >
               <Image
                 src={org.logo}
                 alt={org.name}
-                width={160}
-                height={60}
-                className="h-full w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                width={120}
+                height={80}
+                className="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
               />
             </div>
           ))}
