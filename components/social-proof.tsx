@@ -32,14 +32,14 @@ export function SocialProof() {
           {memberships.map((org) => (
             <div
               key={org.name}
-              className="group relative flex items-center justify-center w-24 sm:w-28 h-16 sm:h-20"
+              className="group relative flex items-center justify-center w-28 sm:w-32 h-12 sm:h-14"
             >
               <Image
                 src={org.logo}
                 alt={org.name}
-                width={120}
-                height={80}
-                className="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+                width={128}
+                height={56}
+                className="w-auto h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
               />
             </div>
           ))}
