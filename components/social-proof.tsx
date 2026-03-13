@@ -19,10 +19,6 @@ const memberships = [
     name: "Launchpad",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Launchpad-yndhgxgIjmMYxj4JL4wWrW8kmR5ELr.jpg",
   },
-  {
-    name: "Brook T. Smith Launchpad",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Brook%20t%20smith-A7FT4LZNHI7doie3LlCSkNF2hnY62g.png",
-  },
 ]
 
 export function SocialProof() {
