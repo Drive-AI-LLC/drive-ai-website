@@ -1,7 +1,6 @@
 "use client"
 
 import { Quote } from "lucide-react"
-import { Container } from "@/components/container"
 import {
   Carousel,
   CarouselContent,
@@ -58,7 +57,7 @@ const testimonials = [
 export function Testimonials() {
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-muted/20">
-      <Container>
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-20">
           <p className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-[0.2em] mb-4">
             Testimonials
@@ -98,7 +97,7 @@ export function Testimonials() {
             <CarouselNext className="-right-2 sm:-right-4 w-10 h-10 sm:w-12 sm:h-12" />
           </Carousel>
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

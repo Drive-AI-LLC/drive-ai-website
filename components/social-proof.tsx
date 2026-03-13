@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { Container } from "@/components/container"
 
 const memberships = [
   {
@@ -25,7 +24,7 @@ const memberships = [
 export function SocialProof() {
   return (
     <section className="py-8 sm:py-10 bg-muted/20 border-y border-border/40">
-      <Container>
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <p className="text-center text-xs sm:text-sm font-medium text-muted-foreground/80 uppercase tracking-[0.2em] mb-6 sm:mb-7">
           Members of
         </p>
@@ -45,7 +44,7 @@ export function SocialProof() {
             </div>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

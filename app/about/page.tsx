@@ -1,5 +1,4 @@
 import { Metadata } from "next"
-import Image from "next/image"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Testimonials } from "@/components/testimonials"
@@ -58,36 +57,12 @@ export default function AboutPage() {
                 We believe that every business, regardless of size, should have access to the efficiency gains that AI can provide. Our mission is to make that a reality through practical, affordable solutions that deliver real results.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 gap-8">
-              <div className="text-center">
-                <div className="mb-6 overflow-hidden rounded-2xl bg-muted/30">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Danika%20-%20White-5qoPP8VW6Z86BdEo2ZpcFl5OPtZM2l.png"
-                    alt="Danika"
-                    width={320}
-                    height={400}
-                    className="w-full h-auto object-cover"
-                  />
+            <div className="bg-muted/50 rounded-2xl p-8 lg:p-12 border border-border">
+              <div className="aspect-square bg-background rounded-xl flex items-center justify-center">
+                <div className="text-center">
+                  <p className="text-6xl font-bold text-primary font-serif">2</p>
+                  <p className="text-muted-foreground mt-2">Founders</p>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground font-serif">
-                  Danika
-                </h3>
-                <p className="text-muted-foreground mt-2">Co-founder</p>
-              </div>
-              <div className="text-center">
-                <div className="mb-6 overflow-hidden rounded-2xl bg-muted/30">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Reid%20-%20White.png-H0Oc1dEGDXUgndkKTKlQohE7FodTQN.jpeg"
-                    alt="Reid"
-                    width={320}
-                    height={400}
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground font-serif">
-                  Reid
-                </h3>
-                <p className="text-muted-foreground mt-2">Co-founder</p>
               </div>
             </div>
           </div>

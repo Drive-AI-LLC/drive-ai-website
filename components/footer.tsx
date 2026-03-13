@@ -1,7 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Linkedin, Instagram, Facebook } from "lucide-react"
-import { Container } from "@/components/container"
 
 const navigation = {
   main: [
@@ -22,7 +21,7 @@ const navigation = {
 export function Footer() {
   return (
     <footer className="bg-[#1e2a38] text-white">
-      <Container className="py-14 lg:py-16">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Brand */}
           <div className="lg:col-span-2">
@@ -81,7 +80,7 @@ export function Footer() {
             © {new Date().getFullYear()} Drive AI. All rights reserved.
           </p>
         </div>
-      </Container>
+      </div>
     </footer>
   )
 }

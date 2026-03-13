@@ -1,5 +1,4 @@
 import { Clock, Unplug, RefreshCw } from "lucide-react"
-import { Container } from "@/components/container"
 
 const problems = [
   {
@@ -22,7 +21,7 @@ const problems = [
 export function ProblemSection() {
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-background">
-      <Container>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-tight text-balance font-serif">
             Small businesses are wasting hours on manual work.
@@ -53,7 +52,7 @@ export function ProblemSection() {
             Modern AI and automation tools can handle these tasks for you—freeing up your team to focus on what actually grows your business.
           </p>
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

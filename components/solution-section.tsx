@@ -1,5 +1,4 @@
 import { Workflow, Sparkles, Lightbulb } from "lucide-react"
-import { Container } from "@/components/container"
 
 const solutions = [
   {
@@ -22,7 +21,7 @@ const solutions = [
 export function SolutionSection() {
   return (
     <section id="services" className="py-12 sm:py-16 lg:py-20 bg-background">
-      <Container>
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.025em] text-balance font-serif leading-[1.15]">
             Drive AI helps businesses save time.
@@ -50,7 +49,7 @@ export function SolutionSection() {
             </div>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   )
 }
