@@ -23,16 +23,16 @@ const memberships = [
 
 export function SocialProof() {
   return (
-    <section className="py-12 sm:py-16 bg-muted/20 border-y border-border/40">
+    <section className="py-8 sm:py-10 bg-muted/20 border-y border-border/40">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-        <p className="text-center text-xs sm:text-sm font-medium text-muted-foreground/80 uppercase tracking-[0.2em] mb-8 sm:mb-10">
+        <p className="text-center text-xs sm:text-sm font-medium text-muted-foreground/80 uppercase tracking-[0.2em] mb-6 sm:mb-7">
           Members of
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-x-8 sm:gap-x-12 lg:gap-x-14 gap-y-6 sm:gap-y-8">
+        <div className="flex flex-wrap justify-center items-center gap-x-6 sm:gap-x-10 lg:gap-x-12 gap-y-4 sm:gap-y-5">
           {memberships.map((org) => (
             <div
               key={org.name}
-              className="group relative flex items-center justify-center w-28 sm:w-32 h-12 sm:h-14"
+              className="group relative flex items-center justify-center w-24 sm:w-28 h-10 sm:h-12"
             >
               <Image
                 src={org.logo}
