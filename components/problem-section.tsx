@@ -1,4 +1,5 @@
 import { Clock, Unplug, RefreshCw } from "lucide-react"
+import { Container } from "@/components/container"
 
 const problems = [
   {
@@ -21,7 +22,7 @@ const problems = [
 export function ProblemSection() {
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container>
         <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-tight text-balance font-serif">
             Small businesses are wasting hours on manual work.
@@ -36,7 +37,7 @@ export function ProblemSection() {
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <problem.icon className="w-6 h-6 text-primary" />
-              </div>
+      </Container>
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 {problem.title}
               </h3>
