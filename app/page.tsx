@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
+import { SocialProof } from "@/components/social-proof"
 import { ProblemSection } from "@/components/problem-section"
 import { SolutionSection } from "@/components/solution-section"
 import { HowItWorks } from "@/components/how-it-works"
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <SocialProof />
       <ProblemSection />
       <SolutionSection />
       <HowItWorks />
