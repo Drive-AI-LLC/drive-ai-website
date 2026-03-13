@@ -1,11 +1,28 @@
 "use client"
 
+import Image from "next/image"
+
 const memberships = [
-  { name: "Clemson Area Chamber" },
-  { name: "Oconee Chamber" },
-  { name: "Easley Chamber" },
-  { name: "Launchpad TV" },
-  { name: "Brook T. Smith Launchpad" },
+  {
+    name: "Clemson Area Chamber",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Clemson%20Area%20Chamber%20of%20Commerce-LYwC4VuqEuBWQjJdttfPWefNECYJow.png",
+  },
+  {
+    name: "Oconee Chamber",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Oconee%20Chamber%20of%20Commerce-zItwtjQxjyIfXp8xpLWaHDUwYxf25d.png",
+  },
+  {
+    name: "Easley Chamber",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Easely%20Chamber%20of%20Commerce-QU4uyhAPbwiV0euo18jb07oyZBmMTc.png",
+  },
+  {
+    name: "Launchpad",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Launchpad-yndhgxgIjmMYxj4JL4wWrW8kmR5ELr.jpg",
+  },
+  {
+    name: "Brook T. Smith Launchpad",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Brook%20t%20smith-hWylcdvv8cNgkbrk619H1UiYnX6TLP.png",
+  },
 ]
 
 export function SocialProof() {
@@ -15,15 +32,19 @@ export function SocialProof() {
         <p className="text-center text-xs sm:text-sm font-medium text-muted-foreground/80 uppercase tracking-[0.2em] mb-8 sm:mb-10">
           Members of
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-x-8 sm:gap-x-12 lg:gap-x-16 gap-y-4 sm:gap-y-6">
+        <div className="flex flex-wrap justify-center items-center gap-x-8 sm:gap-x-12 lg:gap-x-14 gap-y-6 sm:gap-y-8">
           {memberships.map((org) => (
             <div
               key={org.name}
-              className="group relative flex items-center justify-center"
+              className="group relative flex items-center justify-center h-12 sm:h-14"
             >
-              <span className="text-xs sm:text-sm text-muted-foreground/60 font-medium tracking-wide group-hover:text-foreground transition-colors duration-300">
-                {org.name}
-              </span>
+              <Image
+                src={org.logo}
+                alt={org.name}
+                width={160}
+                height={60}
+                className="h-full w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0"
+              />
             </div>
           ))}
         </div>
