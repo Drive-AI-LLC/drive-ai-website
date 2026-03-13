@@ -20,7 +20,7 @@ const solutions = [
 
 export function SolutionSection() {
   return (
-    <section id="services" className="py-20 sm:py-28 lg:py-36 bg-background">
+    <section id="services" className="py-12 sm:py-16 lg:py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.025em] text-balance font-serif leading-[1.15]">
