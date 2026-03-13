@@ -40,7 +40,7 @@ export function SolutionSection() {
             >
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-primary flex items-center justify-center mb-6 sm:mb-8">
                 <solution.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
-      </Container>
+              </div>
               <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 sm:mb-4 tracking-[-0.01em]">
                 {solution.title}
               </h3>
@@ -50,7 +50,7 @@ export function SolutionSection() {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

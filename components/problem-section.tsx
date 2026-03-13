@@ -37,7 +37,7 @@ export function ProblemSection() {
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <problem.icon className="w-6 h-6 text-primary" />
-      </Container>
+              </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 {problem.title}
               </h3>
@@ -53,7 +53,7 @@ export function ProblemSection() {
             Modern AI and automation tools can handle these tasks for you—freeing up your team to focus on what actually grows your business.
           </p>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

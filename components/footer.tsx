@@ -72,7 +72,7 @@ export function Footer() {
                   <item.icon className="w-5 h-5 text-white" />
                 </Link>
               ))}
-      </Container>
+            </div>
           </div>
         </div>
 
@@ -81,7 +81,7 @@ export function Footer() {
             © {new Date().getFullYear()} Drive AI. All rights reserved.
           </p>
         </div>
-      </div>
+      </Container>
     </footer>
   )
 }

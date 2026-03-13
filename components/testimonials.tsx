@@ -89,7 +89,7 @@ export function Testimonials() {
                       <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 sm:mt-1">
                         {testimonial.title}, {testimonial.company}
                       </p>
-      </Container>
+                    </div>
                   </div>
                 </CarouselItem>
               ))}
@@ -98,7 +98,7 @@ export function Testimonials() {
             <CarouselNext className="-right-2 sm:-right-4 w-10 h-10 sm:w-12 sm:h-12" />
           </Carousel>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

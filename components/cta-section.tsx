@@ -21,9 +21,9 @@ export function CTASection() {
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
-      </Container>
+          </div>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }
