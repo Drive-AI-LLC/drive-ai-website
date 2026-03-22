@@ -44,7 +44,7 @@ export function ProblemSection() {
 
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Modern AI and automation tools can handle these tasks for you—freeing up your team to focus on what actually grows your business.
+            Artificial intelligence and automation tools can handle these tasks for you, allowing your team to focus on what actually matters.
           </p>
         </div>
       </div>
