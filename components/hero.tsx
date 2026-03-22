@@ -171,11 +171,6 @@ export function Hero() {
               </Link>
             </Button>
           </div>
-
-          {/* Credibility line */}
-          <p className="text-sm text-muted-foreground/60 tracking-wide">
-            Helping businesses automate smarter.
-          </p>
         </div>
       </div>
 
