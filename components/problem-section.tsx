@@ -11,11 +11,6 @@ const problems = [
     title: "Disconnected Software Tools",
     description: "Information trapped in separate systems, requiring manual copy-paste between applications.",
   },
-  {
-    icon: Clock,
-    title: "Wasted Time on Manual Processes",
-    description: "Valuable team hours spent on tasks that machines could handle faster and more accurately.",
-  },
 ]
 
 export function ProblemSection() {
@@ -28,7 +23,7 @@ export function ProblemSection() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12 lg:mb-16">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12 lg:mb-16">
           {problems.map((problem, index) => (
             <div
               key={index}
