@@ -19,72 +19,67 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border/40">
-      <nav className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/96 backdrop-blur-md border-b border-border/30">
+      <nav className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-18">
+          <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/images/logo.png"
               alt="Drive AI"
-              width={140}
-              height={52}
-              className="h-8 sm:h-9 w-auto"
+              width={120}
+              height={44}
+              className="h-7 sm:h-8 w-auto"
               priority
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8 xl:gap-10">
+          <div className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-150 text-sm"
               >
                 {link.label}
               </Link>
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button asChild className="rounded-full px-5 h-10">
-              <Link href="/contact">Schedule a Consultation</Link>
+            <Button asChild className="rounded-full px-5 h-9 text-sm">
+              <Link href="/contact">Schedule a Call</Link>
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 -mr-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className="w-6 h-6 text-foreground" />
+              <X className="w-5 h-5 text-foreground" />
             ) : (
-              <Menu className="w-6 h-6 text-foreground" />
+              <Menu className="w-5 h-5 text-foreground" />
             )}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 sm:py-6 border-t border-border/40">
-            <div className="flex flex-col gap-1">
+          <div className="lg:hidden py-4 border-t border-border/30">
+            <div className="flex flex-col gap-0.5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors text-base font-medium py-2.5 sm:py-3 px-3 rounded-lg"
+                  className="text-muted-foreground hover:text-foreground hover:bg-muted/40 transition-colors text-sm font-medium py-2.5 px-3 rounded-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Button asChild className="mt-3 sm:mt-4 rounded-full">
+              <Button asChild className="mt-3 rounded-full text-sm h-10">
                 <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                  Schedule a Consultation
+                  Schedule a Call
                 </Link>
               </Button>
             </div>

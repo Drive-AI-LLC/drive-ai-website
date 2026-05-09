@@ -1,84 +1,64 @@
-import { ClipboardList, Phone, FileText, CheckCircle, Rocket } from "lucide-react"
-
 const steps = [
   {
-    icon: ClipboardList,
     step: "01",
     title: "Pre-Discovery Survey",
-    description: "A short questionnaire identifies where AI can save you time and money.",
+    description: "A short questionnaire helps us understand where your operation loses time and revenue before we speak.",
   },
   {
-    icon: Phone,
     step: "02",
-    title: "Free Discovery Call",
-    description: "We review your workflows and identify high-impact opportunities.",
+    title: "Discovery Call",
+    description: "We map your current workflow, identify friction points, and confirm whether a system makes sense.",
   },
   {
-    icon: FileText,
     step: "03",
-    title: "Proposal & Check-In",
-    description: "We present a clear plan outlining the solution, process, and investment.",
+    title: "Proposal",
+    description: "A clear scope covering what gets built, how it integrates, and what you can expect in return.",
   },
   {
-    icon: CheckCircle,
     step: "04",
-    title: "Approval & Onboarding",
-    description: "Once approved, we finalize paperwork and prepare for implementation.",
+    title: "Build & Onboarding",
+    description: "We implement the system, train your team, and stay close through the handoff.",
   },
   {
-    icon: Rocket,
     step: "05",
-    title: "Project Kickoff",
-    description: "We begin implementation and provide updates every step of the way.",
+    title: "Live & Supported",
+    description: "Your system runs. We monitor, adjust, and remain available as your operation evolves.",
   },
 ]
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-12 sm:py-16 lg:py-20 bg-muted/20">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-20">
-          <p className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-[0.2em] mb-4">
-            How It Works
-          </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.025em] font-serif leading-[1.15]">
+    <section id="how-it-works" className="py-12 sm:py-16 lg:py-20 bg-background border-t border-border/40">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
+
+        <div className="max-w-xl mb-10 lg:mb-14">
+          <p className="text-[11px] font-semibold text-primary uppercase tracking-[0.25em] mb-3">
             Our Process
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-[-0.025em] font-serif leading-[1.1]">
+            How we work with you.
           </h2>
         </div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Horizontal connector line - desktop only */}
-          <div className="hidden lg:block absolute top-[3.5rem] left-[10%] right-[10%] h-px bg-border/60" />
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-6">
-            {steps.map((item, index) => (
-              <div key={index} className="relative">
-                <div className="flex flex-col items-center text-center">
-                  {/* Step circle */}
-                  <div className="relative z-10 w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-background border border-border/60 flex items-center justify-center mb-6 sm:mb-8 shadow-sm">
-                    <item.icon className="w-10 h-10 sm:w-12 sm:h-12 text-primary" />
-                  </div>
-                  
-                  {/* Step number */}
-                  <div className="text-[10px] sm:text-xs font-semibold text-primary mb-2 sm:mb-3 uppercase tracking-[0.2em]">
-                    Step {item.step}
-                  </div>
-                  
-                  {/* Title */}
-                  <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 sm:mb-3 tracking-[-0.01em]">
-                    {item.title}
-                  </h3>
-                  
-                  {/* Description */}
-                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-[180px] sm:max-w-[200px]">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 border border-border/40 rounded-xl overflow-hidden">
+          {steps.map((item, index) => (
+            <div
+              key={index}
+              className="relative p-6 border-b border-r border-border/40 last:border-b-0 sm:[&:nth-child(odd)]:border-r lg:border-b-0 lg:[&:nth-child(5)]:border-r-0 hover:bg-muted/20 transition-colors duration-200"
+            >
+              <span className="text-[10px] font-mono font-semibold text-primary/40 tracking-widest block mb-3">
+                {item.step}
+              </span>
+              <h3 className="text-sm font-semibold text-foreground mb-2 tracking-[-0.01em]">
+                {item.title}
+              </h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
+
       </div>
     </section>
   )
