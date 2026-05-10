@@ -52,7 +52,7 @@ export default function ServicesPage() {
             Our Systems
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-[-0.03em] leading-[1.08] font-serif mb-5 max-w-3xl">
-            Three systems. Measurable outcomes.
+            Explore our systems.
           </h1>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
             Purpose-built automation for roofing operations. Each system solves a specific revenue leak — so you can grow without adding headcount.

@@ -27,7 +27,7 @@ export function SolutionSection() {
         <div className="mb-16">
           <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">Our Systems</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
-            Three systems. Measurable outcomes.
+            Revenue-generating systems for roofing.
           </h2>
         </div>
 

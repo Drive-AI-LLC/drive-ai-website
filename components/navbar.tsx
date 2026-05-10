@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
@@ -15,6 +16,7 @@ const navLinks = [
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/96 backdrop-blur-md border-b border-border/30">
@@ -32,15 +34,22 @@ export function Navbar() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-7">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-150 text-sm"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative text-sm transition-colors duration-150 pb-0.5 ${
+                    isActive
+                      ? "text-foreground font-medium after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-primary after:rounded-full"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
           </div>
 
           <div className="hidden lg:block">
@@ -65,16 +74,23 @@ export function Navbar() {
         {isMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border/30">
             <div className="flex flex-col gap-0.5">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-foreground hover:bg-muted/40 transition-colors text-sm font-medium py-2.5 px-3 rounded-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`text-sm font-medium py-2.5 px-3 rounded-lg transition-colors ${
+                      isActive
+                        ? "text-foreground bg-muted/60"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              })}
               <Button asChild className="mt-3 rounded-full text-sm h-10">
                 <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                   Book a Call
