@@ -27,7 +27,7 @@ export function WhyDriveAI() {
               key={index}
               className={`p-6 sm:p-8 ${index < 2 ? "sm:border-b sm:border-border/30" : ""} ${index % 2 === 0 ? "sm:border-r sm:border-border/30" : ""}`}
             >
-              <h3 className="text-sm font-semibold text-foreground mb-1.5 tracking-[-0.01em]">
+              <h3 className="text-base font-semibold text-foreground mb-1.5 tracking-[-0.02em] font-serif">
                 {item.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">

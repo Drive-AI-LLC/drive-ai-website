@@ -1,124 +1,122 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
+const systemStatus = [
+  { system: "Supplement Recovery", status: "Active", note: "14 claims in review" },
+  { system: "Storm Outreach", status: "Standby", note: "Trigger: hail event" },
+  { system: "Production Coord.", status: "Active", note: "9 jobs in pipeline" },
+]
+
 export function Hero() {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    const container = containerRef.current
-    if (!canvas || !container) return
-    const ctx = canvas.getContext("2d")
-    if (!ctx) return
-
-    let animationId: number
-    let nodes: { x: number; y: number; vx: number; vy: number; radius: number; baseX: number; baseY: number }[] = []
-
-    const resize = () => {
-      const rect = container.getBoundingClientRect()
-      canvas.width = rect.width * window.devicePixelRatio
-      canvas.height = rect.height * window.devicePixelRatio
-      ctx.scale(window.devicePixelRatio, window.devicePixelRatio)
-    }
-
-    const initNodes = () => {
-      nodes = []
-      const rect = container.getBoundingClientRect()
-      for (let i = 0; i < 10; i++) {
-        const x = Math.random() * rect.width
-        const y = Math.random() * rect.height
-        nodes.push({ x, y, baseX: x, baseY: y, vx: 0, vy: 0, radius: Math.random() * 0.8 + 0.4 })
-      }
-    }
-
-    const animate = () => {
-      const rect = container.getBoundingClientRect()
-      ctx.clearRect(0, 0, rect.width, rect.height)
-
-      nodes.forEach((node, i) => {
-        node.vx += (node.baseX - node.x) * 0.003
-        node.vy += (node.baseY - node.y) * 0.003
-        node.x += node.vx
-        node.y += node.vy
-        node.vx *= 0.92
-        node.vy *= 0.92
-
-        nodes.slice(i + 1).forEach((other) => {
-          const ddx = other.x - node.x
-          const ddy = other.y - node.y
-          const d = Math.sqrt(ddx * ddx + ddy * ddy)
-          if (d < 150) {
-            ctx.beginPath()
-            ctx.moveTo(node.x, node.y)
-            ctx.lineTo(other.x, other.y)
-            ctx.strokeStyle = `rgba(0, 86, 59, ${0.02 * (1 - d / 150)})`
-            ctx.lineWidth = 0.4
-            ctx.stroke()
-          }
-        })
-
-        ctx.beginPath()
-        ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2)
-        ctx.fillStyle = "rgba(0, 86, 59, 0.07)"
-        ctx.fill()
-      })
-
-      animationId = requestAnimationFrame(animate)
-    }
-
-    resize()
-    initNodes()
-    animate()
-
-    const onResize = () => { resize(); initNodes() }
-    window.addEventListener("resize", onResize)
-
-    return () => {
-      cancelAnimationFrame(animationId)
-      window.removeEventListener("resize", onResize)
-    }
-  }, [])
-
   return (
-    <section
-      ref={containerRef}
-      className="relative min-h-[100svh] flex items-center overflow-hidden bg-background pt-24 sm:pt-28 pb-20 sm:pb-24"
-    >
-      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
-
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-background pt-24 sm:pt-28 pb-20 sm:pb-24">
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="max-w-2xl space-y-8">
-          <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em]">
-            Drive AI &mdash; Roofing Operations
-          </p>
+        <div className="grid lg:grid-cols-[1fr_420px] gap-16 lg:gap-20 items-center">
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-foreground leading-[1.02] tracking-[-0.035em] font-serif">
-            Revenue systems<br />
-            <span className="text-primary">built for roofers.</span>
-          </h1>
+          {/* Left: Headline */}
+          <div className="space-y-8">
+            <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em]">
+              Drive AI &mdash; Roofing Operations
+            </p>
 
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-lg">
-            Supplement recovery. Storm outreach. Production coordination. Systems that run without adding headcount.
-          </p>
+            <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold text-foreground leading-[0.95] tracking-[-0.04em] font-serif">
+              Revenue<br />
+              systems<br />
+              <span className="text-primary">for roofers.</span>
+            </h1>
 
-          <div className="flex flex-col sm:flex-row gap-3 pt-1">
-            <Button asChild size="lg" className="h-11 text-sm px-7 rounded-full shadow-sm transition-all duration-200">
-              <Link href="/contact">
-                Schedule a Call
-                <ArrowRight className="ml-2 w-3.5 h-3.5" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="h-11 text-sm px-7 rounded-full transition-all duration-200">
-              <Link href="/services">
-                View Solutions
-              </Link>
-            </Button>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md">
+              Supplement recovery. Storm outreach. Production coordination. Systems that run without adding headcount.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 pt-1">
+              <Button asChild size="lg" className="h-11 text-sm px-7 rounded-full shadow-sm transition-all duration-200">
+                <Link href="/contact">
+                  Schedule a Call
+                  <ArrowRight className="ml-2 w-3.5 h-3.5" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="h-11 text-sm px-7 rounded-full transition-all duration-200">
+                <Link href="/services">
+                  View Solutions
+                </Link>
+              </Button>
+            </div>
           </div>
+
+          {/* Right: Operational status panel */}
+          <div className="hidden lg:block">
+            <div className="border border-border/50 bg-background">
+              {/* Panel header */}
+              <div className="flex items-center justify-between px-5 py-3.5 border-b border-border/50">
+                <span className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-[0.2em]">
+                  Operations Dashboard
+                </span>
+                <span className="flex items-center gap-1.5 text-[10px] font-mono text-primary/60">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                  Live
+                </span>
+              </div>
+
+              {/* System rows */}
+              {systemStatus.map((row, i) => (
+                <div
+                  key={row.system}
+                  className={`flex items-center justify-between px-5 py-4 ${i < systemStatus.length - 1 ? "border-b border-border/30" : ""}`}
+                >
+                  <div>
+                    <p className="text-[11px] font-semibold text-foreground tracking-[-0.01em]">{row.system}</p>
+                    <p className="text-[10px] text-muted-foreground/60 mt-0.5 font-mono">{row.note}</p>
+                  </div>
+                  <span className={`text-[10px] font-semibold uppercase tracking-[0.15em] px-2.5 py-1 ${
+                    row.status === "Active"
+                      ? "text-primary bg-primary/8"
+                      : "text-muted-foreground/50 bg-muted/50"
+                  }`}>
+                    {row.status}
+                  </span>
+                </div>
+              ))}
+
+              {/* Supplement detail */}
+              <div className="border-t border-border/50 px-5 py-4 bg-muted/20">
+                <p className="text-[10px] font-mono text-muted-foreground/50 uppercase tracking-[0.15em] mb-3">Supplement Pipeline</p>
+                <div className="space-y-2">
+                  {[
+                    { label: "Claims submitted", value: "14" },
+                    { label: "Avg. supplement delta", value: "$4,200" },
+                    { label: "Recovery rate", value: "91%" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="flex items-center justify-between">
+                      <span className="text-[11px] text-muted-foreground/70">{stat.label}</span>
+                      <span className="text-[11px] font-semibold text-foreground font-mono">{stat.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Storm trigger row */}
+              <div className="border-t border-border/50 px-5 py-4">
+                <p className="text-[10px] font-mono text-muted-foreground/50 uppercase tracking-[0.15em] mb-3">Storm Response</p>
+                <div className="space-y-2">
+                  {[
+                    { label: "Monitored zip codes", value: "340" },
+                    { label: "Outreach sequences", value: "3 active" },
+                    { label: "Avg. response time", value: "< 2 hrs" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="flex items-center justify-between">
+                      <span className="text-[11px] text-muted-foreground/70">{stat.label}</span>
+                      <span className="text-[11px] font-semibold text-foreground font-mono">{stat.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

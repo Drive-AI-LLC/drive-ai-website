@@ -28,7 +28,7 @@ export function HowItWorks() {
               <span className="text-[10px] font-mono text-primary/40 tracking-[0.2em] block mb-3">
                 {item.step}
               </span>
-              <h3 className="text-sm font-semibold text-foreground mb-1.5 tracking-[-0.01em] leading-snug">
+              <h3 className="text-sm font-semibold text-foreground mb-1.5 tracking-[-0.01em] leading-snug font-serif">
                 {item.title}
               </h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
