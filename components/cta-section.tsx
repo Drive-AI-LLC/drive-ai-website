@@ -26,7 +26,7 @@ export function CTASection() {
             <div className="shrink-0">
               <Button asChild size="lg" variant="secondary" className="h-11 text-sm px-7 rounded-full shadow-sm whitespace-nowrap">
                 <Link href="/contact">
-                  Schedule a Call
+                  Book a Call
                   <ArrowRight className="ml-2 w-3.5 h-3.5" />
                 </Link>
               </Button>

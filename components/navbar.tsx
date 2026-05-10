@@ -12,7 +12,6 @@ const navLinks = [
   { href: "/case-studies", label: "Case Studies" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Book a Call" },
 ]
 
 export function Navbar() {
@@ -47,7 +46,7 @@ export function Navbar() {
 
           <div className="hidden lg:block">
             <Button asChild className="rounded-full px-5 h-9 text-sm">
-              <Link href="/contact">Schedule a Call</Link>
+              <Link href="/contact">Book a Call</Link>
             </Button>
           </div>
 
@@ -79,7 +78,7 @@ export function Navbar() {
               ))}
               <Button asChild className="mt-3 rounded-full text-sm h-10">
                 <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                  Schedule a Call
+                  Book a Call
                 </Link>
               </Button>
             </div>
