@@ -1,9 +1,24 @@
 const steps = [
-  { step: "01", title: "Pre-Discovery Survey", description: "Short questionnaire. We learn where you lose time and revenue." },
-  { step: "02", title: "Discovery Call", description: "We map your workflow and identify the highest-impact opportunity." },
-  { step: "03", title: "Proposal", description: "Clear scope — what gets built, how it integrates, what to expect." },
-  { step: "04", title: "Build & Onboarding", description: "We implement, train your team, and stay close through the handoff." },
-  { step: "05", title: "Live & Supported", description: "Your system runs. We monitor and adjust as your operation grows." },
+  {
+    step: "01",
+    title: "Discovery Call",
+    description: "We map your workflow and identify the highest-impact opportunity.",
+  },
+  {
+    step: "02",
+    title: "Proposal",
+    description: "Clear scope — what gets built, how it integrates, and what to expect.",
+  },
+  {
+    step: "03",
+    title: "Build & Onboarding",
+    description: "We implement, train your team, and stay close through the handoff.",
+  },
+  {
+    step: "04",
+    title: "Live & Supported",
+    description: "Your system runs. We monitor and adjust as your operation grows.",
+  },
 ]
 
 export function HowItWorks() {
@@ -12,30 +27,34 @@ export function HowItWorks() {
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
 
         <div className="mb-14">
-          <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">Our Process</p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
+          <p className="text-[10px] font-semibold text-primary/70 uppercase tracking-[0.3em] mb-4">Our Process</p>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05] mb-5">
             How we work with you.
           </h2>
+          <p className="text-base text-muted-foreground">
+            A clear, proven process built to deliver real results.
+          </p>
         </div>
 
-        <div className="divide-y divide-border/40">
+        {/* 2x2 grid with hairline dividers */}
+        <div className="grid sm:grid-cols-2 border-t border-border/40">
           {steps.map((item, index) => (
             <div
               key={item.step}
-              className="animate-fade-up grid sm:grid-cols-[80px_1fr] lg:grid-cols-[120px_1fr] gap-4 py-8 first:pt-0 last:pb-0"
+              className={`animate-fade-up px-0 sm:px-10 py-12 border-b border-border/40 ${
+                index % 2 === 0 ? "sm:border-r sm:pl-0 sm:pr-12" : "sm:pr-0 sm:pl-12"
+              }`}
               style={{ animationDelay: `${index * 70}ms` }}
             >
-              <span className="text-3xl sm:text-4xl font-bold text-primary/20 font-serif tracking-[-0.04em] leading-none pt-1">
+              <span className="block text-6xl sm:text-7xl font-bold text-primary/40 font-serif tracking-[-0.04em] leading-none mb-6">
                 {item.step}
               </span>
-              <div>
-                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 tracking-[-0.02em] leading-snug font-serif">
-                  {item.title}
-                </h3>
-                <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
-                  {item.description}
-                </p>
-              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3 tracking-[-0.02em] font-serif">
+                {item.title}
+              </h3>
+              <p className="text-base text-muted-foreground leading-relaxed max-w-sm">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>
