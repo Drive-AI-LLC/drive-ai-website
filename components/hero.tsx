@@ -17,7 +17,8 @@ export function Hero() {
               className="animate-fade-up text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-[-0.04em] font-serif mb-6"
               style={{ animationDelay: "0ms" }}
             >
-              More money. More jobs.{" "}
+              More money.
+              <span className="block">More jobs.</span>
               <span className="block">
                 Built for{" "}
                 <span className="text-primary underline decoration-2 underline-offset-2">
