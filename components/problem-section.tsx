@@ -9,10 +9,10 @@ const leaks = [
 
 export function ProblemSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-muted/30 border-t border-border/40">
+    <section className="py-20 sm:py-24 lg:py-28 bg-muted/30 border-t border-border/40">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
 
-        <div className="mb-12">
+        <div className="mb-14">
           <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">The Problem</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05] max-w-xl">
             Where roofing companies lose revenue.
@@ -21,7 +21,11 @@ export function ProblemSection() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border/30 border border-border/30">
           {leaks.map((leak, index) => (
-            <div key={index} className="bg-background p-6 lg:p-7">
+            <div
+              key={index}
+              className="animate-fade-up bg-background p-6 lg:p-7 transition-transform duration-200 hover:-translate-y-0.5"
+              style={{ animationDelay: `${index * 60}ms` }}
+            >
               <h3 className="text-sm font-semibold text-foreground mb-1.5 tracking-[-0.01em]">
                 {leak.title}
               </h3>

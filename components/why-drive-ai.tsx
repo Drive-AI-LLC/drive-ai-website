@@ -7,10 +7,10 @@ const differentiators = [
 
 export function WhyDriveAI() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-background border-t border-border/40">
+    <section className="py-20 sm:py-24 lg:py-28 bg-background border-t border-border/40">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
 
-        <div className="mb-12">
+        <div className="mb-14">
           <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">Why Drive AI</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
             Focused on roofing. Focused on results.
@@ -21,9 +21,10 @@ export function WhyDriveAI() {
           {differentiators.map((item, index) => (
             <div
               key={index}
-              className={`p-6 sm:p-8 ${index < 2 ? "sm:border-b sm:border-border/30" : ""} ${index % 2 === 0 ? "sm:border-r sm:border-border/30" : ""}`}
+              className={`animate-fade-up p-6 sm:p-8 transition-transform duration-200 hover:-translate-y-0.5 ${index < 2 ? "sm:border-b sm:border-border/30" : ""} ${index % 2 === 0 ? "sm:border-r sm:border-border/30" : ""}`}
+              style={{ animationDelay: `${index * 70}ms` }}
             >
-              <h3 className="text-sm font-semibold text-foreground mb-1.5 tracking-[-0.01em]">
+              <h3 className="text-base font-semibold text-foreground mb-1.5 tracking-[-0.02em] font-serif">
                 {item.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
