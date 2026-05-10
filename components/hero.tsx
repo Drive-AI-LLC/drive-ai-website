@@ -5,7 +5,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
-function ParticleCanvas() {
+// Animated roofing job pipeline canvas
+function PipelineCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -17,21 +18,36 @@ function ParticleCanvas() {
     let animId: number
     let w = 0
     let h = 0
+    let t = 0
 
-    const PRIMARY = "52, 120, 90" // rgb approx of oklch(0.35 0.1 160)
+    // Brand primary approx rgb
+    const P = { r: 34, g: 85, b: 60 }
 
-    interface Particle {
-      x: number
-      y: number
-      vx: number
-      vy: number
-      r: number
+    const STAGES = ["Lead", "Supplement", "Approved", "Scheduled", "Complete"]
+    const NUM_JOBS = 7
+
+    interface Job {
+      id: number
+      progress: number // 0–1 across pipeline
+      speed: number
       opacity: number
+      yOffset: number
     }
 
-    const COUNT = 38
-    const CONNECT_DIST = 140
-    const particles: Particle[] = []
+    const jobs: Job[] = []
+
+    function init() {
+      jobs.length = 0
+      for (let i = 0; i < NUM_JOBS; i++) {
+        jobs.push({
+          id: i,
+          progress: Math.random(),
+          speed: 0.00018 + Math.random() * 0.00012,
+          opacity: 0.18 + Math.random() * 0.25,
+          yOffset: (Math.random() - 0.5) * 18,
+        })
+      }
+    }
 
     function resize() {
       w = canvas!.offsetWidth
@@ -41,71 +57,101 @@ function ParticleCanvas() {
       ctx!.scale(devicePixelRatio, devicePixelRatio)
     }
 
-    function spawn(): Particle {
-      return {
-        x: Math.random() * w,
-        y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.28,
-        vy: (Math.random() - 0.5) * 0.28,
-        r: Math.random() * 1.6 + 0.8,
-        opacity: Math.random() * 0.4 + 0.15,
-      }
-    }
-
-    function init() {
-      particles.length = 0
-      for (let i = 0; i < COUNT; i++) particles.push(spawn())
-    }
-
     function draw() {
       ctx!.clearRect(0, 0, w, h)
 
-      // Draw edges
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const a = particles[i]
-          const b = particles[j]
-          const dx = a.x - b.x
-          const dy = a.y - b.y
-          const dist = Math.sqrt(dx * dx + dy * dy)
-          if (dist < CONNECT_DIST) {
-            const edgeOpacity = (1 - dist / CONNECT_DIST) * 0.12
-            ctx!.beginPath()
-            ctx!.strokeStyle = `rgba(${PRIMARY}, ${edgeOpacity})`
-            ctx!.lineWidth = 0.6
-            ctx!.moveTo(a.x, a.y)
-            ctx!.lineTo(b.x, b.y)
-            ctx!.stroke()
-          }
-        }
-      }
+      const padX = w * 0.08
+      const lineY = h * 0.56
+      const lineW = w - padX * 2
 
-      // Draw nodes
-      for (const p of particles) {
+      // Stage node positions
+      const nodeXs = STAGES.map((_, i) => padX + (i / (STAGES.length - 1)) * lineW)
+
+      // Main pipeline line
+      ctx!.beginPath()
+      ctx!.strokeStyle = `rgba(${P.r},${P.g},${P.b},0.10)`
+      ctx!.lineWidth = 1
+      ctx!.moveTo(padX, lineY)
+      ctx!.lineTo(padX + lineW, lineY)
+      ctx!.stroke()
+
+      // Animated progress fill — slow crawl from left
+      const fillProgress = ((Math.sin(t * 0.0003) + 1) / 2) * 0.85 + 0.1
+      const grad = ctx!.createLinearGradient(padX, 0, padX + lineW, 0)
+      grad.addColorStop(0, `rgba(${P.r},${P.g},${P.b},0.40)`)
+      grad.addColorStop(fillProgress, `rgba(${P.r},${P.g},${P.b},0.22)`)
+      grad.addColorStop(Math.min(fillProgress + 0.05, 1), `rgba(${P.r},${P.g},${P.b},0)`)
+      ctx!.beginPath()
+      ctx!.strokeStyle = grad
+      ctx!.lineWidth = 1.5
+      ctx!.moveTo(padX, lineY)
+      ctx!.lineTo(padX + lineW * fillProgress, lineY)
+      ctx!.stroke()
+
+      // Stage nodes
+      nodeXs.forEach((nx, i) => {
+        const stageProgress = i / (STAGES.length - 1)
+        const active = stageProgress <= fillProgress
+        const nodeOpacity = active ? 0.55 : 0.18
+
+        // Outer ring
         ctx!.beginPath()
-        ctx!.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-        ctx!.fillStyle = `rgba(${PRIMARY}, ${p.opacity})`
+        ctx!.arc(nx, lineY, 5.5, 0, Math.PI * 2)
+        ctx!.strokeStyle = `rgba(${P.r},${P.g},${P.b},${nodeOpacity * 0.5})`
+        ctx!.lineWidth = 1
+        ctx!.stroke()
+
+        // Inner dot
+        ctx!.beginPath()
+        ctx!.arc(nx, lineY, 2.5, 0, Math.PI * 2)
+        ctx!.fillStyle = `rgba(${P.r},${P.g},${P.b},${nodeOpacity})`
+        ctx!.fill()
+
+        // Stage label
+        ctx!.font = `500 10px 'Open Sans', system-ui, sans-serif`
+        ctx!.textAlign = "center"
+        ctx!.fillStyle = `rgba(${P.r},${P.g},${P.b},${active ? 0.45 : 0.18})`
+        ctx!.fillText(STAGES[i], nx, lineY + 20)
+      })
+
+      // Job markers — small circles moving along the pipeline
+      for (const job of jobs) {
+        const jx = padX + job.progress * lineW
+        const jy = lineY + job.yOffset
+
+        // Connecting dotted line to pipeline
+        ctx!.beginPath()
+        ctx!.setLineDash([2, 3])
+        ctx!.strokeStyle = `rgba(${P.r},${P.g},${P.b},${job.opacity * 0.3})`
+        ctx!.lineWidth = 0.5
+        ctx!.moveTo(jx, lineY)
+        ctx!.lineTo(jx, jy - 6)
+        ctx!.stroke()
+        ctx!.setLineDash([])
+
+        // Job dot
+        ctx!.beginPath()
+        ctx!.arc(jx, jy, 3, 0, Math.PI * 2)
+        ctx!.fillStyle = `rgba(${P.r},${P.g},${P.b},${job.opacity})`
         ctx!.fill()
       }
     }
 
     function tick() {
-      for (const p of particles) {
-        p.x += p.vx
-        p.y += p.vy
-        if (p.x < -10) p.x = w + 10
-        if (p.x > w + 10) p.x = -10
-        if (p.y < -10) p.y = h + 10
-        if (p.y > h + 10) p.y = -10
+      t++
+      for (const job of jobs) {
+        job.progress += job.speed
+        if (job.progress > 1.02) {
+          job.progress = -0.02
+          job.opacity = 0.18 + Math.random() * 0.25
+          job.yOffset = (Math.random() - 0.5) * 18
+        }
       }
       draw()
       animId = requestAnimationFrame(tick)
     }
 
-    const ro = new ResizeObserver(() => {
-      resize()
-      init()
-    })
+    const ro = new ResizeObserver(() => { resize(); init() })
     ro.observe(canvas)
     resize()
     init()
@@ -128,12 +174,11 @@ function ParticleCanvas() {
 
 export function Hero() {
   return (
-    <section className="relative min-h-[92svh] flex items-center bg-background pt-24 sm:pt-28 pb-20 sm:pb-24 overflow-hidden">
-      {/* Ambient particle field — fills the full hero */}
-      <ParticleCanvas />
+    <section className="relative min-h-[94svh] flex items-center bg-background pt-24 sm:pt-28 pb-20 sm:pb-24 overflow-hidden">
+      <PipelineCanvas />
 
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="max-w-2xl">
 
           <p
             className="animate-fade-up text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-8"
@@ -143,7 +188,7 @@ export function Hero() {
           </p>
 
           <h1
-            className="animate-fade-up text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground leading-[0.97] tracking-[-0.04em] font-serif mb-8"
+            className="animate-fade-up text-5xl sm:text-6xl lg:text-7xl xl:text-[84px] font-bold text-foreground leading-[0.95] tracking-[-0.04em] font-serif mb-8"
             style={{ animationDelay: "80ms" }}
           >
             Revenue systems<br />

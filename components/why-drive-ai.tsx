@@ -17,14 +17,18 @@ export function WhyDriveAI() {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 border border-border/30 divide-y divide-border/30 sm:divide-y-0">
+        <div className="grid sm:grid-cols-2 border border-border/30">
           {differentiators.map((item, index) => (
             <div
               key={index}
-              className={`animate-fade-up p-6 sm:p-8 transition-transform duration-200 hover:-translate-y-0.5 ${index < 2 ? "sm:border-b sm:border-border/30" : ""} ${index % 2 === 0 ? "sm:border-r sm:border-border/30" : ""}`}
+              className={`animate-fade-up p-7 sm:p-8 transition-colors duration-200 hover:bg-muted/25 group
+                ${index % 2 === 0 ? "sm:border-r border-border/30" : ""}
+                ${index < 2 ? "border-b border-border/30" : ""}
+              `}
               style={{ animationDelay: `${index * 70}ms` }}
             >
-              <h3 className="text-base font-semibold text-foreground mb-1.5 tracking-[-0.02em] font-serif">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary/50 mb-5" />
+              <h3 className="text-base font-semibold text-foreground mb-2 tracking-[-0.02em] font-serif">
                 {item.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
