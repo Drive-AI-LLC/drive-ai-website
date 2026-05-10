@@ -17,13 +17,12 @@ export function Hero() {
               className="animate-fade-up text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-[-0.04em] font-serif mb-6"
               style={{ animationDelay: "0ms" }}
             >
-              Revenue systems built for{" "}
-              <span className="relative inline-block text-primary">
-                roofing.
-                <span
-                  className="animate-draw-line absolute bottom-0 left-0 h-[2px] bg-primary/30"
-                  aria-hidden="true"
-                />
+              More money. More jobs.{" "}
+              <span className="block">
+                Built for{" "}
+                <span className="text-primary underline decoration-2 underline-offset-2">
+                  roofing.
+                </span>
               </span>
             </h1>
 
