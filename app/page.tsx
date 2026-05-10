@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { SocialProof } from "@/components/social-proof"
-import { ProblemSection } from "@/components/problem-section"
 import { SolutionSection } from "@/components/solution-section"
 import { HowItWorks } from "@/components/how-it-works"
 import { Testimonials } from "@/components/testimonials"
@@ -14,7 +13,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <SocialProof />
-      <ProblemSection />
       <SolutionSection />
       <HowItWorks />
       <Testimonials />

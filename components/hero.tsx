@@ -97,12 +97,11 @@ export function Hero() {
           {/* Left — copy */}
           <div>
             <h1
-              className="animate-fade-up text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[0.97] tracking-[-0.04em] font-serif mb-8"
+              className="animate-fade-up text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[0.97] tracking-[-0.04em] font-serif mb-8 max-w-[9ch]"
               style={{ animationDelay: "0ms" }}
             >
-              Revenue systems<br />
-              built for<br />
-              <span className="relative inline-block text-primary">
+              Revenue systems built for{" "}
+              <span className="relative inline-block text-primary whitespace-nowrap">
                 roofing.
                 <span
                   className="animate-draw-line absolute bottom-0 left-0 h-[2px] bg-primary/30"
@@ -115,8 +114,7 @@ export function Hero() {
               className="animate-fade-up text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md mb-10"
               style={{ animationDelay: "80ms" }}
             >
-              Supplement recovery. Storm outreach. Production coordination.
-              Systems that run without adding headcount.
+              Supplement recovery. Storm outreach. Systems that run without adding headcount.
             </p>
 
             <div

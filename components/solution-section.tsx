@@ -2,19 +2,19 @@ const solutions = [
   {
     tag: "Revenue Recovery",
     title: "Insurance Supplement System",
-    description: "Recover more on every claim without slowing production.",
+    description: "Most roofing companies leave money on the table with every claim. Our system finds line item gaps, cross-references Xactimate, and tracks supplements so nothing gets missed.",
     details: ["Line item gap analysis", "Xactimate cross-reference", "Supplement tracking"],
   },
   {
     tag: "Storm Response",
     title: "Storm Outreach System",
-    description: "Move fast when a storm hits — without dropping leads.",
+    description: "When a storm hits, speed wins. We automate targeted outreach to affected areas so your team is first on the door — without dropping existing leads.",
     details: ["Affected area targeting", "Automated follow-up", "Response tracking"],
   },
   {
     tag: "Production Operations",
     title: "Production Coordination System",
-    description: "Nothing stalls between signed contract and completed job.",
+    description: "Poor handoffs between sales and production cause delays, rework, and callbacks. Our system keeps every job moving from signed contract to completion with full visibility.",
     details: ["Sales-to-production handoff", "Crew scheduling", "Job status visibility"],
   },
 ]
