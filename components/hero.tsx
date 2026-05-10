@@ -21,11 +21,10 @@ export function Hero() {
     resize()
     window.addEventListener("resize", resize)
 
-    // --- House geometry (centered in canvas) ---
     const cx = () => canvas.width / 2
     const cy = () => canvas.height / 2
 
-    // Shingle fragments flying off the roof
+    // Shingle fragments
     interface Fragment {
       x: number; y: number
       vx: number; vy: number
@@ -38,22 +37,21 @@ export function Hero() {
     const spawnFragment = () => {
       const side = Math.random() < 0.5 ? -1 : 1
       const peakX = cx()
-      const peakY = cy() - 120
-      const roofW = 220
-      // random point on one slope of the roof
+      const peakY = cy() - 140
+      const roofW = 260
       const t = Math.random()
       const sx = peakX + side * t * (roofW / 2)
-      const sy = peakY + t * 120
+      const sy = peakY + t * 140
       fragments.push({
         x: sx, y: sy,
-        vx: side * (1.5 + Math.random() * 2.5),
+        vx: side * (2 + Math.random() * 3),
         vy: -(1 + Math.random() * 2.5),
         rotation: Math.random() * Math.PI * 2,
-        rotV: (Math.random() - 0.5) * 0.18,
+        rotV: (Math.random() - 0.5) * 0.2,
         life: 1,
-        maxLife: 80 + Math.random() * 60,
-        w: 14 + Math.random() * 14,
-        h: 4 + Math.random() * 4,
+        maxLife: 90 + Math.random() * 70,
+        w: 18 + Math.random() * 16,
+        h: 6 + Math.random() * 5,
       })
     }
 
@@ -63,10 +61,10 @@ export function Hero() {
 
     const spawnDrop = () => {
       drops.push({
-        x: cx() - 180 + Math.random() * 360,
-        y: cy() - 200 - Math.random() * 80,
-        vy: 6 + Math.random() * 3,
-        len: 12 + Math.random() * 10,
+        x: cx() - 220 + Math.random() * 440,
+        y: cy() - 260 - Math.random() * 100,
+        vy: 7 + Math.random() * 3.5,
+        len: 14 + Math.random() * 12,
         life: 1,
       })
     }
@@ -79,9 +77,9 @@ export function Hero() {
 
       const px = cx()
       const py = cy()
-      const roofW = 220
-      const roofH = 120
-      const wallH = 110
+      const roofW = 260
+      const roofH = 140
+      const wallH = 130
       const wallW = roofW
 
       const peakX = px
@@ -91,133 +89,165 @@ export function Hero() {
       const eaveY = py
       const groundY = py + wallH
 
-      const green = (a: number) => `rgba(22,163,74,${a})`
+      // Color scheme
+      const brickRed = "#C94C4C"
+      const darkRed = "#A63939"
+      const roofGray = "#4A5568"
+      const roofLight = "#6B7280"
+      const skyBlue = "#E3F2FD"
+      const rainGray = "#94A3B8"
+
+      // --- Background sky gradient ---
+      const grad = ctx.createLinearGradient(0, 0, 0, groundY + 60)
+      grad.addColorStop(0, skyBlue)
+      grad.addColorStop(1, "#F0F4F8")
+      ctx.fillStyle = grad
+      ctx.fillRect(0, 0, canvas.width, groundY + 60)
 
       // --- Rain ---
-      frame % 3 === 0 && drops.length < 24 && spawnDrop()
+      frame % 2 === 0 && drops.length < 32 && spawnDrop()
       for (let i = drops.length - 1; i >= 0; i--) {
         const d = drops[i]
-        ctx.strokeStyle = green(0.25 * d.life)
-        ctx.lineWidth = 1
+        ctx.strokeStyle = rainGray
+        ctx.globalAlpha = 0.4 * d.life
+        ctx.lineWidth = 2
+        ctx.lineCap = "round"
         ctx.beginPath()
         ctx.moveTo(d.x, d.y)
-        ctx.lineTo(d.x - 1, d.y + d.len)
+        ctx.lineTo(d.x - 2, d.y + d.len)
         ctx.stroke()
+        ctx.globalAlpha = 1
         d.y += d.vy
-        d.life -= 0.012
-        if (d.y > groundY + 20 || d.life <= 0) drops.splice(i, 1)
+        d.life -= 0.01
+        if (d.y > groundY + 30 || d.life <= 0) drops.splice(i, 1)
       }
 
-      // --- House body (walls) ---
-      ctx.strokeStyle = green(0.18)
+      // --- Brick walls ---
+      ctx.fillStyle = brickRed
+      ctx.fillRect(eaveL, eaveY, wallW, wallH)
+
+      // Brick pattern
+      ctx.strokeStyle = darkRed
+      ctx.lineWidth = 1
+      for (let row = 0; row < 5; row++) {
+        for (let col = 0; col < 6; col++) {
+          const bx = eaveL + col * 44
+          const by = eaveY + row * 26
+          ctx.strokeRect(bx, by, 44, 26)
+        }
+      }
+
+      // --- Door (brown) ---
+      const dw = 32, dh = 50
+      ctx.fillStyle = "#8B4513"
+      ctx.fillRect(px - dw / 2, groundY - dh, dw, dh)
+      ctx.fillStyle = "#FFD700"
+      ctx.beginPath()
+      ctx.arc(px + dw / 2 - 6, groundY - dh / 2, 3, 0, Math.PI * 2)
+      ctx.fill()
+
+      // --- Windows (light blue) ---
+      ctx.fillStyle = "#87CEEB"
+      const winSize = 28
+      ctx.fillRect(eaveL + 30, eaveY + 24, winSize, winSize)
+      ctx.fillRect(eaveR - 30 - winSize, eaveY + 24, winSize, winSize)
+      // Window frames
+      ctx.strokeStyle = "#333"
       ctx.lineWidth = 2
-      ctx.strokeRect(eaveL, eaveY, wallW, wallH)
+      ctx.strokeRect(eaveL + 30, eaveY + 24, winSize, winSize)
+      ctx.strokeRect(eaveR - 30 - winSize, eaveY + 24, winSize, winSize)
+      ctx.beginPath()
+      ctx.moveTo(eaveL + 30 + winSize / 2, eaveY + 24)
+      ctx.lineTo(eaveL + 30 + winSize / 2, eaveY + 24 + winSize)
+      ctx.stroke()
+      ctx.beginPath()
+      ctx.moveTo(eaveL + 30, eaveY + 24 + winSize / 2)
+      ctx.lineTo(eaveL + 30 + winSize, eaveY + 24 + winSize / 2)
+      ctx.stroke()
 
-      // Door
-      const dw = 24, dh = 38
-      ctx.strokeStyle = green(0.2)
-      ctx.strokeRect(px - dw / 2, groundY - dh, dw, dh)
-
-      // Windows
-      const winSize = 22
-      ctx.strokeStyle = green(0.18)
-      ctx.strokeRect(eaveL + 24, eaveY + 22, winSize, winSize)
-      ctx.strokeRect(eaveR - 24 - winSize, eaveY + 22, winSize, winSize)
-
-      // --- Roof slopes ---
-      ctx.strokeStyle = green(0.55)
-      ctx.lineWidth = 2.5
-      ctx.lineCap = "round"
-      ctx.lineJoin = "round"
-
-      // Left slope
+      // --- Roof (left slope, darker gray) ---
+      ctx.fillStyle = roofGray
       ctx.beginPath()
       ctx.moveTo(eaveL, eaveY)
       ctx.lineTo(peakX, peakY)
-      ctx.stroke()
+      ctx.lineTo(eaveL - 20, eaveY)
+      ctx.closePath()
+      ctx.fill()
 
-      // Right slope
+      // --- Roof (right slope) ---
+      ctx.fillStyle = roofLight
       ctx.beginPath()
       ctx.moveTo(eaveR, eaveY)
       ctx.lineTo(peakX, peakY)
-      ctx.stroke()
+      ctx.lineTo(eaveR + 20, eaveY)
+      ctx.closePath()
+      ctx.fill()
 
-      // Overhang (eave line) with slight extend
-      ctx.strokeStyle = green(0.35)
+      // --- Ridge cap (dark) ---
+      ctx.fillStyle = "#2D3748"
+      ctx.beginPath()
+      ctx.moveTo(peakX - 8, peakY)
+      ctx.lineTo(peakX + 8, peakY)
+      ctx.lineTo(peakX + 6, peakY - 6)
+      ctx.lineTo(peakX - 6, peakY - 6)
+      ctx.closePath()
+      ctx.fill()
+
+      // --- Roof shingles (light rows) ---
+      ctx.fillStyle = "#5A6B7A"
+      ctx.globalAlpha = 0.6
+      for (let r = 1; r <= 6; r++) {
+        const t = r / 7
+        const rowY = peakY + t * roofH
+        const rowXl = eaveL + t * 20
+        const rowXr = eaveR - t * 20
+
+        // Left slope shingles
+        for (let s = 0; s < 5; s++) {
+          const sx = rowXl + (s - 2) * 30
+          ctx.fillRect(sx, rowY, 28, 12)
+        }
+        // Right slope shingles
+        for (let s = 0; s < 5; s++) {
+          const sx = rowXr - (s - 2) * 30 - 28
+          ctx.fillRect(sx, rowY, 28, 12)
+        }
+      }
+      ctx.globalAlpha = 1
+
+      // --- Damage cracks on roof ---
+      ctx.strokeStyle = "rgba(0,0,0,0.25)"
       ctx.lineWidth = 2
+      ctx.setLineDash([4, 6])
+      ctx.lineCap = "round"
       ctx.beginPath()
-      ctx.moveTo(eaveL - 12, eaveY)
-      ctx.lineTo(eaveR + 12, eaveY)
-      ctx.stroke()
-
-      // Ridge cap
-      ctx.strokeStyle = green(0.5)
-      ctx.lineWidth = 3
-      ctx.beginPath()
-      ctx.moveTo(peakX - 6, peakY)
-      ctx.lineTo(peakX + 6, peakY)
-      ctx.stroke()
-
-      // Shingle rows (left slope)
-      ctx.strokeStyle = green(0.12)
-      ctx.lineWidth = 1
-      for (let r = 1; r <= 5; r++) {
-        const t = r / 6
-        const rowY = peakY + t * roofH
-        const rowXl = peakX - t * (roofW / 2)
-        const rowXr = peakX
-        ctx.beginPath()
-        ctx.moveTo(rowXl, rowY)
-        ctx.lineTo(rowXr - 4, rowY + 3)
-        ctx.stroke()
-      }
-      // Right slope
-      for (let r = 1; r <= 5; r++) {
-        const t = r / 6
-        const rowY = peakY + t * roofH
-        const rowXr = peakX + t * (roofW / 2)
-        const rowXl = peakX
-        ctx.beginPath()
-        ctx.moveTo(rowXr, rowY)
-        ctx.lineTo(rowXl + 4, rowY + 3)
-        ctx.stroke()
-      }
-
-      // --- Damage crack lines ---
-      ctx.strokeStyle = green(0.22)
-      ctx.lineWidth = 1
-      ctx.setLineDash([3, 4])
-      // Left slope crack
-      const crackT = 0.45
-      const crackX = peakX - crackT * (roofW / 2)
-      const crackY = peakY + crackT * roofH
-      ctx.beginPath()
-      ctx.moveTo(crackX, crackY)
-      ctx.lineTo(crackX - 14, crackY + 10)
-      ctx.lineTo(crackX - 8, crackY + 18)
+      ctx.moveTo(peakX - 40, peakY + 20)
+      ctx.lineTo(peakX - 60, peakY + 50)
+      ctx.lineTo(peakX - 45, peakY + 70)
       ctx.stroke()
       ctx.setLineDash([])
 
-      // --- Shingle fragments ---
-      frame % 50 === 0 && fragments.length < 14 && spawnFragment()
+      // --- Shingle fragments (flying off) ---
+      frame % 45 === 0 && fragments.length < 18 && spawnFragment()
       for (let i = fragments.length - 1; i >= 0; i--) {
         const f = fragments[i]
-        const alpha = (f.life) * 0.55
         ctx.save()
         ctx.translate(f.x, f.y)
         ctx.rotate(f.rotation)
-        ctx.strokeStyle = green(alpha)
-        ctx.fillStyle = green(alpha * 0.3)
-        ctx.lineWidth = 1
-        ctx.beginPath()
-        ctx.rect(-f.w / 2, -f.h / 2, f.w, f.h)
-        ctx.fill()
-        ctx.stroke()
+
+        ctx.fillStyle = roofGray
+        ctx.globalAlpha = f.life * 0.8
+        ctx.fillRect(-f.w / 2, -f.h / 2, f.w, f.h)
+        ctx.strokeStyle = "#2D3748"
+        ctx.lineWidth = 1.5
+        ctx.strokeRect(-f.w / 2, -f.h / 2, f.w, f.h)
+        ctx.globalAlpha = 1
+
         ctx.restore()
 
         f.x += f.vx
         f.y += f.vy
-        f.vy += 0.08 // gravity
+        f.vy += 0.12
         f.rotation += f.rotV
         f.life -= 1 / f.maxLife
         if (f.life <= 0) fragments.splice(i, 1)
@@ -288,8 +318,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right — animated house with storm damage graphic */}
-          <div className="relative w-full h-[340px] sm:h-[420px] lg:h-[500px] flex items-center justify-center">
+          {/* Right — animated cartoon house with storm damage graphic */}
+          <div className="relative w-full h-[360px] sm:h-[460px] lg:h-[540px] flex items-center justify-center">
             <canvas
               ref={canvasRef}
               className="w-full h-full"
