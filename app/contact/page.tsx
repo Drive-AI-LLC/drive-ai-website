@@ -1,13 +1,18 @@
-import { Metadata } from "next"
+'use client'
+
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-
-export const metadata: Metadata = {
-  title: "Book a Call | Drive AI",
-  description: "Schedule a call with Drive AI. We'll learn about your operation and walk through where our systems could help.",
-}
+import { useEffect } from "react"
 
 export default function ContactPage() {
+  useEffect(() => {
+    // Load Calendly widget script
+    const script = document.createElement('script')
+    script.src = 'https://assets.calendly.com/assets/external/widget.js'
+    script.async = true
+    document.body.appendChild(script)
+  }, [])
+
   return (
     <main className="min-h-screen flex flex-col">
       <Navbar />
@@ -29,14 +34,11 @@ export default function ContactPage() {
           </div>
 
           {/* Calendly embed */}
-          <div className="w-full border border-border/40 bg-background overflow-hidden">
-            <iframe
-              src="https://calendly.com/driveai"
-              width="100%"
-              height="700"
-              frameBorder="0"
-              title="Schedule a call with Drive AI"
-              className="w-full"
+          <div className="w-full border border-border/40 bg-background overflow-hidden rounded-lg">
+            <div 
+              className="calendly-inline-widget" 
+              data-url="https://calendly.com/danika-driveai/27min?hide_event_type_details=1&primary_color=01563b" 
+              style={{ minWidth: '320px', height: '700px' }}
             />
           </div>
 
