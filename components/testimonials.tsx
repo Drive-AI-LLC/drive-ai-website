@@ -1,6 +1,13 @@
 "use client"
 
 import { Quote } from "lucide-react"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel"
 
 const testimonials = [
   {
@@ -60,21 +67,35 @@ export function Testimonials() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-          {testimonials.slice(0, 2).map((testimonial, index) => (
-            <div key={index} className="p-6 sm:p-7 rounded-lg bg-background border border-border/40 flex flex-col shadow-sm">
-              <Quote className="w-6 h-6 text-primary/20 mb-4 shrink-0" />
-              <p className="text-foreground leading-relaxed mb-6 flex-grow text-sm">
-                {`"${testimonial.quote}"`}
-              </p>
-              <div className="mt-auto pt-4 border-t border-border/40">
-                <p className="font-semibold text-foreground text-sm">{testimonial.name}</p>
-                <p className="text-xs text-muted-foreground mt-1">
-                  {testimonial.title}, {testimonial.company}
-                </p>
-              </div>
-            </div>
-          ))}
+        <div className="px-0 sm:px-0">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-3 sm:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-3 sm:pl-4 basis-full sm:basis-1/2">
+                  <div className="h-full p-5 sm:p-6 rounded-lg bg-background border border-border/40 flex flex-col shadow-sm">
+                    <Quote className="w-5 h-5 text-primary/20 mb-3 shrink-0" />
+                    <p className="text-foreground leading-relaxed mb-4 flex-grow text-sm">
+                      {`"${testimonial.quote}"`}
+                    </p>
+                    <div className="mt-auto pt-3 border-t border-border/40">
+                      <p className="font-semibold text-foreground text-sm">{testimonial.name}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        {testimonial.title}, {testimonial.company}
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="-left-2 sm:-left-4 w-10 h-10 sm:w-12 sm:h-12" />
+            <CarouselNext className="-right-2 sm:-right-4 w-10 h-10 sm:w-12 sm:h-12" />
+          </Carousel>
         </div>
       </div>
     </section>
