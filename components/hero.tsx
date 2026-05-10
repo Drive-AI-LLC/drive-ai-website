@@ -4,69 +4,118 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
-function RoofVisual() {
+function OperationalVisual() {
+  // Node positions for the abstract workflow graph
+  const nodes = [
+    { id: "a", cx: 48,  cy: 48,  delay: "0ms",    label: "Supplement" },
+    { id: "b", cx: 160, cy: 26,  delay: "400ms",   label: "Storm" },
+    { id: "c", cx: 260, cy: 72,  delay: "800ms",   label: "Production" },
+    { id: "d", cx: 112, cy: 112, delay: "1200ms",  label: "Scheduling" },
+    { id: "e", cx: 210, cy: 136, delay: "1600ms",  label: "Handoff" },
+  ]
+
+  const edges = [
+    { x1: 48,  y1: 48,  x2: 160, y2: 26,  delay: "200ms"  },
+    { x1: 160, y1: 26,  x2: 260, y2: 72,  delay: "600ms"  },
+    { x1: 48,  y1: 48,  x2: 112, y2: 112, delay: "400ms"  },
+    { x1: 112, y1: 112, x2: 210, y2: 136, delay: "800ms"  },
+    { x1: 260, y1: 72,  x2: 210, y2: 136, delay: "1000ms" },
+    { x1: 160, y1: 26,  x2: 112, y2: 112, delay: "700ms"  },
+  ]
+
   return (
-    <div className="animate-roof-in hidden lg:flex flex-col gap-0 border border-border/40 divide-y divide-border/40" style={{ animationDelay: "400ms" }}>
-      {/* Roof SVG */}
-      <div className="p-6 pb-4">
-        <p className="text-[9px] font-semibold text-muted-foreground/40 uppercase tracking-[0.3em] mb-5">
-          Roofing Operations
-        </p>
-        <svg viewBox="0 0 260 140" className="w-full" aria-hidden="true">
-          {/* Roof outline */}
-          <polyline
-            points="20,110 130,28 240,110"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            className="text-foreground/20"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          {/* Ridge cap */}
-          <line x1="130" y1="28" x2="130" y2="38" stroke="currentColor" strokeWidth="1.5" className="text-primary/30" strokeLinecap="round" />
-          {/* Left slope detail */}
-          <line x1="20" y1="110" x2="75" y2="69" stroke="currentColor" strokeWidth="0.75" strokeDasharray="3 3" className="text-border/60" />
-          {/* Right slope detail */}
-          <line x1="240" y1="110" x2="185" y2="69" stroke="currentColor" strokeWidth="0.75" strokeDasharray="3 3" className="text-border/60" />
-          {/* Eave line */}
-          <line x1="20" y1="110" x2="240" y2="110" stroke="currentColor" strokeWidth="1" className="text-foreground/15" />
+    <div
+      className="hidden lg:block animate-fade-up"
+      style={{ animationDelay: "300ms" }}
+      aria-hidden="true"
+    >
+      {/* Label */}
+      <p className="text-[9px] font-semibold text-muted-foreground/30 uppercase tracking-[0.3em] mb-5">
+        Operations
+      </p>
 
-          {/* Flow line: supplement → storm → production */}
-          <path
-            d="M 55 95 Q 130 55 205 95"
-            fill="none"
+      {/* SVG network */}
+      <svg
+        viewBox="0 0 308 162"
+        className="w-full max-w-[300px]"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {/* Edges */}
+        {edges.map((e, i) => (
+          <line
+            key={i}
+            x1={e.x1} y1={e.y1}
+            x2={e.x2} y2={e.y2}
             stroke="currentColor"
-            strokeWidth="1"
-            strokeDasharray="6 4"
-            className="text-primary/40 animate-flow-dash"
-            strokeLinecap="round"
+            strokeWidth="0.75"
+            strokeDasharray="3 4"
+            className="text-border/50 animate-flow-dash"
+            style={{ animationDelay: e.delay, animationDuration: "3s" }}
           />
+        ))}
 
-          {/* Node: Supplement */}
-          <circle cx="55" cy="95" r="3" fill="currentColor" className="text-primary animate-pulse-dot" style={{ animationDelay: "0ms" }} />
-          {/* Node: Storm */}
-          <circle cx="130" cy="62" r="3" fill="currentColor" className="text-primary animate-pulse-dot" style={{ animationDelay: "800ms" }} />
-          {/* Node: Production */}
-          <circle cx="205" cy="95" r="3" fill="currentColor" className="text-primary animate-pulse-dot" style={{ animationDelay: "1600ms" }} />
-        </svg>
+        {/* Nodes */}
+        {nodes.map((n) => (
+          <g key={n.id}>
+            {/* Outer ring */}
+            <circle
+              cx={n.cx} cy={n.cy} r="9"
+              stroke="currentColor"
+              strokeWidth="0.5"
+              className="text-border/40"
+            />
+            {/* Inner filled dot */}
+            <circle
+              cx={n.cx} cy={n.cy} r="3.5"
+              fill="currentColor"
+              className="text-primary/60 animate-pulse-dot"
+              style={{ animationDelay: n.delay }}
+            />
+            {/* Node label */}
+            <text
+              x={n.cx}
+              y={n.cy + 22}
+              textAnchor="middle"
+              fontSize="7"
+              fontFamily="inherit"
+              letterSpacing="0.08em"
+              fill="currentColor"
+              className="text-muted-foreground/40 uppercase"
+            >
+              {n.label}
+            </text>
+          </g>
+        ))}
+      </svg>
+
+      {/* Divider */}
+      <div className="mt-8 border-t border-border/30" />
+
+      {/* System status rows */}
+      <div className="mt-5 flex flex-col gap-3.5">
+        {[
+          { name: "Supplement Recovery", state: "Active" },
+          { name: "Storm Outreach",      state: "Active" },
+          { name: "Production Handoff",  state: "Active" },
+        ].map((row, i) => (
+          <div
+            key={row.name}
+            className="flex items-center justify-between animate-fade-up"
+            style={{ animationDelay: `${500 + i * 80}ms` }}
+          >
+            <span className="text-[11px] text-muted-foreground/60 tracking-tight">
+              {row.name}
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary/50 animate-pulse-dot" style={{ animationDelay: `${i * 400}ms` }} />
+              <span className="text-[9px] text-primary/50 uppercase tracking-[0.15em]">
+                {row.state}
+              </span>
+            </span>
+          </div>
+        ))}
       </div>
-
-      {/* Three system rows */}
-      {[
-        { label: "Supplement", status: "Recovery" },
-        { label: "Storm", status: "Outreach" },
-        { label: "Production", status: "Coordination" },
-      ].map((row) => (
-        <div key={row.label} className="flex items-center justify-between px-6 py-3 group transition-colors duration-150 hover:bg-muted/30">
-          <span className="text-xs font-medium text-foreground/70 group-hover:text-foreground transition-colors duration-150">
-            {row.label}
-          </span>
-          <span className="text-[10px] text-primary/60 uppercase tracking-[0.15em]">
-            {row.status}
-          </span>
-        </div>
-      ))}
     </div>
   )
 }
@@ -75,7 +124,7 @@ export function Hero() {
   return (
     <section className="relative min-h-[92svh] flex items-center bg-background pt-24 sm:pt-28 pb-20 sm:pb-24">
       <div className="w-full max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-[1fr_280px] gap-16 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-[1fr_260px] gap-20 lg:gap-28 items-center">
 
           {/* Left: headline */}
           <div>
@@ -124,8 +173,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right: roofing workflow visual */}
-          <RoofVisual />
+          {/* Right: operational network visual */}
+          <OperationalVisual />
 
         </div>
       </div>
