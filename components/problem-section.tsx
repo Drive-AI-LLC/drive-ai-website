@@ -12,7 +12,7 @@ const leaks = [
     description: "Inbound volume spikes overnight — most teams can't scale fast enough.",
   },
   {
-    title: "Sales-to-Production Handoff Failures",
+    title: "Sales-to-Production Failures",
     description: "Poor handoffs create delays, rework, and unhappy customers.",
   },
   {
@@ -20,36 +20,43 @@ const leaks = [
     description: "Manual scheduling creates gaps, conflicts, and idle crews.",
   },
   {
-    title: "No Visibility Into the Pipeline",
+    title: "No Pipeline Visibility",
     description: "Without systems, owners can't see what's stalled or why.",
   },
 ]
 
 export function ProblemSection() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-background border-t border-border/40">
+    <section className="py-16 sm:py-20 lg:py-24 bg-background border-t border-border/40">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
 
-        <div className="max-w-3xl mb-10 lg:mb-14">
-          <p className="text-primary font-semibold text-xs uppercase tracking-[0.22em] mb-4">
-            The Problem
-          </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.025em] font-serif leading-[1.1]">
-            Where roofing companies lose revenue.
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            Most revenue loss in roofing isn&apos;t from bad work — it&apos;s from gaps in the process.
-          </p>
+        {/* Asymmetric header: label left, statement right */}
+        <div className="grid lg:grid-cols-[220px_1fr] gap-8 lg:gap-16 mb-12 lg:mb-16 items-start">
+          <div className="pt-1">
+            <p className="text-primary font-semibold text-[10px] uppercase tracking-[0.3em]">
+              The Problem
+            </p>
+          </div>
+          <div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
+              Where roofing companies<br className="hidden sm:block" /> lose revenue.
+            </h2>
+            <p className="mt-4 text-base text-muted-foreground leading-relaxed max-w-xl">
+              Most revenue loss isn&apos;t from bad work — it&apos;s from gaps in the process that no one has time to fix.
+            </p>
+          </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border/40 rounded-2xl overflow-hidden border border-border/40">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border/30 rounded-2xl overflow-hidden border border-border/30">
           {leaks.map((leak, index) => (
             <div
               key={index}
-              className="bg-background p-6 lg:p-7 hover:bg-muted/30 transition-colors duration-200"
+              className="bg-background p-6 lg:p-8 hover:bg-muted/20 transition-colors duration-200 group"
             >
-              <div className="w-1.5 h-1.5 rounded-full bg-primary mb-4" />
-              <h3 className="text-base font-semibold text-foreground mb-1.5 tracking-[-0.01em]">
+              <span className="text-[10px] font-mono text-primary/30 tracking-widest block mb-4">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h3 className="text-sm font-semibold text-foreground mb-2 tracking-[-0.01em] leading-snug">
                 {leak.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -59,7 +66,7 @@ export function ProblemSection() {
           ))}
         </div>
 
-        <p className="mt-8 text-sm text-muted-foreground/70 text-center">
+        <p className="mt-10 text-sm text-muted-foreground/60 max-w-lg">
           Artificial intelligence and automation tools can handle these tasks for you, allowing your team to focus on what actually matters.
         </p>
 

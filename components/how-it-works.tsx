@@ -28,28 +28,34 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-12 sm:py-16 lg:py-20 bg-background border-t border-border/40">
+    <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 bg-background border-t border-border/40">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
 
-        <div className="max-w-xl mb-10 lg:mb-14">
-          <p className="text-[11px] font-semibold text-primary uppercase tracking-[0.25em] mb-3">
-            Our Process
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-[-0.025em] font-serif leading-[1.1]">
-            How we work with you.
-          </h2>
+        {/* Consistent asymmetric header */}
+        <div className="grid lg:grid-cols-[220px_1fr] gap-8 lg:gap-16 mb-12 lg:mb-16 items-start">
+          <div className="pt-1">
+            <p className="text-[10px] font-semibold text-primary/70 uppercase tracking-[0.3em]">
+              Our Process
+            </p>
+          </div>
+          <div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
+              How we work with you.
+            </h2>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0 border border-border/40 rounded-xl overflow-hidden">
-          {steps.map((item, index) => (
+        {/* Steps: vertical stack on mobile, horizontal on large */}
+        <div className="border border-border/30 rounded-xl overflow-hidden divide-y divide-border/30 lg:divide-y-0 lg:grid lg:grid-cols-5 lg:divide-x">
+          {steps.map((item) => (
             <div
-              key={index}
-              className="relative p-6 border-b border-r border-border/40 last:border-b-0 sm:[&:nth-child(odd)]:border-r lg:border-b-0 lg:[&:nth-child(5)]:border-r-0 hover:bg-muted/20 transition-colors duration-200"
+              key={item.step}
+              className="p-6 lg:p-7 hover:bg-muted/15 transition-colors duration-200"
             >
-              <span className="text-[10px] font-mono font-semibold text-primary/40 tracking-widest block mb-3">
+              <span className="text-[10px] font-mono font-semibold text-primary/35 tracking-[0.2em] block mb-4">
                 {item.step}
               </span>
-              <h3 className="text-sm font-semibold text-foreground mb-2 tracking-[-0.01em]">
+              <h3 className="text-sm font-semibold text-foreground mb-2 tracking-[-0.01em] leading-snug">
                 {item.title}
               </h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
