@@ -21,50 +21,56 @@ export function Hero() {
     resize()
     window.addEventListener("resize", resize)
 
-    const cx = () => canvas.width / 2
-    const cy = () => canvas.height / 2
+    // Colors from reference
+    const mintGreen = "#D4E6D4"
+    const darkGreen = "#2D5016"
+    const roofGray = "#5A5A5A"
+    const brickRed = "#8B6B47"
+    const skyBlue = "#E8F4F8"
+    const rainGray = "#A0A0A0"
+    const grassGreen = "#4A7C4E"
 
-    // Shingle fragments
-    interface Fragment {
+    interface Shingle {
       x: number; y: number
       vx: number; vy: number
       rotation: number; rotV: number
       life: number; maxLife: number
-      w: number; h: number
     }
-    const fragments: Fragment[] = []
+    const shingles: Shingle[] = []
 
-    const spawnFragment = () => {
+    const spawnShingle = () => {
+      const cx = canvas.width / 2
+      const cy = canvas.height / 2
+      const peakX = cx
+      const peakY = cy - 120
+      const roofW = 200
       const side = Math.random() < 0.5 ? -1 : 1
-      const peakX = cx()
-      const peakY = cy() - 140
-      const roofW = 260
-      const t = Math.random()
-      const sx = peakX + side * t * (roofW / 2)
-      const sy = peakY + t * 140
-      fragments.push({
-        x: sx, y: sy,
-        vx: side * (2 + Math.random() * 3),
-        vy: -(1 + Math.random() * 2.5),
+      
+      shingles.push({
+        x: peakX + side * Math.random() * (roofW / 2),
+        y: peakY + Math.random() * 80,
+        vx: side * (2 + Math.random() * 4),
+        vy: -(1 + Math.random() * 2),
         rotation: Math.random() * Math.PI * 2,
-        rotV: (Math.random() - 0.5) * 0.2,
+        rotV: (Math.random() - 0.5) * 0.25,
         life: 1,
-        maxLife: 90 + Math.random() * 70,
-        w: 18 + Math.random() * 16,
-        h: 6 + Math.random() * 5,
+        maxLife: 70 + Math.random() * 60,
       })
     }
 
-    // Rain drops
-    interface Drop { x: number; y: number; vy: number; len: number; life: number }
+    interface Drop {
+      x: number; y: number
+      vy: number; len: number; life: number
+    }
     const drops: Drop[] = []
 
     const spawnDrop = () => {
+      const cx = canvas.width / 2
       drops.push({
-        x: cx() - 220 + Math.random() * 440,
-        y: cy() - 260 - Math.random() * 100,
-        vy: 7 + Math.random() * 3.5,
-        len: 14 + Math.random() * 12,
+        x: cx - 200 + Math.random() * 400,
+        y: -20 - Math.random() * 80,
+        vy: 6 + Math.random() * 3,
+        len: 12 + Math.random() * 10,
         life: 1,
       })
     }
@@ -75,182 +81,222 @@ export function Hero() {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-      const px = cx()
-      const py = cy()
-      const roofW = 260
-      const roofH = 140
-      const wallH = 130
-      const wallW = roofW
+      const cx = canvas.width / 2
+      const cy = canvas.height / 2
 
-      const peakX = px
-      const peakY = py - roofH
-      const eaveL = px - roofW / 2
-      const eaveR = px + roofW / 2
-      const eaveY = py
-      const groundY = py + wallH
-
-      // Color scheme
-      const brickRed = "#C94C4C"
-      const darkRed = "#A63939"
-      const roofGray = "#4A5568"
-      const roofLight = "#6B7280"
-      const skyBlue = "#E3F2FD"
-      const rainGray = "#94A3B8"
-
-      // --- Background sky gradient ---
-      const grad = ctx.createLinearGradient(0, 0, 0, groundY + 60)
+      // Background gradient
+      const grad = ctx.createLinearGradient(0, 0, 0, canvas.height)
       grad.addColorStop(0, skyBlue)
-      grad.addColorStop(1, "#F0F4F8")
+      grad.addColorStop(1, "#F5F9FA")
       ctx.fillStyle = grad
-      ctx.fillRect(0, 0, canvas.width, groundY + 60)
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-      // --- Rain ---
-      frame % 2 === 0 && drops.length < 32 && spawnDrop()
+      // Rain
+      frame % 2 === 0 && drops.length < 28 && spawnDrop()
       for (let i = drops.length - 1; i >= 0; i--) {
         const d = drops[i]
         ctx.strokeStyle = rainGray
-        ctx.globalAlpha = 0.4 * d.life
-        ctx.lineWidth = 2
+        ctx.globalAlpha = 0.5 * d.life
+        ctx.lineWidth = 2.5
         ctx.lineCap = "round"
         ctx.beginPath()
-        ctx.moveTo(d.x, d.y)
-        ctx.lineTo(d.x - 2, d.y + d.len)
+        ctx.moveTo(d.x - 3, d.y)
+        ctx.lineTo(d.x - 1, d.y + d.len)
         ctx.stroke()
         ctx.globalAlpha = 1
         d.y += d.vy
-        d.life -= 0.01
-        if (d.y > groundY + 30 || d.life <= 0) drops.splice(i, 1)
+        d.life -= 0.008
+        if (d.y > canvas.height + 20 || d.life <= 0) drops.splice(i, 1)
       }
 
-      // --- Brick walls ---
-      ctx.fillStyle = brickRed
-      ctx.fillRect(eaveL, eaveY, wallW, wallH)
+      // House base positioning
+      const houseX = cx - 80
+      const houseY = cy - 20
+      const houseW = 160
+      const houseH = 100
+      const roofH = 90
+      const wallH = 60
 
-      // Brick pattern
-      ctx.strokeStyle = darkRed
-      ctx.lineWidth = 1
-      for (let row = 0; row < 5; row++) {
-        for (let col = 0; col < 6; col++) {
-          const bx = eaveL + col * 44
-          const by = eaveY + row * 26
-          ctx.strokeRect(bx, by, 44, 26)
-        }
-      }
-
-      // --- Door (brown) ---
-      const dw = 32, dh = 50
-      ctx.fillStyle = "#8B4513"
-      ctx.fillRect(px - dw / 2, groundY - dh, dw, dh)
-      ctx.fillStyle = "#FFD700"
+      // Grass/ground
+      ctx.fillStyle = grassGreen
       ctx.beginPath()
-      ctx.arc(px + dw / 2 - 6, groundY - dh / 2, 3, 0, Math.PI * 2)
+      ctx.ellipse(cx, houseY + wallH + 45, 180, 30, 0, 0, Math.PI * 2)
+      ctx.fill()
+      ctx.fillStyle = "#3D6A41"
+      ctx.fillRect(0, houseY + wallH + 70, canvas.width, canvas.height)
+
+      // Left tree
+      ctx.fillStyle = "#8B5A3C"
+      ctx.fillRect(houseX - 60, houseY + wallH - 25, 8, 35)
+      ctx.fillStyle = darkGreen
+      ctx.beginPath()
+      ctx.ellipse(houseX - 56, houseY + wallH - 30, 35, 40, 0, 0, Math.PI * 2)
       ctx.fill()
 
-      // --- Windows (light blue) ---
-      ctx.fillStyle = "#87CEEB"
-      const winSize = 28
-      ctx.fillRect(eaveL + 30, eaveY + 24, winSize, winSize)
-      ctx.fillRect(eaveR - 30 - winSize, eaveY + 24, winSize, winSize)
-      // Window frames
+      // Bush left
+      ctx.fillStyle = darkGreen
+      ctx.beginPath()
+      ctx.ellipse(houseX + 20, houseY + wallH + 8, 25, 18, 0, 0, Math.PI * 2)
+      ctx.fill()
+
+      // Bush right
+      ctx.beginPath()
+      ctx.ellipse(houseX + houseW - 20, houseY + wallH + 8, 25, 18, 0, 0, Math.PI * 2)
+      ctx.fill()
+
+      // Main walls (mint green)
+      ctx.fillStyle = mintGreen
+      ctx.fillRect(houseX, houseY + roofH, houseW, wallH)
+
+      // Wall outline
+      ctx.strokeStyle = "#333"
+      ctx.lineWidth = 2.5
+      ctx.strokeRect(houseX, houseY + roofH, houseW, wallH)
+
+      // Left gable (lighter)
+      ctx.fillStyle = "#E8F5E8"
+      ctx.beginPath()
+      ctx.moveTo(houseX + 30, houseY + roofH)
+      ctx.lineTo(houseX + 70, houseY + roofH - 40)
+      ctx.lineTo(houseX + 110, houseY + roofH)
+      ctx.closePath()
+      ctx.fill()
+      ctx.strokeStyle = "#333"
+      ctx.lineWidth = 2.5
+      ctx.stroke()
+
+      // Door (dark green)
+      ctx.fillStyle = darkGreen
+      ctx.fillRect(houseX + 30, houseY + roofH + 25, 24, 35)
       ctx.strokeStyle = "#333"
       ctx.lineWidth = 2
-      ctx.strokeRect(eaveL + 30, eaveY + 24, winSize, winSize)
-      ctx.strokeRect(eaveR - 30 - winSize, eaveY + 24, winSize, winSize)
+      ctx.strokeRect(houseX + 30, houseY + roofH + 25, 24, 35)
+      ctx.fillStyle = "#FFD700"
       ctx.beginPath()
-      ctx.moveTo(eaveL + 30 + winSize / 2, eaveY + 24)
-      ctx.lineTo(eaveL + 30 + winSize / 2, eaveY + 24 + winSize)
+      ctx.arc(houseX + 50, houseY + roofH + 42, 2.5, 0, Math.PI * 2)
+      ctx.fill()
+
+      // Left window
+      const winX1 = houseX + 15
+      const winY = houseY + roofH + 10
+      const winW = 22
+      const winH = 22
+      ctx.fillStyle = "#B0E0E6"
+      ctx.fillRect(winX1, winY, winW, winH)
+      ctx.strokeStyle = "#333"
+      ctx.lineWidth = 2
+      ctx.strokeRect(winX1, winY, winW, winH)
+      ctx.beginPath()
+      ctx.moveTo(winX1 + winW / 2, winY)
+      ctx.lineTo(winX1 + winW / 2, winY + winH)
       ctx.stroke()
       ctx.beginPath()
-      ctx.moveTo(eaveL + 30, eaveY + 24 + winSize / 2)
-      ctx.lineTo(eaveL + 30 + winSize, eaveY + 24 + winSize / 2)
+      ctx.moveTo(winX1, winY + winH / 3)
+      ctx.lineTo(winX1 + winW, winY + winH / 3)
+      ctx.stroke()
+      ctx.beginPath()
+      ctx.moveTo(winX1, winY + (winH * 2) / 3)
+      ctx.lineTo(winX1 + winW, winY + (winH * 2) / 3)
       ctx.stroke()
 
-      // --- Roof (left slope, darker gray) ---
+      // Right window (larger)
+      const winX2 = houseX + 100
+      const winW2 = 28
+      ctx.fillStyle = "#B0E0E6"
+      ctx.fillRect(winX2, winY, winW2, winH)
+      ctx.strokeStyle = "#333"
+      ctx.lineWidth = 2
+      ctx.strokeRect(winX2, winY, winW2, winH)
+      ctx.beginPath()
+      ctx.moveTo(winX2 + winW2 / 2, winY)
+      ctx.lineTo(winX2 + winW2 / 2, winY + winH)
+      ctx.stroke()
+      ctx.beginPath()
+      ctx.moveTo(winX2, winY + winH / 2)
+      ctx.lineTo(winX2 + winW2, winY + winH / 2)
+      ctx.stroke()
+
+      // Roof left slope (dark)
       ctx.fillStyle = roofGray
       ctx.beginPath()
-      ctx.moveTo(eaveL, eaveY)
-      ctx.lineTo(peakX, peakY)
-      ctx.lineTo(eaveL - 20, eaveY)
+      ctx.moveTo(houseX, houseY + roofH)
+      ctx.lineTo(houseX + houseW / 2, houseY)
+      ctx.lineTo(houseX - 10, houseY + roofH)
       ctx.closePath()
       ctx.fill()
 
-      // --- Roof (right slope) ---
-      ctx.fillStyle = roofLight
+      // Roof right slope (lighter)
+      ctx.fillStyle = "#6B7280"
       ctx.beginPath()
-      ctx.moveTo(eaveR, eaveY)
-      ctx.lineTo(peakX, peakY)
-      ctx.lineTo(eaveR + 20, eaveY)
+      ctx.moveTo(houseX + houseW, houseY + roofH)
+      ctx.lineTo(houseX + houseW / 2, houseY)
+      ctx.lineTo(houseX + houseW + 10, houseY + roofH)
       ctx.closePath()
       ctx.fill()
 
-      // --- Ridge cap (dark) ---
-      ctx.fillStyle = "#2D3748"
+      // Ridge
+      ctx.strokeStyle = "#2D2D2D"
+      ctx.lineWidth = 3
       ctx.beginPath()
-      ctx.moveTo(peakX - 8, peakY)
-      ctx.lineTo(peakX + 8, peakY)
-      ctx.lineTo(peakX + 6, peakY - 6)
-      ctx.lineTo(peakX - 6, peakY - 6)
-      ctx.closePath()
-      ctx.fill()
+      ctx.moveTo(houseX + houseW / 2 - 6, houseY - 3)
+      ctx.lineTo(houseX + houseW / 2 + 6, houseY - 3)
+      ctx.stroke()
 
-      // --- Roof shingles (light rows) ---
-      ctx.fillStyle = "#5A6B7A"
-      ctx.globalAlpha = 0.6
-      for (let r = 1; r <= 6; r++) {
-        const t = r / 7
-        const rowY = peakY + t * roofH
-        const rowXl = eaveL + t * 20
-        const rowXr = eaveR - t * 20
-
-        // Left slope shingles
-        for (let s = 0; s < 5; s++) {
-          const sx = rowXl + (s - 2) * 30
-          ctx.fillRect(sx, rowY, 28, 12)
-        }
-        // Right slope shingles
-        for (let s = 0; s < 5; s++) {
-          const sx = rowXr - (s - 2) * 30 - 28
-          ctx.fillRect(sx, rowY, 28, 12)
+      // Roof shingles
+      ctx.fillStyle = "#5A4A3A"
+      ctx.globalAlpha = 0.5
+      const shingleW = 20
+      const shingleH = 12
+      for (let r = 0; r < 5; r++) {
+        const rowY = houseY + roofH - r * shingleH
+        const offset = r % 2 ? shingleW / 2 : 0
+        for (let s = 0; s < 12; s++) {
+          const sx = houseX - 20 + offset + s * shingleW
+          ctx.fillRect(sx, rowY, shingleW - 2, shingleH - 2)
         }
       }
       ctx.globalAlpha = 1
 
-      // --- Damage cracks on roof ---
-      ctx.strokeStyle = "rgba(0,0,0,0.25)"
-      ctx.lineWidth = 2
-      ctx.setLineDash([4, 6])
-      ctx.lineCap = "round"
-      ctx.beginPath()
-      ctx.moveTo(peakX - 40, peakY + 20)
-      ctx.lineTo(peakX - 60, peakY + 50)
-      ctx.lineTo(peakX - 45, peakY + 70)
-      ctx.stroke()
+      // Damage area
+      ctx.fillStyle = "rgba(0,0,0,0.15)"
+      ctx.fillRect(houseX + 80, houseY + 10, 35, 25)
+      ctx.strokeStyle = "rgba(0,0,0,0.3)"
+      ctx.lineWidth = 1.5
+      ctx.setLineDash([2, 3])
+      ctx.strokeRect(houseX + 80, houseY + 10, 35, 25)
       ctx.setLineDash([])
 
-      // --- Shingle fragments (flying off) ---
-      frame % 45 === 0 && fragments.length < 18 && spawnFragment()
-      for (let i = fragments.length - 1; i >= 0; i--) {
-        const f = fragments[i]
+      // Chimney
+      ctx.fillStyle = brickRed
+      ctx.fillRect(houseX + houseW - 25, houseY + 10, 12, 30)
+      ctx.strokeStyle = "#333"
+      ctx.lineWidth = 2
+      ctx.strokeRect(houseX + houseW - 25, houseY + 10, 12, 30)
+
+      // Flying shingles
+      frame % 35 === 0 && shingles.length < 16 && spawnShingle()
+      for (let i = shingles.length - 1; i >= 0; i--) {
+        const s = shingles[i]
         ctx.save()
-        ctx.translate(f.x, f.y)
-        ctx.rotate(f.rotation)
+        ctx.translate(s.x, s.y)
+        ctx.rotate(s.rotation)
 
         ctx.fillStyle = roofGray
-        ctx.globalAlpha = f.life * 0.8
-        ctx.fillRect(-f.w / 2, -f.h / 2, f.w, f.h)
-        ctx.strokeStyle = "#2D3748"
-        ctx.lineWidth = 1.5
-        ctx.strokeRect(-f.w / 2, -f.h / 2, f.w, f.h)
+        ctx.globalAlpha = s.life * 0.85
+        ctx.fillRect(-8, -4, 16, 8)
+        ctx.strokeStyle = "#2D2D2D"
+        ctx.lineWidth = 1
+        ctx.strokeRect(-8, -4, 16, 8)
         ctx.globalAlpha = 1
 
         ctx.restore()
 
-        f.x += f.vx
-        f.y += f.vy
-        f.vy += 0.12
-        f.rotation += f.rotV
-        f.life -= 1 / f.maxLife
-        if (f.life <= 0) fragments.splice(i, 1)
+        s.x += s.vx
+        s.y += s.vy
+        s.vy += 0.1
+        s.rotation += s.rotV
+        s.life -= 1 / s.maxLife
+        if (s.life <= 0) shingles.splice(i, 1)
       }
 
       frame++
@@ -318,7 +364,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right — animated cartoon house with storm damage graphic */}
+          {/* Right — cartoon house matching reference */}
           <div className="relative w-full h-[360px] sm:h-[460px] lg:h-[540px] flex items-center justify-center">
             <canvas
               ref={canvasRef}
