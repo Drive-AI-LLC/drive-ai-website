@@ -1,20 +1,8 @@
 const differentiators = [
-  {
-    title: "Built for roofing, not adapted to it.",
-    description: "Every system is designed around how roofing companies sell, produce, and collect — not repurposed from a generic template.",
-  },
-  {
-    title: "We learn the operation before we build.",
-    description: "Before writing a line of code, we map your workflow, identify the friction, and confirm the system will deliver value.",
-  },
-  {
-    title: "Measured in revenue, not hours saved.",
-    description: "We track dollars recovered, leads responded to, and jobs completed on schedule — not vague efficiency metrics.",
-  },
-  {
-    title: "Systems thinking, not software consulting.",
-    description: "We bring operational discipline to an industry that has historically run on relationships and manual effort.",
-  },
+  { title: "Built for roofing.", description: "Every system is designed around how roofing companies sell, produce, and collect." },
+  { title: "We learn before we build.", description: "We map your workflow first. Systems only get built when the value is clear." },
+  { title: "Measured in revenue.", description: "Dollars recovered and jobs completed on schedule — not vague efficiency metrics." },
+  { title: "Systems, not software.", description: "Operational discipline applied to an industry that runs on relationships and manual effort." },
 ]
 
 export function WhyDriveAI() {
@@ -22,11 +10,9 @@ export function WhyDriveAI() {
     <section className="py-16 sm:py-20 lg:py-24 bg-background border-t border-border/40">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
 
-        <div className="grid lg:grid-cols-[220px_1fr] gap-8 lg:gap-16 mb-12 lg:mb-16 items-start">
+        <div className="grid lg:grid-cols-[220px_1fr] gap-8 lg:gap-16 mb-12 items-start">
           <div className="pt-1">
-            <p className="text-[10px] font-semibold text-primary/70 uppercase tracking-[0.3em]">
-              Why Drive AI
-            </p>
+            <p className="text-[10px] font-semibold text-primary/70 uppercase tracking-[0.3em]">Why Drive AI</p>
           </div>
           <div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
@@ -39,9 +25,9 @@ export function WhyDriveAI() {
           {differentiators.map((item, index) => (
             <div
               key={index}
-              className={`p-6 sm:p-8 ${index === 0 || index === 1 ? "sm:border-b sm:border-border/30" : ""} ${index % 2 === 0 ? "sm:border-r sm:border-border/30" : ""}`}
+              className={`p-6 sm:p-8 ${index < 2 ? "sm:border-b sm:border-border/30" : ""} ${index % 2 === 0 ? "sm:border-r sm:border-border/30" : ""}`}
             >
-              <h3 className="text-sm sm:text-base font-semibold text-foreground mb-2.5 tracking-[-0.01em] leading-snug">
+              <h3 className="text-sm font-semibold text-foreground mb-1.5 tracking-[-0.01em]">
                 {item.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">

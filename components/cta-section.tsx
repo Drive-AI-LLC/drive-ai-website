@@ -19,8 +19,8 @@ export function CTASection() {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-[-0.03em] font-serif leading-[1.05] text-balance">
                 See what a system could do for your operation.
               </h2>
-              <p className="mt-4 text-sm sm:text-base text-primary-foreground/60 leading-relaxed max-w-md">
-                A 30-minute discovery call is enough to identify your highest-impact opportunity. No commitment required.
+              <p className="mt-3 text-sm text-primary-foreground/60 leading-relaxed max-w-md">
+                30 minutes. No commitment. We&apos;ll identify your highest-impact opportunity.
               </p>
             </div>
             <div className="shrink-0">

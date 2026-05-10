@@ -103,7 +103,7 @@ export function Hero() {
           </h1>
 
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-lg">
-            We build operational systems for roofing companies — supplement workflows, storm outreach, and production coordination that run without adding headcount.
+            Supplement recovery. Storm outreach. Production coordination. Systems that run without adding headcount.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 pt-1">
