@@ -18,29 +18,24 @@ export function HowItWorks() {
           </h2>
         </div>
 
-        <div className="relative">
-          {/* Connecting rule — desktop only */}
-          <div className="hidden lg:block absolute top-[22px] left-[calc(10%+12px)] right-[calc(10%+12px)] h-px bg-border/40" aria-hidden="true" />
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-px bg-border/20 border border-border/30">
-            {steps.map((item, index) => (
-              <div
-                key={item.step}
-                className="animate-fade-up relative bg-background p-6 lg:p-7 group hover:bg-muted/30 transition-colors duration-200"
-                style={{ animationDelay: `${index * 70}ms` }}
-              >
-                <span className="text-[10px] font-mono text-primary/50 tracking-[0.2em] block mb-4">
-                  {item.step}
-                </span>
-                <h3 className="text-sm font-semibold text-foreground mb-2 tracking-[-0.01em] leading-snug font-serif">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
+        <div className="border border-border/30 divide-y divide-border/30 lg:divide-y-0 lg:grid lg:grid-cols-5 lg:divide-x">
+          {steps.map((item, index) => (
+            <div
+              key={item.step}
+              className="animate-fade-up bg-background p-6 lg:p-7 transition-transform duration-200 hover:-translate-y-0.5"
+              style={{ animationDelay: `${index * 70}ms` }}
+            >
+              <span className="text-[10px] font-mono text-primary/40 tracking-[0.2em] block mb-3">
+                {item.step}
+              </span>
+              <h3 className="text-sm font-semibold text-foreground mb-1.5 tracking-[-0.01em] leading-snug font-serif">
+                {item.title}
+              </h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
 
       </div>

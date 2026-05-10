@@ -31,38 +31,12 @@ export function SolutionSection() {
           </h2>
         </div>
 
-        {/* Featured top card */}
-        <div className="animate-fade-up border border-border/40 p-8 sm:p-10 lg:p-12 mb-px group hover:bg-muted/20 transition-colors duration-200">
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-            <div className="max-w-xl">
-              <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.2em] mb-4">
-                {solutions[0].tag}
-              </p>
-              <h3 className="text-2xl sm:text-3xl font-bold text-foreground tracking-[-0.03em] font-serif leading-tight mb-3">
-                {solutions[0].title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {solutions[0].description}
-              </p>
-            </div>
-            <div className="flex gap-6 lg:gap-8 shrink-0">
-              {solutions[0].details.map((d) => (
-                <div key={d} className="flex items-center gap-1.5 text-xs text-muted-foreground/70">
-                  <span className="w-1 h-1 rounded-full bg-primary/40 shrink-0" />
-                  {d}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Two cards side by side */}
-        <div className="grid md:grid-cols-2 gap-px bg-border/30">
-          {solutions.slice(1).map((solution, index) => (
+        <div className="grid md:grid-cols-3 gap-px bg-border/30 border border-border/30">
+          {solutions.map((solution, index) => (
             <div
               key={solution.title}
-              className="animate-fade-up bg-background border border-border/40 p-7 sm:p-8 flex flex-col group hover:bg-muted/20 transition-colors duration-200"
-              style={{ animationDelay: `${(index + 1) * 80}ms` }}
+              className="animate-fade-up bg-background p-6 sm:p-8 flex flex-col transition-transform duration-200 hover:-translate-y-0.5"
+              style={{ animationDelay: `${index * 80}ms` }}
             >
               <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.2em] mb-4">
                 {solution.tag}
@@ -70,12 +44,12 @@ export function SolutionSection() {
               <h3 className="text-lg font-semibold text-foreground mb-2 tracking-[-0.02em] leading-snug font-serif">
                 {solution.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
                 {solution.description}
               </p>
-              <div className="pt-4 border-t border-border/30 flex flex-wrap gap-x-5 gap-y-2">
+              <div className="pt-4 border-t border-border/30 space-y-1.5">
                 {solution.details.map((detail) => (
-                  <div key={detail} className="flex items-center gap-1.5 text-xs text-muted-foreground/60">
+                  <div key={detail} className="flex items-center gap-2 text-xs text-muted-foreground/70">
                     <span className="w-1 h-1 rounded-full bg-primary/35 shrink-0" />
                     {detail}
                   </div>
