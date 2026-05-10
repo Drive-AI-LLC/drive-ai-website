@@ -11,228 +11,292 @@ export function Hero() {
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
-
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
-    // Set canvas size
-    const updateCanvasSize = () => {
+    const resize = () => {
       canvas.width = canvas.offsetWidth
       canvas.height = canvas.offsetHeight
     }
-    updateCanvasSize()
-    window.addEventListener("resize", updateCanvasSize)
+    resize()
+    window.addEventListener("resize", resize)
 
-    // Roof dimensions
-    const roofX = canvas.width / 2
-    const roofY = canvas.height / 2
-    const roofWidth = 280
-    const roofHeight = 160
+    // --- House geometry (centered in canvas) ---
+    const cx = () => canvas.width / 2
+    const cy = () => canvas.height / 2
 
-    // Rain drops array
-    const raindrops: Array<{
-      x: number
-      y: number
-      vx: number
-      vy: number
-      life: number
-      age: number
-    }> = []
-
-    // Draw roof structure
-    const drawRoof = () => {
-      ctx.strokeStyle = "rgba(22, 163, 74, 0.4)"
-      ctx.lineWidth = 3
-      ctx.lineCap = "round"
-      ctx.lineJoin = "round"
-
-      // Roof triangle (left and right slopes)
-      ctx.beginPath()
-      ctx.moveTo(roofX - roofWidth / 2, roofY)
-      ctx.lineTo(roofX, roofY - roofHeight)
-      ctx.lineTo(roofX + roofWidth / 2, roofY)
-      ctx.stroke()
-
-      // Ridge cap accent
-      ctx.strokeStyle = "rgba(22, 163, 74, 0.6)"
-      ctx.lineWidth = 2
-      ctx.beginPath()
-      ctx.moveTo(roofX - 4, roofY - roofHeight - 2)
-      ctx.lineTo(roofX + 4, roofY - roofHeight - 2)
-      ctx.stroke()
-
-      // Building walls
-      ctx.strokeStyle = "rgba(22, 163, 74, 0.25)"
-      ctx.lineWidth = 2
-      ctx.beginPath()
-      ctx.moveTo(roofX - roofWidth / 2, roofY)
-      ctx.lineTo(roofX - roofWidth / 2, roofY + 80)
-      ctx.lineTo(roofX + roofWidth / 2, roofY + 80)
-      ctx.lineTo(roofX + roofWidth / 2, roofY)
-      ctx.stroke()
-
-      // Shingle rows (left side)
-      ctx.strokeStyle = "rgba(22, 163, 74, 0.15)"
-      ctx.lineWidth = 1
-      for (let i = 1; i < 6; i++) {
-        const progress = i / 6
-        const x1 = roofX - roofWidth / 2 + progress * (roofWidth / 2)
-        const y1 = roofY - roofHeight * (1 - progress)
-        const x2 = roofX - roofWidth / 2 + 40
-        const y2 = y1 + 15
-        ctx.beginPath()
-        ctx.moveTo(x1, y1)
-        ctx.lineTo(x2, y2)
-        ctx.stroke()
-      }
-
-      // Shingle rows (right side)
-      for (let i = 1; i < 6; i++) {
-        const progress = i / 6
-        const x1 = roofX + roofWidth / 2 - progress * (roofWidth / 2)
-        const y1 = roofY - roofHeight * (1 - progress)
-        const x2 = roofX + roofWidth / 2 - 40
-        const y2 = y1 + 15
-        ctx.beginPath()
-        ctx.moveTo(x1, y1)
-        ctx.lineTo(x2, y2)
-        ctx.stroke()
-      }
+    // Shingle fragments flying off the roof
+    interface Fragment {
+      x: number; y: number
+      vx: number; vy: number
+      rotation: number; rotV: number
+      life: number; maxLife: number
+      w: number; h: number
     }
+    const fragments: Fragment[] = []
 
-    // Create raindrop
-    const createRaindrop = () => {
-      const startX = roofX - roofWidth / 2 - 40 + Math.random() * (roofWidth + 80)
-      const startY = roofY - roofHeight - 60
-      raindrops.push({
-        x: startX,
-        y: startY,
-        vx: (Math.random() - 0.5) * 2,
-        vy: 3.5 + Math.random() * 2.5,
+    const spawnFragment = () => {
+      const side = Math.random() < 0.5 ? -1 : 1
+      const peakX = cx()
+      const peakY = cy() - 120
+      const roofW = 220
+      // random point on one slope of the roof
+      const t = Math.random()
+      const sx = peakX + side * t * (roofW / 2)
+      const sy = peakY + t * 120
+      fragments.push({
+        x: sx, y: sy,
+        vx: side * (1.5 + Math.random() * 2.5),
+        vy: -(1 + Math.random() * 2.5),
+        rotation: Math.random() * Math.PI * 2,
+        rotV: (Math.random() - 0.5) * 0.18,
         life: 1,
-        age: 0,
+        maxLife: 80 + Math.random() * 60,
+        w: 14 + Math.random() * 14,
+        h: 4 + Math.random() * 4,
       })
     }
 
-    // Draw and update raindrops
-    const drawRaindrops = () => {
-      for (let i = raindrops.length - 1; i >= 0; i--) {
-        const drop = raindrops[i]
+    // Rain drops
+    interface Drop { x: number; y: number; vy: number; len: number; life: number }
+    const drops: Drop[] = []
 
-        // Check if drop hit roof
-        if (drop.y >= roofY - 5) {
-          if (drop.x >= roofX - roofWidth / 2 && drop.x <= roofX + roofWidth / 2) {
-            drop.life = 0
-          }
-        }
-
-        // Check if drop hit ground
-        if (drop.y > roofY + 80) {
-          drop.life = 0
-        }
-
-        // Draw drop with glow
-        const opacity = Math.max(0, drop.life * 0.7)
-        ctx.fillStyle = `rgba(22, 163, 74, ${opacity * 0.3})`
-        ctx.beginPath()
-        ctx.arc(drop.x, drop.y, 4, 0, Math.PI * 2)
-        ctx.fill()
-
-        ctx.fillStyle = `rgba(22, 163, 74, ${opacity})`
-        ctx.beginPath()
-        ctx.arc(drop.x, drop.y, 2, 0, Math.PI * 2)
-        ctx.fill()
-
-        // Update drop
-        drop.x += drop.vx
-        drop.y += drop.vy
-        drop.age += 0.016
-        drop.life = Math.max(0, 1 - drop.age / 1.4)
-
-        // Remove dead drops
-        if (drop.life <= 0) {
-          raindrops.splice(i, 1)
-        }
-      }
+    const spawnDrop = () => {
+      drops.push({
+        x: cx() - 180 + Math.random() * 360,
+        y: cy() - 200 - Math.random() * 80,
+        vy: 6 + Math.random() * 3,
+        len: 12 + Math.random() * 10,
+        life: 1,
+      })
     }
 
-    // Animation loop
-    let lastSpawnTime = 0
-    const animate = () => {
+    let frame = 0
+    let animId: number
+
+    const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-      drawRoof()
-      drawRaindrops()
+      const px = cx()
+      const py = cy()
+      const roofW = 220
+      const roofH = 120
+      const wallH = 110
+      const wallW = roofW
 
-      // Spawn new raindrops with variable timing
-      lastSpawnTime += 0.016
-      if (lastSpawnTime > 0.12 && raindrops.length < 28) {
-        createRaindrop()
-        lastSpawnTime = 0
+      const peakX = px
+      const peakY = py - roofH
+      const eaveL = px - roofW / 2
+      const eaveR = px + roofW / 2
+      const eaveY = py
+      const groundY = py + wallH
+
+      const green = (a: number) => `rgba(22,163,74,${a})`
+
+      // --- Rain ---
+      frame % 3 === 0 && drops.length < 24 && spawnDrop()
+      for (let i = drops.length - 1; i >= 0; i--) {
+        const d = drops[i]
+        ctx.strokeStyle = green(0.25 * d.life)
+        ctx.lineWidth = 1
+        ctx.beginPath()
+        ctx.moveTo(d.x, d.y)
+        ctx.lineTo(d.x - 1, d.y + d.len)
+        ctx.stroke()
+        d.y += d.vy
+        d.life -= 0.012
+        if (d.y > groundY + 20 || d.life <= 0) drops.splice(i, 1)
       }
 
-      requestAnimationFrame(animate)
+      // --- House body (walls) ---
+      ctx.strokeStyle = green(0.18)
+      ctx.lineWidth = 2
+      ctx.strokeRect(eaveL, eaveY, wallW, wallH)
+
+      // Door
+      const dw = 24, dh = 38
+      ctx.strokeStyle = green(0.2)
+      ctx.strokeRect(px - dw / 2, groundY - dh, dw, dh)
+
+      // Windows
+      const winSize = 22
+      ctx.strokeStyle = green(0.18)
+      ctx.strokeRect(eaveL + 24, eaveY + 22, winSize, winSize)
+      ctx.strokeRect(eaveR - 24 - winSize, eaveY + 22, winSize, winSize)
+
+      // --- Roof slopes ---
+      ctx.strokeStyle = green(0.55)
+      ctx.lineWidth = 2.5
+      ctx.lineCap = "round"
+      ctx.lineJoin = "round"
+
+      // Left slope
+      ctx.beginPath()
+      ctx.moveTo(eaveL, eaveY)
+      ctx.lineTo(peakX, peakY)
+      ctx.stroke()
+
+      // Right slope
+      ctx.beginPath()
+      ctx.moveTo(eaveR, eaveY)
+      ctx.lineTo(peakX, peakY)
+      ctx.stroke()
+
+      // Overhang (eave line) with slight extend
+      ctx.strokeStyle = green(0.35)
+      ctx.lineWidth = 2
+      ctx.beginPath()
+      ctx.moveTo(eaveL - 12, eaveY)
+      ctx.lineTo(eaveR + 12, eaveY)
+      ctx.stroke()
+
+      // Ridge cap
+      ctx.strokeStyle = green(0.5)
+      ctx.lineWidth = 3
+      ctx.beginPath()
+      ctx.moveTo(peakX - 6, peakY)
+      ctx.lineTo(peakX + 6, peakY)
+      ctx.stroke()
+
+      // Shingle rows (left slope)
+      ctx.strokeStyle = green(0.12)
+      ctx.lineWidth = 1
+      for (let r = 1; r <= 5; r++) {
+        const t = r / 6
+        const rowY = peakY + t * roofH
+        const rowXl = peakX - t * (roofW / 2)
+        const rowXr = peakX
+        ctx.beginPath()
+        ctx.moveTo(rowXl, rowY)
+        ctx.lineTo(rowXr - 4, rowY + 3)
+        ctx.stroke()
+      }
+      // Right slope
+      for (let r = 1; r <= 5; r++) {
+        const t = r / 6
+        const rowY = peakY + t * roofH
+        const rowXr = peakX + t * (roofW / 2)
+        const rowXl = peakX
+        ctx.beginPath()
+        ctx.moveTo(rowXr, rowY)
+        ctx.lineTo(rowXl + 4, rowY + 3)
+        ctx.stroke()
+      }
+
+      // --- Damage crack lines ---
+      ctx.strokeStyle = green(0.22)
+      ctx.lineWidth = 1
+      ctx.setLineDash([3, 4])
+      // Left slope crack
+      const crackT = 0.45
+      const crackX = peakX - crackT * (roofW / 2)
+      const crackY = peakY + crackT * roofH
+      ctx.beginPath()
+      ctx.moveTo(crackX, crackY)
+      ctx.lineTo(crackX - 14, crackY + 10)
+      ctx.lineTo(crackX - 8, crackY + 18)
+      ctx.stroke()
+      ctx.setLineDash([])
+
+      // --- Shingle fragments ---
+      frame % 50 === 0 && fragments.length < 14 && spawnFragment()
+      for (let i = fragments.length - 1; i >= 0; i--) {
+        const f = fragments[i]
+        const alpha = (f.life) * 0.55
+        ctx.save()
+        ctx.translate(f.x, f.y)
+        ctx.rotate(f.rotation)
+        ctx.strokeStyle = green(alpha)
+        ctx.fillStyle = green(alpha * 0.3)
+        ctx.lineWidth = 1
+        ctx.beginPath()
+        ctx.rect(-f.w / 2, -f.h / 2, f.w, f.h)
+        ctx.fill()
+        ctx.stroke()
+        ctx.restore()
+
+        f.x += f.vx
+        f.y += f.vy
+        f.vy += 0.08 // gravity
+        f.rotation += f.rotV
+        f.life -= 1 / f.maxLife
+        if (f.life <= 0) fragments.splice(i, 1)
+      }
+
+      frame++
+      animId = requestAnimationFrame(draw)
     }
 
-    animate()
+    draw()
 
-    return () => window.removeEventListener("resize", updateCanvasSize)
+    return () => {
+      window.removeEventListener("resize", resize)
+      cancelAnimationFrame(animId)
+    }
   }, [])
 
   return (
-    <section className="relative w-full min-h-[100svh] flex items-center justify-center bg-background overflow-hidden">
-      {/* Animated canvas background */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-70 pointer-events-none"
-        aria-hidden="true"
-      />
+    <section className="relative w-full min-h-[100svh] flex items-center bg-background overflow-hidden">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 w-full">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-24 lg:py-0">
 
-      {/* Content */}
-      <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 w-full">
-        <div className="max-w-2xl">
-          <h1 className="animate-fade-up text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-[-0.04em] font-serif mb-6 max-w-[9ch]">
-            Revenue systems built for{" "}
-            <span className="relative inline-block text-primary whitespace-nowrap">
-              roofing.
-              <span
-                className="animate-draw-line absolute bottom-0 left-0 h-[2px] bg-primary/30"
-                aria-hidden="true"
-              />
-            </span>
-          </h1>
-
-          <p
-            className="animate-fade-up text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md mb-10"
-            style={{ animationDelay: "80ms" }}
-          >
-            Supplement recovery. Storm outreach. Systems that run without adding headcount.
-          </p>
-
-          {/* CTA Buttons */}
-          <div
-            className="flex flex-col sm:flex-row gap-4 animate-fade-up"
-            style={{ animationDelay: "160ms" }}
-          >
-            <Button
-              asChild
-              size="lg"
-              className="h-12 sm:h-14 text-base px-6 sm:px-8 rounded-none shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300"
+          {/* Left — text content, pushed down slightly */}
+          <div className="flex flex-col justify-center mt-8 lg:mt-16">
+            <h1
+              className="animate-fade-up text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-[-0.04em] font-serif mb-6"
+              style={{ animationDelay: "0ms" }}
             >
-              <Link href="/contact">
-                Schedule a Consultation
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="h-12 sm:h-14 text-base px-6 sm:px-8 rounded-none border-border hover:bg-muted/50 transition-all duration-300"
+              Revenue systems built for{" "}
+              <span className="relative inline-block text-primary">
+                roofing.
+                <span
+                  className="animate-draw-line absolute bottom-0 left-0 h-[2px] bg-primary/30"
+                  aria-hidden="true"
+                />
+              </span>
+            </h1>
+
+            <p
+              className="animate-fade-up text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md mb-10"
+              style={{ animationDelay: "80ms" }}
             >
-              <Link href="/services">Explore Services</Link>
-            </Button>
+              Supplement recovery. Storm outreach. Systems that run without adding headcount.
+            </p>
+
+            <div
+              className="flex flex-col sm:flex-row gap-4 animate-fade-up"
+              style={{ animationDelay: "160ms" }}
+            >
+              <Button
+                asChild
+                size="lg"
+                className="h-12 sm:h-14 text-base px-6 sm:px-8 rounded-none shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300"
+              >
+                <Link href="/contact">
+                  Schedule a Consultation
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="h-12 sm:h-14 text-base px-6 sm:px-8 rounded-none border-border hover:bg-muted/50 transition-all duration-300"
+              >
+                <Link href="/services">Explore Services</Link>
+              </Button>
+            </div>
           </div>
+
+          {/* Right — animated house with storm damage graphic */}
+          <div className="relative w-full h-[340px] sm:h-[420px] lg:h-[500px] flex items-center justify-center">
+            <canvas
+              ref={canvasRef}
+              className="w-full h-full"
+              aria-hidden="true"
+            />
+          </div>
+
         </div>
       </div>
     </section>
