@@ -9,27 +9,23 @@ const leaks = [
 
 export function ProblemSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-foreground">
+    <section className="py-16 sm:py-20 lg:py-24 bg-muted/30 border-t border-border/40">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
 
-        <div className="grid lg:grid-cols-[220px_1fr] gap-8 lg:gap-16 mb-12 items-start">
-          <div className="pt-1">
-            <p className="text-[10px] font-semibold text-primary-foreground/40 uppercase tracking-[0.3em]">The Problem</p>
-          </div>
-          <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-[-0.03em] font-serif leading-[1.05]">
-              Where roofing companies<br className="hidden sm:block" /> lose revenue.
-            </h2>
-          </div>
+        <div className="mb-12">
+          <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">The Problem</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05] max-w-xl">
+            Where roofing companies lose revenue.
+          </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-primary-foreground/10 border border-primary-foreground/10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border/30 border border-border/30">
           {leaks.map((leak, index) => (
-            <div key={index} className="bg-foreground p-6 lg:p-7">
-              <h3 className="text-base font-semibold text-primary-foreground mb-1.5 tracking-[-0.01em]">
+            <div key={index} className="bg-background p-6 lg:p-7">
+              <h3 className="text-sm font-semibold text-foreground mb-1.5 tracking-[-0.01em]">
                 {leak.title}
               </h3>
-              <p className="text-sm text-primary-foreground/50 leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {leak.description}
               </p>
             </div>
