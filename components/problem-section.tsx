@@ -30,7 +30,6 @@ export function ProblemSection() {
     <section className="py-16 sm:py-20 lg:py-24 bg-background border-t border-border/40">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
 
-        {/* Asymmetric header: label left, statement right */}
         <div className="grid lg:grid-cols-[220px_1fr] gap-8 lg:gap-16 mb-12 lg:mb-16 items-start">
           <div className="pt-1">
             <p className="text-primary font-semibold text-[10px] uppercase tracking-[0.3em]">
@@ -47,15 +46,12 @@ export function ProblemSection() {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border/30 rounded-2xl overflow-hidden border border-border/30">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border/30 border border-border/30">
           {leaks.map((leak, index) => (
             <div
               key={index}
-              className="bg-background p-6 lg:p-8 hover:bg-muted/20 transition-colors duration-200 group"
+              className="bg-background p-6 lg:p-8"
             >
-              <span className="text-[10px] font-mono text-primary/30 tracking-widest block mb-4">
-                {String(index + 1).padStart(2, "0")}
-              </span>
               <h3 className="text-sm font-semibold text-foreground mb-2 tracking-[-0.01em] leading-snug">
                 {leak.title}
               </h3>
@@ -66,7 +62,7 @@ export function ProblemSection() {
           ))}
         </div>
 
-        <p className="mt-10 text-sm text-muted-foreground/60 max-w-lg">
+        <p className="mt-8 text-sm text-muted-foreground/60 max-w-lg">
           Artificial intelligence and automation tools can handle these tasks for you, allowing your team to focus on what actually matters.
         </p>
 
