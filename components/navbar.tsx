@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/case-studies", label: "Case Studies" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Book a Call" },
 ]
 
 export function Navbar() {
