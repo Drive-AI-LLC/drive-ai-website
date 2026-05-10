@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { Testimonials } from "@/components/testimonials"
+import { WhyDriveAI } from "@/components/why-drive-ai"
 import { Target, Heart, Zap, Users } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -118,6 +119,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Why Drive AI */}
+      <WhyDriveAI />
 
       {/* Testimonials */}
       <Testimonials />

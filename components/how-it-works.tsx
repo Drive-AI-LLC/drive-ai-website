@@ -18,22 +18,24 @@ export function HowItWorks() {
           </h2>
         </div>
 
-        <div className="border border-border/30 divide-y divide-border/30 lg:divide-y-0 lg:grid lg:grid-cols-5 lg:divide-x">
+        <div className="divide-y divide-border/40">
           {steps.map((item, index) => (
             <div
               key={item.step}
-              className="animate-fade-up bg-background p-6 lg:p-7 transition-transform duration-200 hover:-translate-y-0.5"
+              className="animate-fade-up grid sm:grid-cols-[80px_1fr] lg:grid-cols-[120px_1fr] gap-4 py-8 first:pt-0 last:pb-0"
               style={{ animationDelay: `${index * 70}ms` }}
             >
-              <span className="text-[10px] font-mono text-primary/40 tracking-[0.2em] block mb-3">
+              <span className="text-3xl sm:text-4xl font-bold text-primary/20 font-serif tracking-[-0.04em] leading-none pt-1">
                 {item.step}
               </span>
-              <h3 className="text-sm font-semibold text-foreground mb-1.5 tracking-[-0.01em] leading-snug font-serif">
-                {item.title}
-              </h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                {item.description}
-              </p>
+              <div>
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2 tracking-[-0.02em] leading-snug font-serif">
+                  {item.title}
+                </h3>
+                <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

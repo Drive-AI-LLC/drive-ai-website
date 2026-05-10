@@ -17,7 +17,7 @@ export function CTASection() {
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">
             <div className="max-w-xl">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-[-0.03em] font-serif leading-[1.05] text-balance">
-                See what a system could do for your operation.
+                See what AI can do for you.
               </h2>
               <p className="mt-3 text-sm text-primary-foreground/60 leading-relaxed max-w-md">
                 30 minutes. No commitment. We&apos;ll identify your highest-impact opportunity.

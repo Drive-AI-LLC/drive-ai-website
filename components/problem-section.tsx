@@ -2,9 +2,7 @@ const leaks = [
   { title: "Missed supplements", description: "Incomplete claims leave thousands per job on the table." },
   { title: "Slow lead follow-up", description: "Leads go cold while your team is on the roof." },
   { title: "Storm surge overwhelm", description: "Volume spikes overnight. Most teams can't scale fast enough." },
-  { title: "Sales-to-production failures", description: "Poor handoffs cause delays, rework, and callbacks." },
   { title: "Scheduling gaps", description: "Manual scheduling creates idle crews and missed windows." },
-  { title: "No pipeline visibility", description: "Owners can't see what's stalled or why." },
 ]
 
 export function ProblemSection() {
@@ -19,7 +17,7 @@ export function ProblemSection() {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border/30 border border-border/30">
+        <div className="grid sm:grid-cols-2 gap-px bg-border/30 border border-border/30">
           {leaks.map((leak, index) => (
             <div
               key={index}

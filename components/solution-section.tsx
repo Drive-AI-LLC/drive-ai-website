@@ -31,11 +31,11 @@ export function SolutionSection() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-px bg-border/30 border border-border/30">
+        <div className="grid md:grid-cols-3 gap-4 lg:gap-6">
           {solutions.map((solution, index) => (
             <div
               key={solution.title}
-              className="animate-fade-up bg-background p-6 sm:p-8 flex flex-col transition-transform duration-200 hover:-translate-y-0.5"
+              className="animate-fade-up bg-background border border-border/40 p-6 sm:p-8 flex flex-col transition-transform duration-200 hover:-translate-y-0.5"
               style={{ animationDelay: `${index * 80}ms` }}
             >
               <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.2em] mb-4">
