@@ -14,7 +14,7 @@ export function Hero() {
           {/* Left — text content, pushed down slightly */}
           <div className="flex flex-col justify-center mt-8 lg:mt-16">
             <h1
-              className="animate-fade-up text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-[-0.04em] font-serif mb-6"
+              className="animate-fade-up text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.35] tracking-[-0.04em] font-serif mb-6"
               style={{ animationDelay: "0ms" }}
             >
               More money.
