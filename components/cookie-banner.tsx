@@ -21,7 +21,7 @@ export function CookieBanner() {
   if (!visible) return null
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 max-w-[280px]">
+    <div className="fixed bottom-4 right-4 z-50 max-w-[280px]">
       <div className="bg-[#1e2a38] text-white rounded-lg px-4 py-3 flex flex-col gap-2.5 shadow-md">
         <p className="text-[11px] text-white/60 leading-relaxed">
           This site uses cookies to improve your experience.{" "}
