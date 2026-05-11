@@ -5,11 +5,9 @@ import { Linkedin, Instagram, Facebook } from "lucide-react"
 const navigation = {
   main: [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "Case Studies", href: "/case-studies" },
+    { name: "Our Systems", href: "/services" },
     { name: "Blog", href: "/blog" },
     { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
   ],
   social: [
     { name: "LinkedIn", href: "https://www.linkedin.com/company/drive-ai-llc", icon: Linkedin },
@@ -21,62 +19,72 @@ const navigation = {
 export function Footer() {
   return (
     <footer className="bg-[#1e2a38] text-white">
-      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 py-10 lg:py-12">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-8">
+
           {/* Brand */}
-          <div className="lg:col-span-2">
+          <div className="max-w-xs">
             <Link href="/" className="flex items-center">
               <Image
                 src="/images/logo.png"
                 alt="Drive AI"
                 width={140}
                 height={52}
-                className="h-9 w-auto brightness-0 invert"
+                className="h-8 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="mt-6 text-white/60 max-w-md leading-relaxed text-base">
-              Drive AI helps small businesses implement practical AI tools and workflow automations to save time, reduce manual work, and operate more efficiently.
+            <p className="mt-4 text-white/50 text-sm leading-relaxed">
+              Drive AI builds revenue-generating systems for roofing companies.
             </p>
-          </div>
-
-          {/* Navigation */}
-          <div>
-            <h3 className="font-semibold text-white mb-5 text-sm uppercase tracking-[0.15em]">Navigation</h3>
-            <ul className="space-y-4">
-              {navigation.main.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-white/60 hover:text-white transition-colors duration-200"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="font-semibold text-white mb-5 text-sm uppercase tracking-[0.15em]">Contact</h3>
-            <p className="text-white/60 mb-6">inquiries@driveai.llc</p>
-            <div className="flex gap-3">
+            <div className="flex gap-2.5 mt-5">
               {navigation.social.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-200"
+                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-200"
                   aria-label={item.name}
                 >
-                  <item.icon className="w-5 h-5 text-white" />
+                  <item.icon className="w-4 h-4 text-white" />
                 </Link>
               ))}
             </div>
           </div>
+
+          {/* Navigation */}
+          <div className="flex flex-col gap-3">
+            <h3 className="font-semibold text-white text-xs uppercase tracking-[0.15em] mb-1">Navigation</h3>
+            {navigation.main.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-sm text-white/55 hover:text-white transition-colors duration-200"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Contact */}
+          <div className="flex flex-col gap-2">
+            <h3 className="font-semibold text-white text-xs uppercase tracking-[0.15em] mb-1">Contact</h3>
+            <a
+              href="mailto:inquiries@driveai.llc"
+              className="text-sm text-white/55 hover:text-white transition-colors duration-200"
+            >
+              inquiries@driveai.llc
+            </a>
+            <Link
+              href="/contact"
+              className="text-sm text-white/55 hover:text-white transition-colors duration-200"
+            >
+              Book a Call
+            </Link>
+          </div>
+
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10">
-          <p className="text-center text-white/40 text-sm tracking-wide">
+        <div className="mt-8 pt-6 border-t border-white/10">
+          <p className="text-white/30 text-xs tracking-wide">
             © {new Date().getFullYear()} Drive AI. All rights reserved.
           </p>
         </div>
