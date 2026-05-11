@@ -32,13 +32,13 @@ export function SolutionSection() {
           {solutions.map((solution, index) => (
             <div
               key={solution.title}
-              className="animate-fade-up bg-background border border-border/40 p-7 sm:p-9 flex flex-col group transition-all duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-sm"
+              className="animate-fade-up bg-background border border-border rounded-lg p-8 flex flex-col group transition-all duration-200 hover:border-primary"
               style={{ animationDelay: `${index * 80}ms` }}
             >
-              <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.2em] mb-5">
+              <p className="text-[10px] font-semibold text-primary uppercase tracking-[0.22em] mb-5">
                 {solution.tag}
               </p>
-              <h3 className="text-xl font-bold text-foreground mb-3 tracking-[-0.02em] leading-snug font-serif">
+              <h3 className="text-2xl font-bold text-foreground mb-4 tracking-[-0.02em] leading-snug font-serif">
                 {solution.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed flex-1">
