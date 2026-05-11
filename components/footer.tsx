@@ -36,18 +36,6 @@ export function Footer() {
             <p className="mt-4 text-white/50 text-sm leading-relaxed">
               Drive AI builds revenue-generating systems for roofing companies.
             </p>
-            <div className="flex gap-2.5 mt-5">
-              {navigation.social.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-200"
-                  aria-label={item.name}
-                >
-                  <item.icon className="w-4 h-4 text-white" />
-                </Link>
-              ))}
-            </div>
           </div>
 
           {/* Navigation */}
@@ -65,7 +53,7 @@ export function Footer() {
           </div>
 
           {/* Contact */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             <h3 className="font-semibold text-white text-xs uppercase tracking-[0.15em] mb-1">Contact</h3>
             <a
               href="mailto:inquiries@driveai.llc"
@@ -73,12 +61,18 @@ export function Footer() {
             >
               inquiries@driveai.llc
             </a>
-            <Link
-              href="/contact"
-              className="text-sm text-white/55 hover:text-white transition-colors duration-200"
-            >
-              Book a Call
-            </Link>
+            <div className="flex gap-2.5 pt-2">
+              {navigation.social.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-200"
+                  aria-label={item.name}
+                >
+                  <item.icon className="w-4 h-4 text-white" />
+                </Link>
+              ))}
+            </div>
           </div>
 
         </div>
