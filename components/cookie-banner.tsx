@@ -22,7 +22,7 @@ export function CookieBanner() {
 
   return (
     <div className="fixed bottom-4 right-4 z-50 max-w-[280px]">
-      <div className="bg-[#1e2a38] text-white rounded-lg px-4 py-3 flex flex-col gap-2.5 shadow-md">
+      <div className="bg-[#1e2a38] text-white rounded-lg px-4 py-3 flex flex-col gap-2.5 shadow-md text-right">
         <p className="text-[11px] text-white/60 leading-relaxed">
           This site uses cookies to improve your experience.{" "}
           <Link
@@ -34,7 +34,7 @@ export function CookieBanner() {
         </p>
         <button
           onClick={accept}
-          className="self-start text-[11px] font-semibold bg-primary text-primary-foreground px-3 py-1 rounded hover:bg-primary/90 transition-colors"
+          className="self-end text-[11px] font-semibold bg-primary text-primary-foreground px-3 py-1 rounded hover:bg-primary/90 transition-colors"
         >
           Accept
         </button>
