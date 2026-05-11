@@ -79,7 +79,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-base font-semibold text-foreground mb-3">We Do Not Sell Your Data</h2>
             <p>
-              Drive AI does not sell, trade, or rent your personal information to third parties. Full stop.
+              Drive AI does not sell, trade, or rent your personal information to third parties.
             </p>
           </section>
 
@@ -91,12 +91,26 @@ export default function PrivacyPage() {
           </section>
 
           <section>
+            <h2 className="text-base font-semibold text-foreground mb-3">Data Retention</h2>
+            <p>
+              We retain submitted information only as long as necessary to respond to inquiries, maintain business records, or improve our services.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-base font-semibold text-foreground mb-3">Policy Updates</h2>
+            <p>
+              We may update this Privacy Policy periodically. Any changes will be reflected by the 'Last updated' date at the top of this page.
+            </p>
+          </section>
+
+          <section>
             <h2 className="text-base font-semibold text-foreground mb-3">Contact</h2>
             <p>
               If you have questions about this privacy policy or how we handle your data, reach out at{" "}
               <a href="mailto:inquiries@driveai.llc" className="text-primary underline underline-offset-2">
                 inquiries@driveai.llc
-              </a>.
+              </a>. You may also contact us to request deletion of information you previously submitted.
             </p>
           </section>
 
