@@ -25,7 +25,7 @@ const steps = [
   },
 ]
 
-function StepCard({ item, index }: { item: typeof steps[0]; index: number }) {
+function StepItem({ item, index }: { item: typeof steps[0]; index: number }) {
   const ref = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
 
@@ -39,7 +39,7 @@ function StepCard({ item, index }: { item: typeof steps[0]; index: number }) {
           observer.disconnect()
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.2 }
     )
     observer.observe(el)
     return () => observer.disconnect()
@@ -48,18 +48,24 @@ function StepCard({ item, index }: { item: typeof steps[0]; index: number }) {
   return (
     <div
       ref={ref}
-      className={`px-0 py-10 border-b border-border/40 transition-all duration-700 ease-out ${
-        index % 2 === 0 ? "sm:border-r sm:pl-0 sm:pr-14" : "sm:pr-0 sm:pl-14"
-      } ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
-      style={{ transitionDelay: `${index * 80}ms` }}
+      className={`flex-1 transition-all duration-600 ease-out ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+      }`}
+      style={{ transitionDelay: `${index * 120}ms` }}
     >
-      <span className="block text-sm font-semibold text-primary/50 tracking-[0.15em] mb-5 font-sans">
-        {item.step}
-      </span>
-      <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2.5 tracking-[-0.02em] font-serif">
+      {/* Number + dot on the line */}
+      <div className="flex items-center mb-6">
+        <div className="w-7 h-7 rounded-full border border-primary/30 bg-background flex items-center justify-center shrink-0 z-10">
+          <span className="text-[10px] font-semibold text-primary/60 tracking-wide font-sans">
+            {item.step}
+          </span>
+        </div>
+      </div>
+
+      <h3 className="text-base font-semibold text-foreground mb-2 tracking-[-0.01em] font-serif">
         {item.title}
       </h3>
-      <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
+      <p className="text-sm text-muted-foreground leading-relaxed">
         {item.description}
       </p>
     </div>
@@ -71,9 +77,9 @@ export function HowItWorks() {
     <section id="how-it-works" className="py-20 sm:py-24 lg:py-28 bg-muted/30 border-t border-border/40">
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
 
-        <div className="mb-12">
+        <div className="mb-14">
           <p className="text-[10px] font-semibold text-primary/70 uppercase tracking-[0.3em] mb-4">Our Process</p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05] mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05] mb-3">
             How it works.
           </h2>
           <p className="text-sm text-muted-foreground">
@@ -81,10 +87,19 @@ export function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 border-t border-border/40">
-          {steps.map((item, index) => (
-            <StepCard key={item.step} item={item} index={index} />
-          ))}
+        {/* Timeline */}
+        <div className="relative">
+          {/* Connecting line — hidden on mobile, shown on sm+ */}
+          <div
+            className="hidden sm:block absolute top-[13px] left-[14px] right-[14px] h-px bg-primary/20"
+            aria-hidden="true"
+          />
+
+          <div className="flex flex-col sm:flex-row gap-10 sm:gap-6">
+            {steps.map((item, index) => (
+              <StepItem key={item.step} item={item} index={index} />
+            ))}
+          </div>
         </div>
 
       </div>
