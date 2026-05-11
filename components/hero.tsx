@@ -31,7 +31,8 @@ export function Hero() {
               className="animate-fade-up text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md mb-10"
               style={{ animationDelay: "80ms" }}
             >
-              Supplement recovery. Storm outreach. Smarter roofing operations.
+              Supplement recovery. Storm outreach.
+              <span className="block">Smarter roofing operations.</span>
             </p>
 
             <div
