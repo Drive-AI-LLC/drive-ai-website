@@ -498,14 +498,13 @@ export default async function BlogPostPage({
       {/* Article Body */}
       <section className="pb-20 lg:pb-28">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
-          <article className="max-w-3xl prose prose-lg max-w-none
-            prose-headings:font-serif prose-headings:tracking-tight prose-headings:text-foreground prose-headings:font-bold
-            prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
-            prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-5
-            prose-ul:text-muted-foreground prose-ul:leading-relaxed
-            prose-li:mb-1.5 prose-li:marker:text-primary
-            prose-strong:text-foreground
-            prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground">
+          <article className="max-w-3xl
+            [&>p]:text-base [&>p]:text-muted-foreground [&>p]:leading-[1.85] [&>p]:mb-6
+            [&>h2]:text-xl [&>h2]:sm:text-2xl [&>h2]:font-bold [&>h2]:font-serif [&>h2]:tracking-[-0.02em] [&>h2]:text-foreground [&>h2]:mt-12 [&>h2]:mb-4 [&>h2]:pb-2 [&>h2]:border-b [&>h2]:border-border
+            [&>ul]:mb-6 [&>ul]:pl-5 [&>ul]:space-y-2
+            [&>ul>li]:text-base [&>ul>li]:text-muted-foreground [&>ul>li]:leading-relaxed [&>ul>li]:marker:text-primary
+            [&>ul>li>strong]:text-foreground [&>ul>li>strong]:font-semibold
+            [&>div]:my-8">
             {post.content}
           </article>
         </div>
