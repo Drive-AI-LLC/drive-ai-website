@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Libre_Baskerville, Open_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 
 const libreBaskerville = Libre_Baskerville({ 
@@ -52,6 +53,7 @@ export default function RootLayout({
       <body className={`${libreBaskerville.variable} ${openSans.variable} font-sans antialiased`}>
         {children}
         <Analytics />
+        <GoogleAnalytics gaId="G-61K6X4947K" />
       </body>
     </html>
   )
