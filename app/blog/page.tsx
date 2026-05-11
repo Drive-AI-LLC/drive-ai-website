@@ -103,7 +103,7 @@ export default function BlogPage() {
               Roofing Industry Insights
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-              Systems thinking and workflow strategies.
+              Understanding modern operations.
             </p>
           </div>
         </div>
