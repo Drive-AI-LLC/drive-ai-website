@@ -7,7 +7,7 @@ import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { CTASection } from "@/components/cta-section"
 import { Input } from "@/components/ui/input"
-import { Search, ArrowRight } from "lucide-react"
+import { Search, ArrowRight, ChevronDown } from "lucide-react"
 
 const categories = [
   "All",
@@ -102,9 +102,12 @@ export default function BlogPage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-[-0.02em] font-serif mb-6 whitespace-nowrap">
               Roofing Industry Insights
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8">
               Understanding modern operations.
             </p>
+            <div className="flex justify-center">
+              <ChevronDown className="w-5 h-5 text-primary/60 animate-bounce" />
+            </div>
           </div>
         </div>
       </section>
