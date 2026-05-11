@@ -24,7 +24,7 @@ const memberships = [
 export function SocialProof() {
   return (
     <section className="py-8 sm:py-10 bg-muted/20 border-y border-border/40">
-      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
+      <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
         <p className="text-center text-xs sm:text-sm font-medium text-muted-foreground/80 uppercase tracking-[0.2em] mb-6 sm:mb-7">
           Members of
         </p>

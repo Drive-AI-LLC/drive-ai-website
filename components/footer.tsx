@@ -19,7 +19,7 @@ const navigation = {
 export function Footer() {
   return (
     <footer className="bg-[#1e2a38] text-white">
-      <div className="max-w-[1050px] mx-auto px-5 sm:px-6 lg:px-8 py-10 lg:py-12">
+      <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8 py-10 lg:py-12">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-10">
 
           {/* Brand */}

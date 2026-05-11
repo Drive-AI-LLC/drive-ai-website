@@ -69,7 +69,7 @@ function StepCard({ item, index }: { item: typeof steps[0]; index: number }) {
 export function HowItWorks() {
   return (
     <section id="how-it-works" className="py-20 sm:py-24 lg:py-28 bg-muted/30 border-t border-border/40">
-      <div className="max-w-[860px] mx-auto px-6 sm:px-10 lg:px-12">
+      <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
 
         <div className="mb-12">
           <p className="text-[10px] font-semibold text-primary/70 uppercase tracking-[0.3em] mb-4">Our Process</p>

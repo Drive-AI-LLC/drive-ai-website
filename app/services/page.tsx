@@ -45,7 +45,7 @@ export default function ServicesPage() {
 
       {/* Hero */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-background">
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">
             Our Systems
           </p>
@@ -60,7 +60,7 @@ export default function ServicesPage() {
 
       {/* Services */}
       <section className="py-16 lg:py-24 bg-background border-t border-border/40">
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
+        <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           <div className="space-y-20 lg:space-y-28">
             {services.map((service, index) => (
               <div key={service.title} className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">

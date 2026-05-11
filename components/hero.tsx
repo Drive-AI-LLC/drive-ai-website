@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react"
 export function Hero() {
   return (
     <section className="relative w-full min-h-[100svh] flex items-center bg-background overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 w-full">
+      <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-24 lg:py-0">
 
           {/* Left — text content, pushed down slightly */}

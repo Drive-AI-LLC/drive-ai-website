@@ -41,7 +41,7 @@ export default function AboutPage() {
       
       {/* Hero */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">
@@ -71,7 +71,7 @@ export default function AboutPage() {
 
       {/* Mission */}
       <section className="py-16 lg:py-24 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">
               Our Mission
@@ -88,7 +88,7 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="py-16 lg:py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
             <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">
               Our Values

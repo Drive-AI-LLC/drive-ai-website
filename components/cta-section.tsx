@@ -10,7 +10,7 @@ interface CTASectionProps {
 export function CTASection({ headline, supporting }: CTASectionProps) {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-primary">
-      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-[-0.03em] font-serif leading-[1.05] text-balance">
           {headline}
         </h2>

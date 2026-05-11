@@ -20,7 +20,7 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/96 backdrop-blur-md border-b border-border/30">
-      <nav className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
+      <nav className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-18">
           <Link href="/" className="flex items-center shrink-0">
             <Image

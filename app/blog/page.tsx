@@ -86,7 +86,7 @@ export default function BlogPage() {
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-medium text-sm uppercase tracking-[0.2em] mb-6">
               Blog
@@ -103,7 +103,7 @@ export default function BlogPage() {
 
       {/* Blog Content */}
       <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           {/* Search and Filters */}
           <div className="mb-12 space-y-6">
             {/* Search Bar */}
