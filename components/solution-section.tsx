@@ -32,7 +32,7 @@ export function SolutionSection() {
           {solutions.map((solution, index) => (
             <div
               key={solution.title}
-              className="animate-fade-up bg-background border border-border rounded-lg p-8 flex flex-col group transition-all duration-200 hover:border-primary"
+              className="animate-fade-up bg-background border border-border rounded-lg p-8 flex flex-col group transition-colors duration-200 hover:border-primary"
               style={{ animationDelay: `${index * 80}ms` }}
             >
               <p className="text-[10px] font-semibold text-primary uppercase tracking-[0.22em] mb-5">
