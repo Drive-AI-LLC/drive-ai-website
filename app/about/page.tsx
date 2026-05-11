@@ -14,11 +14,13 @@ const founders = [
     name: "Danika Pfleghardt",
     role: "Co-Founder",
     image: "/images/team/danika.jpg",
+    bio: "I lead marketing and growth at Drive AI. Over the past few years, I've worked across several startups and spent a lot of time helping businesses improve communication and brand presence. At Drive AI, I'm focused on helping roofing companies modernize the way they coordinate and scale.",
   },
   {
     name: "Reid Turner",
     role: "Co-Founder",
     image: "/images/team/reid.jpg",
+    bio: "I oversee the technical side of Drive AI along with the legal aspects and operations behind the company. Before starting Drive AI, I gained experience in finance and investor relations at a Fortune 500 company, which shaped the way I think about organization and long-term growth.",
   },
 ]
 
@@ -73,10 +75,10 @@ export default function AboutPage() {
             Meet the founders.
           </h2>
           
-          <div className="grid sm:grid-cols-2 gap-8 max-w-xl">
+          <div className="grid sm:grid-cols-2 gap-10 max-w-2xl">
             {founders.map((founder) => (
               <div key={founder.name} className="flex flex-col">
-                <div className="aspect-[4/5] relative rounded-lg overflow-hidden bg-muted mb-4">
+                <div className="aspect-[4/5] relative rounded-lg overflow-hidden bg-muted mb-5">
                   <Image
                     src={founder.image}
                     alt={founder.name}
@@ -84,11 +86,14 @@ export default function AboutPage() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground">
+                <h3 className="text-base font-semibold text-foreground">
                   {founder.name}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-xs text-primary uppercase tracking-[0.15em] font-semibold mt-0.5 mb-3">
                   {founder.role}
+                </p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {founder.bio}
                 </p>
               </div>
             ))}
