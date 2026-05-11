@@ -54,7 +54,7 @@ export default function AboutPage() {
               About Us
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-[-0.03em] leading-[1.08] font-serif mb-6">
-              Revenue systems for roofing companies.
+              What we do.
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Drive AI builds revenue-generating systems for roofing companies. We focus on operational workflows including supplement recovery, storm outreach, and production coordination.
