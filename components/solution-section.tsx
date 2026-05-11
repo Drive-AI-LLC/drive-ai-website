@@ -32,7 +32,9 @@ export function SolutionSection() {
           {solutions.map((solution, index) => (
             <div
               key={solution.title}
-              className="animate-fade-up bg-background border-2 border-border/60 rounded-lg p-8 flex flex-col group transition-colors duration-300 hover:border-primary/100"
+              className="animate-fade-up bg-background border border-border rounded-lg p-8 flex flex-col group cursor-pointer transition-all duration-300"
+              onMouseEnter={(e) => e.currentTarget.style.borderColor = 'rgb(1, 86, 59)'}
+              onMouseLeave={(e) => e.currentTarget.style.borderColor = ''}
               style={{ animationDelay: `${index * 80}ms` }}
             >
               <p className="text-[10px] font-semibold text-primary uppercase tracking-[0.22em] mb-5">
