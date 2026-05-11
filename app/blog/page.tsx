@@ -11,61 +11,61 @@ import { Search, ArrowRight } from "lucide-react"
 
 const categories = [
   "All",
-  "AI Basics",
-  "Automation",
-  "Small Business Tips",
-  "Productivity",
-  "Case Studies",
+  "Supplements",
+  "Storm Response",
+  "Operations",
+  "Workflows",
+  "Industry Trends",
 ]
 
 const blogPosts = [
   {
-    slug: "5-ways-small-businesses-can-use-ai-right-now",
-    title: "5 Ways Small Businesses Can Use AI Right Now",
-    excerpt: "Discover practical, actionable ways to implement AI in your small business today without a massive budget or technical expertise.",
-    category: "AI Basics",
-    date: "March 5, 2026",
-    image: "/images/blog/ai-small-business.jpg",
+    slug: "why-roofing-companies-leave-money-on-the-table",
+    title: "Why Roofing Companies Leave Money on the Table",
+    excerpt: "Most roofers miss supplement opportunities on every claim. Here's how to identify gaps in your current process and recover what you're owed.",
+    category: "Supplements",
+    date: "April 28, 2026",
+    image: "/images/blog/supplements.jpg",
   },
   {
-    slug: "what-ai-automation-actually-looks-like",
-    title: "What AI Automation Actually Looks Like",
-    excerpt: "Forget the hype. Here's what AI automation looks like in practice for real businesses with real constraints.",
-    category: "Automation",
-    date: "February 28, 2026",
-    image: "/images/blog/automation.jpg",
+    slug: "storm-response-speed-matters",
+    title: "Storm Response: Why Speed Matters More Than You Think",
+    excerpt: "The first 48 hours after a storm determine who wins the neighborhood. Learn how top roofing companies structure their outreach.",
+    category: "Storm Response",
+    date: "April 21, 2026",
+    image: "/images/blog/storm-response.jpg",
   },
   {
-    slug: "how-to-save-time-by-connecting-your-business-tools",
-    title: "How to Save Time by Connecting Your Business Tools",
-    excerpt: "Learn how integrating your existing tools can eliminate manual data entry and save hours every week.",
-    category: "Productivity",
-    date: "February 20, 2026",
-    image: "/images/blog/tools.jpg",
+    slug: "production-bottlenecks-killing-your-margins",
+    title: "5 Production Bottlenecks Killing Your Margins",
+    excerpt: "From sales-to-production handoffs to crew scheduling gaps, these common operational issues cost roofing companies thousands every month.",
+    category: "Operations",
+    date: "April 14, 2026",
+    image: "/images/blog/production.jpg",
   },
   {
-    slug: "common-misconceptions-about-ai-for-small-business",
-    title: "Common Misconceptions About AI for Small Business",
-    excerpt: "We break down the biggest myths about AI adoption and show you what's actually possible for businesses of any size.",
-    category: "AI Basics",
-    date: "February 15, 2026",
-    image: "/images/blog/misconceptions.jpg",
+    slug: "automating-lead-follow-up-without-losing-the-human-touch",
+    title: "Automating Lead Follow-Up Without Losing the Human Touch",
+    excerpt: "Homeowners want fast responses, but they also want to feel heard. Here's how to balance automation with authentic communication.",
+    category: "Workflows",
+    date: "April 7, 2026",
+    image: "/images/blog/follow-up.jpg",
   },
   {
-    slug: "where-to-start-with-ai-in-your-company",
-    title: "Where to Start with AI in Your Company",
-    excerpt: "Feeling overwhelmed? Here's a simple framework to identify the best opportunities for AI in your business.",
-    category: "Small Business Tips",
-    date: "February 10, 2026",
-    image: "/images/blog/getting-started.jpg",
+    slug: "xactimate-cross-reference-explained",
+    title: "Xactimate Cross-Reference: What Most Adjusters Miss",
+    excerpt: "A breakdown of the most commonly missed line items in roofing estimates and how systematic cross-referencing increases claim value.",
+    category: "Supplements",
+    date: "March 30, 2026",
+    image: "/images/blog/xactimate.jpg",
   },
   {
-    slug: "case-study-chamber-of-commerce-automation",
-    title: "Case Study: How We Saved a Chamber of Commerce 100+ Hours",
-    excerpt: "A deep dive into how Drive AI automated lead generation and data collection for the Clemson Area Chamber.",
-    category: "Case Studies",
-    date: "February 5, 2026",
-    image: "/images/blog/case-study.jpg",
+    slug: "roofing-industry-trends-2026",
+    title: "Roofing Industry Trends to Watch in 2026",
+    excerpt: "From labor shortages to insurance tightening, here are the operational shifts every roofing company should be preparing for.",
+    category: "Industry Trends",
+    date: "March 22, 2026",
+    image: "/images/blog/trends.jpg",
   },
 ]
 
@@ -92,10 +92,10 @@ export default function BlogPage() {
               Blog
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-[-0.02em] font-serif mb-6">
-              Insights on AI for Small Business
+              Insights for Roofing Operations
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-              Practical ideas, automation tips, and real-world guidance for using AI in your business.
+              Systems thinking, workflow strategies, and operational insights for roofing companies.
             </p>
           </div>
         </div>
@@ -145,13 +145,12 @@ export default function BlogPage() {
               >
                 {/* Featured Image */}
                 <div className="aspect-[16/10] bg-muted relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-primary font-serif">
-                        {post.title.charAt(0)}
-                      </span>
-                    </div>
-                  </div>
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
 
                 {/* Content */}
