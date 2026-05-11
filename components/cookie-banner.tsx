@@ -7,10 +7,12 @@ export function CookieBanner() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const accepted = localStorage.getItem("cookie-consent")
-    if (!accepted) {
-      setVisible(true)
-    }
+    // TEMPORARY: Always show banner for design preview
+    setVisible(true)
+    // const accepted = localStorage.getItem("cookie-consent")
+    // if (!accepted) {
+    //   setVisible(true)
+    // }
   }, [])
 
   const accept = () => {
