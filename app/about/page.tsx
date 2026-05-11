@@ -78,7 +78,7 @@ export default function AboutPage() {
           <div className="flex flex-col gap-6">
             {founders.map((founder) => (
               <div key={founder.name} className="bg-background rounded-lg border border-border p-6 flex flex-row gap-6 items-stretch">
-                <div className="w-40 h-40 relative rounded-md overflow-hidden bg-muted flex-shrink-0">
+                <div className="w-[140px] h-[140px] relative rounded-md overflow-hidden bg-muted flex-shrink-0">
                   <Image
                     src={founder.image}
                     alt={founder.name}
