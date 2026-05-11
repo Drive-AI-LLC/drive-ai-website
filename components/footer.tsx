@@ -19,7 +19,7 @@ const navigation = {
 export function Footer() {
   return (
     <footer className="bg-[#1e2a38] text-white">
-      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 py-10 lg:py-12">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 py-8 lg:py-10">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-8">
 
           {/* Brand */}
@@ -39,17 +39,19 @@ export function Footer() {
           </div>
 
           {/* Navigation */}
-          <div className="flex flex-col gap-3">
-            <h3 className="font-semibold text-white text-xs uppercase tracking-[0.15em] mb-1">Navigation</h3>
-            {navigation.main.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-sm text-white/55 hover:text-white transition-colors duration-200"
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div>
+            <h3 className="font-semibold text-white text-xs uppercase tracking-[0.15em] mb-3">Navigation</h3>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-2.5">
+              {navigation.main.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-sm text-white/55 hover:text-white transition-colors duration-200"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Contact */}
