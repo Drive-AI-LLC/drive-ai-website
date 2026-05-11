@@ -26,11 +26,11 @@ export function Footer() {
           <div className="max-w-[260px]">
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-white.svg"
                 alt="Drive AI"
-                width={130}
+                width={140}
                 height={48}
-                className="h-8 w-auto brightness-0 invert"
+                className="h-8 w-auto"
               />
             </Link>
             <p className="mt-3.5 text-white/50 text-sm leading-relaxed">
