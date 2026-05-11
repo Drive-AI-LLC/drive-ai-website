@@ -45,7 +45,7 @@ export function Hero() {
                 className="h-12 sm:h-14 text-base px-6 sm:px-8 rounded-none shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300"
               >
                 <Link href="/contact">
-                  Schedule a Consultation
+                  Let's Talk
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
@@ -55,7 +55,7 @@ export function Hero() {
                 size="lg"
                 className="h-12 sm:h-14 text-base px-6 sm:px-8 rounded-none border-border hover:bg-muted/50 transition-all duration-300"
               >
-                <Link href="/services">Explore Services</Link>
+                <Link href="/services">Explore Systems</Link>
               </Button>
             </div>
           </div>
