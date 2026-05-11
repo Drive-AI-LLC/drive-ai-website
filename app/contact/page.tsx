@@ -67,11 +67,13 @@ export default function ContactPage() {
 
             {/* Calendly embed */}
             <div className="w-full border border-border/40 bg-background overflow-hidden">
-              <div
-                className="calendly-inline-widget"
-                data-url="https://calendly.com/danika-driveai/27min?hide_event_type_details=1&primary_color=01563b"
+              {/* Calendly inline widget begin */}
+              <div 
+                className="calendly-inline-widget" 
+                data-url="https://calendly.com/danika-driveai/27min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=01563b" 
                 style={{ minWidth: '320px', height: '700px' }}
               />
+              {/* Calendly inline widget end */}
             </div>
 
           </div>
