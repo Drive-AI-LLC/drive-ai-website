@@ -16,398 +16,383 @@ const blogPosts: Record<string, {
 }> = {
   "crew-scheduling-mistakes-costing-you-time": {
     title: "Crew Scheduling Mistakes Costing You Time and Money",
-    excerpt: "Poor scheduling creates downtime, travel gaps, and missed revenue opportunities. Here's how to optimize crew allocation and maximize productivity.",
+    excerpt: "Poor scheduling creates downtime and travel gaps. Here's how to optimize crew allocation.",
     category: "Operations",
     date: "May 5, 2026",
     image: "/images/blog/crew-scheduling.jpg",
     content: (
       <>
         <p>
-          Scheduling seems simple on the surface — match crew to job, confirm the time, move on. But for most roofing companies, the reality looks very different. Jobs get stacked in the wrong order. Crews drive past each other on the highway. A material delay on one job cascades into two lost afternoons somewhere else.
+          Scheduling looks simple enough. Match the crew to the job, confirm the time, move on. But for most roofing companies, it plays out differently. Jobs get stacked wrong. Crews pass each other on the highway heading to opposite ends of town. One material delay on Monday turns into two lost afternoons by Wednesday.
         </p>
         <p>
-          The result is wasted labor hours, frustrated homeowners, and margin that quietly disappears before anyone notices. Here are the most common scheduling mistakes roofing companies make — and what to do instead.
+          What you end up with is wasted labor, frustrated homeowners, and margin that slips away before anyone catches it.
         </p>
 
-        <h2>1. Scheduling by Availability Instead of Geography</h2>
+        <h2>Scheduling by Availability Instead of Geography</h2>
         <p>
-          One of the most costly scheduling habits is assigning the next available crew regardless of where the job is located. When crews spend 45 minutes driving to a job that a different crew could have reached in 10, that travel time eats directly into your profitability.
+          This one is everywhere. Assign the next available crew regardless of where the job actually is. Now you've got guys driving 45 minutes when a different crew could've been there in 10.
         </p>
         <p>
-          Routing schedules geographically — grouping jobs by neighborhood or zip code — reduces windshield time significantly. Over the course of a week, this can reclaim several productive hours per crew.
+          Route your schedule by geography. Group jobs by neighborhood or zip code. Over a week, this alone can get you back several hours of productive time per crew.
         </p>
 
         <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-          <p className="font-semibold text-foreground mb-2">Key Takeaway</p>
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
           <p className="text-muted-foreground m-0">
-            Geographic scheduling is one of the simplest changes with one of the highest returns. Start by mapping your weekly jobs before assigning crews.
+            Geographic scheduling is low-hanging fruit. Map your weekly jobs before assigning crews. You'll see results fast.
           </p>
         </div>
 
-        <h2>2. No Buffer Between Jobs</h2>
+        <h2>No Buffer Between Jobs</h2>
         <p>
-          Back-to-back scheduling with no buffer assumes everything goes perfectly. In roofing, it rarely does. A job runs long due to decking damage. A homeowner isn't home. Materials arrive late. When there's no buffer, one delay ripples through the rest of the day.
+          Scheduling jobs back-to-back only works if everything goes perfectly. In roofing, it doesn't. Decking damage adds time. Homeowner isn't home. Materials show up late. Without any buffer, one delay messes up the whole day.
         </p>
         <p>
-          Building in a realistic buffer — even 30 to 45 minutes between jobs — gives crews room to absorb small delays without disrupting the entire schedule. It also reduces the stress that leads to quality issues and callbacks.
-        </p>
-
-        <h2>3. Manually Tracking Crew Status</h2>
-        <p>
-          If your production manager is calling or texting crews throughout the day to figure out where they are and when they'll be done, that's a coordination system that doesn't scale. It consumes time, creates communication gaps, and makes it difficult to make real-time scheduling decisions.
-        </p>
-        <p>
-          Even a basic shared job board or workflow system can dramatically improve visibility across crews and reduce the number of check-in calls needed each day.
+          Build in 30 to 45 minutes between jobs. It absorbs the small stuff and keeps your crews less stressed, which means fewer callbacks.
         </p>
 
-        <h2>4. No Clear Handoff From Sales to Production</h2>
+        <h2>Manually Tracking Crew Status</h2>
         <p>
-          One of the most overlooked scheduling issues isn't on the production side at all — it's the moment a job moves from sold to scheduled. When that handoff is unclear, jobs sit in limbo. Material orders get delayed. The homeowner doesn't hear anything for days. And the production team scrambles to find a spot in the schedule at the last minute.
+          If your production manager spends the day calling and texting crews to figure out where they are, you have a coordination system that won't scale. It takes too much time, creates gaps, and makes it hard to adjust on the fly.
         </p>
         <p>
-          A defined process for how a closed deal enters the production pipeline — with assigned responsibilities and clear timelines — eliminates most of this friction.
+          Even a basic shared job board cuts down on those check-in calls significantly.
         </p>
 
-        <h2>5. Over-Relying on One Key Scheduler</h2>
+        <h2>No Clear Handoff From Sales to Production</h2>
         <p>
-          When one person holds all the scheduling knowledge in their head, you have a single point of failure. If they're out sick, on vacation, or leave the company, the whole system stalls. Scheduling logic and job status need to live in a shared system — not a spreadsheet on one person's desktop.
+          A lot of scheduling problems start before the job even hits the board. When there's no clear process for how a sold job enters production, things sit in limbo. Material orders get delayed. The homeowner hears nothing. Production scrambles to squeeze it in last minute.
+        </p>
+        <p>
+          Define the handoff. Assign responsibilities. Set timelines. Most of this friction goes away.
+        </p>
+
+        <h2>Over-Relying on One Key Scheduler</h2>
+        <p>
+          When one person holds all the scheduling knowledge in their head, you have a single point of failure. If they're sick, on vacation, or leave the company, everything stalls. Get the logic into a shared system. Stop relying on one person's desktop spreadsheet.
         </p>
 
         <h2>Where to Start</h2>
         <p>
-          You don't need to overhaul everything at once. Start by tracking where your current schedule breaks down most often. Is it the handoff from sales? Crew travel time? Day-of delays? Identify the single biggest friction point and fix that first. Small improvements compound quickly in production operations.
+          You don't need to fix everything at once. Track where your schedule breaks down most often. Is it the handoff? Travel time? Day-of delays? Find the biggest friction point and start there.
         </p>
       </>
     ),
   },
   "why-roofing-companies-leave-money-on-the-table": {
     title: "Why Roofing Companies Leave Money on the Table",
-    excerpt: "Most roofers miss supplement opportunities on every claim. Here's how to identify gaps in your current process and recover what you're owed.",
+    excerpt: "Most roofers miss supplement opportunities on every claim. Here's how to identify gaps and recover what you're owed.",
     category: "Supplements",
     date: "April 28, 2026",
     image: "/images/blog/supplements.jpg",
     content: (
       <>
         <p>
-          Most roofing companies doing insurance work are getting paid less than they should on every claim. Not because adjusters are dishonest — but because the supplement process is time-consuming, detail-oriented, and easy to deprioritize when the team is focused on closing the next job.
+          Most roofing companies doing insurance work are getting paid less than they should. Not because adjusters are dishonest. The supplement process is just time-consuming and easy to push off when the team is focused on closing the next job.
         </p>
         <p>
-          The result is consistent, invisible revenue loss. Here's why it happens and how to fix it.
+          The result is steady revenue loss that nobody notices until they look at the numbers.
         </p>
 
         <h2>What Gets Missed Most Often</h2>
         <p>
-          Insurance estimates are written quickly. Adjusters are managing high volumes, especially post-storm, and line items that require documentation or justification are frequently omitted from the initial estimate. Common missed items include:
+          Insurance estimates get written fast. Adjusters are managing high volumes, especially after storms. Line items that need documentation or justification often get left off the initial estimate.
+        </p>
+        <p>
+          Common examples:
         </p>
         <ul>
-          <li>Detach and reset work for gutters, skylights, and HVAC equipment</li>
-          <li>Drip edge and code-required upgrades that vary by jurisdiction</li>
-          <li>Starter strip as a separate line item</li>
-          <li>Roof deck replacement that wasn't visible during the initial inspection</li>
-          <li>Additional layers of existing roofing material</li>
-          <li>Permit fees and sales tax where applicable</li>
+          <li>Detach and reset work for gutters, skylights, HVAC</li>
+          <li>Drip edge and code-required upgrades</li>
+          <li>Starter strip as its own line item</li>
+          <li>Deck replacement that wasn't visible at first inspection</li>
+          <li>Additional layers of existing material</li>
+          <li>Permit fees and sales tax</li>
         </ul>
         <p>
-          On an average residential claim, missed line items often add up to several hundred to several thousand dollars. Multiplied across the number of claims your company handles in a year, this represents significant recoverable revenue.
+          On an average residential claim, missed items often add up to a few hundred to a few thousand dollars. Multiply that across a year of claims and it adds up.
         </p>
 
         <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-          <p className="font-semibold text-foreground mb-2">Key Takeaway</p>
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
           <p className="text-muted-foreground m-0">
-            Supplementing isn't about overcharging — it's about being paid accurately for the scope of work actually required. Every missed line item is money your company earned but didn't collect.
+            Supplementing isn't overcharging. It's getting paid for the actual scope. Every missed line item is money you earned but didn't collect.
           </p>
         </div>
 
         <h2>Why Most Companies Don't Supplement Consistently</h2>
         <p>
-          The issue isn't awareness — most contractors know supplements exist. The issue is capacity. Writing a supplement requires cross-referencing the estimate against the actual job scope, knowing which line items are defensible, understanding carrier-specific preferences, and following up persistently until it's approved.
+          The issue isn't awareness. Most contractors know supplements exist. The issue is capacity. Writing one means cross-referencing estimates against actual job scope, knowing which items hold up, understanding carrier preferences, and following up until it's approved.
         </p>
         <p>
-          When your production team is already stretched thin managing active jobs, supplementing becomes the thing that gets done "when there's time." There's rarely time.
+          When production is stretched thin, supplements become the thing you'll get to "when there's time." There's rarely time.
         </p>
 
-        <h2>Building a Supplement Process That Runs</h2>
+        <h2>Building a Process That Actually Runs</h2>
         <p>
-          The companies that recover the most revenue from supplements treat it as a defined workflow, not an ad hoc task. That means:
+          Companies that recover the most treat supplements as a defined workflow, not a side task. That means having a consistent checklist to review on every estimate. Clear ownership of who submits and follows up. A tracking system so nothing slips. Documentation habits baked into every job.
         </p>
-        <ul>
-          <li>A consistent checklist of items to review on every estimate</li>
-          <li>Clear ownership of who submits supplements and follows up</li>
-          <li>A tracking system so nothing falls through the cracks</li>
-          <li>Documentation habits on every job to support supplement requests</li>
-        </ul>
         <p>
-          When the process is defined and the documentation is in place, supplement recovery becomes predictable — not a function of how much bandwidth the team had that week.
+          When the process is set up right, supplement recovery becomes predictable instead of dependent on who had bandwidth that week.
         </p>
       </>
     ),
   },
   "storm-response-speed-matters": {
     title: "Storm Response: Why Speed Matters More Than You Think",
-    excerpt: "The first 48 hours after a storm determine who wins the neighborhood. Learn how top roofing companies structure their outreach.",
+    excerpt: "The first 48 hours after a storm determine who wins the neighborhood.",
     category: "Storm Response",
     date: "April 21, 2026",
     image: "/images/blog/storm-response.jpg",
     content: (
       <>
         <p>
-          After a significant hail or wind event, every roofing company in the market is looking at the same radar data. The difference between who wins the neighborhood and who gets locked out often comes down to hours — not days.
+          After a big hail or wind event, every roofing company in the market is looking at the same radar data. The difference between who wins the neighborhood and who gets locked out usually comes down to hours.
         </p>
         <p>
-          Speed in storm response isn't just about being first to knock on a door. It's about being first to build trust, provide value, and make it easy for the homeowner to say yes before a competitor has shown up at all.
+          Speed isn't just about knocking on doors first. It's about being first to build trust and make it easy for the homeowner to say yes before anyone else has even shown up.
         </p>
 
         <h2>Why the First 48 Hours Are Critical</h2>
         <p>
-          Homeowners who experience storm damage go through a predictable pattern. In the hours immediately after a storm, they're assessing the situation — checking their roof from the ground, looking for obvious damage, and trying to figure out what to do. They haven't called their insurance company yet. They haven't talked to a contractor.
+          Homeowners go through a predictable pattern after storm damage. Right after the storm, they're figuring things out. Checking the roof from the ground. Looking for obvious damage. Wondering what to do next. They haven't called insurance yet. Haven't talked to any contractors.
         </p>
         <p>
-          This window is where relationships are formed. A company that shows up at this moment — with useful information, no pressure, and a clear offer to help — establishes trust before any competitor arrives. Companies that wait until day three or four are often walking onto a property where the homeowner has already made a decision.
+          That window is where relationships form. A company that shows up early with useful information and no pressure builds trust before anyone else arrives. Companies that wait until day three are often walking onto a property where someone else already got the handshake.
         </p>
 
         <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-          <p className="font-semibold text-foreground mb-2">Key Takeaway</p>
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
           <p className="text-muted-foreground m-0">
-            In storm response, every hour of delay is a door your competitor might knock on first. Speed isn't aggressive — it's a service to homeowners who don't know where to start.
+            Every hour you wait is a door your competitor might knock on first. Speed isn't pushy. It's helpful to homeowners who don't know where to start.
           </p>
         </div>
 
         <h2>What a Fast Storm Response Looks Like</h2>
         <p>
-          Top-performing roofing companies have storm response processes that activate automatically when significant weather hits their market. This includes:
+          The best companies have storm response processes that kick in automatically. They monitor weather data for affected zip codes before the storm even fully clears. They have outreach sequences ready to deploy within hours. Field teams are briefed and scheduled for canvassing the next morning. Follow-up goes out to homeowners who were contacted but didn't convert.
         </p>
-        <ul>
-          <li>Monitoring weather data for affected zip codes before the storm fully clears</li>
-          <li>Pre-built outreach sequences ready to deploy within hours of an event</li>
-          <li>Field teams briefed and scheduled for canvassing the day after the storm</li>
-          <li>Follow-up communications to homeowners who were contacted but didn't convert</li>
-        </ul>
 
         <h2>The Most Common Speed Killers</h2>
         <p>
-          Most companies don't respond slowly because they don't care — they respond slowly because their process requires too many manual steps. Figuring out which neighborhoods were hit. Building a canvassing list. Getting the team briefed and out the door. Each of these steps takes time, and time compounds.
+          Most companies don't respond slowly because they don't care. They respond slowly because their process has too many manual steps. Figuring out which neighborhoods got hit. Building a canvassing list. Briefing the team. Each step takes time. Time compounds.
         </p>
         <p>
-          Automating the early stages of storm response — identification, outreach, and scheduling — removes these friction points and lets the team focus on what they do best: showing up in person and building relationships.
+          Automating the early stages removes friction and lets the team focus on showing up and building relationships in person.
         </p>
       </>
     ),
   },
   "production-bottlenecks-killing-your-margins": {
     title: "5 Production Bottlenecks Killing Your Margins",
-    excerpt: "From sales-to-production handoffs to crew scheduling gaps, these common operational issues cost roofing companies thousands every month.",
+    excerpt: "From sales-to-production handoffs to scheduling gaps, these issues cost roofing companies thousands every month.",
     category: "Operations",
     date: "April 14, 2026",
     image: "/images/blog/production.jpg",
     content: (
       <>
         <p>
-          Roofing companies don't usually lose margin on the job itself. The work gets done, the roof holds, the homeowner is satisfied. The margin disappears in the space between jobs — in handoffs, delays, miscommunications, and inefficiencies that nobody is directly accountable for.
+          Roofing companies don't usually lose margin on the job itself. The work gets done. The roof holds. The homeowner is happy. The margin disappears in the space between jobs. Handoffs, delays, miscommunications, stuff that nobody is directly responsible for.
         </p>
         <p>
-          Here are the five production bottlenecks we see most consistently, and why they're harder to fix than they look.
+          Here are five production bottlenecks we see over and over.
         </p>
 
         <h2>1. The Sales-to-Production Handoff</h2>
         <p>
-          When a job is sold, critical information needs to move from the sales team to the production team accurately and quickly. Job scope, materials, HOA restrictions, homeowner preferences, special access instructions — all of it needs to transfer without being filtered through a game of telephone.
+          When a job sells, information needs to move from sales to production quickly and completely. Job scope, materials, HOA rules, homeowner preferences, access notes. All of it.
         </p>
         <p>
-          In most companies, this handoff happens through a combination of texts, emails, notes in a CRM, and verbal conversations. The result is inconsistency. Jobs arrive in production incomplete, requiring callbacks to the salesperson to clarify details that should have been captured at the point of sale.
+          In most companies, this handoff happens through texts, emails, CRM notes, and conversations. The result is inconsistency. Jobs show up in production incomplete, and someone has to call the salesperson to get details that should have been captured already.
         </p>
 
         <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-          <p className="font-semibold text-foreground mb-2">Key Takeaway</p>
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
           <p className="text-muted-foreground m-0">
-            A clean handoff process is one of the highest-leverage operational improvements a roofing company can make. Every incomplete handoff creates downstream delays and costs.
+            A clean handoff process is one of the highest-leverage fixes a roofing company can make. Every incomplete handoff causes downstream delays.
           </p>
         </div>
 
-        <h2>2. Material Ordering Without Lead Time Built In</h2>
+        <h2>2. Material Ordering Without Lead Time</h2>
         <p>
-          Ordering materials the day before a scheduled job is a production practice that works — until it doesn't. A supplier is out of stock. Delivery is delayed. The crew shows up and there's nothing to install. Now you're rescheduling, the homeowner is frustrated, and you've paid for a crew day you can't bill.
+          Ordering materials the day before a job works until it doesn't. Supplier is out of stock. Delivery is late. Crew shows up and there's nothing to install. Now you're rescheduling, the homeowner is frustrated, and you've paid for a crew day you can't bill.
         </p>
 
         <h2>3. No Real-Time Job Status Visibility</h2>
         <p>
-          When the production manager doesn't know where each crew is in their day, they can't make smart decisions about the afternoon. They can't redirect a crew that finished early to a nearby job. They can't proactively communicate with the next homeowner on the schedule. Everything is reactive.
+          When the production manager doesn't know where each crew is in their day, they can't make smart decisions. Can't redirect a crew that finished early. Can't give the next homeowner a heads-up. Everything becomes reactive.
         </p>
 
-        <h2>4. Rework and Callbacks Without Root Cause Tracking</h2>
+        <h2>4. Callbacks Without Root Cause Tracking</h2>
         <p>
-          Callbacks happen in every roofing company. What separates well-run companies from struggling ones is whether they track why callbacks happen. Without root cause data, the same quality issues repeat indefinitely. With it, you can identify whether the problem is crew-specific, product-specific, or process-specific — and fix it.
+          Callbacks happen. What separates well-run companies from struggling ones is whether they track why. Without root cause data, the same issues repeat forever. With it, you can figure out if the problem is crew-specific, product-specific, or process-specific.
         </p>
 
-        <h2>5. Closing Out Jobs Without Collecting Documentation</h2>
+        <h2>5. Closing Out Jobs Without Documentation</h2>
         <p>
-          A job that's physically complete but not administratively closed is a liability. Missing photos, unsigned certificates of completion, outstanding supplement documentation, unbilled change orders — all of these represent either revenue at risk or problems waiting to surface later.
+          A job that's done physically but not administratively is a liability. Missing photos, unsigned completion certs, supplement docs still pending, change orders not billed. All of this is either revenue at risk or problems waiting to pop up later.
         </p>
         <p>
-          Building job closeout into the production workflow, with checklists and accountability, ensures nothing falls through the cracks after the crew leaves the property.
+          Build job closeout into the workflow with checklists. Don't let jobs fall off the radar after the crew leaves.
         </p>
       </>
     ),
   },
   "automating-lead-follow-up-without-losing-the-human-touch": {
     title: "Automating Lead Follow-Up Without Losing the Human Touch",
-    excerpt: "Homeowners want fast responses, but they also want to feel heard. Here's how to balance automation with authentic communication.",
+    excerpt: "Homeowners want fast responses. They also want to feel heard. Here's how to balance both.",
     category: "Workflows",
     date: "April 7, 2026",
     image: "/images/blog/follow-up.jpg",
     content: (
       <>
         <p>
-          Speed of response is one of the strongest predictors of lead conversion in roofing. A homeowner who fills out a contact form and hears back within five minutes is significantly more likely to become a customer than one who waits until the next morning.
+          Speed of response is one of the strongest predictors of lead conversion in roofing. A homeowner who hears back within five minutes is way more likely to become a customer than one who waits until the next day.
         </p>
         <p>
-          But automated follow-up done poorly feels impersonal — and in a high-trust purchase like a roof replacement, impersonal is a conversion killer. The goal is to move fast without sounding like a robot.
+          But automated follow-up done poorly feels impersonal. And in a high-trust purchase like roofing, that's a problem.
         </p>
 
         <h2>Why Speed Matters So Much</h2>
         <p>
-          When a homeowner reaches out to a roofing company, they're often reaching out to more than one at the same time. They're comparing. The company that responds first has a significant advantage — not just because they made contact first, but because they demonstrated responsiveness, which homeowners interpret as a signal of how the company will treat them throughout the project.
+          When a homeowner reaches out, they're often reaching out to multiple companies at once. They're comparing. The company that responds first has an edge. Not just because they made contact first, but because they showed responsiveness. Homeowners read that as a signal of how the company will treat them through the whole project.
         </p>
 
         <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-          <p className="font-semibold text-foreground mb-2">Key Takeaway</p>
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
           <p className="text-muted-foreground m-0">
-            The first response doesn't need to close the deal — it just needs to acknowledge the homeowner quickly and set an expectation for next steps. That alone separates you from most competitors.
+            The first response doesn't need to close anything. It just needs to acknowledge the homeowner and set expectations for next steps. That alone puts you ahead of most competitors.
           </p>
         </div>
 
         <h2>What Automation Should and Shouldn't Do</h2>
         <p>
-          Automation works well for the initial acknowledgment, appointment confirmation, pre-inspection reminders, and follow-up after no response. These are predictable, time-sensitive touchpoints where a consistent, prompt message adds genuine value.
+          Automation is good for initial acknowledgments, appointment confirmations, pre-inspection reminders, follow-ups when there's no response. These are predictable touchpoints where a prompt message genuinely helps.
         </p>
         <p>
-          Automation works poorly when it tries to handle nuanced conversations — questions about scope, insurance concerns, or anything that requires judgment. Those touchpoints need a real person.
+          Automation is bad for nuanced conversations. Questions about scope, insurance concerns, anything requiring judgment. Those need a real person.
         </p>
 
-        <h2>Writing Messages That Don't Sound Automated</h2>
+        <h2>Writing Messages That Don't Sound Like a Bot</h2>
         <p>
-          The difference between an automated message that works and one that feels hollow usually comes down to specificity. Generic language like "Thank you for your interest in our services" signals automation immediately. Messages that reference the specific inquiry, use the homeowner's name, and have a clear next step feel much more personal — even when they're sent automatically.
+          The difference between a message that works and one that feels hollow is usually specificity. "Thank you for your interest in our services" sounds automated immediately. Reference the specific inquiry. Use the homeowner's name. Give a clear next step like "I'll call you tomorrow between 9 and 11." Keep it short.
         </p>
-        <ul>
-          <li>Use the homeowner's first name</li>
-          <li>Reference the specific service or concern they mentioned</li>
-          <li>Give a clear, specific next step ("I'll call you tomorrow between 9 and 11")</li>
-          <li>Keep it short — long automated messages feel like marketing, not conversation</li>
-        </ul>
 
         <h2>The Follow-Up Sequence That Works</h2>
         <p>
-          For leads that don't convert immediately, a structured follow-up sequence over 7 to 14 days consistently outperforms one-and-done outreach. The sequence should vary in channel — text, email, call — and vary in message so it doesn't feel like the same automated message sent repeatedly. Each touchpoint should add something: a resource, a question, a reminder of the offer.
+          For leads that don't convert right away, a structured sequence over 7 to 14 days beats one-and-done outreach. Vary the channel. Text, email, call. Vary the message so it doesn't feel like the same automated thing sent repeatedly. Each touchpoint should add something. A resource, a question, a reminder.
         </p>
       </>
     ),
   },
   "xactimate-cross-reference-explained": {
     title: "Xactimate Cross-Reference: What Most Adjusters Miss",
-    excerpt: "A breakdown of the most commonly missed line items in roofing estimates and how systematic cross-referencing increases claim value.",
+    excerpt: "A breakdown of commonly missed line items and how systematic cross-referencing increases claim value.",
     category: "Supplements",
     date: "March 30, 2026",
     image: "/images/blog/xactimate.jpg",
     content: (
       <>
         <p>
-          Xactimate is the estimating software used by the majority of insurance carriers to price property damage claims. It's a comprehensive tool — but it's only as accurate as the person writing the estimate. Adjusters working high volumes under time pressure frequently omit line items that are legitimate, documented, and entirely defensible.
+          Xactimate is the estimating software most carriers use to price property damage claims. It's a solid tool, but it's only as accurate as the person writing the estimate. Adjusters working high volumes under time pressure frequently leave out line items that are legitimate and defensible.
         </p>
         <p>
-          Understanding where those gaps consistently appear is the foundation of an effective supplement strategy.
+          Knowing where those gaps consistently show up is the foundation of any good supplement strategy.
         </p>
 
         <h2>How Xactimate Estimates Get Written</h2>
         <p>
-          An adjuster visits the property, documents visible damage, and builds an estimate based on what they observed. Line items are selected from Xactimate's database, which includes pricing that's updated by region and market conditions. The final estimate reflects the adjuster's scope assessment — which may or may not match the full scope of work required to restore the property to pre-loss condition.
+          An adjuster visits the property, documents visible damage, and builds an estimate based on what they saw. The estimate reflects their scope assessment, which may or may not match what's actually needed to restore the property properly.
         </p>
         <p>
-          This is where the gap opens. Not because adjusters are wrong, but because the initial visit often happens quickly, certain damage isn't visible until tear-off, and some line items require contractor knowledge to identify.
+          That's where the gap opens. Not because adjusters are wrong, but because initial visits happen fast. Some damage isn't visible until tear-off. Some line items require contractor knowledge to identify.
         </p>
 
         <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-          <p className="font-semibold text-foreground mb-2">Key Takeaway</p>
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
           <p className="text-muted-foreground m-0">
-            Supplementing is not disputing the adjuster's estimate — it's expanding it to reflect the actual scope of work. Documentation is everything.
+            Supplementing isn't arguing with the estimate. It's expanding it to reflect actual scope. Documentation makes or breaks the process.
           </p>
         </div>
 
         <h2>The Most Commonly Missed Line Items</h2>
         <p>
-          Across residential roofing claims, these items are routinely omitted from initial estimates and routinely approved when properly documented:
+          Across residential roofing claims, these items are routinely left off initial estimates and routinely approved when documented:
         </p>
         <ul>
-          <li><strong>Starter strip:</strong> Often written as part of the shingle cost, but is a separate material and labor item</li>
-          <li><strong>Drip edge:</strong> Frequently missed, especially when code requires replacement</li>
-          <li><strong>Detach and reset:</strong> For gutters, skylights, HVAC curbs, satellite dishes, and solar equipment</li>
-          <li><strong>Roof deck replacement:</strong> Not always visible until tear-off; must be documented with photos</li>
-          <li><strong>Additional layers:</strong> If existing roofing has multiple layers, tear-off costs are higher</li>
-          <li><strong>Permit fees:</strong> Required in most jurisdictions; often not included in initial estimates</li>
-          <li><strong>Steep slope charges:</strong> Applied when pitch exceeds standard parameters</li>
-          <li><strong>High roof charges:</strong> For single-story structures above a certain height threshold</li>
+          <li><strong>Starter strip:</strong> Often bundled into shingle cost, but it's a separate material and labor item</li>
+          <li><strong>Drip edge:</strong> Missed often, especially when code requires replacement</li>
+          <li><strong>Detach and reset:</strong> Gutters, skylights, HVAC curbs, satellite dishes, solar</li>
+          <li><strong>Roof deck replacement:</strong> Not visible until tear-off. Document with photos</li>
+          <li><strong>Additional layers:</strong> Multiple existing layers mean higher tear-off costs</li>
+          <li><strong>Permit fees:</strong> Required most places, often not included</li>
+          <li><strong>Steep slope charges:</strong> When pitch exceeds standard parameters</li>
+          <li><strong>High roof charges:</strong> For certain height thresholds</li>
         </ul>
 
         <h2>Documentation That Supports Supplements</h2>
         <p>
-          Every supplement needs supporting documentation. Photos taken during tear-off that show deck damage. Material invoices that confirm actual quantities. Code documentation from the local jurisdiction. The more specific the documentation, the faster and more predictably supplements get approved.
+          Every supplement needs backup. Photos from tear-off showing deck damage. Material invoices confirming quantities. Code documentation from the local jurisdiction. The more specific, the faster things get approved.
         </p>
         <p>
-          Companies that build documentation habits into every job — not just the ones they plan to supplement — have a significant advantage. When you need to supplement six weeks after the job, the evidence is already organized.
+          Companies that document every job, not just the ones they plan to supplement, have a real advantage. When you need to file something six weeks later, the evidence is already there.
         </p>
       </>
     ),
   },
   "roofing-industry-trends-2026": {
     title: "Roofing Industry Trends to Watch in 2026",
-    excerpt: "From labor shortages to insurance tightening, here are the operational shifts every roofing company should be preparing for.",
+    excerpt: "From labor shortages to insurance tightening, here are the shifts every roofing company should prepare for.",
     category: "Industry Trends",
     date: "March 22, 2026",
     image: "/images/blog/trends.jpg",
     content: (
       <>
         <p>
-          The roofing industry is in a period of meaningful change. Market conditions that held relatively steady for years are shifting — and the companies that are paying attention to where things are heading are positioning themselves very differently than those still operating on the assumptions of a few years ago.
+          The roofing industry is changing. Market conditions that held steady for years are shifting, and companies paying attention are positioning themselves differently than those still operating on old assumptions.
         </p>
         <p>
-          Here are the trends we're watching closely in 2026.
+          Here's what we're watching in 2026.
         </p>
 
         <h2>Insurance Carriers Are Tightening</h2>
         <p>
-          After years of elevated claim volumes driven by severe weather, a growing number of carriers are restricting coverage, raising deductibles, and tightening claim approval processes in high-risk markets. For roofing companies that rely heavily on insurance work, this creates two related challenges: fewer approvals on marginal claims, and homeowners with less coverage than they expect.
+          After years of high claim volumes from severe weather, more carriers are restricting coverage, raising deductibles, and tightening claim approvals in high-risk markets. For companies that rely heavily on insurance work, this means fewer approvals on marginal claims and homeowners with less coverage than they expected.
         </p>
         <p>
-          Companies that build strong supplement documentation and claims knowledge into their process are better positioned to recover the maximum value on approved claims — which becomes more important as overall claim volume potentially decreases.
+          Companies that build strong supplement documentation into their process are better positioned to recover full value on the claims that do get approved.
         </p>
 
         <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
-          <p className="font-semibold text-foreground mb-2">Key Takeaway</p>
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
           <p className="text-muted-foreground m-0">
-            Companies that diversify beyond pure insurance replacement and build operational efficiency into their core model will be more resilient to carrier market shifts.
+            Companies that diversify beyond pure insurance replacement and build operational efficiency into their model will handle carrier shifts better.
           </p>
         </div>
 
         <h2>Labor Remains the Binding Constraint</h2>
         <p>
-          Skilled roofing labor has been in short supply for years, and that hasn't changed. The companies growing most sustainably aren't necessarily the ones finding more crews — they're the ones getting more out of the crews they have through better scheduling, cleaner handoffs, and less wasted time on administrative tasks.
+          Skilled roofing labor has been short for years. That hasn't changed. The companies growing most sustainably aren't necessarily finding more crews. They're getting more out of the crews they have. Better scheduling, cleaner handoffs, less wasted time on admin.
         </p>
         <p>
-          Operational efficiency is increasingly a competitive advantage, not just a cost-saving measure.
+          Operational efficiency is turning into a competitive advantage, not just a cost-saving thing.
         </p>
 
         <h2>Technology Adoption Is Accelerating</h2>
         <p>
-          Tools that were considered advanced a few years ago — aerial measurement software, CRM platforms, automated follow-up systems — are now table stakes in most competitive markets. The gap between tech-enabled companies and those still running on spreadsheets and group texts is widening.
+          Tools that felt advanced a few years ago are now table stakes in competitive markets. Aerial measurement, CRM platforms, automated follow-up. The gap between tech-enabled companies and those still running on spreadsheets is widening.
         </p>
         <p>
-          The next wave of adoption is in workflow automation: systems that handle the handoffs, follow-ups, documentation, and coordination that currently require manual effort. Companies investing in these systems now are building an operational foundation that's increasingly difficult for competitors to replicate quickly.
+          The next wave is workflow automation. Systems that handle handoffs, follow-ups, documentation, coordination. Companies investing in this now are building something competitors can't easily copy.
         </p>
 
         <h2>Homeowners Expect More Communication</h2>
         <p>
-          Consumer expectations around communication have changed. Homeowners who ordered a package this morning already know it's three stops away. When their roofing contractor goes silent for two days during a project, the contrast is jarring.
+          Consumer expectations around communication have shifted. Homeowners who ordered something this morning already know it's three stops away. When their roofing contractor goes quiet for two days during a project, it feels off.
         </p>
         <p>
-          Companies that build proactive communication into their process — confirmation messages, installation day updates, completion summaries — are seeing measurably better reviews and referrals. The investment is small; the impact on reputation is significant.
+          Companies that build proactive communication into their process, confirmation messages, install-day updates, completion summaries, are seeing better reviews and more referrals. The effort is small. The impact on reputation is real.
         </p>
       </>
     ),
