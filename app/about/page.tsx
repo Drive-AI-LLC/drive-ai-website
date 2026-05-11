@@ -75,15 +75,15 @@ export default function AboutPage() {
             Meet the founders.
           </h2>
           
-          <div className="grid sm:grid-cols-2 gap-10 max-w-2xl">
+          <div className="grid sm:grid-cols-2 gap-8">
             {founders.map((founder) => (
-              <div key={founder.name} className="flex flex-col">
-                <div className="aspect-[4/5] relative rounded-lg overflow-hidden bg-muted mb-5">
+              <div key={founder.name} className="bg-background rounded-lg border border-border p-6 flex flex-col">
+                <div className="aspect-square relative rounded-md overflow-hidden bg-muted mb-5 w-full">
                   <Image
                     src={founder.image}
                     alt={founder.name}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <h3 className="text-base font-semibold text-foreground">
