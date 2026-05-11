@@ -75,10 +75,10 @@ export default function AboutPage() {
             Meet the founders.
           </h2>
           
-          <div className="grid sm:grid-cols-2 gap-8 max-w-2xl">
+          <div className="flex flex-col gap-6 max-w-2xl">
             {founders.map((founder) => (
-              <div key={founder.name} className="bg-background rounded-lg border border-border p-6 flex flex-col">
-                <div className="w-32 h-32 relative rounded-md overflow-hidden bg-muted mb-5 flex-shrink-0">
+              <div key={founder.name} className="bg-background rounded-lg border border-border p-6 flex flex-row gap-6 items-start">
+                <div className="w-24 h-24 relative rounded-md overflow-hidden bg-muted flex-shrink-0">
                   <Image
                     src={founder.image}
                     alt={founder.name}
@@ -86,15 +86,17 @@ export default function AboutPage() {
                     className="object-cover object-top"
                   />
                 </div>
-                <h3 className="text-base font-semibold text-foreground">
-                  {founder.name}
-                </h3>
-                <p className="text-xs text-primary uppercase tracking-[0.15em] font-semibold mt-0.5 mb-3">
-                  {founder.role}
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {founder.bio}
-                </p>
+                <div className="flex flex-col min-w-0">
+                  <h3 className="text-base font-semibold text-foreground">
+                    {founder.name}
+                  </h3>
+                  <p className="text-xs text-primary uppercase tracking-[0.15em] font-semibold mt-0.5 mb-3">
+                    {founder.role}
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {founder.bio}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
