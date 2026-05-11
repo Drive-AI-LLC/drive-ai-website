@@ -62,6 +62,9 @@ export default function PrivacyPage() {
               This website uses cookies to improve your experience. Cookies are small text files stored on your device that help us understand how the site is used. We use cookies for analytics purposes through Google Analytics.
             </p>
             <p className="mt-3">
+              Analytics cookies are only enabled after you accept cookie usage through the site's consent banner.
+            </p>
+            <p className="mt-3">
               You can control cookie settings through your browser. Disabling cookies may affect how certain parts of the site function.
             </p>
           </section>
@@ -93,7 +96,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-base font-semibold text-foreground mb-3">Data Retention</h2>
             <p>
-              We retain submitted information only as long as necessary to respond to inquiries, maintain business records, or improve our services.
+              We retain submitted information only as long as necessary to respond to inquiries, maintain business records, or improve the website and our services.
             </p>
           </section>
 
