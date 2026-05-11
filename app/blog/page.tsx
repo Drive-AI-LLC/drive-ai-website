@@ -99,11 +99,11 @@ export default function BlogPage() {
             <p className="text-primary font-medium text-sm uppercase tracking-[0.2em] mb-6">
               Blog
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-[-0.02em] font-serif mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-[-0.02em] font-serif mb-6 whitespace-nowrap">
               Roofing Industry Insights
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-              Systems thinking, workflow strategies, and operational insights for roofing companies.
+              Systems thinking and workflow strategies.
             </p>
           </div>
         </div>
