@@ -20,6 +20,14 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "crew-scheduling-mistakes-costing-you-time",
+    title: "Crew Scheduling Mistakes Costing You Time and Money",
+    excerpt: "Poor scheduling creates downtime, travel gaps, and missed revenue opportunities. Here's how to optimize crew allocation and maximize productivity.",
+    category: "Operations",
+    date: "May 5, 2026",
+    image: "/images/blog/crew-scheduling.jpg",
+  },
+  {
     slug: "why-roofing-companies-leave-money-on-the-table",
     title: "Why Roofing Companies Leave Money on the Table",
     excerpt: "Most roofers miss supplement opportunities on every claim. Here's how to identify gaps in your current process and recover what you're owed.",
