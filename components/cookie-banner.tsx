@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { X } from "lucide-react"
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false)
@@ -22,32 +21,23 @@ export function CookieBanner() {
   if (!visible) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 px-5 pb-5 sm:px-6 pointer-events-none">
-      <div className="max-w-xl mx-auto sm:mx-0 bg-[#1e2a38] text-white rounded-lg px-5 py-4 flex items-center justify-between gap-4 shadow-lg pointer-events-auto">
-        <p className="text-sm text-white/70 leading-relaxed">
-          This site uses cookies and analytics to improve your experience.{" "}
+    <div className="fixed bottom-4 left-4 z-50 max-w-[280px]">
+      <div className="bg-[#1e2a38] text-white rounded-lg px-4 py-3 flex flex-col gap-2.5 shadow-md">
+        <p className="text-[11px] text-white/60 leading-relaxed">
+          This site uses cookies to improve your experience.{" "}
           <Link
             href="/privacy"
-            className="text-white underline underline-offset-2 hover:text-white/80 transition-colors"
+            className="text-white/80 underline underline-offset-2 hover:text-white transition-colors"
           >
-            Learn More
+            Learn more
           </Link>
         </p>
-        <div className="flex items-center gap-2 flex-shrink-0">
-          <button
-            onClick={accept}
-            className="text-xs font-semibold bg-primary text-primary-foreground px-4 py-1.5 rounded-md hover:bg-primary/90 transition-colors"
-          >
-            Accept
-          </button>
-          <button
-            onClick={accept}
-            aria-label="Dismiss"
-            className="text-white/40 hover:text-white/80 transition-colors"
-          >
-            <X className="w-4 h-4" />
-          </button>
-        </div>
+        <button
+          onClick={accept}
+          className="self-start text-[11px] font-semibold bg-primary text-primary-foreground px-3 py-1 rounded hover:bg-primary/90 transition-colors"
+        >
+          Accept
+        </button>
       </div>
     </div>
   )
