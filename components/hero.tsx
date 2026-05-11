@@ -31,7 +31,7 @@ export function Hero() {
               className="animate-fade-up text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md mb-10"
               style={{ animationDelay: "80ms" }}
             >
-              Supplement recovery. Storm outreach. Systems that run without adding headcount.
+              Supplement recovery. Storm outreach. Smarter roofing operations.
             </p>
 
             <div
