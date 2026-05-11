@@ -110,7 +110,7 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Content */}
-      <section className="py-16 lg:py-24">
+      <section className="py-12 lg:py-20">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           {/* Search and Filters */}
           <div className="mb-12 space-y-6">
