@@ -4,8 +4,7 @@ import { Footer } from "@/components/footer"
 import { Testimonials } from "@/components/testimonials"
 import { WhyDriveAI } from "@/components/why-drive-ai"
 import { Target, Heart, Zap, Users } from "lucide-react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { CTASection } from "@/components/cta-section"
 
 export const metadata: Metadata = {
   title: "About | Drive AI",
@@ -126,22 +125,10 @@ export default function AboutPage() {
       {/* Testimonials */}
       <Testimonials />
 
-      {/* CTA */}
-      <section className="py-16 lg:py-24 bg-primary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-tight text-balance font-serif">
-            Ready to work with us?
-          </h2>
-          <p className="mt-4 text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Schedule a free consultation to see how we can help your business.
-          </p>
-          <div className="mt-8">
-            <Button asChild size="lg" variant="secondary">
-              <Link href="/contact">Get in Touch</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        headline="Let's start the conversation."
+        supporting="We're building Drive AI alongside roofing companies focused on smarter operations and long-term growth."
+      />
 
       <Footer />
     </main>

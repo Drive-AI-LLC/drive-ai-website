@@ -16,7 +16,10 @@ export default function Home() {
       <SolutionSection />
       <HowItWorks />
       <Testimonials />
-      <CTASection />
+      <CTASection
+        headline="Explore smarter roofing operations."
+        supporting="Learn how Drive AI helps roofing companies improve coordination, recover revenue, and streamline operations."
+      />
       <Footer />
     </main>
   )

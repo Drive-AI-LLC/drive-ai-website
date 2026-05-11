@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { CTASection } from "@/components/cta-section"
 import { Input } from "@/components/ui/input"
 import { Search, ArrowRight } from "lucide-react"
 
@@ -201,6 +202,10 @@ export default function BlogPage() {
         </div>
       </section>
 
+      <CTASection
+        headline="Explore what's next for roofing operations."
+        supporting="Follow along as we share insights on systems, workflows, and operational trends in roofing."
+      />
       <Footer />
     </main>
   )
