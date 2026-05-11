@@ -19,7 +19,7 @@ export function Hero() {
             >
               More money.
               <span className="block">More jobs.</span>
-              <span className="block">
+              <span className="block whitespace-nowrap">
                 Built for{" "}
                 <span className="text-primary underline decoration-2 underline-offset-2">
                   roofing.
