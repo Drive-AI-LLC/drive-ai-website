@@ -79,10 +79,13 @@ export function Footer() {
 
         </div>
 
-        <div className="mt-7 pt-5 border-t border-white/10">
+        <div className="mt-7 pt-5 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <p className="text-white/30 text-[11px] tracking-wide">
             © {new Date().getFullYear()} Drive AI. All rights reserved.
           </p>
+          <Link href="/privacy" className="text-white/30 text-[11px] tracking-wide hover:text-white/50 transition-colors">
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>
