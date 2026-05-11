@@ -33,7 +33,7 @@ export function Footer() {
                 className="h-8 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="mt-3.5 text-white/50 text-xs leading-relaxed">
+            <p className="mt-3.5 text-white/50 text-sm leading-relaxed">
               Drive AI builds revenue-generating systems for roofing companies.
             </p>
           </div>
@@ -46,7 +46,7 @@ export function Footer() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-xs text-white/55 hover:text-white transition-colors duration-200"
+                  className="text-sm text-white/55 hover:text-white transition-colors duration-200 leading-relaxed"
                 >
                   {item.name}
                 </Link>
@@ -59,7 +59,7 @@ export function Footer() {
             <h3 className="font-semibold text-white text-[10px] uppercase tracking-[0.15em]">Contact</h3>
             <a
               href="mailto:inquiries@driveai.llc"
-              className="text-xs text-white/55 hover:text-white transition-colors duration-200"
+              className="text-sm text-white/55 hover:text-white transition-colors duration-200 leading-relaxed"
             >
               inquiries@driveai.llc
             </a>
