@@ -100,7 +100,7 @@ export default function BlogPage() {
               Blog
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-[-0.02em] font-serif mb-6">
-              Insights for Roofing Operations
+              Roofing Industry Insights
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
               Systems thinking, workflow strategies, and operational insights for roofing companies.
