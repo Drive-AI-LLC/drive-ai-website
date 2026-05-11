@@ -1,20 +1,25 @@
 "use client"
 
+import Link from "next/link"
+
 const solutions = [
   {
     tag: "Revenue Recovery",
     title: "Insurance Supplement System",
     description: "Stop leaving money on every claim. We find the gaps, file the supplements, and track every dollar.",
+    href: "/services#insurance-supplement-system",
   },
   {
     tag: "Storm Response",
     title: "Storm Outreach System",
     description: "Be first on the door when a storm hits. Automated outreach gets your team moving before competitors show up.",
+    href: "/services#storm-outreach-system",
   },
   {
     tag: "Production Operations",
     title: "Production Coordination System",
     description: "No more jobs stalling between sales and production. Every handoff is clean, every crew is scheduled, every job visible.",
+    href: "/services#production-coordination-system",
   },
 ]
 
@@ -32,9 +37,10 @@ export function SolutionSection() {
 
         <div className="grid md:grid-cols-3 gap-5 lg:gap-7">
           {solutions.map((solution, index) => (
-            <div
+            <Link
               key={solution.title}
-              className="animate-fade-up bg-background border border-border rounded-lg p-8 flex flex-col group cursor-pointer transition-all duration-300"
+              href={solution.href}
+              className="animate-fade-up bg-background border border-border rounded-lg p-8 flex flex-col group transition-all duration-300"
               onMouseEnter={(e) => e.currentTarget.style.borderColor = 'rgb(1, 86, 59)'}
               onMouseLeave={(e) => e.currentTarget.style.borderColor = ''}
               style={{ animationDelay: `${index * 80}ms` }}
@@ -48,7 +54,7 @@ export function SolutionSection() {
               <p className="text-sm text-muted-foreground leading-relaxed flex-1">
                 {solution.description}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
 

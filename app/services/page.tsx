@@ -63,7 +63,7 @@ export default function ServicesPage() {
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           <div className="space-y-20 lg:space-y-28">
             {services.map((service, index) => (
-              <div key={service.title} className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+              <div key={service.title} id={service.title.toLowerCase().replace(/\s+/g, '-')} className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
                 
                 {/* Left: Title & Description */}
                 <div className="lg:sticky lg:top-32">
