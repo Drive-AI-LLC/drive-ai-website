@@ -2,14 +2,38 @@
 
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 export default function ContactPage() {
+  const [calendlyLoaded, setCalendlyLoaded] = useState(false)
+  const [scriptReady, setScriptReady] = useState(false)
+
+  // Lazy-load the Calendly script after page content renders
   useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://assets.calendly.com/assets/external/widget.js'
-    script.async = true
-    document.body.appendChild(script)
+    const timer = setTimeout(() => {
+      const script = document.createElement('script')
+      script.src = 'https://assets.calendly.com/assets/external/widget.js'
+      script.async = true
+      script.onload = () => setScriptReady(true)
+      document.body.appendChild(script)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Listen for Calendly's event to know when the widget has painted
+  useEffect(() => {
+    const handler = (e: MessageEvent) => {
+      if (e.data?.event === 'calendly.event_type_viewed' || e.data?.event === 'calendly.profile_page_viewed') {
+        setCalendlyLoaded(true)
+      }
+    }
+    window.addEventListener('message', handler)
+    // Fallback: mark as loaded after 4s regardless
+    const fallback = setTimeout(() => setCalendlyLoaded(true), 4000)
+    return () => {
+      window.removeEventListener('message', handler)
+      clearTimeout(fallback)
+    }
   }, [])
 
   return (
@@ -65,10 +89,38 @@ export default function ContactPage() {
 
             </div>
 
-            {/* Calendly embed */}
-            <div className="w-full border border-border/40 bg-background overflow-hidden">
+            {/* Calendly embed with loading state */}
+            <div
+              className="relative w-full border border-border/40 bg-background overflow-hidden"
+              style={{ height: '700px' }}
+            >
+              {/* Skeleton placeholder */}
+              {!calendlyLoaded && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 bg-muted/20 px-8">
+                  {/* Shimmer rows */}
+                  <div className="w-full flex flex-col gap-3 mb-2">
+                    <div className="h-3 rounded bg-border/60 animate-pulse w-2/3 mx-auto" />
+                    <div className="h-3 rounded bg-border/50 animate-pulse w-1/2 mx-auto" />
+                  </div>
+                  {/* Spinner */}
+                  <div className="w-8 h-8 rounded-full border-2 border-border border-t-primary animate-spin" />
+                  <p className="text-sm text-muted-foreground tracking-wide">Loading calendar&hellip;</p>
+                  {/* Fake time slot skeletons */}
+                  <div className="w-full flex flex-col gap-2 mt-2">
+                    {[...Array(5)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="h-10 rounded-lg bg-border/40 animate-pulse"
+                        style={{ animationDelay: `${i * 120}ms` }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Calendly widget — always rendered so it loads in background */}
               <div
-                className="calendly-inline-widget"
+                className={`calendly-inline-widget w-full h-full transition-opacity duration-500 ${calendlyLoaded ? 'opacity-100' : 'opacity-0'}`}
                 data-url="https://calendly.com/danika-driveai/27min?hide_event_type_details=1&primary_color=01563b"
                 style={{ minWidth: '320px', height: '700px' }}
               />
