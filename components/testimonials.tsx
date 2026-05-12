@@ -79,6 +79,13 @@ export function Testimonials() {
     }
 
     const onPointerDown = () => {
+      console.log("[v0] Pointer down detected, stopping auto-play")
+      userInteractedRef.current = true
+      stopAutoPlay()
+    }
+
+    const onClick = () => {
+      console.log("[v0] Click detected, stopping auto-play")
       userInteractedRef.current = true
       stopAutoPlay()
     }
@@ -87,10 +94,12 @@ export function Testimonials() {
 
     const rootNode = api.rootNode()
     rootNode.addEventListener("pointerdown", onPointerDown)
+    rootNode.addEventListener("click", onClick)
 
     return () => {
       stopAutoPlay()
       rootNode.removeEventListener("pointerdown", onPointerDown)
+      rootNode.removeEventListener("click", onClick)
     }
   }, [api])
 
