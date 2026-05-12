@@ -73,7 +73,7 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-background">
+      <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-muted/30">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           <div
             ref={heroReveal.ref as React.RefObject<HTMLDivElement>}
