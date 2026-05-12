@@ -40,6 +40,33 @@ const principles = [
   },
 ]
 
+function PrincipleCard({ title, description, delay }: { title: string; description: string; delay: number }) {
+  const { ref, visible } = useScrollReveal(0.2)
+  return (
+    <div
+      ref={ref as React.RefObject<HTMLDivElement>}
+      className="border-l-2 border-primary/30 pl-5 overflow-hidden"
+    >
+      <div
+        className="transition-all duration-700"
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateX(0)" : "translateX(-18px)",
+          transitionDelay: `${delay}ms`,
+          transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
+        }}
+      >
+        <h3 className="text-base font-semibold text-foreground mb-2">
+          {title}
+        </h3>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          {description}
+        </p>
+      </div>
+    </div>
+  )
+}
+
 export default function AboutPage() {
   const foundersHeader = useScrollReveal(0.2)
   const founder0 = useScrollReveal(0.15)
@@ -126,15 +153,13 @@ export default function AboutPage() {
           </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {principles.map((principle) => (
-              <div key={principle.title} className="border-l-2 border-primary/30 pl-5">
-                <h3 className="text-base font-semibold text-foreground mb-2">
-                  {principle.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {principle.description}
-                </p>
-              </div>
+            {principles.map((principle, index) => (
+              <PrincipleCard
+                key={principle.title}
+                title={principle.title}
+                description={principle.description}
+                delay={index * 120}
+              />
             ))}
           </div>
         </div>
