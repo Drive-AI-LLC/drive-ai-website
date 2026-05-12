@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
 const solutions = [
   {
@@ -24,11 +25,20 @@ const solutions = [
 ]
 
 export function SolutionSection() {
+  const header = useScrollReveal(0.2)
+  const card0 = useScrollReveal(0.15)
+  const card1 = useScrollReveal(0.15)
+  const card2 = useScrollReveal(0.15)
+  const cardRefs = [card0, card1, card2]
+
   return (
     <section id="services" className="py-20 sm:py-24 lg:py-28 bg-background border-t border-border/40">
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
 
-        <div className="mb-16">
+        <div
+          ref={header.ref as React.RefObject<HTMLDivElement>}
+          className={`mb-16 reveal ${header.visible ? "is-visible" : ""}`}
+        >
           <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">Our Systems</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
             Revenue systems for roofing.
@@ -40,10 +50,11 @@ export function SolutionSection() {
             <Link
               key={solution.title}
               href={solution.href}
-              className="animate-fade-up bg-background border border-border rounded-lg p-8 flex flex-col group transition-all duration-300"
+              ref={cardRefs[index].ref as React.RefObject<HTMLAnchorElement>}
+              className={`reveal ${cardRefs[index].visible ? "is-visible" : ""} bg-background border border-border rounded-lg p-8 flex flex-col group transition-colors duration-300`}
+              style={{ transitionDelay: cardRefs[index].visible ? `${index * 100}ms` : "0ms" }}
               onMouseEnter={(e) => e.currentTarget.style.borderColor = 'rgb(1, 86, 59)'}
               onMouseLeave={(e) => e.currentTarget.style.borderColor = ''}
-              style={{ animationDelay: `${index * 80}ms` }}
             >
               <p className="text-[10px] font-semibold text-primary uppercase tracking-[0.22em] mb-5">
                 {solution.tag}

@@ -1,9 +1,9 @@
 "use client"
 
-import { Metadata } from "next"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { CTASection } from "@/components/cta-section"
+import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
 const services = [
   {
@@ -39,6 +39,8 @@ const services = [
 ]
 
 export default function ServicesPage() {
+  const heroReveal = useScrollReveal(0.1)
+
   return (
     <main className="min-h-screen flex flex-col">
       <Navbar />
@@ -46,15 +48,20 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-background">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">
-            Our Systems
-          </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-[-0.03em] leading-[1.08] font-serif mb-5 max-w-3xl">
-            Explore our systems.
-          </h1>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            Purpose-built automation for roofing operations. Each system solves a specific revenue leak — so you can grow without adding headcount.
-          </p>
+          <div
+            ref={heroReveal.ref as React.RefObject<HTMLDivElement>}
+            className={`reveal ${heroReveal.visible ? "is-visible" : ""}`}
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-4">
+              Our Systems
+            </p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-[-0.03em] leading-[1.08] font-serif mb-5 max-w-3xl">
+              Explore our systems.
+            </h1>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              Purpose-built automation for roofing operations. Each system solves a specific revenue leak — so you can grow without adding headcount.
+            </p>
+          </div>
         </div>
       </section>
 
