@@ -18,7 +18,7 @@ export function CTASection({ headline, supporting }: CTASectionProps) {
           {supporting}
         </p>
         <div className="mt-8 flex justify-center">
-          <Button asChild size="lg" variant="secondary" className="h-11 text-sm px-7 rounded-full shadow-sm whitespace-nowrap">
+          <Button asChild size="lg" variant="secondary" className="h-11 text-sm px-7 shadow-sm whitespace-nowrap">
             <Link href="/contact">
               Book a Call
               <ArrowRight className="ml-2 w-3.5 h-3.5" />

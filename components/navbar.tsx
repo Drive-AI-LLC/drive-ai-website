@@ -53,7 +53,7 @@ export function Navbar() {
           </div>
 
           <div className="hidden lg:block">
-            <Button asChild className="rounded-full px-5 h-9 text-sm">
+            <Button asChild className="px-5 h-9 text-sm">
               <Link href="/contact">Book a Call</Link>
             </Button>
           </div>
@@ -91,7 +91,7 @@ export function Navbar() {
                   </Link>
                 )
               })}
-              <Button asChild className="mt-3 rounded-full text-sm h-10">
+              <Button asChild className="mt-3 text-sm h-10">
                 <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                   Book a Call
                 </Link>
