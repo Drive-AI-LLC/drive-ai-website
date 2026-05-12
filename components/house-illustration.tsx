@@ -27,7 +27,7 @@ const shingles = [
 export function HouseIllustration() {
   return (
     <div className="relative w-full flex items-center justify-center">
-      <div className="animate-house-float relative w-full max-w-[500px]">
+      <div className="relative w-full max-w-[500px]">
         {/* Aspect-ratio box — matches shared Figma canvas 2032 × 2235 */}
         <div style={{ position: "relative", paddingBottom: "110.02%", width: "100%" }}>
 
@@ -63,7 +63,7 @@ export function HouseIllustration() {
                 stroke="black"
                 strokeWidth="3"
                 className="animate-shingle-in"
-                style={{ animationDelay: `${0.5 + i * 0.08}s` }}
+                style={{ animationDelay: `${0.5 + i * 0.25}s` }}
               />
             ))}
           </svg>
