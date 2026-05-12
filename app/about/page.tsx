@@ -45,7 +45,7 @@ function PrincipleCard({ title, description, delay }: { title: string; descripti
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className="border-l-2 border-primary pl-5 overflow-hidden"
+      className="border-l-2 border-primary/30 pl-5 overflow-hidden"
     >
       <div
         className="transition-all duration-700"
