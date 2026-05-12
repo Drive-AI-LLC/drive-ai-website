@@ -9,10 +9,10 @@ export function Hero() {
   return (
     <section className="relative w-full min-h-[100svh] flex items-center bg-background overflow-hidden">
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-24 lg:py-0">
+        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center py-24 lg:py-0">
 
           {/* Left — text content, pushed down slightly */}
-          <div className="flex flex-col justify-center mt-8 lg:mt-16">
+          <div className="flex flex-col justify-center mt-8 lg:mt-16 lg:col-span-2">
             <h1
               className="animate-fade-up text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-[1.3] tracking-[-0.04em] font-serif mb-6"
               style={{ animationDelay: "0ms" }}
