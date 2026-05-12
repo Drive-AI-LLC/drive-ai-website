@@ -69,10 +69,6 @@ function PrincipleCard({ title, description, delay }: { title: string; descripti
 
 export default function AboutPage() {
   const heroReveal = useScrollReveal(0.1)
-  const foundersHeader = useScrollReveal(0.2)
-  const founder0 = useScrollReveal(0.15)
-  const founder1 = useScrollReveal(0.15)
-  const founderCardRefs = [founder0, founder1]
 
   return (
     <main className="min-h-screen">
@@ -101,10 +97,7 @@ export default function AboutPage() {
       {/* Founders */}
       <section className="py-16 lg:py-20 bg-muted/30">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
-          <div
-            ref={foundersHeader.ref as React.RefObject<HTMLDivElement>}
-            className={`reveal ${foundersHeader.visible ? "is-visible" : ""} mb-10`}
-          >
+          <div className="mb-10">
             <p className="text-primary font-semibold text-xs uppercase tracking-[0.18em] mb-4">
               Our Team
             </p>
@@ -114,12 +107,10 @@ export default function AboutPage() {
           </div>
 
           <div className="flex flex-col gap-6">
-            {founders.map((founder, index) => (
+            {founders.map((founder) => (
               <div
                 key={founder.name}
-                ref={founderCardRefs[index].ref as React.RefObject<HTMLDivElement>}
-                className={`reveal ${founderCardRefs[index].visible ? "is-visible" : ""} bg-background rounded-lg border border-border p-6 flex flex-row gap-6 items-stretch`}
-                style={{ transitionDelay: founderCardRefs[index].visible ? `${index * 120}ms` : "0ms" }}
+                className="bg-background rounded-lg border border-border p-6 flex flex-row gap-6 items-stretch"
               >
                 <div className="w-[140px] h-[140px] relative rounded-md overflow-hidden bg-muted flex-shrink-0">
                   <Image
