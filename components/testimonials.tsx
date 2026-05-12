@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useRef, useState } from "react"
 import { Quote } from "lucide-react"
 import {
   Carousel,
@@ -7,6 +8,7 @@ import {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
+  type CarouselApi,
 } from "@/components/ui/carousel"
 
 const testimonials = [
@@ -55,6 +57,43 @@ const testimonials = [
 ]
 
 export function Testimonials() {
+  const [api, setApi] = useState<CarouselApi>()
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const userInteractedRef = useRef(false)
+
+  useEffect(() => {
+    if (!api) return
+
+    const startAutoPlay = () => {
+      if (userInteractedRef.current) return
+      intervalRef.current = setInterval(() => {
+        api.scrollNext()
+      }, 4000)
+    }
+
+    const stopAutoPlay = () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+        intervalRef.current = null
+      }
+    }
+
+    const onPointerDown = () => {
+      userInteractedRef.current = true
+      stopAutoPlay()
+    }
+
+    startAutoPlay()
+
+    const rootNode = api.rootNode()
+    rootNode.addEventListener("pointerdown", onPointerDown)
+
+    return () => {
+      stopAutoPlay()
+      rootNode.removeEventListener("pointerdown", onPointerDown)
+    }
+  }, [api])
+
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-muted/20">
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
@@ -69,6 +108,7 @@ export function Testimonials() {
 
         <div className="px-0 sm:px-0">
           <Carousel
+            setApi={setApi}
             opts={{
               align: "start",
               loop: true,
