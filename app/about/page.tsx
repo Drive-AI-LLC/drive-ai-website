@@ -6,11 +6,6 @@ import { CTASection } from "@/components/cta-section"
 import Image from "next/image"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
-export const metadata: Metadata = {
-  title: "About | Drive AI",
-  description: "Drive AI builds revenue-generating systems for roofing companies.",
-}
-
 const founders = [
   {
     name: "Danika Pfleghardt",
