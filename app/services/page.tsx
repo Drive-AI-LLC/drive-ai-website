@@ -38,18 +38,18 @@ const services = [
   },
 ]
 
-function FeatureCard({ name, detail, delay }: { name: string; detail: string; delay: number }) {
+function FeatureCard({ name, detail, delay, rightAligned = false }: { name: string; detail: string; delay: number; rightAligned?: boolean }) {
   const { ref, visible } = useScrollReveal(0.2)
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className="border-l-2 border-primary/20 pl-5 py-1 overflow-hidden"
+      className={`border-l-2 border-primary/20 py-1 overflow-hidden ${rightAligned ? "border-l-0 border-r-2 pl-0 pr-5 text-right" : "pl-5"}`}
     >
       <div
         className="transition-all duration-700"
         style={{
           opacity: visible ? 1 : 0,
-          transform: visible ? "translateX(0)" : "translateX(-18px)",
+          transform: visible ? "translateX(0)" : rightAligned ? "translateX(18px)" : "translateX(-18px)",
           transitionDelay: `${delay}ms`,
           transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
         }}
@@ -101,21 +101,7 @@ export default function ServicesPage() {
               return (
                 <div key={service.title} id={service.title.toLowerCase().replace(/\s+/g, '-')} className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-start`}>
 
-                  {/* Features — left when flipped */}
-                  {flipped && (
-                    <div className="space-y-6 order-2 lg:order-1">
-                      {service.features.map((feature, fi) => (
-                        <FeatureCard
-                          key={feature.name}
-                          name={feature.name}
-                          detail={feature.detail}
-                          delay={fi * 120}
-                        />
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Title & Description */}
+                  {/* Title & Description — left on desktop, or right when flipped */}
                   <div className={`lg:sticky lg:top-32 ${flipped ? "order-1 lg:order-2 lg:text-right" : ""}`}>
                     <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.25em] mb-4">
                       {service.tag}
@@ -128,19 +114,18 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  {/* Features — right when not flipped */}
-                  {!flipped && (
-                    <div className="space-y-6">
-                      {service.features.map((feature, fi) => (
-                        <FeatureCard
-                          key={feature.name}
-                          name={feature.name}
-                          detail={feature.detail}
-                          delay={fi * 120}
-                        />
-                      ))}
-                    </div>
-                  )}
+                  {/* Features */}
+                  <div className={`space-y-6 ${flipped ? "order-2 lg:order-1" : ""}`}>
+                    {service.features.map((feature, fi) => (
+                      <FeatureCard
+                        key={feature.name}
+                        name={feature.name}
+                        detail={feature.detail}
+                        delay={fi * 120}
+                        rightAligned={flipped}
+                      />
+                    ))}
+                  </div>
 
                 </div>
               )
