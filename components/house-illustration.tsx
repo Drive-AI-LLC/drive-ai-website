@@ -2,35 +2,27 @@
 
 import Image from "next/image"
 
-// Each shingle: width (inner fill px from SVG viewBox), row, col-offset
-// The shingles are laid in 3 rows over the damaged dark patch on the right roof section.
-// At 500px display width the house image (originally ~1080px wide) scales to ~0.463x.
-// Damaged patch center: ~61% x, ~26% y of the image.
-// We tile shingles left-to-right across 3 rows, staggered by index for animation.
-
+// 18 shingle rects from Group 2.svg (viewBox="0 0 516 226")
+// Rendered inline so each rect can be individually animated with staggered delay
 const shingles = [
-  // Row 1 — top of patch
-  { w: 82, h: 39, x: 54.5, y: 19.5 },
-  { w: 79, h: 39, x: 70.5, y: 19.5 },
-  { w: 74, h: 39, x: 86.0, y: 19.5 },
-  { w: 71, h: 39, x: 101.0, y: 19.5 },
-  { w: 68, h: 39, x: 115.5, y: 19.5 },
-  { w: 64, h: 39, x: 129.5, y: 19.5 },
-
-  // Row 2 — middle of patch
-  { w: 62, h: 39, x: 48.0, y: 56.5 },
-  { w: 60, h: 39, x: 63.0, y: 56.5 },
-  { w: 58, h: 39, x: 77.5, y: 56.5 },
-  { w: 76, h: 39, x: 93.5, y: 56.5 },
-  { w: 71, h: 39, x: 109.0, y: 56.5 },
-  { w: 49, h: 39, x: 123.0, y: 56.5 },
-
-  // Row 3 — bottom of patch
-  { w: 46, h: 39, x: 53.0, y: 93.5 },
-  { w: 64, h: 39, x: 67.5, y: 93.5 },
-  { w: 68, h: 39, x: 83.0, y: 93.5 },
-  { w: 74, h: 39, x: 99.5, y: 93.5 },
-  { w: 34, h: 39, x: 114.5, y: 93.5 },
+  { x: 1.5,   y: 40.5,  w: 79,  h: 36 },
+  { x: 32.5,  y: 1.5,   w: 79,  h: 36 },
+  { x: 40.5,  y: 77.5,  w: 71,  h: 36 },
+  { x: 81.5,  y: 40.5,  w: 68,  h: 36 },
+  { x: 112.5, y: 77.5,  w: 64,  h: 36 },
+  { x: 303.5, y: 77.5,  w: 68,  h: 36 },
+  { x: 207.5, y: 114.5, w: 68,  h: 36 },
+  { x: 275.5, y: 114.5, w: 68,  h: 36 },
+  { x: 343.5, y: 114.5, w: 68,  h: 36 },
+  { x: 411.5, y: 114.5, w: 62,  h: 36 },
+  { x: 473.5, y: 114.5, w: 31,  h: 36 },
+  { x: 234.5, y: 151.5, w: 68,  h: 36 },
+  { x: 302.5, y: 151.5, w: 68,  h: 36 },
+  { x: 370.5, y: 151.5, w: 68,  h: 36 },
+  { x: 438.5, y: 151.5, w: 76,  h: 36 },
+  { x: 265.5, y: 188.5, w: 60,  h: 36 },
+  { x: 325.5, y: 188.5, w: 58,  h: 36 },
+  { x: 383.5, y: 188.5, w: 46,  h: 36 },
 ]
 
 export function HouseIllustration() {
@@ -38,7 +30,7 @@ export function HouseIllustration() {
     <div className="relative w-full flex items-center justify-center">
       {/* Floating wrapper */}
       <div className="animate-house-float relative w-full max-w-[500px]">
-        {/* Base house image */}
+        {/* Base house image — Group 1.png */}
         <Image
           src="/images/house.png"
           alt="Cartoon house with damaged roof being repaired"
@@ -48,38 +40,38 @@ export function HouseIllustration() {
           priority
         />
 
-        {/* Shingle overlay — absolutely positioned over the damaged roof patch */}
-        {/* The patch sits at roughly 51% from left, 19% from top of the image */}
-        <div
+        {/* Group 2.svg overlay — exact same size/position as the base image */}
+        {/* Uses absolute inset-0 so it maps 1:1 over the house */}
+        <svg
+          viewBox="0 0 516 226"
+          xmlns="http://www.w3.org/2000/svg"
           className="absolute"
-          style={{ top: "19%", left: "51%", width: "34%", height: "21%" }}
+          style={{
+            // The damaged roof patch in Group 1.png sits in the upper-right
+            // quadrant. Group 2.svg viewBox covers exactly that patch region.
+            // Position and size the overlay to match that area precisely.
+            top: "12.5%",
+            left: "44%",
+            width: "57%",
+            height: "auto",
+          }}
+          preserveAspectRatio="xMinYMin meet"
         >
-          <svg
-            viewBox="0 0 160 132"
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-full"
-            style={{ overflow: "visible" }}
-          >
-            {shingles.map((s, i) => (
-              <rect
-                key={i}
-                x={s.x - s.w / 2}
-                y={s.y - s.h / 2}
-                width={s.w}
-                height={s.h}
-                fill="#868686"
-                stroke="black"
-                strokeWidth="2"
-                rx="1"
-                className="animate-shingle-in"
-                style={{
-                  animationDelay: `${0.6 + i * 0.08}s`,
-                  transformOrigin: `${s.x}px ${s.y + 10}px`,
-                }}
-              />
-            ))}
-          </svg>
-        </div>
+          {shingles.map((s, i) => (
+            <rect
+              key={i}
+              x={s.x}
+              y={s.y}
+              width={s.w}
+              height={s.h}
+              fill="#868686"
+              stroke="black"
+              strokeWidth="3"
+              className="animate-shingle-in"
+              style={{ animationDelay: `${0.5 + i * 0.07}s` }}
+            />
+          ))}
+        </svg>
       </div>
     </div>
   )
