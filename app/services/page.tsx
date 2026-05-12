@@ -100,7 +100,7 @@ export default function ServicesPage() {
             {services.map((service, index) => {
               const flipped = service.title === "Storm Outreach System"
               return (
-                <div key={service.title} id={service.title.toLowerCase().replace(/\s+/g, '-')} className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-start py-16 lg:py-24 first:pt-0`}>
+                <div key={service.title} id={service.title.toLowerCase().replace(/\s+/g, '-')} className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-start py-16 lg:py-24 first:pt-0 last:pb-0`}>
 
                   {/* Title & Description — left on desktop, or right when flipped */}
                   <div className={`lg:sticky lg:top-32 ${flipped ? "order-1 lg:order-2 lg:text-right" : ""}`}>
