@@ -43,7 +43,7 @@ function FeatureCard({ name, detail, delay, rightAligned = false }: { name: stri
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className={`py-1 overflow-hidden ${rightAligned ? "pr-5 text-right" : "border-l-2 border-primary/20 pl-5"}`}
+      className={`py-1 overflow-hidden ${rightAligned ? "border-r-2 border-primary/20 pr-5 text-right" : "border-l-2 border-primary/20 pl-5"}`}
     >
       <div
         className="transition-all duration-700"
