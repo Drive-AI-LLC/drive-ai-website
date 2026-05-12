@@ -68,6 +68,7 @@ function PrincipleCard({ title, description, delay }: { title: string; descripti
 }
 
 export default function AboutPage() {
+  const heroReveal = useScrollReveal(0.1)
   const foundersHeader = useScrollReveal(0.2)
   const founder0 = useScrollReveal(0.15)
   const founder1 = useScrollReveal(0.15)
@@ -80,7 +81,10 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-background">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
+          <div
+            ref={heroReveal.ref as React.RefObject<HTMLDivElement>}
+            className={`reveal ${heroReveal.visible ? "is-visible" : ""} max-w-2xl`}
+          >
             <p className="text-primary font-semibold text-xs uppercase tracking-[0.18em] mb-4">
               About Us
             </p>

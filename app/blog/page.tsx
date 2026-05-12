@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer"
 import { CTASection } from "@/components/cta-section"
 import { Input } from "@/components/ui/input"
 import { Search, ArrowRight, ChevronDown } from "lucide-react"
+import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
 const categories = [
   "All",
@@ -80,6 +81,7 @@ const blogPosts = [
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState("")
   const [activeCategory, setActiveCategory] = useState("All")
+  const heroReveal = useScrollReveal(0.1)
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -95,7 +97,10 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-20 bg-muted/30">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+          <div
+            ref={heroReveal.ref as React.RefObject<HTMLDivElement>}
+            className={`reveal ${heroReveal.visible ? "is-visible" : ""} max-w-3xl mx-auto text-center`}
+          >
             <p className="text-primary font-medium text-sm uppercase tracking-[0.2em] mb-6">
               Blog
             </p>
