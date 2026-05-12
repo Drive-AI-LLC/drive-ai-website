@@ -60,8 +60,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right — animated house illustration */}
-          <div className="animate-fade-up" style={{ animationDelay: "240ms" }}>
+          {/* Right — animated house illustration (hidden on mobile) */}
+          <div className="hidden lg:block animate-fade-up" style={{ animationDelay: "240ms" }}>
             <HouseIllustration />
           </div>
 
