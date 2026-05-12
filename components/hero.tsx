@@ -42,7 +42,7 @@ export function Hero() {
               <Button
                 asChild
                 size="lg"
-                className="h-12 sm:h-14 text-base px-6 sm:px-8 rounded-none shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300"
+                className="h-12 sm:h-14 text-base px-6 sm:px-8 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300"
               >
                 <Link href="/contact">
                   Let's Talk
@@ -53,7 +53,7 @@ export function Hero() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="h-12 sm:h-14 text-base px-6 sm:px-8 rounded-none border-border hover:bg-muted/50 transition-all duration-300"
+                className="h-12 sm:h-14 text-base px-6 sm:px-8 border-border hover:bg-muted/50 transition-all duration-300"
               >
                 <Link href="/services">Explore Systems</Link>
               </Button>
