@@ -38,33 +38,6 @@ const services = [
   },
 ]
 
-function FeatureCard({ name, detail, delay, rightAligned = false }: { name: string; detail: string; delay: number; rightAligned?: boolean }) {
-  const { ref, visible } = useScrollReveal(0.2)
-  return (
-    <div
-      ref={ref as React.RefObject<HTMLDivElement>}
-      className={`py-1 overflow-hidden ${rightAligned ? "border-r-2 border-primary/20 pr-5 text-right" : "border-l-2 border-primary/20 pl-5"}`}
-    >
-      <div
-        className="transition-all duration-700"
-        style={{
-          opacity: visible ? 1 : 0,
-          transform: visible ? "translateX(0)" : rightAligned ? "translateX(18px)" : "translateX(-18px)",
-          transitionDelay: `${delay}ms`,
-          transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
-        }}
-      >
-        <h3 className="text-sm font-semibold text-foreground mb-1.5">
-          {name}
-        </h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          {detail}
-        </p>
-      </div>
-    </div>
-  )
-}
-
 export default function ServicesPage() {
   const heroReveal = useScrollReveal(0.1)
 
@@ -93,44 +66,41 @@ export default function ServicesPage() {
       </section>
 
       {/* Services */}
-      <section className="py-20 lg:py-32 bg-background border-t border-border/40">
+      <section className="py-16 lg:py-24 bg-background border-t border-border/40">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="divide-y divide-border/40">
-            
-            {services.map((service, index) => {
-              const flipped = service.title === "Storm Outreach System"
-              return (
-                <div key={service.title} id={service.title.toLowerCase().replace(/\s+/g, '-')} className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-start py-16 lg:py-24 first:pt-0`}>
-
-                  {/* Title & Description — left on desktop, or right when flipped */}
-                  <div className={`lg:sticky lg:top-32 ${flipped ? "order-1 lg:order-2 lg:text-right" : ""}`}>
-                    <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.25em] mb-4">
-                      {service.tag}
-                    </p>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.1] mb-4">
-                      {service.title}
-                    </h2>
-                    <p className={`text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md ${flipped ? "lg:ml-auto" : ""}`}>
-                      {service.description}
-                    </p>
-                  </div>
-
-                  {/* Features */}
-                  <div className={`space-y-6 ${flipped ? "order-2 lg:order-1" : ""}`}>
-                    {service.features.map((feature, fi) => (
-                      <FeatureCard
-                        key={feature.name}
-                        name={feature.name}
-                        detail={feature.detail}
-                        delay={fi * 120}
-                        rightAligned={flipped}
-                      />
-                    ))}
-                  </div>
-
+          <div className="space-y-20 lg:space-y-28">
+            {services.map((service, index) => (
+              <div key={service.title} id={service.title.toLowerCase().replace(/\s+/g, '-')} className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+                
+                {/* Left: Title & Description */}
+                <div className="lg:sticky lg:top-32">
+                  <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.25em] mb-4">
+                    {service.tag}
+                  </p>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.1] mb-4">
+                    {service.title}
+                  </h2>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-md">
+                    {service.description}
+                  </p>
                 </div>
-              )
-            })}
+
+                {/* Right: Features */}
+                <div className="space-y-6">
+                  {service.features.map((feature) => (
+                    <div key={feature.name} className="border-l-2 border-primary/20 pl-5 py-1">
+                      <h3 className="text-sm font-semibold text-foreground mb-1.5">
+                        {feature.name}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {feature.detail}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            ))}
           </div>
         </div>
       </section>
