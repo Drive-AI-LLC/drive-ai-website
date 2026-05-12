@@ -93,13 +93,14 @@ export default function ServicesPage() {
       </section>
 
       {/* Services */}
-      <section className="py-16 lg:py-24 bg-background border-t border-border/40">
+      <section className="py-20 lg:py-32 bg-background border-t border-border/40">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="space-y-20 lg:space-y-28">
+          <div className="divide-y divide-border/40">
+            
             {services.map((service, index) => {
               const flipped = service.title === "Storm Outreach System"
               return (
-                <div key={service.title} id={service.title.toLowerCase().replace(/\s+/g, '-')} className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-start`}>
+                <div key={service.title} id={service.title.toLowerCase().replace(/\s+/g, '-')} className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-start py-16 lg:py-24 first:pt-0`}>
 
                   {/* Title & Description — left on desktop, or right when flipped */}
                   <div className={`lg:sticky lg:top-32 ${flipped ? "order-1 lg:order-2 lg:text-right" : ""}`}>
