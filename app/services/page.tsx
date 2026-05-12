@@ -38,6 +38,33 @@ const services = [
   },
 ]
 
+function FeatureCard({ name, detail, delay }: { name: string; detail: string; delay: number }) {
+  const { ref, visible } = useScrollReveal(0.2)
+  return (
+    <div
+      ref={ref as React.RefObject<HTMLDivElement>}
+      className="border-l-2 border-primary/20 pl-5 py-1 overflow-hidden"
+    >
+      <div
+        className="transition-all duration-700"
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateX(0)" : "translateX(-18px)",
+          transitionDelay: `${delay}ms`,
+          transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
+        }}
+      >
+        <h3 className="text-sm font-semibold text-foreground mb-1.5">
+          {name}
+        </h3>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          {detail}
+        </p>
+      </div>
+    </div>
+  )
+}
+
 export default function ServicesPage() {
   const heroReveal = useScrollReveal(0.1)
 
@@ -87,15 +114,13 @@ export default function ServicesPage() {
 
                 {/* Right: Features */}
                 <div className="space-y-6">
-                  {service.features.map((feature) => (
-                    <div key={feature.name} className="border-l-2 border-primary/20 pl-5 py-1">
-                      <h3 className="text-sm font-semibold text-foreground mb-1.5">
-                        {feature.name}
-                      </h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {feature.detail}
-                      </p>
-                    </div>
+                  {service.features.map((feature, fi) => (
+                    <FeatureCard
+                      key={feature.name}
+                      name={feature.name}
+                      detail={feature.detail}
+                      delay={fi * 120}
+                    />
                   ))}
                 </div>
 
