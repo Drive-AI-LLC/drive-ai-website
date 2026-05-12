@@ -69,6 +69,9 @@ function PrincipleCard({ title, description, delay }: { title: string; descripti
 
 export default function AboutPage() {
   const heroReveal = useScrollReveal(0.1)
+  const founder0 = useScrollReveal(0.15)
+  const founder1 = useScrollReveal(0.15)
+  const founderCardRefs = [founder0, founder1]
 
   return (
     <main className="min-h-screen">
@@ -107,10 +110,12 @@ export default function AboutPage() {
           </div>
 
           <div className="flex flex-col gap-6">
-            {founders.map((founder) => (
+            {founders.map((founder, index) => (
               <div
                 key={founder.name}
-                className="bg-background rounded-lg border border-border p-6 flex flex-row gap-6 items-stretch"
+                ref={founderCardRefs[index].ref as React.RefObject<HTMLDivElement>}
+                className={`reveal ${founderCardRefs[index].visible ? "is-visible" : ""} bg-background rounded-lg border border-border p-6 flex flex-row gap-6 items-stretch`}
+                style={{ transitionDelay: founderCardRefs[index].visible ? `${index * 120}ms` : "0ms" }}
               >
                 <div className="w-[140px] h-[140px] relative rounded-md overflow-hidden bg-muted flex-shrink-0">
                   <Image
