@@ -60,16 +60,11 @@ export function Testimonials() {
   const [api, setApi] = useState<CarouselApi>()
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const userInteractedRef = useRef(false)
+  const prevRef = useRef<HTMLButtonElement>(null)
+  const nextRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     if (!api) return
-
-    const startAutoPlay = () => {
-      if (userInteractedRef.current) return
-      intervalRef.current = setInterval(() => {
-        api.scrollNext()
-      }, 4000)
-    }
 
     const stopAutoPlay = () => {
       if (intervalRef.current) {
@@ -78,28 +73,30 @@ export function Testimonials() {
       }
     }
 
-    const onPointerDown = () => {
-      console.log("[v0] Pointer down detected, stopping auto-play")
+    const onUserInteraction = () => {
       userInteractedRef.current = true
       stopAutoPlay()
     }
 
-    const onClick = () => {
-      console.log("[v0] Click detected, stopping auto-play")
-      userInteractedRef.current = true
-      stopAutoPlay()
+    if (!userInteractedRef.current) {
+      intervalRef.current = setInterval(() => {
+        api.scrollNext()
+      }, 4000)
     }
-
-    startAutoPlay()
 
     const rootNode = api.rootNode()
-    rootNode.addEventListener("pointerdown", onPointerDown)
-    rootNode.addEventListener("click", onClick)
+    rootNode.addEventListener("pointerdown", onUserInteraction)
+
+    const prevEl = prevRef.current
+    const nextEl = nextRef.current
+    prevEl?.addEventListener("click", onUserInteraction)
+    nextEl?.addEventListener("click", onUserInteraction)
 
     return () => {
       stopAutoPlay()
-      rootNode.removeEventListener("pointerdown", onPointerDown)
-      rootNode.removeEventListener("click", onClick)
+      rootNode.removeEventListener("pointerdown", onUserInteraction)
+      prevEl?.removeEventListener("click", onUserInteraction)
+      nextEl?.removeEventListener("click", onUserInteraction)
     }
   }, [api])
 
@@ -142,8 +139,8 @@ export function Testimonials() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-2 sm:-left-4 w-10 h-10 sm:w-12 sm:h-12" />
-            <CarouselNext className="-right-2 sm:-right-4 w-10 h-10 sm:w-12 sm:h-12" />
+            <CarouselPrevious ref={prevRef} className="-left-2 sm:-left-4 w-10 h-10 sm:w-12 sm:h-12" />
+            <CarouselNext ref={nextRef} className="-right-2 sm:-right-4 w-10 h-10 sm:w-12 sm:h-12" />
           </Carousel>
         </div>
       </div>
