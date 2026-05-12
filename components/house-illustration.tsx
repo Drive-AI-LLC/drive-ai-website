@@ -26,8 +26,8 @@ const shingles = [
 
 export function HouseIllustration() {
   return (
-    <div className="relative w-full flex items-center justify-center">
-      <div className="relative w-full max-w-[500px]">
+    <div className="relative w-full flex items-center justify-end">
+      <div className="relative w-full max-w-[520px] translate-x-8 translate-y-10">
         {/* Aspect-ratio box — matches shared Figma canvas 2032 × 2235 */}
         <div style={{ position: "relative", paddingBottom: "110.02%", width: "100%" }}>
 
