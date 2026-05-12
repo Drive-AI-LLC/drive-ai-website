@@ -53,7 +53,7 @@ export function Navbar() {
           </div>
 
           <div className="hidden lg:block">
-            <Button asChild className="px-5 h-9 text-sm">
+            <Button asChild className="px-5 h-9 text-sm hover:-translate-y-1">
               <Link href="/contact">Book a Call</Link>
             </Button>
           </div>
