@@ -61,7 +61,9 @@ export function Hero() {
           </div>
 
           {/* Right — animated house illustration */}
-          <HouseIllustration />
+          <div className="animate-fade-up" style={{ animationDelay: "240ms" }}>
+            <HouseIllustration />
+          </div>
 
         </div>
       </div>
