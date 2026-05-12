@@ -1,9 +1,9 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { HouseIllustration } from "@/components/house-illustration"
 
 export function Hero() {
   return (
@@ -60,17 +60,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right — cartoon house image */}
-          <div className="relative w-full flex items-center justify-center">
-            <Image
-              src="/images/house.png"
-              alt="Cartoon house with damaged roof depicting roofing services"
-              width={500}
-              height={350}
-              className="w-full max-w-[500px] h-auto object-contain"
-              priority
-            />
-          </div>
+          {/* Right — animated house illustration */}
+          <HouseIllustration />
 
         </div>
       </div>
