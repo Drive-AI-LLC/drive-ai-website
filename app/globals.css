@@ -230,17 +230,8 @@
 .underline-draw {
   position: relative;
   text-decoration: none;
-  background: linear-gradient(to right, 
-    transparent 0%, 
-    transparent 55%, 
-    white 55%, 
-    white 75%, 
-    transparent 75%, 
-    transparent 100%);
-  background-position: 0 4px;
-  background-size: 100% 3px;
-  background-repeat: no-repeat;
-  padding: 0 2px;
+  -webkit-text-stroke: 2.5px white;
+  z-index: 1;
 }
 
 .underline-draw::after {
@@ -253,6 +244,7 @@
   background-color: #000;
   animation: draw-line 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: 0.65s;
+  z-index: -1;
 }
 
 @keyframes draw-line {
