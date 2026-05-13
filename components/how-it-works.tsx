@@ -45,8 +45,8 @@ function StepItem({ item, index }: { item: typeof steps[0]; index: number }) {
   return (
     <div
       ref={ref}
-      className={`flex-1 transition-all duration-600 ease-out ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+      className={`flex-1 transition-all duration-1000 ease-out ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
       style={{ transitionDelay: `${index * 120}ms` }}
     >

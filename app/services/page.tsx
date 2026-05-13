@@ -46,10 +46,10 @@ function FeatureCard({ name, detail, delay, rightAligned = false }: { name: stri
       className={`py-1 overflow-hidden ${rightAligned ? "border-r-2 border-primary/20 pr-5 text-right" : "border-l-2 border-primary/20 pl-5"}`}
     >
       <div
-        className="transition-all duration-700"
+        className="transition-all duration-1000"
         style={{
           opacity: visible ? 1 : 0,
-          transform: visible ? "translateX(0)" : rightAligned ? "translateX(18px)" : "translateX(-18px)",
+          transform: visible ? "translateX(0)" : rightAligned ? "translateX(28px)" : "translateX(-28px)",
           transitionDelay: `${delay}ms`,
           transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
         }}

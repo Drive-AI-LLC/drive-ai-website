@@ -48,10 +48,10 @@ function PrincipleCard({ title, description, delay }: { title: string; descripti
       className="border-l-2 border-primary/30 pl-5 overflow-hidden"
     >
       <div
-        className="transition-all duration-700"
+        className="transition-all duration-1000"
         style={{
           opacity: visible ? 1 : 0,
-          transform: visible ? "translateX(0)" : "translateX(-18px)",
+          transform: visible ? "translateX(0)" : "translateX(-28px)",
           transitionDelay: `${delay}ms`,
           transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
         }}
