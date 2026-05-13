@@ -1,10 +1,11 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { ReactNode } from "react"
 
 interface CTASectionProps {
   headline: string
-  supporting: string
+  supporting: string | ReactNode
 }
 
 export function CTASection({ headline, supporting }: CTASectionProps) {
