@@ -57,7 +57,7 @@ function FeatureCard({ name, detail, delay, rightAligned = false }: { name: stri
         <h3 className="text-sm font-semibold text-foreground mb-1.5">
           {name}
         </h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">
+        <p className="text-base text-muted-foreground leading-relaxed">
           {detail}
         </p>
       </div>
