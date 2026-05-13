@@ -23,7 +23,7 @@ const services = [
     features: [
       { name: "Area Targeting", detail: "Pinpoint affected neighborhoods using weather and damage data." },
       { name: "Automated Follow-Up", detail: "Multi-touch sequences that keep leads warm without manual effort." },
-      { name: "Lead Tracking", detail: "See every lead's status — contacted, scheduled, closed — in one place." },
+      { name: "Lead Tracking", detail: "See every lead's status — contacted, scheduled, closed" },
     ],
   },
   {
@@ -40,6 +40,7 @@ const services = [
 
 function FeatureCard({ name, detail, delay, rightAligned = false }: { name: string; detail: string; delay: number; rightAligned?: boolean }) {
   const { ref, visible } = useScrollReveal(0.2)
+  const isLeadTracking = name === "Lead Tracking"
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
@@ -57,9 +58,16 @@ function FeatureCard({ name, detail, delay, rightAligned = false }: { name: stri
         <h3 className="text-sm font-semibold text-foreground mb-1.5">
           {name}
         </h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          {detail}
-        </p>
+        {isLeadTracking ? (
+          <div className={`text-sm text-muted-foreground leading-relaxed flex flex-col lg:flex-row ${rightAligned ? "lg:justify-end lg:gap-2" : "lg:gap-2"}`}>
+            <span>{detail}</span>
+            <span className={`${rightAligned ? "lg:text-right" : ""}`}>— in one place.</span>
+          </div>
+        ) : (
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            {detail}
+          </p>
+        )}
       </div>
     </div>
   )
