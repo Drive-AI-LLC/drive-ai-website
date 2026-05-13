@@ -41,7 +41,7 @@ export function SolutionSection() {
         >
           <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">Our Systems</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
-            <em>Drive</em> <span className="text-primary">AI</span> creates revenue systems for roofing.
+            <em className="text-primary">Drive</em> <span className="text-primary">AI</span> creates revenue systems for roofing.
           </h2>
         </div>
 
