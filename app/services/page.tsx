@@ -23,7 +23,7 @@ const services = [
     features: [
       { name: "Area Targeting", detail: "Pinpoint affected neighborhoods using weather and damage data." },
       { name: "Automated Follow-Up", detail: "Multi-touch sequences that keep leads warm without manual effort." },
-      { name: "Lead Tracking", detail: "See every lead's status — contacted, scheduled, closed — in one place." },
+      { name: "Lead Tracking", detail: "See every lead's status (contacted, scheduled, closed) in one place." },
     ],
   },
   {
