@@ -12,7 +12,7 @@ const services = [
     description: "Stop leaving money on every claim. We find the gaps, file the supplements, and track every dollar to recovery.",
     features: [
       { name: "Gap Analysis", detail: "Automated review of every estimate to identify missed or underpaid line items." },
-      { name: "Xactimate Cross-Reference", detail: "Your scope compared against Xactimate pricing to maximize claim value." },
+      { name: "Xactimate Cross-Reference", detail: "Your scope compared to Xactimate pricing to maximize claim value." },
       { name: "Supplement Tracking", detail: "Real-time visibility into every supplement — filed, pending, or paid." },
     ],
   },
