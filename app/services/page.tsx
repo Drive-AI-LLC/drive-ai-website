@@ -54,10 +54,10 @@ function FeatureCard({ name, detail, delay, rightAligned = false }: { name: stri
           transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
         }}
       >
-        <h3 className="text-sm font-semibold text-foreground mb-1.5">
+        <h3 className="text-base font-semibold text-foreground mb-1.5">
           {name}
         </h3>
-        <p className="text-base text-muted-foreground leading-relaxed">
+        <p className="text-sm text-muted-foreground leading-relaxed">
           {detail}
         </p>
       </div>
