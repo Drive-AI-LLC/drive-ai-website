@@ -17,11 +17,11 @@ export function Hero() {
               className="animate-fade-up text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-[1.3] tracking-[-0.04em] font-serif mb-6"
               style={{ animationDelay: "0ms" }}
             >
-              More money.
-              <span className="block">More jobs.</span>
+              More <span className="text-primary">money</span>.
+              <span className="block">More <span className="text-primary">jobs</span>.</span>
               <span className="block whitespace-nowrap">
                 Built for{" "}
-                <span className="text-primary underline decoration-2 underline-offset-2">
+                <span className="text-primary underline decoration-2 underline-offset-4">
                   roofing.
                 </span>
               </span>
