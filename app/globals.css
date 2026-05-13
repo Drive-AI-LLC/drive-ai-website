@@ -230,7 +230,6 @@
 .underline-draw {
   position: relative;
   text-decoration: none;
-  -webkit-text-stroke: 2.5px white;
   z-index: 1;
 }
 
@@ -238,7 +237,7 @@
   content: '';
   position: absolute;
   left: 0;
-  bottom: 4px;
+  bottom: 2px;
   height: 3px;
   width: 0;
   background-color: #000;
