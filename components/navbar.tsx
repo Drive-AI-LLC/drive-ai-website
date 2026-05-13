@@ -14,6 +14,8 @@ const navLinks = [
   { href: "/about", label: "About" },
 ]
 
+const scrollToTop = () => window.scrollTo({ top: 0, behavior: "instant" })
+
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
@@ -22,7 +24,7 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/96 backdrop-blur-md border-b border-border/30">
       <nav className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-18">
-          <Link href="/" className="flex items-center shrink-0">
+          <Link href="/" className="flex items-center shrink-0" onClick={scrollToTop}>
             <Image
               src="/images/logo.png"
               alt="Drive AI"
@@ -40,6 +42,7 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  onClick={scrollToTop}
                   className={`relative text-sm transition-colors duration-150 pb-0.5 ${
                     isActive
                       ? "text-foreground font-medium after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1.5px] after:bg-primary after:rounded-full"
@@ -85,14 +88,14 @@ export function Navbar() {
                         ? "text-foreground bg-muted/60"
                         : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
                     }`}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => { setIsMenuOpen(false); scrollToTop() }}
                   >
                     {link.label}
                   </Link>
                 )
               })}
               <Button asChild className="mt-3 text-sm h-10">
-                <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                <Link href="/contact" onClick={() => { setIsMenuOpen(false); scrollToTop() }}>
                   Book a Call
                 </Link>
               </Button>
