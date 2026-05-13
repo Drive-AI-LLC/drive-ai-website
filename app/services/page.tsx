@@ -137,7 +137,7 @@ export default function ServicesPage() {
 
       <CTASection
         headline="See how our systems fit your operation."
-        supporting="Book a short introductory call to explore where Drive AI can support your workflows and growth."
+        supporting="Book a short introductory call to explore where <em>Drive</em> AI can support your workflows and growth."
       />
 
       <Footer />

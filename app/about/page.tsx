@@ -11,13 +11,13 @@ const founders = [
     name: "Danika Pfleghardt",
     role: "Co-Founder",
     image: "/images/team/danika.jpg",
-    bio: "I lead marketing and growth at Drive AI. Over the past few years, I've worked across several startups and spent a lot of time helping businesses improve communication and brand presence. At Drive AI, I'm focused on helping roofing companies modernize the way they coordinate and scale.",
+    bio: "I lead marketing and growth at <em>Drive</em> AI. Over the past few years, I've worked across several startups and spent a lot of time helping businesses improve communication and brand presence. At <em>Drive</em> AI, I'm focused on helping roofing companies modernize the way they coordinate and scale.",
   },
   {
     name: "Reid Turner",
     role: "Co-Founder",
     image: "/images/team/reid.jpg",
-    bio: "I oversee the technical side of Drive AI along with the legal aspects and operations behind the company. Before starting Drive AI, I gained experience in finance and investor relations at a Fortune 500 company, which shaped the way I think about organization and long-term growth.",
+    bio: "I oversee the technical side of <em>Drive</em> AI along with the legal aspects and operations behind the company. Before starting <em>Drive</em> AI, I gained experience in finance and investor relations at a Fortune 500 company, which shaped the way I think about organization and long-term growth.",
   },
 ]
 
@@ -91,7 +91,7 @@ export default function AboutPage() {
               What we do.
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Drive AI builds revenue-generating systems for roofing companies. We focus on operational workflows including supplement recovery, storm outreach, and production coordination.
+              <em>Drive</em> AI builds revenue-generating systems for roofing companies. We focus on operational workflows including supplement recovery, storm outreach, and production coordination.
             </p>
           </div>
         </div>
@@ -167,7 +167,7 @@ export default function AboutPage() {
 
       <CTASection
         headline="Let's start the conversation."
-        supporting="We're building Drive AI alongside roofing companies focused on smarter operations and long-term growth."
+        supporting="We're building <em>Drive</em> AI alongside roofing companies focused on smarter operations and long-term growth."
       />
 
       <Footer />

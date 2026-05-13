@@ -34,7 +34,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-3.5 text-white/50 text-sm leading-relaxed">
-              Drive AI builds revenue-generating systems for roofing companies.
+              <em>Drive</em> AI builds revenue-generating systems for roofing companies.
             </p>
           </div>
 

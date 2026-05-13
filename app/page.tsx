@@ -18,7 +18,7 @@ export default function Home() {
       <Testimonials />
       <CTASection
         headline="Explore smarter roofing operations."
-        supporting="Learn how Drive AI helps roofing companies improve coordination, recover revenue, and streamline operations."
+        supporting="Learn how <em>Drive</em> AI helps roofing companies improve coordination, recover revenue, and streamline operations."
       />
       <Footer />
     </main>
