@@ -40,7 +40,7 @@ export function SolutionSection() {
           className={`mb-16 reveal ${header.visible ? "is-visible" : ""}`}
         >
           <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">Our Systems</p>
-          <h2 className="text-3xl sm:text-3xl lg:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
+          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
             <em className="text-primary">Drive</em> <span className="text-primary">AI</span> creates <span className="text-primary">revenue</span> systems for <span className="text-primary">roofing</span>.
           </h2>
         </div>
