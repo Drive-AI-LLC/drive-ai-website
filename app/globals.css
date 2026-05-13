@@ -226,6 +226,30 @@
   animation: shingle-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* Draw-on underline for hero "roofing." */
+.underline-draw {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline-draw::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 4px;
+  width: 0;
+  background-color: currentColor;
+  border-radius: 2px;
+  animation: draw-line 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.65s;
+}
+
+@keyframes draw-line {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
 /* Scroll reveal */
 .reveal {
   opacity: 0 !important;
