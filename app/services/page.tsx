@@ -19,7 +19,7 @@ const services = [
   {
     tag: "Storm Response",
     title: "Storm Outreach System",
-    description: "Be first on the door when a storm hits. Automated outreach gets your team moving before competitors show up.",
+    description: "Be first at the door when a storm hits. Automated outreach gets your team moving before competitors show up.",
     features: [
       { name: "Area Targeting", detail: "Pinpoint affected neighborhoods using weather and damage data." },
       { name: "Automated Follow-Up", detail: "Multi-touch sequences that keep leads warm without manual effort." },
