@@ -236,7 +236,7 @@
   content: '';
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: -3px;
   height: 4px;
   width: 0;
   background-color: currentColor;

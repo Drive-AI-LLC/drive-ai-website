@@ -22,8 +22,9 @@ export function Hero() {
               <span className="block whitespace-nowrap">
                 Built for{" "}
                 <span className="text-primary underline-draw">
-                  roofing.
+                  roofing
                 </span>
+                .
               </span>
             </h1>
 
