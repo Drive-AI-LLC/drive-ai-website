@@ -21,7 +21,7 @@ export function Hero() {
               <span className="block">More <span className="text-primary">jobs</span>.</span>
               <span className="block whitespace-nowrap">
                 Built for{" "}
-                <span className="text-primary underline decoration-2 underline-offset-4">
+                <span className="text-primary underline decoration-4 underline-offset-6">
                   roofing.
                 </span>
               </span>
