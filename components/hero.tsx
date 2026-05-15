@@ -43,10 +43,10 @@ export function Hero() {
       </div>
 
       {/* Desktop layout — two columns, image drives section height */}
-      <div className="hidden lg:grid grid-cols-[1fr_auto] w-full">
+      <div className="hidden lg:grid grid-cols-[minmax(0,1080px)_auto] w-full justify-start" style={{ paddingLeft: "max(20px, calc((100vw - 1080px) / 2))" }}>
 
         {/* Left — text content with consistent top padding */}
-        <div className="max-w-[540px] xl:max-w-[600px] ml-auto pl-5 sm:pl-6 lg:pl-8 pr-8 xl:pr-12 pt-36 xl:pt-44 pb-16 xl:pb-20">
+        <div className="pr-8 xl:pr-12 pt-36 xl:pt-44 pb-16 xl:pb-20">
           <h1
             className="animate-fade-up text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.15] tracking-[-0.04em] font-serif mb-6"
             style={{ animationDelay: "0ms" }}
