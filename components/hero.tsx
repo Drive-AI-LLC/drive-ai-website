@@ -7,12 +7,12 @@ import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[100svh] flex items-center overflow-hidden" style={{ backgroundColor: "#eef2e8" }}>
-      <div className="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8 w-full">
-        <div className="grid lg:grid-cols-2 items-end min-h-[100svh]">
+    <section className="relative w-full overflow-hidden" style={{ backgroundColor: "#eef2e8", minHeight: "calc(100svh - 64px)" }}>
+      <div className="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-8 w-full h-full">
+        <div className="grid lg:grid-cols-2 items-center" style={{ minHeight: "calc(100svh - 64px)" }}>
 
           {/* Left — text content */}
-          <div className="flex flex-col justify-center py-24 lg:py-0 lg:pb-16 mt-8 lg:mt-16">
+          <div className="flex flex-col justify-center py-20 lg:py-0">
             <h1
               className="animate-fade-up text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-[1.3] tracking-[-0.04em] font-serif mb-6"
               style={{ animationDelay: "0ms" }}
@@ -46,7 +46,7 @@ export function Hero() {
                 className="h-12 sm:h-14 text-base px-6 sm:px-8 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300"
               >
                 <Link href="/contact">
-                  Let's Talk
+                  Let&apos;s Talk
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
@@ -68,7 +68,7 @@ export function Hero() {
               alt="Close-up of a residential house roof with green shingles and dormer window"
               width={700}
               height={700}
-              className="w-full max-w-[600px] xl:max-w-[640px] h-auto"
+              className="w-full max-w-[580px] xl:max-w-[620px] h-auto"
               style={{ display: "block" }}
               priority
             />
