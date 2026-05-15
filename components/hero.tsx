@@ -8,8 +8,8 @@ import Image from "next/image"
 export function Hero() {
   return (
     <section className="relative w-full min-h-[100svh] overflow-hidden" style={{ backgroundColor: "#eef2e8" }}>
-      <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8 w-full">
-        <div className="pt-28 lg:pt-32 xl:pt-36 pb-16 lg:pb-0 lg:min-h-[100svh] flex lg:items-start">
+      <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8 w-full">
+        <div className="pt-32 sm:pt-36 lg:pt-40 xl:pt-44 pb-16 lg:pb-0 lg:min-h-[100svh] flex lg:items-start">
 
           {/* Left — text content */}
           <div className="flex flex-col justify-start max-w-xl lg:max-w-none lg:w-[52%]">
