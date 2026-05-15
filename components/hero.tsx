@@ -62,12 +62,12 @@ export function Hero() {
           </div>
 
           {/* Right — house illustration (hidden on mobile) */}
-          <div className="hidden lg:block animate-fade-up absolute right-0 bottom-0 w-[55%] h-full pointer-events-none" style={{ animationDelay: "240ms" }}>
+          <div className="hidden lg:block animate-fade-up absolute right-0 bottom-0 w-[60%] h-full pointer-events-none" style={{ animationDelay: "240ms" }}>
             <Image
-              src="/images/house-closeup.jpg"
-              alt="Close-up of a residential house roof with green shingles"
+              src="/images/house-roof.png"
+              alt="Close-up of a residential house roof with green shingles and dormer window"
               fill
-              className="object-cover object-left-top"
+              className="object-contain object-right-bottom"
               priority
             />
           </div>
