@@ -6,26 +6,32 @@ const organizations = [
   {
     name: "Clemson Area Chamber of Commerce",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Clemson%20Area%20Chamber%20of%20Commerce-LYwC4VuqEuBWQjJdttfPWefNECYJow.png",
+    height: "h-8 sm:h-9",
   },
   {
     name: "Oconee County Chamber of Commerce",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Oconee%20Chamber%20of%20Commerce-zItwtjQxjyIfXp8xpLWaHDUwYxf25d.png",
+    height: "h-8 sm:h-9",
   },
   {
     name: "Easley Chamber of Commerce",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Easely%20Chamber%20of%20Commerce-QU4uyhAPbwiV0euo18jb07oyZBmMTc.png",
+    height: "h-8 sm:h-9",
   },
   {
     name: "Launchpad",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Launchpad-yndhgxgIjmMYxj4JL4wWrW8kmR5ELr.jpg",
+    height: "h-9 sm:h-10",
   },
   {
     name: "Clemson News",
     logo: "/images/logos/clemson-news.png",
+    height: "h-6 sm:h-7",
   },
   {
     name: "The Journal",
     logo: "/images/logos/the-journal.png",
+    height: "h-9 sm:h-10",
   },
 ]
 
@@ -47,7 +53,7 @@ export function SocialProof() {
                 alt={org.name}
                 width={160}
                 height={64}
-                className="h-8 sm:h-9 w-auto object-contain grayscale opacity-60 hover:opacity-90 hover:grayscale-0 transition-all duration-300"
+                className={`${org.height} w-auto object-contain grayscale opacity-60 hover:opacity-90 hover:grayscale-0 transition-all duration-300`}
               />
             </div>
           ))}
