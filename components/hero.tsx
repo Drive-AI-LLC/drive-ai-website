@@ -42,10 +42,14 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Desktop layout — text in standard container, image overflows to right */}
-      <div className="hidden lg:flex w-full">
-        {/* Left — text content with standard site container alignment */}
-        <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8 w-full pt-36 xl:pt-44 pb-16 xl:pb-20">
+      {/* Desktop layout — grid: text col + image col, image drives height */}
+      <div className="hidden lg:grid w-full" style={{ gridTemplateColumns: "1fr auto" }}>
+
+        {/* Left — text, aligned to site container left edge */}
+        <div
+          className="pt-36 xl:pt-44 pb-16 xl:pb-20"
+          style={{ paddingLeft: "max(20px, calc((100vw - 1080px) / 2 + 32px))" }}
+        >
           <div className="max-w-xl">
             <h1
               className="animate-fade-up text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.15] tracking-[-0.04em] font-serif mb-6"
@@ -77,10 +81,10 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right — illustration, positioned absolutely to overflow right edge */}
+        {/* Right — illustration in flow, self-end pins bottom to section bottom */}
         <div
-          className="animate-fade-up absolute right-0 bottom-0 pointer-events-none"
-          style={{ animationDelay: "240ms", width: "clamp(480px, 50vw, 820px)", top: "clamp(60px, 8vh, 120px)" }}
+          className="animate-fade-up self-end pointer-events-none"
+          style={{ animationDelay: "240ms", width: "clamp(480px, 50vw, 820px)", paddingTop: "clamp(60px, 8vh, 120px)" }}
         >
           <Image
             src="/images/house-roof.png"
@@ -91,6 +95,7 @@ export function Hero() {
             priority
           />
         </div>
+
       </div>
 
     </section>
