@@ -6,7 +6,7 @@ const organizations = [
   {
     name: "Clemson Area Chamber of Commerce",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Clemson%20Area%20Chamber%20of%20Commerce-LYwC4VuqEuBWQjJdttfPWefNECYJow.png",
-    height: "h-9 sm:h-10",
+    height: "h-10 sm:h-11",
   },
   {
     name: "Oconee County Chamber of Commerce",
