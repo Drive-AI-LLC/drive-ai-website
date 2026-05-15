@@ -68,7 +68,7 @@ export function Hero() {
               alt="Close-up of a residential house roof with green shingles and dormer window"
               width={700}
               height={700}
-              className="w-[45vw] max-w-[750px] h-auto"
+              className="w-[45vw] max-w-[820px] h-auto"
               style={{ display: "block" }}
               priority
             />
