@@ -65,7 +65,7 @@ export function Hero() {
       {/* Right — house illustration anchored to bottom-right, hidden on mobile */}
       <div
         className="hidden lg:block animate-fade-up absolute right-0 bottom-0 pointer-events-none"
-        style={{ animationDelay: "240ms", width: "min(60%, 900px)" }}
+        style={{ animationDelay: "240ms", width: "min(60%, 900px)", top: "clamp(60px, 8vh, 140px)" }}
       >
         <Image
           src="/images/house-roof.png"
