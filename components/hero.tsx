@@ -7,9 +7,9 @@ import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[100svh] overflow-hidden" style={{ backgroundColor: "#eef2e8" }}>
+    <section className="relative w-full overflow-hidden" style={{ backgroundColor: "#eef2e8" }}>
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8 w-full">
-        <div className="pt-32 sm:pt-36 lg:pt-40 xl:pt-44 pb-16 lg:pb-0 lg:min-h-[100svh] flex lg:items-start">
+        <div className="pt-32 sm:pt-36 lg:pt-40 xl:pt-44 pb-16 lg:pb-24 xl:pb-28">
 
           {/* Left — text content */}
           <div className="flex flex-col justify-start max-w-xl lg:max-w-none lg:w-[52%]">
@@ -62,8 +62,11 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Right — house illustration (hidden on mobile), sits absolute to section bottom-right within max-width */}
-      <div className="hidden lg:block animate-fade-up absolute right-0 bottom-0 pointer-events-none" style={{ animationDelay: "240ms", width: "min(54%, 780px)" }}>
+      {/* Right — house illustration anchored to top-right, hidden on mobile */}
+      <div
+        className="hidden lg:block animate-fade-up absolute right-0 pointer-events-none"
+        style={{ animationDelay: "240ms", width: "min(52%, 760px)", top: "64px" }}
+      >
         <Image
           src="/images/house-roof.png"
           alt="Close-up of a residential house roof with green shingles and dormer window"
