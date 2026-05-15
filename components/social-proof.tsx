@@ -21,7 +21,7 @@ const organizations = [
   {
     name: "Launchpad",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Launchpad-yndhgxgIjmMYxj4JL4wWrW8kmR5ELr.jpg",
-    height: "h-10 sm:h-11",
+    height: "h-11 sm:h-12",
   },
   {
     name: "Clemson News",
