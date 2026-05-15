@@ -6,7 +6,7 @@ const organizations = [
   {
     name: "Clemson Area Chamber of Commerce",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Clemson%20Area%20Chamber%20of%20Commerce-LYwC4VuqEuBWQjJdttfPWefNECYJow.png",
-    height: "h-8 sm:h-9",
+    height: "h-9 sm:h-10",
   },
   {
     name: "Oconee County Chamber of Commerce",
@@ -21,17 +21,17 @@ const organizations = [
   {
     name: "Launchpad",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Launchpad-yndhgxgIjmMYxj4JL4wWrW8kmR5ELr.jpg",
-    height: "h-9 sm:h-10",
+    height: "h-10 sm:h-11",
   },
   {
     name: "Clemson News",
     logo: "/images/logos/clemson-news.png",
-    height: "h-6 sm:h-7",
+    height: "h-5 sm:h-6",
   },
   {
     name: "The Journal",
     logo: "/images/logos/the-journal.png",
-    height: "h-9 sm:h-10",
+    height: "h-10 sm:h-11",
   },
 ]
 
