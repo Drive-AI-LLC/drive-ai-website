@@ -3,13 +3,13 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
-import { HouseIllustration } from "@/components/house-illustration"
+import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[100svh] flex items-center bg-background overflow-hidden">
+    <section className="relative w-full min-h-[100svh] flex items-center overflow-hidden" style={{ backgroundColor: "#eef2e8" }}>
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-24 lg:py-0">
+        <div className="flex items-center py-24 lg:py-0">
 
           {/* Left — text content, pushed down slightly */}
           <div className="flex flex-col justify-center mt-8 lg:mt-16">
@@ -61,9 +61,15 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right — animated house illustration (hidden on mobile) */}
-          <div className="hidden lg:block animate-fade-up" style={{ animationDelay: "240ms" }}>
-            <HouseIllustration />
+          {/* Right — house illustration (hidden on mobile) */}
+          <div className="hidden lg:block animate-fade-up absolute right-0 bottom-0 w-[55%] h-full pointer-events-none" style={{ animationDelay: "240ms" }}>
+            <Image
+              src="/images/house-closeup.jpg"
+              alt="Close-up of a residential house roof with green shingles"
+              fill
+              className="object-cover object-left-top"
+              priority
+            />
           </div>
 
         </div>
