@@ -7,20 +7,20 @@ const solutions = [
   {
     tag: "Revenue Recovery",
     title: "Insurance Supplement System",
-    description: "Stop leaving money on every claim. We find the gaps, file the supplements, and track every dollar.",
+    description: "AI-powered estimate review that catches missed line items, outdated pricing, and underpayments before you close the claim.",
     href: "/services#insurance-supplement-system",
   },
   {
-    tag: "Storm Response",
-    title: "Storm Outreach System",
-    description: "Be first on the door when a storm hits. Automated outreach gets your team moving before competitors show up.",
-    href: "/services#storm-outreach-system",
+    tag: "Claim Analysis",
+    title: "Estimate Review",
+    description: "Upload any adjuster estimate and receive a detailed breakdown of discrepancies, code deficiencies, and pricing gaps.",
+    href: "/services#estimate-review",
   },
   {
-    tag: "Production Operations",
-    title: "Production Coordination System",
-    description: "No more jobs stalling between sales and production. Every handoff is clean, every crew is scheduled, every job visible.",
-    href: "/services#production-coordination-system",
+    tag: "Supplement Workflow",
+    title: "Supplement Justification Reports",
+    description: "Auto-generated, carrier-ready supplement documentation with line-by-line justification for every flagged item.",
+    href: "/services#supplement-reports",
   },
 ]
 
@@ -39,9 +39,9 @@ export function SolutionSection() {
           ref={header.ref as React.RefObject<HTMLDivElement>}
           className={`mb-16 reveal ${header.visible ? "is-visible" : ""}`}
         >
-          <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">Our Systems</p>
+          <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">The Platform</p>
           <h2 className="text-3xl sm:text-3xl lg:text-[2.625rem] font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
-            <em className="text-primary">Drive</em> <span className="text-primary">AI</span> creates <span className="text-primary">revenue</span> systems for <span className="text-primary">roofing</span>.
+            One system. Built for <span className="text-primary">supplement recovery</span>.
           </h2>
         </div>
 
