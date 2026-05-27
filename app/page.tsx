@@ -19,11 +19,10 @@ export default function Home() {
       <HowItWorks />
       <Testimonials />
       <CTASection
-        headline="Explore smarter roofing operations."
+        headline="Stop leaving money on every claim."
         supporting={
           <>
-            Learn how <em>Drive</em> AI helps roofing companies improve coordination, recover revenue, and streamline
-            operations.
+            See how <em>Drive</em> AI helps roofing companies recover revenue from every insurance estimate.
           </>
         }
       />
