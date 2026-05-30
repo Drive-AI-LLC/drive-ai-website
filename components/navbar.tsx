@@ -9,7 +9,7 @@ import { Menu, X } from "lucide-react"
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Our Systems" },
+  { href: "/#how-it-works", label: "How It Works" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
 ]
@@ -57,7 +57,7 @@ export function Navbar() {
 
           <div className="hidden lg:block">
             <Button asChild className="px-5 h-9 text-sm hover:-translate-y-1">
-              <Link href="/contact">Book a Call</Link>
+              <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer">Try It Free</a>
             </Button>
           </div>
 
@@ -95,9 +95,9 @@ export function Navbar() {
                 )
               })}
               <Button asChild className="mt-3 text-sm h-10">
-                <Link href="/contact" onClick={() => { setIsMenuOpen(false); scrollToTop() }}>
-                  Book a Call
-                </Link>
+                <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
+                  Try It Free
+                </a>
               </Button>
             </div>
           </div>

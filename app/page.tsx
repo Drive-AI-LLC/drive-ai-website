@@ -2,7 +2,6 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { SocialProof } from "@/components/social-proof"
 import { SolutionSection } from "@/components/solution-section"
-import { HowItWorks } from "@/components/how-it-works"
 import { Testimonials } from "@/components/testimonials"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
@@ -14,16 +13,10 @@ export default function Home() {
       <Hero />
       <SocialProof />
       <SolutionSection />
-      <HowItWorks />
       <Testimonials />
       <CTASection
-        headline="Explore smarter roofing operations."
-        supporting={
-          <>
-            Learn how <em>Drive</em> AI helps roofing companies improve coordination, recover revenue, and streamline
-            operations.
-          </>
-        }
+        headline="See what your last claim was actually worth."
+        supporting="Run your first supplement free. No card required, no commitment."
       />
       <Footer />
     </main>

@@ -1,26 +1,22 @@
 "use client"
 
-import Link from "next/link"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
-const solutions = [
+const steps = [
   {
-    tag: "Revenue Recovery",
-    title: "Insurance Supplement System",
-    description: "Stop leaving money on every claim. We find the gaps, file the supplements, and track every dollar.",
-    href: "/services#insurance-supplement-system",
+    step: "01",
+    title: "Upload Your Estimate",
+    description: "Drop in the adjuster's PDF. Drive AI reads every line item and flags what's missing or underpaid.",
   },
   {
-    tag: "Storm Response",
-    title: "Storm Outreach System",
-    description: "Be first on the door when a storm hits. Automated outreach gets your team moving before competitors show up.",
-    href: "/services#storm-outreach-system",
+    step: "02",
+    title: "AI Builds Your Case",
+    description: "Drive AI pulls supporting documentation, Xactimate codes, and justifications for every gap it finds.",
   },
   {
-    tag: "Production Operations",
-    title: "Production Coordination System",
-    description: "No more jobs stalling between sales and production. Every handoff is clean, every crew is scheduled, every job visible.",
-    href: "/services#production-coordination-system",
+    step: "03",
+    title: "Download & Submit",
+    description: "You get a professional, submission-ready supplement package to send directly to the adjuster.",
   },
 ]
 
@@ -32,53 +28,43 @@ export function SolutionSection() {
   const cardRefs = [card0, card1, card2]
 
   return (
-    <section id="services" className="py-20 sm:py-24 lg:py-28 bg-background border-t border-border/40">
+    <section id="how-it-works" className="py-20 sm:py-24 lg:py-28 bg-background border-t border-border/40">
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
 
         <div
           ref={header.ref as React.RefObject<HTMLDivElement>}
           className={`mb-16 reveal ${header.visible ? "is-visible" : ""}`}
         >
-          <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">Our Systems</p>
+          <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">How It Works</p>
           <h2 className="text-3xl sm:text-3xl lg:text-[2.625rem] font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
-            <em className="text-primary">Drive</em> <span className="text-primary">AI</span> creates <span className="text-primary">revenue</span> systems for <span className="text-primary">roofing</span>.
+            From estimate to supplement — in minutes.
           </h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-5 lg:gap-7">
-          {solutions.map((solution, index) => (
-            <Link
-              key={solution.title}
-              href={solution.href}
-              ref={cardRefs[index].ref as React.RefObject<HTMLAnchorElement>}
-              className={`reveal ${cardRefs[index].visible ? "is-visible" : ""} bg-background border border-border rounded-lg p-8 flex flex-col group transition-colors duration-300`}
+          {steps.map((step, index) => (
+            <div
+              key={step.step}
+              ref={cardRefs[index].ref as React.RefObject<HTMLDivElement>}
+              className={`reveal ${cardRefs[index].visible ? "is-visible" : ""} bg-background border border-border rounded-lg p-8 flex flex-col`}
               style={{ transitionDelay: cardRefs[index].visible ? `${index * 100}ms` : "0ms" }}
-              onMouseEnter={(e) => e.currentTarget.style.borderColor = 'rgb(1, 86, 59)'}
-              onMouseLeave={(e) => e.currentTarget.style.borderColor = ''}
             >
               <p className="text-[10px] font-semibold text-primary uppercase tracking-[0.22em] mb-5">
-                {solution.tag}
+                {step.step}
               </p>
               <h3 className="text-2xl font-bold text-foreground mb-4 tracking-[-0.02em] leading-snug font-serif">
-                {solution.title}
+                {step.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                {solution.description}
+                {step.description}
               </p>
-            </Link>
+            </div>
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
-          <a
-            href="/services"
-            className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-muted/30 border border-border/60 px-6 py-3 rounded-xl hover:bg-muted/50 hover:shadow-md hover:shadow-black/5 hover:-translate-y-0.5 transition-all duration-200"
-          >
-            Learn more
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
+        {/* Demo placeholder */}
+        <div className="mt-7 rounded-xl bg-foreground/90 flex items-center justify-center py-16 px-8">
+          <p className="text-sm font-medium text-primary/60 tracking-wide">Product demo coming soon</p>
         </div>
 
       </div>

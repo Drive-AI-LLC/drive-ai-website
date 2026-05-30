@@ -5,7 +5,7 @@ import { Linkedin, Instagram, Facebook } from "lucide-react"
 const navigation = {
   main: [
     { name: "Home", href: "/" },
-    { name: "Our Systems", href: "/services" },
+    { name: "How It Works", href: "/#how-it-works" },
     { name: "Blog", href: "/blog" },
     { name: "About", href: "/about" },
   ],
@@ -34,7 +34,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-3.5 text-white/50 text-sm leading-relaxed">
-              <em>Drive</em> AI builds revenue-generating systems for roofing companies.
+              <em>Drive</em> AI automates insurance supplement requests for roofing companies.
             </p>
           </div>
 
