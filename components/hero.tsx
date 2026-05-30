@@ -16,22 +16,27 @@ export function Hero() {
             className="animate-fade-up text-4xl sm:text-5xl font-bold text-foreground leading-[1.15] tracking-[-0.04em] font-serif mb-6"
             style={{ animationDelay: "0ms" }}
           >
-            Recover more from
-            <span className="block">every <span className="text-primary underline-draw">insurance</span></span>
-            <span className="block">claim.</span>
+            More <span className="text-primary">money</span>.
+            <span className="block">More <span className="text-primary">jobs</span>.</span>
+            <span className="block whitespace-nowrap">
+              Built for{" "}
+              <span className="text-primary underline-draw">roofing</span>
+              .
+            </span>
           </h1>
           <p
             className="animate-fade-up text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md mb-10"
             style={{ animationDelay: "80ms" }}
           >
-            Drive AI helps roofing companies identify missed line items, outdated pricing, code upgrades, and underpayments in insurance estimates.
+            Supplement recovery. Storm outreach.
+            <span className="block">Smarter roofing operations.</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "160ms" }}>
             <Button asChild size="lg" className="h-12 sm:h-14 text-base px-6 sm:px-8 shadow-lg shadow-primary/20">
-              <Link href="/contact">See How It Works <ArrowRight className="ml-2 w-4 h-4" /></Link>
+              <Link href="/contact">Let&apos;s Talk <ArrowRight className="ml-2 w-4 h-4" /></Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-12 sm:h-14 text-base px-6 sm:px-8 border-border hover:bg-muted/50">
-              <Link href="/services">Explore the System</Link>
+              <Link href="/services">Explore Systems</Link>
             </Button>
           </div>
         </div>
@@ -50,22 +55,27 @@ export function Hero() {
               className="animate-fade-up text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.15] tracking-[-0.04em] font-serif mb-6"
               style={{ animationDelay: "0ms" }}
             >
-              Recover more from
-              <span className="block">every <span className="text-primary underline-draw">insurance</span></span>
-              <span className="block">claim.</span>
+              More <span className="text-primary">money</span>.
+              <span className="block">More <span className="text-primary">jobs</span>.</span>
+              <span className="block whitespace-nowrap">
+                Built for{" "}
+                <span className="text-primary underline-draw">roofing</span>
+                .
+              </span>
             </h1>
             <p
               className="animate-fade-up text-lg xl:text-xl text-muted-foreground leading-relaxed max-w-md mb-10"
               style={{ animationDelay: "80ms" }}
             >
-              Drive AI helps roofing companies identify missed line items, outdated pricing, code upgrades, and underpayments in insurance estimates.
+              Supplement recovery. Storm outreach.
+              <span className="block">Smarter roofing operations.</span>
             </p>
             <div className="flex flex-row gap-4 animate-fade-up" style={{ animationDelay: "160ms" }}>
               <Button asChild size="lg" className="h-14 xl:h-16 text-base xl:text-lg px-8 xl:px-10 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">
-                <Link href="/contact">See How It Works <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                <Link href="/contact">Let&apos;s Talk <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-14 xl:h-16 text-base xl:text-lg px-8 xl:px-10 border-border hover:bg-muted/50 transition-all duration-300">
-                <Link href="/services">Explore the System</Link>
+                <Link href="/services">Explore Systems</Link>
               </Button>
             </div>
           </div>

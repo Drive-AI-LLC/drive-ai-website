@@ -5,23 +5,23 @@ import { useEffect, useRef, useState } from "react"
 const steps = [
   {
     step: "01",
-    title: "Upload Insurance Estimate",
-    description: "Submit your adjuster's estimate directly into the platform. Any format, any carrier.",
+    title: "Discovery Call",
+    description: "We map your workflow and identify the highest-impact opportunity.",
   },
   {
     step: "02",
-    title: "AI Reviews Scope & Pricing",
-    description: "Our system analyzes line items against current Xactimate pricing, local codes, and scope standards.",
+    title: "Proposal",
+    description: "Clear scope — what gets built, how it integrates, and what to expect.",
   },
   {
     step: "03",
-    title: "Detect Missed Revenue",
-    description: "Identify underpaid items, missing code upgrades, incorrect waste calculations, and overlooked labor.",
+    title: "Build & Onboarding",
+    description: "We implement, train your team, and stay close through the handoff.",
   },
   {
     step: "04",
-    title: "Generate Supplement Justification",
-    description: "Receive a ready-to-submit supplement report with documented support for every flagged discrepancy.",
+    title: "Live & Supported",
+    description: "Your system runs. We monitor and adjust as your operation grows.",
   },
 ]
 
@@ -75,12 +75,12 @@ export function HowItWorks() {
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
 
         <div className="mb-14">
-          <p className="text-[10px] font-semibold text-primary/70 uppercase tracking-[0.3em] mb-4">Supplement Workflow</p>
+          <p className="text-[10px] font-semibold text-primary/70 uppercase tracking-[0.3em] mb-4">Our Process</p>
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05] mb-3">
             How it works.
           </h2>
           <p className="text-sm text-muted-foreground">
-            A focused four-step process that turns underpaid estimates into recovered revenue.
+            A clear, proven process built to deliver real results.
           </p>
         </div>
 
