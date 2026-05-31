@@ -139,7 +139,7 @@ export default function ServicesPage() {
         headline="See how our systems fit your operation."
         supporting={
           <>
-            Book a short introductory call to explore where Drive <em>AI</em> can support your workflows and growth.
+            Book a short introductory call to explore where <em>Drive AI</em> can support your workflows and growth.
           </>
         }
       />

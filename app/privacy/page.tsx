@@ -21,7 +21,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-base font-semibold text-foreground mb-3">Overview</h2>
             <p>
-              Drive <em>AI</em> ("we", "us", "our") operates the website at driveai.llc. This page explains what information we collect, how we use it, and what choices you have. We keep this simple because we have no interest in collecting more than we need.
+              <em>Drive AI</em> ("we", "us", "our") operates the website at driveai.llc. This page explains what information we collect, how we use it, and what choices you have. We keep this simple because we have no interest in collecting more than we need.
             </p>
           </section>
 
@@ -82,7 +82,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-base font-semibold text-foreground mb-3">We Do Not Sell Your Data</h2>
             <p>
-              Drive <em>AI</em> does not sell, trade, or rent your personal information to third parties.
+              <em>Drive AI</em> does not sell, trade, or rent your personal information to third parties.
             </p>
           </section>
 

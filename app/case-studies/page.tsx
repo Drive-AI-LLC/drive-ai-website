@@ -19,7 +19,7 @@ const caseStudies = [
     problem: "Manual research and data entry taking hundreds of hours to compile contact lists for outreach campaigns",
     solution: "Built an automated web scraping and data compilation system that gathers rowing team contacts from thousands of websites",
     result: "Saved over 100 hours of manual labor and improved employee ability to make sales calls with ready-to-contact information",
-    testimonial: <>Drive <em>AI</em> was able to find Rowing team contacts from thousands of websites and compile them into an easy-to-read excel sheet with ready-to-contact emails and phone numbers.</>,
+    testimonial: <><em>Drive AI</em> was able to find Rowing team contacts from thousands of websites and compile them into an easy-to-read excel sheet with ready-to-contact emails and phone numbers.</>,
     author: "Dylan Johns, Program Coordinator",
   },
   {

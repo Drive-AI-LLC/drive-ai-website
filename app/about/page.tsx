@@ -91,7 +91,7 @@ export default function AboutPage() {
               What we do.
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Drive <em>AI</em> builds AI-powered tools for roofing companies. Right now we&apos;re focused on one thing: helping roofers recover every dollar they&apos;re owed after an insurance claim.
+              <em>Drive AI</em> builds AI-powered tools for roofing companies. Right now we&apos;re focused on one thing: helping roofers recover every dollar they&apos;re owed after an insurance claim.
             </p>
           </div>
         </div>
@@ -134,8 +134,8 @@ export default function AboutPage() {
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {founder.name.startsWith("Danika")
-                      ? <>Danika leads marketing and growth at Drive <em>AI</em>. Over the past few years, she has worked across several startups and spent a lot of time helping businesses improve communication and brand presence. At Drive <em>AI</em>, she is focused on helping roofing companies modernize the way they coordinate and scale.</>
-                      : <>Reid oversees the technical side of Drive <em>AI</em> along with the legal aspects and operations behind the company. Before starting Drive <em>AI</em>, he gained experience in finance and investor relations at a Fortune 500 company, which shaped the way he thinks about organization and long-term growth.</>
+                      ? <>Danika leads marketing and growth at <em>Drive AI</em>. Over the past few years, she has worked across several startups and spent a lot of time helping businesses improve communication and brand presence. At <em>Drive AI</em>, she is focused on helping roofing companies modernize the way they coordinate and scale.</>
+                      : <>Reid oversees the technical side of <em>Drive AI</em> along with the legal aspects and operations behind the company. Before starting <em>Drive AI</em>, he gained experience in finance and investor relations at a Fortune 500 company, which shaped the way he thinks about organization and long-term growth.</>
                     }
                   </p>
                 </div>
@@ -172,7 +172,7 @@ export default function AboutPage() {
         headline="Let's start the conversation."
         supporting={
           <>
-            We&apos;re building Drive <em>AI</em> alongside roofing companies focused on smarter operations and long-term
+            We&apos;re building <em>Drive AI</em> alongside roofing companies focused on smarter operations and long-term
             growth.
           </>
         }
