@@ -68,9 +68,9 @@ export default function ContactPage() {
                   This is a great fit if...
                 </p>
                 {[
-                  "You're a residential roofing contractor doing storm or insurance work",
-                  "You're submitting insurance claims and feel like adjusters are underpaying",
-                  "You want to recover more per job without adding hours of manual work",
+                  "You're a residential roofer doing storm or insurance work",
+                  "You submit claims and feel like adjusters keep underpaying",
+                  "You want to recover more per job without adding more work",
                 ].map((line) => (
                   <div key={line} className="flex items-start gap-2.5">
                     <span className="mt-[6px] w-1 h-1 rounded-full bg-primary flex-shrink-0" />
