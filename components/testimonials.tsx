@@ -36,19 +36,7 @@ const testimonials = [
     company: "ASCEND Lending",
   },
   {
-    quote: <>We partnered with <em>Drive AI</em> to build an early prototype of an AI Coach, and the experience was exactly what you want from a young, high-quality team.</>,
-    name: "Ryan Yeoman",
-    title: "Co-Founder, Product & Program Design",
-    company: "LeaderReps",
-  },
-  {
-    quote: <>What stood out immediately was how they approached the work. Rather than jumping straight to solutions, they asked thoughtful questions, pushed on assumptions, and took the time to truly understand what we were trying to solve. Their process was clear and well-structured, with regular checkpoints that kept the work focused and aligned. Communication was proactive, responsive, and easy throughout.</>,
-    name: "Ryan Yeoman",
-    title: "Co-Founder, Product & Program Design",
-    company: "LeaderReps",
-  },
-  {
-    quote: <><em>Drive AI</em> delivered what they said they would, and more importantly, they showed up as thoughtful, capable partners. I&apos;d confidently recommend them to teams looking for a smart, curious, and dependable group to help bring AI concepts into the real world.</>,
+    quote: <>We partnered with <em>Drive AI</em> to build an early prototype of an AI Coach. What stood out immediately was how they approached the work. Rather than jumping straight to solutions, they asked thoughtful questions, pushed on assumptions, and took the time to truly understand what we were trying to solve. Their process was clear and well-structured, with regular checkpoints that kept the work focused and aligned. Communication was proactive, responsive, and easy throughout. <em>Drive AI</em> delivered what they said they would, and more importantly, they showed up as thoughtful, capable partners. I&apos;d confidently recommend them to teams looking for a smart, curious, and dependable group to help bring AI concepts into the real world.</>,
     name: "Ryan Yeoman",
     title: "Co-Founder, Product & Program Design",
     company: "LeaderReps",
