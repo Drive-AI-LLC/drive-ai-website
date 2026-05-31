@@ -18,12 +18,15 @@ export function CTASection({ headline, supporting }: CTASectionProps) {
         <p className="mt-4 text-sm text-primary-foreground/60 leading-relaxed max-w-xl mx-auto">
           {supporting}
         </p>
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Button asChild size="lg" variant="secondary" className="h-11 text-sm px-7 shadow-sm whitespace-nowrap">
-            <Link href="/contact">
-              Book a Call
+            <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer">
+              Try It Free
               <ArrowRight className="ml-2 w-3.5 h-3.5" />
-            </Link>
+            </a>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="h-11 text-sm px-7 whitespace-nowrap bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+            <Link href="/contact">Book a Call</Link>
           </Button>
         </div>
       </div>

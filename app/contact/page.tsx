@@ -55,22 +55,25 @@ export default function ContactPage() {
                   Book a Call
                 </p>
                 <h1 className="text-4xl sm:text-5xl font-bold text-foreground tracking-[-0.03em] leading-[1.08] font-serif mb-5">
-                  Explore what&apos;s possible.
+                  Let&apos;s talk about your claims.
                 </h1>
                 <p className="text-base text-muted-foreground leading-relaxed max-w-sm">
-                  Pick a time that works for you. We&apos;ll learn about your operation and identify where our systems can make the biggest impact.
+                  Pick a time that works for you. We&apos;ll learn about your operation and show you exactly how Drive AI can help you recover more on every claim.
                 </p>
               </div>
 
-              {/* Reassurance lines */}
-              <div className="flex flex-col gap-2.5">
+              {/* Great fit block */}
+              <div className="flex flex-col gap-3">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground/60">
+                  This is a great fit if...
+                </p>
                 {[
-                  "Built for roofing companies",
-                  "No-pressure introductory conversation",
-                  "Focused on operations and growth",
+                  "You're a residential roofer doing storm or insurance work",
+                  "You submit claims and feel like adjusters keep underpaying",
+                  "You want to recover more per job without adding more work",
                 ].map((line) => (
-                  <div key={line} className="flex items-center gap-2.5">
-                    <span className="w-1 h-1 rounded-full bg-primary flex-shrink-0" />
+                  <div key={line} className="flex items-start gap-2.5">
+                    <span className="mt-[6px] w-1 h-1 rounded-full bg-primary flex-shrink-0" />
                     <span className="text-sm text-muted-foreground">{line}</span>
                   </div>
                 ))}

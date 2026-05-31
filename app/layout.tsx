@@ -17,19 +17,26 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Drive AI | Revenue Systems for Roofing Companies',
-  description: 'Drive AI builds revenue-generating systems for roofing companies.',
+  title: 'Drive AI | AI Automation & Consulting for Small Businesses',
+  description: 'Drive AI helps small businesses implement practical AI tools and workflow automations to save time, reduce manual work, and operate more efficiently.',
   generator: 'v0.app',
-  keywords: ['roofing software', 'roofing business automation', 'roofing CRM', 'roofing company management', 'roofing operations'],
+  keywords: ['AI automation', 'business automation', 'AI consulting', 'workflow automation', 'small business AI'],
   icons: {
     icon: [
       {
-        url: '/favicon-logo.png',
-        type: 'image/png',
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
       },
     ],
-    apple: '/favicon-logo.png',
-    shortcut: '/favicon-logo.png',
+    apple: '/apple-icon.png',
   },
 }
 

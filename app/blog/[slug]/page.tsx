@@ -14,12 +14,230 @@ const blogPosts: Record<string, {
   image: string
   content: React.ReactNode
 }> = {
+  "why-op-is-the-most-argued-line-item": {
+    title: "Why O&P Is the Most Argued Line Item in Every Roofing Claim",
+    excerpt: "Carriers default to 10% when industry standard is 20/10. Here's what overhead and profit actually means and how to argue it professionally.",
+    category: "Supplements",
+    date: "June 2, 2026",
+    image: "/images/blog/overhead-and-profit.png",
+    content: (
+      <>
+        <p>
+          If you've spent any time supplementing roofing claims, you've run into this fight. The carrier writes O&P at 10%. You know it should be 20/10. They push back. The claim stalls.
+        </p>
+        <p>
+          Overhead and profit is one of the most consistently argued line items in residential roofing claims, and understanding exactly why carriers resist it — and how to counter that professionally — is worth real money on every job.
+        </p>
+
+        <h2>What Overhead and Profit Actually Means</h2>
+        <p>
+          O&P in Xactimate refers to the general contractor's overhead and profit markup applied on top of direct repair costs. Overhead covers the indirect costs of running a business: insurance, vehicles, office staff, equipment, licensing, and everything else that doesn't show up as a direct line item on a job. Profit is the margin the contractor earns for managing the project.
+        </p>
+        <p>
+          The standard in Xactimate is 20% overhead and 10% profit, often written as 20/10. This is built into Xactimate's pricing assumptions as the default for general contractor work.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            Xactimate's own documentation supports 20/10 as the standard rate for general contractor overhead and profit. Carriers who write 10% are not following Xactimate's own guidelines.
+          </p>
+        </div>
+
+        <h2>Why Carriers Default to 10%</h2>
+        <p>
+          Carriers often write O&P at 10% or apply it only partially, sometimes arguing that the work doesn't require a general contractor or that the scope isn't complex enough to justify the full rate. Some simply default low and wait to see if anyone pushes back.
+        </p>
+        <p>
+          On a $15,000 claim, the difference between 10% O&P and 20/10 can easily exceed $1,000. Across a year of claims, that's a substantial amount of revenue left uncollected.
+        </p>
+
+        <h2>How to Justify the Correct Rate</h2>
+        <p>
+          The most effective approach is documentation. Pull the Xactimate regional pricing data that supports 20/10 for your market. Include it in your supplement submission with a direct citation. Explain the scope elements that require general contractor coordination: permitting, multiple subcontractors, inspections, material sourcing, timeline management.
+        </p>
+        <p>
+          If the claim involves code upgrades, multiple trades, or storm damage affecting multiple systems, that strengthens the case. The more you can show that the job requires active general contractor management, the harder it is for the carrier to deny the full rate.
+        </p>
+
+        <h2>Keeping It Professional</h2>
+        <p>
+          The tone of a supplement matters. Carriers review a high volume of submissions. A professional, factual justification that cites sources moves faster than a confrontational one.
+        </p>
+        <p>
+          Reference Xactimate documentation. Reference regional pricing. Keep the language direct and focused on the scope. Avoid anything that reads as an argument. You're presenting evidence, not making a case in court.
+        </p>
+      </>
+    ),
+  },
+  "how-to-write-a-supplement-adjusters-approve": {
+    title: "How to Write a Supplement That Adjusters Actually Approve",
+    excerpt: "Xactimate codes, building citations, NOAA storm data, and what a complete supplement package looks like from start to finish.",
+    category: "Supplements",
+    date: "May 26, 2026",
+    image: "/images/blog/writing-a-supplement.png",
+    content: (
+      <>
+        <p>
+          A lot of roofing contractors know they should be supplementing. Fewer know how to write one that actually gets approved. The difference usually comes down to documentation, specificity, and tone.
+        </p>
+        <p>
+          Here's what a supplement that moves through the process looks like.
+        </p>
+
+        <h2>Why Xactimate Line Item Codes Matter</h2>
+        <p>
+          Xactimate is the estimating platform most carriers use. When you submit a supplement, you're asking the carrier to add or adjust line items within that system. Using the correct Xactimate codes in your submission removes ambiguity and makes it easy for the adjuster to locate and process each item.
+        </p>
+        <p>
+          A supplement that references specific codes communicates that you understand the system and have done the work. One that's vague forces the adjuster to figure out what you're asking for, which slows everything down.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            Supplements that include specific Xactimate codes, code citations, and photos get approved faster. Vague requests create back-and-forth that delays the whole claim.
+          </p>
+        </div>
+
+        <h2>Citing Building Codes and Manufacturer Specs</h2>
+        <p>
+          When you're requesting a line item that the adjuster didn't include, you need to explain why it's required. Local building codes are one of the strongest justifications available. If your jurisdiction requires ice and water shield, cite the code section. If manufacturer specs require a specific underlayment for warranty compliance, reference the spec sheet.
+        </p>
+        <p>
+          These citations do two things. They give the adjuster something concrete to approve against. And they show the carrier that the request isn't subjective — it's a compliance requirement.
+        </p>
+
+        <h2>Using NOAA Storm Data</h2>
+        <p>
+          NOAA storm event data is publicly available and highly useful for claims involving hail or wind. Pull the storm report for the event date and affected area. Include hail size, wind speed, and coverage area. This data directly supports your claim that storm damage occurred and helps justify the scope.
+        </p>
+
+        <h2>What a Complete Supplement Package Looks Like</h2>
+        <p>
+          A well-built supplement package includes the original estimate with each disputed item flagged, your supplement request with Xactimate codes and quantities, photos supporting each line item, relevant code citations or manufacturer specs, NOAA data if applicable, and the revised total.
+        </p>
+        <p>
+          The goal is to make the adjuster's job easy. Every question they might ask should be answered before they ask it.
+        </p>
+      </>
+    ),
+  },
+  "most-commonly-missed-line-items-roofing-claims": {
+    title: "The Most Commonly Missed Line Items in Roofing Insurance Claims",
+    excerpt: "Ice and water shield, drip edge, ridge cap, permits, and O&P. Why adjusters miss these and how to catch them every time.",
+    category: "Supplements",
+    date: "May 19, 2026",
+    image: "/images/blog/missed-line-items.png",
+    content: (
+      <>
+        <p>
+          Adjusters work fast. After a significant storm event, they're handling dozens of claims at once. Initial estimates get written based on visible damage and standard scope assumptions. Line items that require contractor knowledge, code awareness, or closer inspection often don't make it in.
+        </p>
+        <p>
+          These are the items that consistently get missed — and consistently get approved when documented properly.
+        </p>
+
+        <h2>Ice and Water Shield</h2>
+        <p>
+          In many jurisdictions, ice and water shield is a code requirement along eaves, in valleys, and around penetrations. It's not always included in the initial estimate. Pull the local building code and cite the specific requirement. The carrier has very little room to deny a code-required item.
+        </p>
+
+        <h2>Drip Edge Linear Footage</h2>
+        <p>
+          Drip edge is frequently undercounted or omitted entirely. Adjusters often estimate based on a simple perimeter calculation without accounting for rakes. Measure the full linear footage yourself and document it. This is a low-dollar item that adds up over multiple claims.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            Most missed line items aren't disputed once documented. The issue is usually that nobody submitted them in the first place.
+          </p>
+        </div>
+
+        <h2>Ridge Cap Shingles</h2>
+        <p>
+          Ridge cap is sometimes omitted from the scope or bundled into the main shingle line item without proper accounting. It's a separate material with separate labor. Document the linear footage and submit it as its own line item.
+        </p>
+
+        <h2>Permit and Inspection Fees</h2>
+        <p>
+          Most jurisdictions require a permit for a full roof replacement, and many require a final inspection. These fees are real costs. They're also frequently left off estimates. Include the actual permit cost from your local jurisdiction and submit with documentation.
+        </p>
+
+        <h2>Contractor Overhead and Profit</h2>
+        <p>
+          O&P at the correct rate of 20/10 is one of the most commonly underpaid items on residential claims. Carriers default to lower rates. Knowing how to justify the standard rate is essential for every claim. See our full breakdown of O&P in a separate post.
+        </p>
+
+        <h2>Why These Get Missed</h2>
+        <p>
+          Adjusters aren't always wrong. They're working quickly, often remotely, and relying on software defaults. They don't always know local code requirements. They don't always have access to manufacturer specs. Your job is to bring that documentation to the claim.
+        </p>
+      </>
+    ),
+  },
+  "what-is-a-roofing-supplement": {
+    title: "What Is a Roofing Supplement and Why Does It Matter?",
+    excerpt: "What a supplement is, why adjusters underpay initial estimates, and how much roofers leave behind by not supplementing.",
+    category: "Supplements",
+    date: "May 12, 2026",
+    image: "/images/blog/what-is-a-supplement.png",
+    content: (
+      <>
+        <p>
+          If you're doing insurance roofing work, you've dealt with insurance estimates that don't cover the full scope. The adjuster writes a number. You look at the job. The numbers don't match. That gap is where supplements come in.
+        </p>
+
+        <h2>What a Supplement Is</h2>
+        <p>
+          A roofing supplement is a formal request to the insurance carrier to revise the original claim estimate. It documents additional line items, corrected measurements, code-required upgrades, or other scope items that weren't included in the initial estimate.
+        </p>
+        <p>
+          Supplementing is not disputing the claim. It's completing it. The initial estimate is written based on a visual inspection, often before tear-off, and often under time pressure. Supplements address what gets discovered once work begins or what was missed due to the limits of that initial inspection.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            Submitting a supplement is standard industry practice. It's not confrontational. Adjusters expect them. The issue is that most contractors don't submit them consistently.
+          </p>
+        </div>
+
+        <h2>Why Adjusters Underpay Initial Estimates</h2>
+        <p>
+          Initial estimates get written fast. Adjusters handle high volumes of claims, especially after storm events. They rely on software defaults and visual inspections from the ground or a quick roof walk. They don't always know local building code requirements. They may not account for items that aren't visible until tear-off.
+        </p>
+        <p>
+          This isn't bad faith. It's a practical limitation of the process. Supplements exist precisely because the initial estimate is rarely the complete picture.
+        </p>
+
+        <h2>Common Reasons Claims Get Underpaid</h2>
+        <ul>
+          <li>Missed line items like drip edge, ice and water shield, and ridge cap</li>
+          <li>Incorrect measurements, especially for complex roof geometries</li>
+          <li>Code upgrade requirements not included in the scope</li>
+          <li>Overhead and profit applied at below-standard rates</li>
+          <li>Permit and inspection fees omitted</li>
+          <li>Hidden damage not visible until tear-off begins</li>
+        </ul>
+
+        <h2>How Much Roofers Leave Behind</h2>
+        <p>
+          On an average residential claim, missed items typically add up to several hundred to a few thousand dollars. On larger or more complex jobs, the gap can be significantly higher. Across a full year of claims, contractors who don't supplement are leaving a meaningful amount of revenue uncollected.
+        </p>
+        <p>
+          The problem compounds because supplement revenue isn't tracked separately in most companies. It just shows up as the difference between what you expected and what you got paid. That gap rarely gets analyzed — which is exactly why it persists.
+        </p>
+      </>
+    ),
+  },
   "crew-scheduling-mistakes-costing-you-time": {
     title: "Crew Scheduling Mistakes Costing You Time and Money",
     excerpt: "Poor scheduling creates downtime and travel gaps. Here's how to optimize crew allocation.",
     category: "Operations",
     date: "May 5, 2026",
-    image: "/images/blog/crew-scheduling.jpg",
+    image: "/images/blog/crew-scheduling.png",
     content: (
       <>
         <p>
@@ -85,7 +303,7 @@ const blogPosts: Record<string, {
     excerpt: "Most roofers miss supplement opportunities on every claim. Here's how to identify gaps and recover what you're owed.",
     category: "Supplements",
     date: "April 28, 2026",
-    image: "/images/blog/supplements.jpg",
+    image: "/images/blog/supplements.png",
     content: (
       <>
         <p>
@@ -144,7 +362,7 @@ const blogPosts: Record<string, {
     excerpt: "The first 48 hours after a storm determine who wins the neighborhood.",
     category: "Storm Response",
     date: "April 21, 2026",
-    image: "/images/blog/storm-response.jpg",
+    image: "/images/blog/storm-response.png",
     content: (
       <>
         <p>
@@ -189,7 +407,7 @@ const blogPosts: Record<string, {
     excerpt: "From sales-to-production handoffs to scheduling gaps, these issues cost roofing companies thousands every month.",
     category: "Operations",
     date: "April 14, 2026",
-    image: "/images/blog/production.jpg",
+    image: "/images/blog/production.png",
     content: (
       <>
         <p>
@@ -244,7 +462,7 @@ const blogPosts: Record<string, {
     excerpt: "Homeowners want fast responses. They also want to feel heard. Here's how to balance both.",
     category: "Workflows",
     date: "April 7, 2026",
-    image: "/images/blog/follow-up.jpg",
+    image: "/images/blog/follow-up.png",
     content: (
       <>
         <p>
@@ -291,7 +509,7 @@ const blogPosts: Record<string, {
     excerpt: "A breakdown of commonly missed line items and how systematic cross-referencing increases claim value.",
     category: "Supplements",
     date: "March 30, 2026",
-    image: "/images/blog/xactimate.jpg",
+    image: "/images/blog/xactimate.png",
     content: (
       <>
         <p>
@@ -346,7 +564,7 @@ const blogPosts: Record<string, {
     excerpt: "From labor shortages to insurance tightening, here are the shifts every roofing company should prepare for.",
     category: "Industry Trends",
     date: "March 22, 2026",
-    image: "/images/blog/trends.jpg",
+    image: "/images/blog/trends.png",
     content: (
       <>
         <p>

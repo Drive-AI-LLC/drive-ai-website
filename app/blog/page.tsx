@@ -21,12 +21,44 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "why-op-is-the-most-argued-line-item",
+    title: "Why O&P Is the Most Argued Line Item in Every Roofing Claim",
+    excerpt: "Carriers default to 10% when industry standard is 20/10. Here's what overhead and profit actually means and how to argue it professionally.",
+    category: "Supplements",
+    date: "June 2, 2026",
+    image: "/images/blog/overhead-and-profit.png",
+  },
+  {
+    slug: "how-to-write-a-supplement-adjusters-approve",
+    title: "How to Write a Supplement That Adjusters Actually Approve",
+    excerpt: "Xactimate codes, building citations, NOAA storm data, and what a complete supplement package looks like from start to finish.",
+    category: "Supplements",
+    date: "May 26, 2026",
+    image: "/images/blog/writing-a-supplement.png",
+  },
+  {
+    slug: "most-commonly-missed-line-items-roofing-claims",
+    title: "The Most Commonly Missed Line Items in Roofing Insurance Claims",
+    excerpt: "Ice and water shield, drip edge, ridge cap, permits, and O&P. Why adjusters miss these and how to catch them every time.",
+    category: "Supplements",
+    date: "May 19, 2026",
+    image: "/images/blog/missed-line-items.png",
+  },
+  {
+    slug: "what-is-a-roofing-supplement",
+    title: "What Is a Roofing Supplement and Why Does It Matter?",
+    excerpt: "What a supplement is, why adjusters underpay initial estimates, and how much roofers leave behind by not supplementing.",
+    category: "Supplements",
+    date: "May 12, 2026",
+    image: "/images/blog/what-is-a-supplement.png",
+  },
+  {
     slug: "crew-scheduling-mistakes-costing-you-time",
     title: "Crew Scheduling Mistakes Costing You Time and Money",
     excerpt: "Poor scheduling creates downtime, travel gaps, and missed revenue opportunities. Here's how to optimize crew allocation and maximize productivity.",
     category: "Operations",
     date: "May 5, 2026",
-    image: "/images/blog/crew-scheduling.jpg",
+    image: "/images/blog/crew-scheduling.png",
   },
   {
     slug: "why-roofing-companies-leave-money-on-the-table",
@@ -34,7 +66,7 @@ const blogPosts = [
     excerpt: "Most roofers miss supplement opportunities on every claim. Here's how to identify gaps in your current process and recover what you're owed.",
     category: "Supplements",
     date: "April 28, 2026",
-    image: "/images/blog/supplements.jpg",
+    image: "/images/blog/supplements.png",
   },
   {
     slug: "storm-response-speed-matters",
@@ -42,7 +74,7 @@ const blogPosts = [
     excerpt: "The first 48 hours after a storm determine who wins the neighborhood. Learn how top roofing companies structure their outreach.",
     category: "Storm Response",
     date: "April 21, 2026",
-    image: "/images/blog/storm-response.jpg",
+    image: "/images/blog/storm-response.png",
   },
   {
     slug: "production-bottlenecks-killing-your-margins",
@@ -50,7 +82,7 @@ const blogPosts = [
     excerpt: "From sales-to-production handoffs to crew scheduling gaps, these common operational issues cost roofing companies thousands every month.",
     category: "Operations",
     date: "April 14, 2026",
-    image: "/images/blog/production.jpg",
+    image: "/images/blog/production.png",
   },
   {
     slug: "automating-lead-follow-up-without-losing-the-human-touch",
@@ -58,7 +90,7 @@ const blogPosts = [
     excerpt: "Homeowners want fast responses, but they also want to feel heard. Here's how to balance automation with authentic communication.",
     category: "Workflows",
     date: "April 7, 2026",
-    image: "/images/blog/follow-up.jpg",
+    image: "/images/blog/follow-up.png",
   },
   {
     slug: "xactimate-cross-reference-explained",
@@ -66,7 +98,7 @@ const blogPosts = [
     excerpt: "A breakdown of the most commonly missed line items in roofing estimates and how systematic cross-referencing increases claim value.",
     category: "Supplements",
     date: "March 30, 2026",
-    image: "/images/blog/xactimate.jpg",
+    image: "/images/blog/xactimate.png",
   },
   {
     slug: "roofing-industry-trends-2026",
@@ -74,7 +106,7 @@ const blogPosts = [
     excerpt: "From labor shortages to insurance tightening, here are the operational shifts every roofing company should be preparing for.",
     category: "Industry Trends",
     date: "March 22, 2026",
-    image: "/images/blog/trends.jpg",
+    image: "/images/blog/trends.png",
   },
 ]
 

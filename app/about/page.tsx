@@ -24,19 +24,19 @@ const founders = [
 const principles = [
   {
     title: "Built for roofing",
-    description: "We specialize in roofing operations — not generic business software.",
+    description: "We built this specifically for roofing companies, not generic business software dressed up for the industry.",
   },
   {
-    title: "Systems over tools",
-    description: "We build workflows that run without constant oversight.",
+    title: "Speed over manual work",
+    description: "What used to take 4–8 hours of manual work now takes minutes. We automate the process so your team stays focused on jobs.",
   },
   {
-    title: "Revenue-focused",
-    description: "Every system is designed to recover money or generate leads.",
+    title: "Revenue focused",
+    description: "Every feature we build is tied to one outcome: more money recovered on every claim you file.",
   },
   {
-    title: "Partnership approach",
-    description: "We work alongside your team to fit your operation.",
+    title: "Real support",
+    description: "We're reachable, responsive, and invested in your results. You're not just buying software.",
   },
 ]
 
@@ -91,7 +91,7 @@ export default function AboutPage() {
               What we do.
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              <em>Drive</em> AI builds revenue-generating systems for roofing companies. We focus on operational workflows including supplement recovery, storm outreach, and production coordination.
+              <em>Drive</em> AI builds AI-powered tools for roofing companies. Right now we&apos;re focused on one thing: helping roofers recover every dollar they&apos;re owed after an insurance claim.
             </p>
           </div>
         </div>

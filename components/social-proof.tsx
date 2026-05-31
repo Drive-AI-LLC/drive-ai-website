@@ -37,7 +37,7 @@ const organizations = [
 
 export function SocialProof() {
   return (
-    <section className="py-10 sm:py-14 bg-muted/20 border-y border-border/40">
+    <section className="py-10 sm:py-14 bg-muted/40 border-y border-border/40">
       <div className="max-w-[1080px] mx-auto">
         <p className="text-center text-[10px] sm:text-xs font-semibold text-muted-foreground/60 uppercase tracking-[0.3em] mb-8 sm:mb-10 px-5 sm:px-6 lg:px-8">
           Recognized &amp; Supported By

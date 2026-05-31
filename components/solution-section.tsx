@@ -1,26 +1,38 @@
 "use client"
 
-import Link from "next/link"
+import { ArrowRight } from "lucide-react"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
-const solutions = [
+const columns = [
   {
-    tag: "Revenue Recovery",
-    title: "Insurance Supplement System",
-    description: "Stop leaving money on every claim. We find the gaps, file the supplements, and track every dollar.",
-    href: "/services#insurance-supplement-system",
+    title: "You Upload",
+    subline: "Just drop in your documents.",
+    items: [
+      "Adjuster's estimate (PDF)",
+      "Roof measurement report",
+      "Site and damage photos",
+      "Supplier quote",
+    ],
   },
   {
-    tag: "Storm Response",
-    title: "Storm Outreach System",
-    description: "Be first on the door when a storm hits. Automated outreach gets your team moving before competitors show up.",
-    href: "/services#storm-outreach-system",
+    title: "We Do the Rest",
+    subline: "No action needed from you.",
+    items: [
+      "NOAA storm data",
+      "Local building codes",
+      "Manufacturer specs",
+      "Xactimate regional pricing",
+    ],
   },
   {
-    tag: "Production Operations",
-    title: "Production Coordination System",
-    description: "No more jobs stalling between sales and production. Every handoff is clean, every crew is scheduled, every job visible.",
-    href: "/services#production-coordination-system",
+    title: "You Get Back",
+    subline: "Ready to send to the adjuster.",
+    items: [
+      "Every missing line item identified",
+      "Xactimate codes and quantities",
+      "Written justifications",
+      "Submission-ready PDF",
+    ],
   },
 ]
 
@@ -32,53 +44,52 @@ export function SolutionSection() {
   const cardRefs = [card0, card1, card2]
 
   return (
-    <section id="services" className="py-20 sm:py-24 lg:py-28 bg-background border-t border-border/40">
+    <section id="how-it-works" className="py-20 sm:py-24 lg:py-28 bg-background border-t border-border/40">
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
 
         <div
           ref={header.ref as React.RefObject<HTMLDivElement>}
           className={`mb-16 reveal ${header.visible ? "is-visible" : ""}`}
         >
-          <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">Our Systems</p>
+          <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">How It Works</p>
           <h2 className="text-3xl sm:text-3xl lg:text-[2.625rem] font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
-            <em className="text-primary">Drive</em> <span className="text-primary">AI</span> creates <span className="text-primary">revenue</span> systems for <span className="text-primary">roofing</span>.
+            From estimate to supplement. In minutes.
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5 lg:gap-7">
-          {solutions.map((solution, index) => (
-            <Link
-              key={solution.title}
-              href={solution.href}
-              ref={cardRefs[index].ref as React.RefObject<HTMLAnchorElement>}
-              className={`reveal ${cardRefs[index].visible ? "is-visible" : ""} bg-background border border-border rounded-lg p-8 flex flex-col group transition-colors duration-300`}
-              style={{ transitionDelay: cardRefs[index].visible ? `${index * 100}ms` : "0ms" }}
-              onMouseEnter={(e) => e.currentTarget.style.borderColor = 'rgb(1, 86, 59)'}
-              onMouseLeave={(e) => e.currentTarget.style.borderColor = ''}
-            >
-              <p className="text-[10px] font-semibold text-primary uppercase tracking-[0.22em] mb-5">
-                {solution.tag}
-              </p>
-              <h3 className="text-2xl font-bold text-foreground mb-4 tracking-[-0.02em] leading-snug font-serif">
-                {solution.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                {solution.description}
-              </p>
-            </Link>
+        <div className="flex flex-col md:flex-row md:items-stretch gap-5 lg:gap-0">
+          {columns.map((col, index) => (
+            <div key={col.title} className="flex md:flex-row md:items-center flex-1 min-w-0">
+              <div
+                ref={cardRefs[index].ref as React.RefObject<HTMLDivElement>}
+                className={`reveal ${cardRefs[index].visible ? "is-visible" : ""} bg-background border border-border rounded-lg p-8 flex flex-col flex-1`}
+                style={{ transitionDelay: cardRefs[index].visible ? `${index * 100}ms` : "0ms" }}
+              >
+                <h3 className="text-2xl font-bold text-foreground mb-1 tracking-[-0.02em] leading-snug font-serif">
+                  {col.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-6">{col.subline}</p>
+                <ul className="flex flex-col gap-2">
+                  {col.items.map((item) => (
+                    <li key={item} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
+                      <span className="mt-[5px] w-1 h-1 rounded-full bg-primary/50 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {index < columns.length - 1 && (
+                <div className="hidden md:flex items-center justify-center flex-shrink-0 px-3">
+                  <ArrowRight className="w-5 h-5 text-primary/50" />
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
-          <a
-            href="/services"
-            className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground bg-muted/30 border border-border/60 px-6 py-3 rounded-xl hover:bg-muted/50 hover:shadow-md hover:shadow-black/5 hover:-translate-y-0.5 transition-all duration-200"
-          >
-            Learn more
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
+        {/* Demo placeholder */}
+        <div className="mt-7 rounded-xl border border-dashed border-primary/40 bg-transparent flex items-center justify-center py-16 px-8">
+          <p className="text-sm font-medium text-primary tracking-wide">Product demo coming soon</p>
         </div>
 
       </div>
