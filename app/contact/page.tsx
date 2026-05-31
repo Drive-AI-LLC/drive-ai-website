@@ -58,7 +58,7 @@ export default function ContactPage() {
                   Explore what&apos;s possible.
                 </h1>
                 <p className="text-base text-muted-foreground leading-relaxed max-w-sm">
-                  Pick a time that works for you. We&apos;ll learn about your operation and identify where our systems can make the biggest impact.
+                  Pick a time that works for you. We&apos;ll learn about your roofing operation and show you exactly how Drive AI recovers money on your claims.
                 </p>
               </div>
 

@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
+import { StatsRow } from "@/components/stats-row"
 import { SocialProof } from "@/components/social-proof"
 import { SolutionSection } from "@/components/solution-section"
 import { Testimonials } from "@/components/testimonials"
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <StatsRow />
       <SocialProof />
       <SolutionSection />
       <Testimonials />
