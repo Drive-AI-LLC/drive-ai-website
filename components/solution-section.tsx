@@ -2,21 +2,37 @@
 
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
-const steps = [
+const columns = [
   {
-    step: "01",
-    title: "Upload Your Estimate",
-    description: "Drop in the adjuster's PDF. Drive AI reads every line item and flags what's missing or underpaid.",
+    title: "You Upload",
+    subline: "Just drop in your documents.",
+    items: [
+      "Adjuster's estimate (PDF)",
+      "Roof measurement report",
+      "Site and damage photos",
+      "Policy declarations page",
+      "Supplier quote",
+    ],
   },
   {
-    step: "02",
-    title: "AI Builds Your Case",
-    description: "Drive AI pulls supporting documentation, Xactimate codes, and justifications for every gap it finds.",
+    title: "We Handle the Rest",
+    subline: "No action needed from you.",
+    items: [
+      "NOAA storm data",
+      "Local building codes",
+      "Manufacturer specs",
+      "Xactimate regional pricing",
+    ],
   },
   {
-    step: "03",
-    title: "Download & Submit",
-    description: "You get a professional, submission-ready supplement package to send directly to the adjuster.",
+    title: "You Get Back",
+    subline: "Ready to send to the adjuster.",
+    items: [
+      "Every missing line item identified",
+      "Xactimate codes and quantities",
+      "Written justifications",
+      "Submission-ready PDF",
+    ],
   },
 ]
 
@@ -42,22 +58,25 @@ export function SolutionSection() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-5 lg:gap-7">
-          {steps.map((step, index) => (
+          {columns.map((col, index) => (
             <div
-              key={step.step}
+              key={col.title}
               ref={cardRefs[index].ref as React.RefObject<HTMLDivElement>}
               className={`reveal ${cardRefs[index].visible ? "is-visible" : ""} bg-background border border-border rounded-lg p-8 flex flex-col`}
               style={{ transitionDelay: cardRefs[index].visible ? `${index * 100}ms` : "0ms" }}
             >
-              <p className="text-[10px] font-semibold text-primary uppercase tracking-[0.22em] mb-5">
-                {step.step}
-              </p>
-              <h3 className="text-2xl font-bold text-foreground mb-4 tracking-[-0.02em] leading-snug font-serif">
-                {step.title}
+              <h3 className="text-2xl font-bold text-foreground mb-1 tracking-[-0.02em] leading-snug font-serif">
+                {col.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                {step.description}
-              </p>
+              <p className="text-sm text-muted-foreground mb-6">{col.subline}</p>
+              <ul className="flex flex-col gap-2">
+                {col.items.map((item) => (
+                  <li key={item} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
+                    <span className="mt-[5px] w-1 h-1 rounded-full bg-primary/50 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
