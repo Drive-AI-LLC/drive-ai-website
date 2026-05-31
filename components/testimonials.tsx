@@ -1,25 +1,23 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-import { Quote } from "lucide-react"
+import { useCallback, useEffect, useRef, useState } from "react"
+import { Quote, ChevronLeft, ChevronRight } from "lucide-react"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
   type CarouselApi,
 } from "@/components/ui/carousel"
 
 const testimonials = [
   {
-    quote: "I reached out to Drive AI about SEO, and they quickly got up to speed by asking smart questions and doing real research before recommending anything. They were transparent about fit/feasibility instead of pushing a project. I would certainly recommend Drive AI to anyone who wants a thorough, hardworking, and high-integrity team to help them implement practical AI solutions into their business.",
+    quote: <>I reached out to <em>Drive</em> AI about SEO, and they quickly got up to speed by asking smart questions and doing real research before recommending anything. They were transparent about fit/feasibility instead of pushing a project. I would certainly recommend <em>Drive</em> AI to anyone who wants a thorough, hardworking, and high-integrity team to help them implement practical AI solutions into their business.</>,
     name: "Seth Crow",
     title: "Insurance Agent",
     company: "State Farm",
   },
   {
-    quote: "Drive AI delivered what they said they would, and more importantly, they showed up as thoughtful, capable partners. I'd confidently recommend them to teams looking for a smart, curious, and dependable group to help bring AI concepts into the real world.",
+    quote: <><em>Drive</em> AI delivered what they said they would, and more importantly, they showed up as thoughtful, capable partners. I&apos;d confidently recommend them to teams looking for a smart, curious, and dependable group to help bring AI concepts into the real world.</>,
     name: "Ryan Yeoman",
     title: "Co-founder",
     company: "LeaderReps",
@@ -29,46 +27,37 @@ const testimonials = [
 export function Testimonials() {
   const [api, setApi] = useState<CarouselApi>()
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
-  const userInteractedRef = useRef(false)
-  const prevRef = useRef<HTMLButtonElement>(null)
-  const nextRef = useRef<HTMLButtonElement>(null)
+  const pausedRef = useRef(false)
+
+  const stopAutoPlay = useCallback(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current)
+      intervalRef.current = null
+    }
+  }, [])
+
+  const handlePrev = useCallback(() => {
+    pausedRef.current = true
+    stopAutoPlay()
+    api?.scrollPrev()
+  }, [api, stopAutoPlay])
+
+  const handleNext = useCallback(() => {
+    pausedRef.current = true
+    stopAutoPlay()
+    api?.scrollNext()
+  }, [api, stopAutoPlay])
 
   useEffect(() => {
     if (!api) return
+    if (pausedRef.current) return
 
-    const stopAutoPlay = () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current)
-        intervalRef.current = null
-      }
-    }
+    intervalRef.current = setInterval(() => {
+      api.scrollNext()
+    }, 5000)
 
-    const onUserInteraction = () => {
-      userInteractedRef.current = true
-      stopAutoPlay()
-    }
-
-    if (!userInteractedRef.current) {
-      intervalRef.current = setInterval(() => {
-        api.scrollNext()
-      }, 4000)
-    }
-
-    const rootNode = api.rootNode()
-    rootNode.addEventListener("pointerdown", onUserInteraction)
-
-    const prevEl = prevRef.current
-    const nextEl = nextRef.current
-    prevEl?.addEventListener("click", onUserInteraction)
-    nextEl?.addEventListener("click", onUserInteraction)
-
-    return () => {
-      stopAutoPlay()
-      rootNode.removeEventListener("pointerdown", onUserInteraction)
-      prevEl?.removeEventListener("click", onUserInteraction)
-      nextEl?.removeEventListener("click", onUserInteraction)
-    }
-  }, [api])
+    return () => stopAutoPlay()
+  }, [api, stopAutoPlay])
 
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-muted/40">
@@ -82,7 +71,7 @@ export function Testimonials() {
           </h2>
         </div>
 
-        <div className="px-0 sm:px-0">
+        <div className="relative">
           <Carousel
             setApi={setApi}
             opts={{
@@ -97,7 +86,7 @@ export function Testimonials() {
                   <div className="h-full p-5 sm:p-6 rounded-lg bg-background border border-border/40 flex flex-col shadow-sm">
                     <Quote className="w-5 h-5 text-primary/20 mb-3 shrink-0" />
                     <p className="text-foreground leading-relaxed mb-4 flex-grow text-sm">
-                      {`"${testimonial.quote}"`}
+                      &ldquo;{testimonial.quote}&rdquo;
                     </p>
                     <div className="mt-auto pt-3 border-t border-border/40">
                       <p className="font-semibold text-foreground text-sm">{testimonial.name}</p>
@@ -109,9 +98,23 @@ export function Testimonials() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious ref={prevRef} className="-left-2 sm:-left-4 w-10 h-10 sm:w-12 sm:h-12" />
-            <CarouselNext ref={nextRef} className="-right-2 sm:-right-4 w-10 h-10 sm:w-12 sm:h-12" />
           </Carousel>
+
+          {/* Custom navigation arrows */}
+          <button
+            onClick={handlePrev}
+            aria-label="Previous testimonial"
+            className="absolute -left-2 sm:-left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-background border border-border shadow-sm flex items-center justify-center hover:bg-muted transition-colors duration-150 z-10"
+          >
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-foreground" />
+          </button>
+          <button
+            onClick={handleNext}
+            aria-label="Next testimonial"
+            className="absolute -right-2 sm:-right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-background border border-border shadow-sm flex items-center justify-center hover:bg-muted transition-colors duration-150 z-10"
+          >
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-foreground" />
+          </button>
         </div>
       </div>
     </section>

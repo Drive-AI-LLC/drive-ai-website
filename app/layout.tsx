@@ -17,7 +17,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Drive AI | AI Automation & Consulting for Small Businesses',
+  title: 'Drive AI | Roofing Insurance Supplement Software',
   description: 'Drive AI helps small businesses implement practical AI tools and workflow automations to save time, reduce manual work, and operate more efficiently.',
   generator: 'v0.app',
   keywords: ['AI automation', 'business automation', 'AI consulting', 'workflow automation', 'small business AI'],

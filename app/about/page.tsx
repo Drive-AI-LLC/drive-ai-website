@@ -11,13 +11,13 @@ const founders = [
     name: "Danika Pfleghardt",
     role: "Co-Founder",
     image: "/images/team/danika.jpg",
-    bio: "I lead marketing and growth at Drive AI. Over the past few years, I've worked across several startups and spent a lot of time helping businesses improve communication and brand presence. At Drive AI, I'm focused on helping roofing companies modernize the way they coordinate and scale.",
+    bio: "Danika leads marketing and growth at Drive AI. Over the past few years, she has worked across several startups and spent a lot of time helping businesses improve communication and brand presence. At Drive AI, she is focused on helping roofing companies modernize the way they coordinate and scale.",
   },
   {
     name: "Reid Turner",
     role: "Co-Founder",
     image: "/images/team/reid.jpg",
-    bio: "I oversee the technical side of Drive AI along with the legal aspects and operations behind the company. Before starting Drive AI, I gained experience in finance and investor relations at a Fortune 500 company, which shaped the way I think about organization and long-term growth.",
+    bio: "Reid oversees the technical side of Drive AI along with the legal aspects and operations behind the company. Before starting Drive AI, he gained experience in finance and investor relations at a Fortune 500 company, which shaped the way he thinks about organization and long-term growth.",
   },
 ]
 
@@ -133,16 +133,10 @@ export default function AboutPage() {
                     {founder.role}
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    {founder.bio.includes("Drive AI") ? (
-                      <>
-                        {founder.name.startsWith("Danika")
-                          ? <>I lead marketing and growth at <em>Drive</em> AI. Over the past few years, I&apos;ve worked across several startups and spent a lot of time helping businesses improve communication and brand presence. At <em>Drive</em> AI, I&apos;m focused on helping roofing companies modernize the way they coordinate and scale.</>
-                          : <>I oversee the technical side of <em>Drive</em> AI along with the legal aspects and operations behind the company. Before starting <em>Drive</em> AI, I gained experience in finance and investor relations at a Fortune 500 company, which shaped the way I think about organization and long-term growth.</>
-                        }
-                      </>
-                    ) : (
-                      founder.bio
-                    )}
+                    {founder.name.startsWith("Danika")
+                      ? <>Danika leads marketing and growth at <em>Drive</em> AI. Over the past few years, she has worked across several startups and spent a lot of time helping businesses improve communication and brand presence. At <em>Drive</em> AI, she is focused on helping roofing companies modernize the way they coordinate and scale.</>
+                      : <>Reid oversees the technical side of <em>Drive</em> AI along with the legal aspects and operations behind the company. Before starting <em>Drive</em> AI, he gained experience in finance and investor relations at a Fortune 500 company, which shaped the way he thinks about organization and long-term growth.</>
+                    }
                   </p>
                 </div>
               </div>
@@ -155,7 +149,7 @@ export default function AboutPage() {
       <section className="py-16 lg:py-20 bg-background">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           <p className="text-primary font-semibold text-xs uppercase tracking-[0.18em] mb-4">
-            How We Work
+            Who We Are
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-[-0.03em] font-serif mb-10">
             What we stand for.
