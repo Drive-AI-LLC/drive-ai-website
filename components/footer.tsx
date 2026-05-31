@@ -34,7 +34,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-3.5 text-white/50 text-sm leading-relaxed">
-              <em>Drive</em> AI automates insurance supplement requests for roofing companies.
+              Drive <em>AI</em> automates insurance supplement requests for roofing companies.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ export function Footer() {
 
         <div className="mt-7 pt-5 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <p className="text-white/30 text-[11px] tracking-wide">
-            © {new Date().getFullYear()} <em>Drive</em> AI. All rights reserved.
+            © {new Date().getFullYear()} Drive <em>AI</em>. All rights reserved.
           </p>
           <Link href="/privacy" className="text-white/30 text-[11px] tracking-wide hover:text-white/50 transition-colors">
             Privacy Policy

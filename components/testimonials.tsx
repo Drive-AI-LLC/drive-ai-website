@@ -6,13 +6,13 @@ import useEmblaCarousel from "embla-carousel-react"
 
 const testimonials = [
   {
-    quote: <>I reached out to <em>Drive</em> AI about SEO, and they quickly got up to speed by asking smart questions and doing real research before recommending anything. They were transparent about fit/feasibility instead of pushing a project. I would certainly recommend <em>Drive</em> AI to anyone who wants a thorough, hardworking, and high-integrity team to help them implement practical AI solutions into their business.</>,
+    quote: <>I reached out to Drive <em>AI</em> about SEO, and they quickly got up to speed by asking smart questions and doing real research before recommending anything. They were transparent about fit/feasibility instead of pushing a project. I would certainly recommend Drive <em>AI</em> to anyone who wants a thorough, hardworking, and high-integrity team to help them implement practical AI solutions into their business.</>,
     name: "Seth Crow",
     title: "Insurance Agent",
     company: "State Farm",
   },
   {
-    quote: <><em>Drive</em> AI delivered what they said they would, and more importantly, they showed up as thoughtful, capable partners. I&apos;d confidently recommend them to teams looking for a smart, curious, and dependable group to help bring AI concepts into the real world.</>,
+    quote: <>Drive <em>AI</em> delivered what they said they would, and more importantly, they showed up as thoughtful, capable partners. I&apos;d confidently recommend them to teams looking for a smart, curious, and dependable group to help bring AI concepts into the real world.</>,
     name: "Ryan Yeoman",
     title: "Co-founder",
     company: "LeaderReps",

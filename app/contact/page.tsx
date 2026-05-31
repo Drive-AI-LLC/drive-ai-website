@@ -58,7 +58,7 @@ export default function ContactPage() {
                   Let&apos;s talk about your claims.
                 </h1>
                 <p className="text-base text-muted-foreground leading-relaxed max-w-sm">
-                  Pick a time that works for you. We&apos;ll learn about your operation and show you exactly how <em>Drive</em> AI can help you recover more on every claim.
+                  Pick a time that works for you. We&apos;ll learn about your operation and show you exactly how Drive <em>AI</em> can help you recover more on every claim.
                 </p>
               </div>
 
