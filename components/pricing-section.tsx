@@ -44,7 +44,7 @@ export function PricingSection() {
           <h2 className="text-3xl sm:text-3xl lg:text-[2.625rem] font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05] mb-3">
             Simple pricing. Locked in forever.
           </h2>
-          <p className="text-sm text-muted-foreground max-w-md">
+          <p className="text-sm text-muted-foreground max-w-2xl">
             Your rate never increases. Whatever you pay on day one is your price for life.
           </p>
         </div>
