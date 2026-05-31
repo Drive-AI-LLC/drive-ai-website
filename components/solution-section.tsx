@@ -15,7 +15,7 @@ const columns = [
     ],
   },
   {
-    title: "We Handle the Rest",
+    title: "We Do the Rest",
     subline: "No action needed from you.",
     items: [
       "NOAA storm data",
