@@ -1,7 +1,7 @@
 const differentiators = [
   { title: "Built for roofing.", description: "Every system is designed around how roofing companies sell, produce, and collect." },
   { title: "We learn before we build.", description: "We map your workflow first. Systems only get built when the value is clear." },
-  { title: "Measured in revenue.", description: "Dollars recovered and jobs completed on schedule — not vague efficiency metrics." },
+  { title: "Measured in revenue.", description: "Dollars recovered and jobs completed on schedule. Not vague efficiency metrics." },
   { title: "Systems, not software.", description: "Operational discipline applied to an industry that runs on relationships and manual effort." },
 ]
 

@@ -37,7 +37,7 @@ export function SolutionSection() {
         >
           <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">How It Works</p>
           <h2 className="text-3xl sm:text-3xl lg:text-[2.625rem] font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
-            From estimate to supplement — in minutes.
+            From estimate to supplement. In minutes.
           </h2>
         </div>
 

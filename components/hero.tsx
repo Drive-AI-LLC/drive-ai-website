@@ -16,14 +16,14 @@ export function Hero() {
             className="animate-fade-up text-4xl sm:text-5xl font-bold text-foreground leading-[1.15] tracking-[-0.04em] font-serif mb-6"
             style={{ animationDelay: "0ms" }}
           >
-            Turn Underpaid Claims
-            <span className="block">Into <span className="text-primary underline-draw">Full Recoveries</span>.</span>
+            Automated Insurance
+            <span className="block">Supplements for <span className="text-primary underline-draw">Roofers</span>.</span>
           </h1>
           <p
             className="animate-fade-up text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md mb-10"
             style={{ animationDelay: "80ms" }}
           >
-            Upload your adjuster&apos;s estimate and Drive AI identifies every missing line item, builds the justification, and delivers a submission-ready supplement package — in minutes, not hours.
+            Upload your adjuster&apos;s estimate. We find what&apos;s missing and deliver a submission-ready supplement package in minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "160ms" }}>
             <Button asChild size="lg" className="h-12 sm:h-14 text-base px-6 sm:px-8 shadow-lg shadow-primary/20">
@@ -49,14 +49,14 @@ export function Hero() {
               className="animate-fade-up text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.15] tracking-[-0.04em] font-serif mb-6"
               style={{ animationDelay: "0ms" }}
             >
-              Turn Underpaid Claims
-              <span className="block">Into <span className="text-primary underline-draw">Full Recoveries</span>.</span>
+              Automated Insurance
+              <span className="block">Supplements for <span className="text-primary underline-draw">Roofers</span>.</span>
             </h1>
             <p
               className="animate-fade-up text-lg xl:text-xl text-muted-foreground leading-relaxed max-w-md mb-10"
               style={{ animationDelay: "80ms" }}
             >
-              Upload your adjuster&apos;s estimate and Drive AI identifies every missing line item, builds the justification, and delivers a submission-ready supplement package — in minutes, not hours.
+              Upload your adjuster&apos;s estimate. We find what&apos;s missing and deliver a submission-ready supplement package in minutes.
             </p>
             <div className="flex flex-row gap-4 animate-fade-up" style={{ animationDelay: "160ms" }}>
               <Button asChild size="lg" className="h-14 xl:h-16 text-base xl:text-lg px-8 xl:px-10 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">

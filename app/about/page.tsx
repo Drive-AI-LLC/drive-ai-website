@@ -24,7 +24,7 @@ const founders = [
 const principles = [
   {
     title: "Built for roofing",
-    description: "We built this specifically for roofing companies — not generic business software dressed up for the industry.",
+    description: "We built this specifically for roofing companies, not generic business software dressed up for the industry.",
   },
   {
     title: "Speed over manual work",
@@ -32,7 +32,7 @@ const principles = [
   },
   {
     title: "Revenue focused",
-    description: "Every feature we build is tied to one outcome — more money recovered on every claim you file.",
+    description: "Every feature we build is tied to one outcome: more money recovered on every claim you file.",
   },
   {
     title: "Real support",

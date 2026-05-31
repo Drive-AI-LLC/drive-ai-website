@@ -11,7 +11,7 @@ const steps = [
   {
     step: "02",
     title: "Proposal",
-    description: "Clear scope — what gets built, how it integrates, and what to expect.",
+    description: "Clear scope: what gets built, how it integrates, and what to expect.",
   },
   {
     step: "03",

@@ -128,7 +128,7 @@ export default function CaseStudiesPage() {
                           {`"${study.testimonial}"`}
                         </blockquote>
                         <p className="mt-2 text-sm font-medium text-foreground">
-                          — {study.author}
+                          {study.author}
                         </p>
                       </div>
                     )}

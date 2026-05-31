@@ -13,7 +13,7 @@ const services = [
     features: [
       { name: "Gap Analysis", detail: "Automated review of every estimate to identify missed or underpaid line items." },
       { name: "Xactimate Cross-Reference", detail: "Your scope compared to Xactimate pricing to maximize claim value." },
-      { name: "Supplement Tracking", detail: "Real-time visibility into every supplement — filed, pending, or paid." },
+      { name: "Supplement Tracking", detail: "Real-time visibility into every supplement: filed, pending, or paid." },
     ],
   },
   {
@@ -33,7 +33,7 @@ const services = [
     features: [
       { name: "Sales-to-Production Handoff", detail: "Seamless transition from signed contract to scheduled work." },
       { name: "Crew Scheduling", detail: "Assign crews, manage availability, and eliminate scheduling conflicts." },
-      { name: "Job Visibility", detail: "Real-time status on every job — from permit to completion." },
+      { name: "Job Visibility", detail: "Real-time status on every job, from permit to completion." },
     ],
   },
 ]
@@ -86,7 +86,7 @@ export default function ServicesPage() {
               Explore our systems.
             </h1>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl">
-              Purpose-built automation for roofing operations. Each system solves a specific revenue leak — so you can grow without adding headcount.
+              Purpose-built automation for roofing operations. Each system solves a specific revenue leak so you can grow without adding headcount.
             </p>
           </div>
         </div>
