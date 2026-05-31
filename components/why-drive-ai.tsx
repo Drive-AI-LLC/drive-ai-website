@@ -11,7 +11,7 @@ export function WhyDriveAI() {
       <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-8">
 
         <div className="mb-14">
-          <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">Why <em>Drive</em> AI</p>
+          <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">Why <em>Drive AI</em></p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05]">
             Focused on roofing. Focused on results.
           </h2>

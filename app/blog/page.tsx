@@ -143,14 +143,22 @@ export default function BlogPage() {
               Understanding modern operations.
             </p>
             <div className="flex justify-center">
-              <ChevronDown className="w-5 h-5 text-primary/60 animate-bounce" />
+              <button
+                aria-label="Scroll to articles"
+                onClick={() => {
+                  document.getElementById("blog-articles")?.scrollIntoView({ behavior: "smooth" })
+                }}
+                className="focus:outline-none cursor-pointer"
+              >
+                <ChevronDown className="w-5 h-5 text-primary/60 animate-bounce hover:text-primary transition-colors duration-150" />
+              </button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Blog Content */}
-      <section className="py-12 lg:py-20">
+      <section id="blog-articles" className="py-12 lg:py-20">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           {/* Search and Filters */}
           <div className="mb-12 space-y-6">
