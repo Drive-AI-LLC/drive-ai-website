@@ -687,7 +687,7 @@ export default async function BlogPostPage({
       {/* Cover Image */}
       <section className="py-10">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="max-w-3xl aspect-[16/8] relative rounded-lg overflow-hidden bg-muted">
+          <div className="max-w-3xl aspect-[16/8] relative rounded-lg overflow-hidden bg-gray-100">
             <Image
               src={post.image}
               alt={post.title}
