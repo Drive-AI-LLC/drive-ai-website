@@ -1,5 +1,6 @@
 "use client"
 
+import { ArrowRight } from "lucide-react"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
 const columns = [
@@ -56,26 +57,32 @@ export function SolutionSection() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5 lg:gap-7">
+        <div className="flex flex-col md:flex-row md:items-stretch gap-5 lg:gap-0">
           {columns.map((col, index) => (
-            <div
-              key={col.title}
-              ref={cardRefs[index].ref as React.RefObject<HTMLDivElement>}
-              className={`reveal ${cardRefs[index].visible ? "is-visible" : ""} bg-background border border-border rounded-lg p-8 flex flex-col`}
-              style={{ transitionDelay: cardRefs[index].visible ? `${index * 100}ms` : "0ms" }}
-            >
-              <h3 className="text-2xl font-bold text-foreground mb-1 tracking-[-0.02em] leading-snug font-serif">
-                {col.title}
-              </h3>
-              <p className="text-sm text-muted-foreground mb-6">{col.subline}</p>
-              <ul className="flex flex-col gap-2">
-                {col.items.map((item) => (
-                  <li key={item} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
-                    <span className="mt-[5px] w-1 h-1 rounded-full bg-primary/50 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            <div key={col.title} className="flex md:flex-row md:items-center flex-1 min-w-0">
+              <div
+                ref={cardRefs[index].ref as React.RefObject<HTMLDivElement>}
+                className={`reveal ${cardRefs[index].visible ? "is-visible" : ""} bg-background border border-border rounded-lg p-8 flex flex-col flex-1`}
+                style={{ transitionDelay: cardRefs[index].visible ? `${index * 100}ms` : "0ms" }}
+              >
+                <h3 className="text-2xl font-bold text-foreground mb-1 tracking-[-0.02em] leading-snug font-serif">
+                  {col.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-6">{col.subline}</p>
+                <ul className="flex flex-col gap-2">
+                  {col.items.map((item) => (
+                    <li key={item} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
+                      <span className="mt-[5px] w-1 h-1 rounded-full bg-primary/50 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {index < columns.length - 1 && (
+                <div className="hidden md:flex items-center justify-center flex-shrink-0 px-3">
+                  <ArrowRight className="w-5 h-5 text-primary/50" />
+                </div>
+              )}
             </div>
           ))}
         </div>

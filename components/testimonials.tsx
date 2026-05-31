@@ -71,7 +71,7 @@ export function Testimonials() {
   }, [api])
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-muted/20">
+    <section className="py-12 sm:py-16 lg:py-20 bg-muted/40">
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-20">
           <p className="text-primary font-semibold text-xs sm:text-sm uppercase tracking-[0.2em] mb-4">
