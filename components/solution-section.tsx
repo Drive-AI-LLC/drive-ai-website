@@ -10,7 +10,6 @@ const columns = [
       "Adjuster's estimate (PDF)",
       "Roof measurement report",
       "Site and damage photos",
-      "Policy declarations page",
       "Supplier quote",
     ],
   },
