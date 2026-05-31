@@ -16,8 +16,8 @@ export default function Home() {
       <StatsRow />
       <SolutionSection />
       <SocialProof />
-      <Testimonials />
       <PricingSection />
+      <Testimonials />
       <CTASection
         headline="See what your last claim was actually worth."
         supporting="Run your first supplement free. No card required, no commitment."
