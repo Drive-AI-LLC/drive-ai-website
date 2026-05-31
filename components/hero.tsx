@@ -12,16 +12,19 @@ export function Hero() {
       {/* Mobile layout — stacked, no illustration */}
       <div className="lg:hidden max-w-[1080px] mx-auto px-5 sm:px-6 w-full pt-32 sm:pt-36 pb-16">
         <div className="flex flex-col justify-start max-w-xl">
+          <p className="animate-fade-up text-[10px] font-semibold text-primary/70 uppercase tracking-[0.3em] mb-5" style={{ animationDelay: "0ms" }}>
+            Insurance Supplement Software
+          </p>
           <h1
             className="animate-fade-up text-4xl sm:text-5xl font-bold text-foreground leading-[1.15] tracking-[-0.04em] font-serif mb-6"
-            style={{ animationDelay: "0ms" }}
+            style={{ animationDelay: "40ms" }}
           >
-            Automated Insurance
-            <span className="block">Supplements for <span className="text-primary underline-draw">Roofers</span>.</span>
+            Turn Underpaid Claims
+            <span className="block">Into <span className="text-primary underline-draw">Full Recoveries</span>.</span>
           </h1>
           <p
             className="animate-fade-up text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md mb-10"
-            style={{ animationDelay: "80ms" }}
+            style={{ animationDelay: "100ms" }}
           >
             Upload your adjuster&apos;s estimate. We find what&apos;s missing and deliver a submission-ready supplement package in minutes.
           </p>
@@ -45,16 +48,19 @@ export function Hero() {
           style={{ paddingLeft: "max(20px, calc((100vw - 1080px) / 2 + 32px))" }}
         >
           <div className="max-w-xl">
+            <p className="animate-fade-up text-[10px] font-semibold text-primary/70 uppercase tracking-[0.3em] mb-5" style={{ animationDelay: "0ms" }}>
+              Insurance Supplement Software
+            </p>
             <h1
               className="animate-fade-up text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.15] tracking-[-0.04em] font-serif mb-6"
-              style={{ animationDelay: "0ms" }}
+              style={{ animationDelay: "40ms" }}
             >
-              Automated Insurance
-              <span className="block">Supplements for <span className="text-primary underline-draw">Roofers</span>.</span>
+              Turn Underpaid Claims
+              <span className="block">Into <span className="text-primary underline-draw">Full Recoveries</span>.</span>
             </h1>
             <p
               className="animate-fade-up text-lg xl:text-xl text-muted-foreground leading-relaxed max-w-md mb-10"
-              style={{ animationDelay: "80ms" }}
+              style={{ animationDelay: "100ms" }}
             >
               Upload your adjuster&apos;s estimate. We find what&apos;s missing and deliver a submission-ready supplement package in minutes.
             </p>
