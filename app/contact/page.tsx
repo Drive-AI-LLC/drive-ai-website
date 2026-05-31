@@ -65,7 +65,7 @@ export default function ContactPage() {
               {/* Great fit block */}
               <div className="flex flex-col gap-3">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground/60">
-                  This is a great fit if you...
+                  This is a great fit if...
                 </p>
                 {[
                   "You're a residential roofing contractor doing storm or insurance work",
@@ -74,20 +74,6 @@ export default function ContactPage() {
                 ].map((line) => (
                   <div key={line} className="flex items-start gap-2.5">
                     <span className="mt-[6px] w-1 h-1 rounded-full bg-primary flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">{line}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Reassurance lines */}
-              <div className="flex flex-col gap-2.5">
-                {[
-                  "Built for roofing companies",
-                  "No-pressure introductory conversation",
-                  "Focused on operations and growth",
-                ].map((line) => (
-                  <div key={line} className="flex items-center gap-2.5">
-                    <span className="w-1 h-1 rounded-full bg-primary flex-shrink-0" />
                     <span className="text-sm text-muted-foreground">{line}</span>
                   </div>
                 ))}
