@@ -19,7 +19,7 @@ export default function Home() {
       <PricingSection />
       <Testimonials />
       <CTASection
-        headline="See what your last claim was actually worth."
+        headline="Close every claim with confidence."
         supporting="Run your first supplement free. No card required, no commitment."
       />
       <Footer />
