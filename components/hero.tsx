@@ -19,8 +19,9 @@ export function Hero() {
             className="animate-fade-up text-4xl sm:text-5xl font-bold text-foreground leading-[1.15] tracking-[-0.04em] font-serif mb-6"
             style={{ animationDelay: "40ms" }}
           >
-            Turn Underpaid Claims
-            <span className="block">Into <span className="text-primary underline-draw">Full Recoveries</span>.</span>
+            Turn Underpaid<br />
+            Claims Into<br />
+            <span className="text-primary underline-draw">Full Recoveries</span>.
           </h1>
           <p
             className="animate-fade-up text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md mb-10"
@@ -55,8 +56,9 @@ export function Hero() {
               className="animate-fade-up text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.15] tracking-[-0.04em] font-serif mb-6"
               style={{ animationDelay: "40ms" }}
             >
-              Turn Underpaid Claims
-              <span className="block">Into <span className="text-primary underline-draw">Full Recoveries</span>.</span>
+              Turn Underpaid<br />
+              Claims Into<br />
+              <span className="text-primary underline-draw">Full Recoveries</span>.
             </h1>
             <p
               className="animate-fade-up text-lg xl:text-xl text-muted-foreground leading-relaxed max-w-md mb-10"
