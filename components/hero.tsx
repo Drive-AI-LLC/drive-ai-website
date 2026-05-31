@@ -34,7 +34,7 @@ export function Hero() {
               <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer">Try It Free <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-12 sm:h-14 text-base px-6 sm:px-8 border-border hover:bg-muted/50">
-              <a href="#how-it-works">See How It Works</a>
+              <Link href="/contact">Book a Call</Link>
             </Button>
           </div>
         </div>
@@ -71,7 +71,7 @@ export function Hero() {
                 <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer">Try It Free <ArrowRight className="ml-2 w-4 h-4" /></a>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-14 xl:h-16 text-base xl:text-lg px-8 xl:px-10 border-border hover:bg-muted/50 transition-all duration-300">
-                <a href="#how-it-works">See How It Works</a>
+                <Link href="/contact">Book a Call</Link>
               </Button>
             </div>
           </div>
