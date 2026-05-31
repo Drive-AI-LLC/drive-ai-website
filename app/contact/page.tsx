@@ -62,6 +62,23 @@ export default function ContactPage() {
                 </p>
               </div>
 
+              {/* Great fit block */}
+              <div className="flex flex-col gap-3">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground/60">
+                  This is a great fit if you...
+                </p>
+                {[
+                  "You're a residential roofing contractor doing storm or insurance work",
+                  "You're submitting insurance claims and feel like adjusters are underpaying",
+                  "You want to recover more per job without adding hours of manual work",
+                ].map((line) => (
+                  <div key={line} className="flex items-start gap-2.5">
+                    <span className="mt-[6px] w-1 h-1 rounded-full bg-primary flex-shrink-0" />
+                    <span className="text-sm text-muted-foreground">{line}</span>
+                  </div>
+                ))}
+              </div>
+
               {/* Reassurance lines */}
               <div className="flex flex-col gap-2.5">
                 {[

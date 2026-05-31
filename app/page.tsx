@@ -4,6 +4,7 @@ import { StatsRow } from "@/components/stats-row"
 import { SocialProof } from "@/components/social-proof"
 import { SolutionSection } from "@/components/solution-section"
 import { Testimonials } from "@/components/testimonials"
+import { PricingSection } from "@/components/pricing-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
 
@@ -16,6 +17,7 @@ export default function Home() {
       <SolutionSection />
       <SocialProof />
       <Testimonials />
+      <PricingSection />
       <CTASection
         headline="See what your last claim was actually worth."
         supporting="Run your first supplement free. No card required, no commitment."
