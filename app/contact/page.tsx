@@ -55,7 +55,7 @@ export default function ContactPage() {
                   Book a Call
                 </p>
                 <h1 className="text-4xl sm:text-5xl font-bold text-foreground tracking-[-0.03em] leading-[1.08] font-serif mb-5">
-                  Explore what&apos;s possible.
+                  Let&apos;s talk about your claims.
                 </h1>
                 <p className="text-base text-muted-foreground leading-relaxed max-w-sm">
                   Pick a time that works for you. We&apos;ll learn about your operation and show you exactly how Drive AI can help you recover more on every claim.

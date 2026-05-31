@@ -88,8 +88,8 @@ export function SolutionSection() {
         </div>
 
         {/* Demo placeholder */}
-        <div className="mt-7 rounded-xl bg-foreground/90 flex items-center justify-center py-16 px-8">
-          <p className="text-sm font-medium text-primary/60 tracking-wide">Product demo coming soon</p>
+        <div className="mt-7 rounded-xl border border-dashed border-primary/40 bg-transparent flex items-center justify-center py-16 px-8">
+          <p className="text-sm font-medium text-primary tracking-wide">Product demo coming soon</p>
         </div>
 
       </div>
