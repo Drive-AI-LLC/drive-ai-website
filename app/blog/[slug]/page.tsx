@@ -237,7 +237,7 @@ const blogPosts: Record<string, {
     excerpt: "Poor scheduling creates downtime and travel gaps. Here's how to optimize crew allocation.",
     category: "Operations",
     date: "May 5, 2026",
-    image: "/images/blog/crew-scheduling.jpg",
+    image: "/images/blog/crew-scheduling.png",
     content: (
       <>
         <p>
@@ -303,7 +303,7 @@ const blogPosts: Record<string, {
     excerpt: "Most roofers miss supplement opportunities on every claim. Here's how to identify gaps and recover what you're owed.",
     category: "Supplements",
     date: "April 28, 2026",
-    image: "/images/blog/supplements.jpg",
+    image: "/images/blog/supplements.png",
     content: (
       <>
         <p>
@@ -362,7 +362,7 @@ const blogPosts: Record<string, {
     excerpt: "The first 48 hours after a storm determine who wins the neighborhood.",
     category: "Storm Response",
     date: "April 21, 2026",
-    image: "/images/blog/storm-response.jpg",
+    image: "/images/blog/storm-response.png",
     content: (
       <>
         <p>
@@ -407,7 +407,7 @@ const blogPosts: Record<string, {
     excerpt: "From sales-to-production handoffs to scheduling gaps, these issues cost roofing companies thousands every month.",
     category: "Operations",
     date: "April 14, 2026",
-    image: "/images/blog/production.jpg",
+    image: "/images/blog/production.png",
     content: (
       <>
         <p>
@@ -462,7 +462,7 @@ const blogPosts: Record<string, {
     excerpt: "Homeowners want fast responses. They also want to feel heard. Here's how to balance both.",
     category: "Workflows",
     date: "April 7, 2026",
-    image: "/images/blog/follow-up.jpg",
+    image: "/images/blog/follow-up.png",
     content: (
       <>
         <p>
@@ -509,7 +509,7 @@ const blogPosts: Record<string, {
     excerpt: "A breakdown of commonly missed line items and how systematic cross-referencing increases claim value.",
     category: "Supplements",
     date: "March 30, 2026",
-    image: "/images/blog/xactimate.jpg",
+    image: "/images/blog/xactimate.png",
     content: (
       <>
         <p>
@@ -564,7 +564,7 @@ const blogPosts: Record<string, {
     excerpt: "From labor shortages to insurance tightening, here are the shifts every roofing company should prepare for.",
     category: "Industry Trends",
     date: "March 22, 2026",
-    image: "/images/blog/trends.jpg",
+    image: "/images/blog/trends.png",
     content: (
       <>
         <p>

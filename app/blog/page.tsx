@@ -58,7 +58,7 @@ const blogPosts = [
     excerpt: "Poor scheduling creates downtime, travel gaps, and missed revenue opportunities. Here's how to optimize crew allocation and maximize productivity.",
     category: "Operations",
     date: "May 5, 2026",
-    image: "/images/blog/crew-scheduling.jpg",
+    image: "/images/blog/crew-scheduling.png",
   },
   {
     slug: "why-roofing-companies-leave-money-on-the-table",
@@ -66,7 +66,7 @@ const blogPosts = [
     excerpt: "Most roofers miss supplement opportunities on every claim. Here's how to identify gaps in your current process and recover what you're owed.",
     category: "Supplements",
     date: "April 28, 2026",
-    image: "/images/blog/supplements.jpg",
+    image: "/images/blog/supplements.png",
   },
   {
     slug: "storm-response-speed-matters",
@@ -74,7 +74,7 @@ const blogPosts = [
     excerpt: "The first 48 hours after a storm determine who wins the neighborhood. Learn how top roofing companies structure their outreach.",
     category: "Storm Response",
     date: "April 21, 2026",
-    image: "/images/blog/storm-response.jpg",
+    image: "/images/blog/storm-response.png",
   },
   {
     slug: "production-bottlenecks-killing-your-margins",
@@ -82,7 +82,7 @@ const blogPosts = [
     excerpt: "From sales-to-production handoffs to crew scheduling gaps, these common operational issues cost roofing companies thousands every month.",
     category: "Operations",
     date: "April 14, 2026",
-    image: "/images/blog/production.jpg",
+    image: "/images/blog/production.png",
   },
   {
     slug: "automating-lead-follow-up-without-losing-the-human-touch",
@@ -90,7 +90,7 @@ const blogPosts = [
     excerpt: "Homeowners want fast responses, but they also want to feel heard. Here's how to balance automation with authentic communication.",
     category: "Workflows",
     date: "April 7, 2026",
-    image: "/images/blog/follow-up.jpg",
+    image: "/images/blog/follow-up.png",
   },
   {
     slug: "xactimate-cross-reference-explained",
@@ -98,7 +98,7 @@ const blogPosts = [
     excerpt: "A breakdown of the most commonly missed line items in roofing estimates and how systematic cross-referencing increases claim value.",
     category: "Supplements",
     date: "March 30, 2026",
-    image: "/images/blog/xactimate.jpg",
+    image: "/images/blog/xactimate.png",
   },
   {
     slug: "roofing-industry-trends-2026",
@@ -106,7 +106,7 @@ const blogPosts = [
     excerpt: "From labor shortages to insurance tightening, here are the operational shifts every roofing company should be preparing for.",
     category: "Industry Trends",
     date: "March 22, 2026",
-    image: "/images/blog/trends.jpg",
+    image: "/images/blog/trends.png",
   },
 ]
 
