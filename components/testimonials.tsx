@@ -6,15 +6,63 @@ import useEmblaCarousel from "embla-carousel-react"
 
 const testimonials = [
   {
-    quote: <>I reached out to <em>Drive AI</em> about SEO, and they quickly got up to speed by asking smart questions and doing real research before recommending anything. They were transparent about fit/feasibility instead of pushing a project. I would certainly recommend <em>Drive AI</em> to anyone who wants a thorough, hardworking, and high-integrity team to help them implement practical AI solutions into their business.</>,
+    quote: <>Clemson is a natural hub for entrepreneurs due to the University and local resources, but very few active students will take the initial plunge and dive headfirst into starting a business while they are also full-time students. The Chamber can proudly say that Danika and Reid have not only taken that first step, but they have also delivered hard results that have directly increased our efficiency and saved us money.</>,
+    name: "Bryan Lee",
+    title: "President",
+    company: "Clemson Area Chamber of Commerce",
+  },
+  {
+    quote: <><em>Drive AI</em> was able to find Rowing team contacts from thousands of websites and compile them into an easy-to-read excel sheet with ready-to-contact emails and phone numbers, saving the Chamber over 100 hours of manual labor and improving our employees&apos; ability to make sales calls.</>,
+    name: "Dylan Johns",
+    title: "Program Coordinator",
+    company: "Clemson Area Chamber of Commerce",
+  },
+  {
+    quote: <>They continue to impress with other projects for local businesses and individuals, and it is obvious that they possess the vision and drive to excel in the modern business world. We cannot wait to see where Danika & Reid take their services next, and we cannot recommend them enough if you are looking to dramatically improve workplace efficiency!</>,
+    name: "Lacey Fahs",
+    title: "Marketing & Events Coordinator",
+    company: "Clemson Area Chamber of Commerce",
+  },
+  {
+    quote: <>I reached out to <em>Drive AI</em> about SEO, and they quickly got up to speed by asking smart questions and doing real research before recommending anything.</>,
     name: "Seth Crow",
     title: "Insurance Agent",
     company: "State Farm",
   },
   {
+    quote: <>Even though we didn&apos;t end up moving forward with an implementation, they were transparent about fit/feasibility instead of pushing a project. Their communication and guidance helped us make a better decision.</>,
+    name: "Seth Crow",
+    title: "Insurance Agent",
+    company: "State Farm",
+  },
+  {
+    quote: <>I would certainly recommend <em>Drive AI</em> to anyone who wants a thorough, hardworking, and high-integrity team to help them implement practical AI solutions into their business.</>,
+    name: "Seth Crow",
+    title: "Insurance Agent",
+    company: "State Farm",
+  },
+  {
+    quote: <>Did a demo with <em>Drive AI</em> leadership today. If you haven&apos;t adopted AI in your business and still have 20+ working years left… you need to have a consultation with <em>Drive AI</em>. Artificial Intelligence is no longer &quot;AskJeeves&quot;, it&apos;s evolving and not slowing down. Don&apos;t get left behind. Tactfully integrate AI into your business!</>,
+    name: "Caitlyn Marcell",
+    title: "Co-Owner",
+    company: "ASCEND Lending",
+  },
+  {
+    quote: <>We partnered with <em>Drive AI</em> to build an early prototype of an AI Coach, and the experience was exactly what you want from a young, high-quality team.</>,
+    name: "Ryan Yeoman",
+    title: "Co-Founder, Product & Program Design",
+    company: "LeaderReps",
+  },
+  {
+    quote: <>What stood out immediately was how they approached the work. Rather than jumping straight to solutions, they asked thoughtful questions, pushed on assumptions, and took the time to truly understand what we were trying to solve. Their process was clear and well-structured, with regular checkpoints that kept the work focused and aligned. Communication was proactive, responsive, and easy throughout.</>,
+    name: "Ryan Yeoman",
+    title: "Co-Founder, Product & Program Design",
+    company: "LeaderReps",
+  },
+  {
     quote: <><em>Drive AI</em> delivered what they said they would, and more importantly, they showed up as thoughtful, capable partners. I&apos;d confidently recommend them to teams looking for a smart, curious, and dependable group to help bring AI concepts into the real world.</>,
     name: "Ryan Yeoman",
-    title: "Co-founder",
+    title: "Co-Founder, Product & Program Design",
     company: "LeaderReps",
   },
 ]
