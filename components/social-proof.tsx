@@ -55,7 +55,7 @@ export function SocialProof() {
 
         {/* Auto-scrolling marquee — all screen sizes */}
         <div className="overflow-hidden">
-          <div className="marquee-track flex items-center gap-x-12" style={{ width: "max-content" }}>
+          <div className="marquee-track flex items-center gap-x-24" style={{ width: "max-content" }}>
             {[...organizations, ...organizations].map((org, i) => (
               <div key={i} className="flex items-center justify-center flex-shrink-0">
                 <Image
@@ -64,6 +64,7 @@ export function SocialProof() {
                   width={160}
                   height={64}
                   className={`${org.height} w-auto object-contain grayscale opacity-60 transition-all duration-300`}
+                  style={{ mixBlendMode: "multiply" }}
                 />
               </div>
             ))}
