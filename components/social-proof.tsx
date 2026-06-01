@@ -53,18 +53,28 @@ export function SocialProof() {
           Recognized &amp; Supported By
         </p>
 
-        {/* Auto-scrolling marquee — all screen sizes */}
+        {/* Auto-scrolling marquee — all screen sizes, no pause on hover */}
         <div className="overflow-hidden">
           <div className="marquee-track flex items-center gap-x-24" style={{ width: "max-content" }}>
             {[...organizations, ...organizations].map((org, i) => (
-              <div key={i} className="flex items-center justify-center flex-shrink-0">
+              <div
+                key={i}
+                className="flex items-center justify-center flex-shrink-0 bg-transparent"
+              >
                 <Image
                   src={org.logo}
                   alt={org.name}
                   width={160}
                   height={64}
-                  className={`${org.height} w-auto object-contain grayscale opacity-60 transition-all duration-300`}
-                  style={{ mixBlendMode: "multiply" }}
+                  className={`${org.height} w-auto object-contain opacity-60 hover:opacity-100`}
+                  style={{
+                    filter: "grayscale(100%)",
+                    transition: "filter 0.3s ease, opacity 0.3s ease",
+                    mixBlendMode: "multiply",
+                    background: "transparent",
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.filter = "grayscale(0%)")}
+                  onMouseLeave={e => (e.currentTarget.style.filter = "grayscale(100%)")}
                 />
               </div>
             ))}
