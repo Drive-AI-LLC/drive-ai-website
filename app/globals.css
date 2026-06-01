@@ -261,7 +261,16 @@
   animation: marquee 70s linear infinite;
 }
 
+.marquee-logo img {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
 
+.marquee-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
 
 /* Scroll reveal */
 .reveal {
