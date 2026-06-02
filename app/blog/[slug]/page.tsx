@@ -170,7 +170,7 @@ const blogPosts: Record<string, {
 
         <h2>Contractor Overhead and Profit</h2>
         <p>
-          O&P at the correct rate of 20/10 is one of the most commonly underpaid items on residential claims. Carriers default to lower rates. Knowing how to justify the standard rate is essential for every claim. See our full breakdown of O&P in a separate post.
+          O&P at the industry standard rate of 20/10 is one of the most commonly underpaid items on residential claims. Carriers default to lower rates. Knowing how to justify the standard rate is essential for every claim. See our full breakdown of O&P in a separate post.
         </p>
 
         <h2>Why These Get Missed</h2>
