@@ -579,7 +579,7 @@ const blogPosts: Record<string, {
 
         <h2>Insurance Carriers Are Tightening</h2>
         <p>
-          After years of high claim volumes from severe weather, more carriers are restricting coverage, raising deductibles, and tightening claim approvals in high-risk markets. For companies that rely heavily on insurance work, this means fewer approvals on marginal claims and homeowners with less coverage than they expected.
+          After years of high claim volumes from severe weather, many carriers are restricting coverage, raising deductibles, and tightening claim approvals — a trend that has been most pronounced in high-risk states but is spreading across more markets. For companies that rely heavily on insurance work, this means fewer approvals on marginal claims and homeowners with less coverage than they expected.
         </p>
         <p>
           Companies that build strong supplement documentation into their process are better positioned to recover full value on the claims that do get approved.
