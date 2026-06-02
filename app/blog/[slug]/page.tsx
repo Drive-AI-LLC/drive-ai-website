@@ -40,7 +40,7 @@ const blogPosts: Record<string, {
         <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
           <p className="font-semibold text-foreground mb-2">Worth Noting</p>
           <p className="text-muted-foreground m-0">
-            Xactimate's own documentation supports 20/10 as the standard rate for general contractor overhead and profit. Carriers who write 10% are not following Xactimate's own guidelines.
+            20/10 is the widely recognized industry standard for general contractor overhead and profit in Xactimate-based estimates, and many regional pricing guides reflect this expectation. Carriers who write 10% are deviating from what most contractors and adjusters consider the norm.
           </p>
         </div>
 
@@ -58,6 +58,9 @@ const blogPosts: Record<string, {
         </p>
         <p>
           If the claim involves code upgrades, multiple trades, or storm damage affecting multiple systems, that strengthens the case. The more you can show that the job requires active general contractor management, the harder it is for the carrier to deny the full rate.
+        </p>
+        <p>
+          One thing to be prepared for: some carriers will argue that O&P doesn't apply if the roofing contractor is self-performing all the work. If that objection comes up, be ready to document the GC coordination role — permitting, inspections, subcontractor oversight — that exists regardless of who swings the hammer.
         </p>
 
         <h2>Keeping It Professional</h2>
