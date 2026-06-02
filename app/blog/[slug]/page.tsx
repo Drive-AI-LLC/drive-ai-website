@@ -270,7 +270,7 @@ const blogPosts: Record<string, {
           Scheduling jobs back-to-back only works if everything goes perfectly. In roofing, it doesn't. Decking damage adds time. Homeowner isn't home. Materials show up late. Without any buffer, one delay messes up the whole day.
         </p>
         <p>
-          Build in 30 to 45 minutes between jobs. It absorbs the small stuff and keeps your crews less stressed, which means fewer callbacks.
+          Build in buffer time between jobs. How much depends on job size and travel, but even 30 minutes can absorb most small delays and keep the day from unraveling. Less stress on the crew means fewer callbacks too.
         </p>
 
         <h2>Manually Tracking Crew Status</h2>
