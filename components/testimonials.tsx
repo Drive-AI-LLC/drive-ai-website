@@ -30,16 +30,16 @@ const testimonials = [
     company: "State Farm",
   },
   {
-    quote: <>Did a demo with <em>Drive AI</em> leadership today. If you haven&apos;t adopted AI in your business and still have 20+ working years left… you need to have a consultation with <em>Drive AI</em>. Artificial Intelligence is no longer &quot;AskJeeves&quot;, it&apos;s evolving and not slowing down. Don&apos;t get left behind. Tactfully integrate AI into your business!</>,
-    name: "Caitlyn Marcell",
-    title: "Co-Owner",
-    company: "ASCEND Lending",
-  },
-  {
     quote: <>We partnered with <em>Drive AI</em> to build an early prototype of an AI Coach, and <em>Drive AI</em> delivered what they said they would. More importantly, they showed up as thoughtful, capable partners. I&apos;d confidently recommend them to teams looking for a smart, curious, and dependable group to help bring AI concepts into the real world.</>,
     name: "Ryan Yeoman",
     title: "Co-Founder",
     company: "LeaderReps",
+  },
+  {
+    quote: <>Did a demo with <em>Drive AI</em> leadership today. If you haven&apos;t adopted AI in your business and still have 20+ working years left… you need to have a consultation with <em>Drive AI</em>. Artificial Intelligence is no longer &quot;AskJeeves&quot;, it&apos;s evolving and not slowing down. Don&apos;t get left behind. Tactfully integrate AI into your business!</>,
+    name: "Caitlyn Marcell",
+    title: "Co-Owner",
+    company: "ASCEND Lending",
   },
   {
     quote: <>What stood out immediately was how they approached the work. Rather than jumping straight to solutions, they asked thoughtful questions, pushed on assumptions, and took the time to truly understand what we were trying to solve. Their process was clear and well-structured, with regular checkpoints that kept the work focused and aligned. Communication was proactive, responsive, and easy throughout.</>,
