@@ -40,7 +40,7 @@ const blogPosts: Record<string, {
         <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
           <p className="font-semibold text-foreground mb-2">Worth Noting</p>
           <p className="text-muted-foreground m-0">
-            Xactimate's own documentation supports 20/10 as the standard rate for general contractor overhead and profit. Carriers who write 10% are not following Xactimate's own guidelines.
+            20/10 is the widely recognized industry standard for general contractor overhead and profit in Xactimate-based estimates, and many regional pricing guides reflect this expectation. Carriers who write 10% are deviating from what most contractors and adjusters consider the norm.
           </p>
         </div>
 
@@ -58,6 +58,9 @@ const blogPosts: Record<string, {
         </p>
         <p>
           If the claim involves code upgrades, multiple trades, or storm damage affecting multiple systems, that strengthens the case. The more you can show that the job requires active general contractor management, the harder it is for the carrier to deny the full rate.
+        </p>
+        <p>
+          One thing to be prepared for: some carriers will argue that O&P doesn't apply if the roofing contractor is self-performing all the work. If that objection comes up, be ready to document the GC coordination role — permitting, inspections, subcontractor oversight — that exists regardless of who swings the hammer.
         </p>
 
         <h2>Keeping It Professional</h2>
@@ -167,7 +170,7 @@ const blogPosts: Record<string, {
 
         <h2>Contractor Overhead and Profit</h2>
         <p>
-          O&P at the correct rate of 20/10 is one of the most commonly underpaid items on residential claims. Carriers default to lower rates. Knowing how to justify the standard rate is essential for every claim. See our full breakdown of O&P in a separate post.
+          O&P at the industry standard rate of 20/10 is one of the most commonly underpaid items on residential claims. Carriers default to lower rates. Knowing how to justify the standard rate is essential for every claim. See our full breakdown of O&P in a separate post.
         </p>
 
         <h2>Why These Get Missed</h2>
@@ -267,7 +270,7 @@ const blogPosts: Record<string, {
           Scheduling jobs back-to-back only works if everything goes perfectly. In roofing, it doesn't. Decking damage adds time. Homeowner isn't home. Materials show up late. Without any buffer, one delay messes up the whole day.
         </p>
         <p>
-          Build in 30 to 45 minutes between jobs. It absorbs the small stuff and keeps your crews less stressed, which means fewer callbacks.
+          Build in buffer time between jobs. How much depends on job size and travel, but even 30 minutes can absorb most small delays and keep the day from unraveling. Less stress on the crew means fewer callbacks too.
         </p>
 
         <h2>Manually Tracking Crew Status</h2>
@@ -576,7 +579,7 @@ const blogPosts: Record<string, {
 
         <h2>Insurance Carriers Are Tightening</h2>
         <p>
-          After years of high claim volumes from severe weather, more carriers are restricting coverage, raising deductibles, and tightening claim approvals in high-risk markets. For companies that rely heavily on insurance work, this means fewer approvals on marginal claims and homeowners with less coverage than they expected.
+          After years of high claim volumes from severe weather, many carriers are restricting coverage, raising deductibles, and tightening claim approvals. This trend has been most pronounced in high-risk states but is spreading across more markets. For companies that rely heavily on insurance work, this means fewer approvals on marginal claims and homeowners with less coverage than they expected.
         </p>
         <p>
           Companies that build strong supplement documentation into their process are better positioned to recover full value on the claims that do get approved.
