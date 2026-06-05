@@ -81,12 +81,7 @@ export function PricingSection() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center gap-5 text-center">
-          <div className="max-w-lg w-full bg-primary/10 border border-primary/20 rounded-lg px-6 py-4">
-            <p className="text-sm text-primary font-medium leading-relaxed">
-              Revenue share is invoiced monthly based on what you report recovering. You only pay it when you get paid.
-            </p>
-          </div>
+        <div className="flex flex-col items-center gap-4 text-center">
           <p className="text-sm text-muted-foreground">First supplement free. No card required.</p>
           <Button asChild size="lg" className="h-11 text-sm px-7 shadow-lg shadow-primary/20">
             <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer">
