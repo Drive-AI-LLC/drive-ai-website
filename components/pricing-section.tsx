@@ -68,20 +68,23 @@ export function PricingSection() {
               <p className="text-[10px] font-semibold text-primary uppercase tracking-[0.22em] mb-5">
                 {plan.name}
               </p>
-              <p className="text-4xl font-bold text-foreground tracking-[-0.03em] font-serif mb-3">
+              <p className="text-4xl font-bold text-foreground tracking-[-0.03em] font-serif mb-1">
                 {plan.price}
+              </p>
+              <p className="text-base text-foreground/80 font-medium mb-4">
+                + {plan.revenueShare} revenue share
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {plan.description}
-              </p>
-              <p className="text-sm text-foreground/70 leading-relaxed mt-2">
-                <span className="text-primary/80 font-medium">Revenue share:</span> {plan.revenueShare}
               </p>
             </div>
           ))}
         </div>
 
         <div className="flex flex-col items-center gap-4 text-center">
+          <p className="text-sm text-muted-foreground max-w-lg">
+            Revenue share is invoiced monthly based on what you report recovering. You only pay it when you get paid.
+          </p>
           <p className="text-sm text-muted-foreground">First supplement free. No card required.</p>
           <Button asChild size="lg" className="h-11 text-sm px-7 shadow-lg shadow-primary/20">
             <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer">
