@@ -71,7 +71,7 @@ export function PricingSection() {
               <p className="text-4xl font-bold text-foreground tracking-[-0.03em] font-serif mb-1">
                 {plan.price}
               </p>
-              <p className="text-base text-foreground/80 font-medium mb-4">
+              <p className="text-base text-foreground font-medium mb-4">
                 + {plan.revenueShare} revenue share
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
