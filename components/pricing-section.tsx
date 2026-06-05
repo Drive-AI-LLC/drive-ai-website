@@ -9,18 +9,21 @@ const plans = [
     name: "Starter",
     price: "$297/mo",
     description: "Up to 10 supplements per month",
+    revenueShare: "5%",
     popular: false,
   },
   {
     name: "Growth",
     price: "$497/mo",
     description: "Up to 25 supplements per month",
+    revenueShare: "4%",
     popular: true,
   },
   {
     name: "Pro",
     price: "$697/mo",
     description: "Unlimited supplements per month",
+    revenueShare: "3%",
     popular: false,
   },
 ]
@@ -65,8 +68,11 @@ export function PricingSection() {
               <p className="text-[10px] font-semibold text-primary uppercase tracking-[0.22em] mb-5">
                 {plan.name}
               </p>
-              <p className="text-4xl font-bold text-foreground tracking-[-0.03em] font-serif mb-3">
+              <p className="text-4xl font-bold text-foreground tracking-[-0.03em] font-serif mb-1">
                 {plan.price}
+              </p>
+              <p className="text-base text-foreground font-medium mb-4">
+                + {plan.revenueShare} revenue share
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {plan.description}
