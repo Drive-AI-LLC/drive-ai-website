@@ -21,6 +21,14 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "supplement-email-to-adjuster",
+    title: "How to Write a Supplement Email That Gets a Response",
+    excerpt: "Most supplement emails get ignored. Here's how to write one that's professional, specific, and actually moves the claim forward.",
+    category: "Supplements",
+    date: "June 9, 2026",
+    image: "/images/blog/supplement-email.png",
+  },
+  {
     slug: "why-op-is-the-most-argued-line-item",
     title: "Why O&P Is the Most Argued Line Item in Every Roofing Claim",
     excerpt: "Carriers default to 10% when industry standard is 20/10. Here's what overhead and profit actually means and how to argue it professionally.",

@@ -14,6 +14,82 @@ const blogPosts: Record<string, {
   image: string
   content: React.ReactNode
 }> = {
+  "supplement-email-to-adjuster": {
+    title: "How to Write a Supplement Email That Gets a Response",
+    excerpt: "Most supplement emails get ignored. Here's how to write one that's professional, specific, and actually moves the claim forward.",
+    category: "Supplements",
+    date: "June 9, 2026",
+    image: "/images/blog/supplement-email.png",
+    content: (
+      <>
+        <p>
+          You've built a solid supplement. The line items are right, the photos are attached, the codes are cited. Then you send the email and hear nothing back for two weeks. Sound familiar?
+        </p>
+        <p>
+          The supplement itself is only half the job. The email that delivers it determines whether an adjuster opens it, understands it, and acts on it — or lets it sink to the bottom of an inbox holding hundreds of other claims. Here's how to write one that gets a response.
+        </p>
+
+        <h2>Adjusters Are Buried in Email</h2>
+        <p>
+          A typical desk adjuster is managing dozens of open claims at once, each generating its own thread of emails, photos, and documents. Your supplement is competing for attention against everything else in that queue. An email that's long, vague, or disorganized gets skimmed and set aside. An email that's clear and easy to act on gets handled.
+        </p>
+        <p>
+          The goal isn't to write more. It's to write in a way that respects the adjuster's time and makes saying yes as easy as possible.
+        </p>
+
+        <h2>Write a Subject Line That Identifies the Claim</h2>
+        <p>
+          The subject line is the first filter. It should include the claim number, the property address or insured's last name, and a short description of what's attached. Something like "Claim #12345 — Supplement Request — 142 Oak St" tells the adjuster exactly what they're looking at before they open it.
+        </p>
+        <p>
+          Avoid generic subject lines like "Supplement" or "Follow up." They force the adjuster to open the email just to figure out which claim it belongs to, and they're easy to lose in a search later.
+        </p>
+
+        <h2>Get to the Point in the First Two Sentences</h2>
+        <p>
+          Open by stating who you are, which claim this is, and what you're requesting. The adjuster should understand the purpose of the email before the end of the first short paragraph. Save the context and justification for the body or, better, for the attached supplement documentation.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            Adjusters approve what's easy to approve. An email that clearly states the claim number, the specific items requested, and where to find the supporting documentation removes friction. Friction is what causes claims to stall.
+          </p>
+        </div>
+
+        <h2>Be Specific About What You're Requesting</h2>
+        <p>
+          Vague requests create back-and-forth. Instead of writing "the estimate is missing several items," list exactly what you're asking for and reference the relevant Xactimate line items. If you're requesting ice and water shield, drip edge, and an O&P adjustment, name each one and point to where the justification lives in the attached documentation.
+        </p>
+        <p>
+          When the adjuster can see precisely what you want and why, they can approve it without a follow-up call. Every clarification they have to ask for adds days to the timeline.
+        </p>
+
+        <h2>Reference Your Attachments Clearly</h2>
+        <p>
+          If you're attaching photos, a revised estimate, NOAA storm data, or code citations, mention them in the email and label them so they're easy to match up. "See attached: revised Xactimate estimate, 12 photos of north slope, and the local code citation for ice and water shield" is far more useful than sending five unnamed files with no explanation.
+        </p>
+
+        <h2>Keep the Tone Professional and Neutral</h2>
+        <p>
+          It's easy to get frustrated when a claim is underpaid, but the email is not the place to show it. A confrontational or accusatory tone gives the adjuster a reason to slow down or escalate. A calm, factual, professional tone keeps things moving and keeps the relationship intact for the next claim.
+        </p>
+        <p>
+          Remember that you'll likely work with the same adjusters and carriers again. The reputation you build across emails affects how quickly your future supplements get handled.
+        </p>
+
+        <h2>Close With a Clear Next Step</h2>
+        <p>
+          End the email by stating what you'd like to happen next and by when. A simple "Please review the attached supplement and let me know if you need anything further to process these items. I'll follow up on [date] if I haven't heard back" sets a clear expectation and gives you a natural reason to follow up without seeming pushy.
+        </p>
+
+        <h2>Follow Up on a Schedule</h2>
+        <p>
+          If you don't hear back, follow up — but do it on a consistent, professional schedule rather than firing off reminders every day. A polite follow-up that references the original send date and restates the request keeps the claim visible without creating noise. Most claims that stall do so simply because no one followed up, not because the supplement was wrong.
+        </p>
+      </>
+    ),
+  },
   "why-op-is-the-most-argued-line-item": {
     title: "Why O&P Is the Most Argued Line Item in Every Roofing Claim",
     excerpt: "Carriers default to 10% when industry standard is 20/10. Here's what overhead and profit actually means and how to argue it professionally.",
