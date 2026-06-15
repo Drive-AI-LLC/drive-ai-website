@@ -29,7 +29,7 @@ const blogPosts: Record<string, {
           Here's how to handle a denied supplement professionally, figure out why it happened, and push for a fair reconsideration without burning the relationship.
         </p>
 
-        <h2>Don't React — Read</h2>
+        <h2>Don't React. Read First.</h2>
         <p>
           The first mistake contractors make is firing back an angry email the moment a denial lands. Instead, slow down and read the denial carefully. Carriers are required to explain why something was denied, and that explanation tells you exactly what you're up against. The reason behind the denial determines your entire next move, so understand it before you respond.
         </p>
@@ -39,11 +39,11 @@ const blogPosts: Record<string, {
           Most supplement denials fall into a handful of categories. Knowing which one you're dealing with tells you how to respond:
         </p>
         <ul>
-          <li><strong>Insufficient documentation</strong> — the adjuster didn't see enough photos, measurements, or evidence to justify the item.</li>
-          <li><strong>Disagreement on scope</strong> — the adjuster doesn't believe the work is necessary or related to the covered loss.</li>
-          <li><strong>Pricing disputes</strong> — the adjuster agrees the item is needed but disputes the rate or quantity.</li>
-          <li><strong>Policy or coverage limits</strong> — the item genuinely isn't covered under the policy or falls outside the claim.</li>
-          <li><strong>Code interpretation</strong> — the adjuster disputes whether a building code actually requires the work.</li>
+          <li><strong>Insufficient documentation.</strong> The adjuster didn't see enough photos, measurements, or evidence to justify the item.</li>
+          <li><strong>Disagreement on scope.</strong> The adjuster doesn't believe the work is necessary or related to the covered loss.</li>
+          <li><strong>Pricing disputes.</strong> The adjuster agrees the item is needed but disputes the rate or quantity.</li>
+          <li><strong>Policy or coverage limits.</strong> The item genuinely isn't covered under the policy or falls outside the claim.</li>
+          <li><strong>Code interpretation.</strong> The adjuster disputes whether a building code actually requires the work.</li>
         </ul>
         <p>
           A documentation problem is the easiest to fix. A true coverage exclusion is the hardest. Most denials sit somewhere in between, which means there's room to make your case.
@@ -61,7 +61,7 @@ const blogPosts: Record<string, {
           Once you know the reason, build a response that directly addresses it. If the denial cited insufficient documentation, send the missing photos, measurements, or moisture readings. If it's a scope disagreement, explain why the work is necessary and tie it back to the original loss. If it's a code dispute, cite the specific section of the local building code and attach it.
         </p>
         <p>
-          Keep the tone factual and professional. You're not accusing the adjuster of anything — you're giving them what they need to approve the item. Every point you make should be backed by something they can verify.
+          Keep the tone factual and professional. You're not accusing the adjuster of anything. You're giving them what they need to approve the item. Every point you make should be backed by something they can verify.
         </p>
 
         <h2>Put Your Reconsideration Request in Writing</h2>
@@ -74,18 +74,18 @@ const blogPosts: Record<string, {
 
         <h2>Know When and How to Escalate</h2>
         <p>
-          If you've provided solid evidence and the adjuster still won't budge, it may be time to escalate. Escalation isn't about going over someone's head out of spite — it's about getting a fresh set of eyes on a claim that's stuck.
+          If you've provided solid evidence and the adjuster still won't budge, it may be time to escalate. Escalation isn't about going over someone's head out of spite. It's about getting a fresh set of eyes on a claim that's stuck.
         </p>
         <ul>
-          <li><strong>Request a supervisor or re-inspection</strong> — ask the carrier to have a supervisor review the file or send a different adjuster to re-inspect.</li>
-          <li><strong>Invoke the appraisal clause</strong> — most policies include an appraisal process for resolving disagreements on the amount of loss. This can break a stalemate without litigation.</li>
-          <li><strong>Encourage the homeowner to engage</strong> — it's the policyholder's claim, and a call from the insured carries weight a contractor's email sometimes doesn't.</li>
+          <li><strong>Request a supervisor or re-inspection.</strong> Ask the carrier to have a supervisor review the file or send a different adjuster to re-inspect.</li>
+          <li><strong>Invoke the appraisal clause.</strong> Most policies include an appraisal process for resolving disagreements on the amount of loss. This can break a stalemate without litigation.</li>
+          <li><strong>Encourage the homeowner to engage.</strong> It's the policyholder's claim, and a call from the insured carries weight a contractor's email sometimes doesn't.</li>
         </ul>
         <p>
           Escalate in steps. Exhaust the straightforward options before moving to formal processes, and document each one.
         </p>
 
-        <h2>Stay Professional — You'll See This Adjuster Again</h2>
+        <h2>Stay Professional. You'll See This Adjuster Again.</h2>
         <p>
           It's easy to treat a denial as a fight, but the carriers and adjusters you work with today are the same ones you'll work with on the next storm. A reputation for being thorough, fair, and professional gets your future supplements taken seriously. A reputation for being combative slows everything down.
         </p>
