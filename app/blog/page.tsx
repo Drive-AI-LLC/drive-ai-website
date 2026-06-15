@@ -21,6 +21,14 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "what-to-do-when-adjuster-denies-supplement",
+    title: "What to Do When an Adjuster Denies Your Supplement",
+    excerpt: "A denial isn't the end of the road. Here's how to respond professionally, escalate when necessary, and get underpaid items reconsidered.",
+    category: "Supplements",
+    date: "June 16, 2026",
+    image: "/images/blog/adjuster-denies-supplement.png",
+  },
+  {
     slug: "supplement-email-to-adjuster",
     title: "How to Write a Supplement Email That Gets a Response",
     excerpt: "Most supplement emails get ignored. Here's how to write one that's professional, specific, and actually moves the claim forward.",
