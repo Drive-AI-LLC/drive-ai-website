@@ -14,6 +14,92 @@ const blogPosts: Record<string, {
   image: string
   content: React.ReactNode
 }> = {
+  "what-to-do-when-adjuster-denies-supplement": {
+    title: "What to Do When an Adjuster Denies Your Supplement",
+    excerpt: "A denial isn't the end of the road. Here's how to respond professionally, escalate when necessary, and get underpaid items reconsidered.",
+    category: "Supplements",
+    date: "June 16, 2026",
+    image: "/images/blog/adjuster-denies-supplement.png",
+    content: (
+      <>
+        <p>
+          You submitted a clean supplement with photos, code citations, and a clear breakdown of every line item. A few days later the response comes back: denied. It's frustrating, but a denial is rarely the final word. It's the start of a conversation, and how you respond determines whether those items get reconsidered or written off for good.
+        </p>
+        <p>
+          Here's how to handle a denied supplement professionally, figure out why it happened, and push for a fair reconsideration without burning the relationship.
+        </p>
+
+        <h2>Don't React. Read First.</h2>
+        <p>
+          The first mistake contractors make is firing back an angry email the moment a denial lands. Instead, slow down and read the denial carefully. Carriers are required to explain why something was denied, and that explanation tells you exactly what you're up against. The reason behind the denial determines your entire next move, so understand it before you respond.
+        </p>
+
+        <h2>Identify the Real Reason for the Denial</h2>
+        <p>
+          Most supplement denials fall into a handful of categories. Knowing which one you're dealing with tells you how to respond:
+        </p>
+        <ul>
+          <li><strong>Insufficient documentation.</strong> The adjuster didn't see enough photos, measurements, or evidence to justify the item.</li>
+          <li><strong>Disagreement on scope.</strong> The adjuster doesn't believe the work is necessary or related to the covered loss.</li>
+          <li><strong>Pricing disputes.</strong> The adjuster agrees the item is needed but disputes the rate or quantity.</li>
+          <li><strong>Policy or coverage limits.</strong> The item genuinely isn't covered under the policy or falls outside the claim.</li>
+          <li><strong>Code interpretation.</strong> The adjuster disputes whether a building code actually requires the work.</li>
+        </ul>
+        <p>
+          A documentation problem is the easiest to fix. A true coverage exclusion is the hardest. Most denials sit somewhere in between, which means there's room to make your case.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            A denial often means the adjuster didn't have enough to approve the item, not that the item is wrong. Reframing a denial as a request for more evidence keeps you focused on solving the problem instead of arguing about it.
+          </p>
+        </div>
+
+        <h2>Respond With Evidence, Not Emotion</h2>
+        <p>
+          Once you know the reason, build a response that directly addresses it. If the denial cited insufficient documentation, send the missing photos, measurements, or moisture readings. If it's a scope disagreement, explain why the work is necessary and tie it back to the original loss. If it's a code dispute, cite the specific section of the local building code and attach it.
+        </p>
+        <p>
+          Keep the tone factual and professional. You're not accusing the adjuster of anything. You're giving them what they need to approve the item. Every point you make should be backed by something they can verify.
+        </p>
+
+        <h2>Put Your Reconsideration Request in Writing</h2>
+        <p>
+          Always request reconsideration in writing, even if you've discussed it by phone. Reference the claim number, the specific line items denied, the reason given, and the evidence you're providing in response. A written record protects you if the claim escalates later and keeps everyone clear on what's actually in dispute.
+        </p>
+        <p>
+          Be specific about what you want. "Please reconsider the ice and water shield line item based on the attached code citation and photos" is far more actionable than "please review the denial again."
+        </p>
+
+        <h2>Know When and How to Escalate</h2>
+        <p>
+          If you've provided solid evidence and the adjuster still won't budge, it may be time to escalate. Escalation isn't about going over someone's head out of spite. It's about getting a fresh set of eyes on a claim that's stuck.
+        </p>
+        <ul>
+          <li><strong>Request a supervisor or re-inspection.</strong> Ask the carrier to have a supervisor review the file or send a different adjuster to re-inspect.</li>
+          <li><strong>Invoke the appraisal clause.</strong> Most policies include an appraisal process for resolving disagreements on the amount of loss. This can break a stalemate without litigation.</li>
+          <li><strong>Encourage the homeowner to engage.</strong> It's the policyholder's claim, and a call from the insured carries weight a contractor's email sometimes doesn't.</li>
+        </ul>
+        <p>
+          Escalate in steps. Exhaust the straightforward options before moving to formal processes, and document each one.
+        </p>
+
+        <h2>Stay Professional. You'll See This Adjuster Again.</h2>
+        <p>
+          It's easy to treat a denial as a fight, but the carriers and adjusters you work with today are the same ones you'll work with on the next storm. A reputation for being thorough, fair, and professional gets your future supplements taken seriously. A reputation for being combative slows everything down.
+        </p>
+
+        <h2>Know When to Let It Go</h2>
+        <p>
+          Not every denial is worth an extended fight. If an item is genuinely outside coverage, or the dollar amount doesn't justify the time, it may be smarter to move on and focus your energy on claims where the evidence is strong. Picking your battles keeps your win rate high and your time spent where it actually pays off.
+        </p>
+        <p>
+          A denial is a checkpoint, not a dead end. Read it carefully, respond with evidence, escalate when the facts support you, and stay professional throughout. Done consistently, that approach turns a lot of initial denials into approved, fully paid claims.
+        </p>
+      </>
+    ),
+  },
   "supplement-email-to-adjuster": {
     title: "How to Write a Supplement Email That Gets a Response",
     excerpt: "Most supplement emails get ignored. Here's how to write one that's professional, specific, and actually moves the claim forward.",
