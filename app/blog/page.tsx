@@ -21,6 +21,14 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "how-roofing-companies-use-ai-for-supplements",
+    title: "How Roofing Companies Are Using AI to Speed Up the Supplement Process",
+    excerpt: "From identifying missed line items to generating documentation, AI is changing how contractors approach insurance claims. Here's what that looks like in practice.",
+    category: "Industry Trends",
+    date: "June 23, 2026",
+    image: "/images/blog/ai-for-supplements.png",
+  },
+  {
     slug: "what-to-do-when-adjuster-denies-supplement",
     title: "What to Do When an Adjuster Denies Your Supplement",
     excerpt: "A denial isn't the end of the road. Here's how to respond professionally, escalate when necessary, and get underpaid items reconsidered.",
