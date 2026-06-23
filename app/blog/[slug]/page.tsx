@@ -14,6 +14,78 @@ const blogPosts: Record<string, {
   image: string
   content: React.ReactNode
 }> = {
+  "how-roofing-companies-use-ai-for-supplements": {
+    title: "How Roofing Companies Are Using AI to Speed Up the Supplement Process",
+    excerpt: "From identifying missed line items to generating documentation, AI is changing how contractors approach insurance claims. Here's what that looks like in practice.",
+    category: "Industry Trends",
+    date: "June 23, 2026",
+    image: "/images/blog/ai-for-supplements.png",
+    content: (
+      <>
+        <p>
+          Supplementing has always been one of the most time-consuming parts of running an insurance-focused roofing business. Reviewing estimates line by line, cross-referencing photos, pulling code requirements, and writing it all up takes hours per claim. AI is starting to compress that work, and the contractors adopting it are turning around supplements faster without cutting corners.
+        </p>
+        <p>
+          This isn't about replacing experienced estimators. It's about handing the repetitive parts of the process to software so your team can focus on judgment, relationships, and the claims that actually need a human touch. Here's what that looks like in practice.
+        </p>
+
+        <h2>Catching Missed Line Items Automatically</h2>
+        <p>
+          The most immediate use of AI is flagging items that should be on an estimate but aren't. By comparing a carrier's scope against a typical scope for the same type of loss, AI tools can surface commonly missed items like drip edge, ice and water shield, starter strip, or proper O&P before the supplement ever goes out.
+        </p>
+        <p>
+          For a busy estimator reviewing dozens of claims a week, this acts as a safety net. The software doesn't decide what belongs on the claim, but it makes sure nothing obvious slips through, which directly protects revenue that would otherwise be left on the table.
+        </p>
+
+        <h2>Reading Estimates and Documents Faster</h2>
+        <p>
+          Carrier estimates, policy documents, and inspection reports are dense and inconsistent. AI tools can now parse a Xactimate estimate or a PDF scope in seconds, pulling out quantities, line items, and pricing into a structured format your team can actually work with.
+        </p>
+        <p>
+          Instead of manually reading through pages of documentation to find the gaps, an estimator can start from a clean summary and spend their time on analysis rather than data entry.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            The biggest time savings come from the boring parts of the process, not the complex ones. Document parsing, line-item comparison, and first-draft write-ups are exactly the tasks AI handles well, and they're also the tasks that eat the most hours.
+          </p>
+        </div>
+
+        <h2>Generating First-Draft Documentation</h2>
+        <p>
+          Writing the narrative that justifies a supplement is often the slowest step. AI can produce a clear first draft that explains why each item is necessary, references the relevant codes, and ties the work back to the documented loss. Your estimator then reviews, corrects, and finalizes it.
+        </p>
+        <p>
+          Starting from a solid draft instead of a blank page can cut the writing time on a supplement dramatically, and it helps keep the tone consistent across everyone on your team.
+        </p>
+
+        <h2>Organizing Photos and Evidence</h2>
+        <p>
+          Photo documentation is critical to getting items approved, but organizing it is tedious. AI tools can help sort and label inspection photos, match them to the relevant line items, and flag areas where documentation is thin before the claim goes to the adjuster.
+        </p>
+        <p>
+          A supplement that arrives with clearly organized, well-matched evidence is easier for an adjuster to approve, which reduces back-and-forth and shortens the cycle time on every claim.
+        </p>
+
+        <h2>Keeping the Human in the Loop</h2>
+        <p>
+          AI is a tool, not a decision-maker. It can miss context, misread a document, or suggest an item that doesn't actually apply to a specific loss. The contractors getting the most out of it treat AI output as a starting point that a knowledgeable estimator always reviews.
+        </p>
+        <p>
+          The combination matters. AI handles speed and consistency, your team handles judgment and accountability. Leaning entirely on either one is where companies get into trouble.
+        </p>
+
+        <h2>What This Means for Your Business</h2>
+        <p>
+          Faster supplements mean faster approvals, faster billing, and the ability to handle more claims with the same team. For a residential roofing company that lives on insurance work, even a modest reduction in time per claim adds up across a busy storm season.
+        </p>
+        <p>
+          You don't need to overhaul your entire process to start. Pick one slow step, whether it's reading estimates, drafting narratives, or organizing photos, and test an AI tool there. Measure the time saved and the approval results, then expand from what actually works. The goal isn't to chase technology for its own sake. It's to get accurate supplements out the door faster and get your crews paid sooner.
+        </p>
+      </>
+    ),
+  },
   "what-to-do-when-adjuster-denies-supplement": {
     title: "What to Do When an Adjuster Denies Your Supplement",
     excerpt: "A denial isn't the end of the road. Here's how to respond professionally, escalate when necessary, and get underpaid items reconsidered.",
