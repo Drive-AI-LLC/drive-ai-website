@@ -14,6 +14,80 @@ const blogPosts: Record<string, {
   image: string
   content: React.ReactNode
 }> = {
+  "recoverable-vs-non-recoverable-depreciation": {
+    title: "Understanding Depreciation: Recoverable vs. Non-Recoverable",
+    excerpt: "Carriers hold back depreciation on almost every claim. Here's how it works, what you can recover, and how to make sure your customers get what they're owed.",
+    category: "Supplements",
+    date: "June 30, 2026",
+    image: "/images/blog/recoverable-depreciation.png",
+    content: (
+      <>
+        <p>
+          Almost every homeowner gets confused when they receive their insurance payout. The estimate looks reasonable, but then they notice the carrier withheld thousands in depreciation. Your customers ask you why, and if you can't explain it clearly or recover it for them, they feel cheated. Understanding how depreciation works and what you can actually recover is one of the most important skills in roofing.
+        </p>
+
+        <h2>What Depreciation Is</h2>
+        <p>
+          Depreciation is the carrier's way of accounting for the reduced value of an existing roof due to age and wear. A brand new roof is worth 100 percent. A ten-year-old roof might be worth 70 percent of replacement cost, according to the carrier's schedule. When a loss occurs, the carrier pays for the damaged portion at its depreciated value, not full replacement cost.
+        </p>
+        <p>
+          This creates a gap between what the roof actually costs to replace and what the carrier initially pays. Recoverable depreciation is the portion of that gap the homeowner can get back. Non-recoverable depreciation is the portion they cannot.
+        </p>
+
+        <h2>Recoverable Depreciation</h2>
+        <p>
+          Recoverable depreciation is paid back when the homeowner actually completes the repairs. The carrier withholds it initially as an incentive for the work to be done. Once you invoice the homeowner for the completed job and they submit proof of payment to the carrier, the depreciation gets released.
+        </p>
+        <p>
+          This applies to the direct cost of the repairs themselves. If a roof replacement costs $15,000 and the carrier depreciates it by $3,000, making the initial payout $12,000, that $3,000 is recoverable. The homeowner pays their deductible, you do the work, and when the claim is settled and proof of completion is submitted, the $3,000 comes back to them.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            Recoverable depreciation only applies to the actual work that gets done. If you supplement items that weren't originally scoped and approved, the depreciation on those items typically won't be recoverable, because the homeowner wasn't charged for them in the initial estimate.
+          </p>
+        </div>
+
+        <h2>Non-Recoverable Depreciation</h2>
+        <p>
+          Non-recoverable depreciation is the portion the homeowner simply cannot recover, no matter what. This usually applies to items that are considered part of the home's natural wear and tear, items that weren't part of the direct loss, or items that fall outside the policy coverage.
+        </p>
+        <p>
+          Some carriers also apply non-recoverable depreciation to supplemental items that are added after the initial estimate is written. The logic is that these items weren't damaged by the covered loss, so the depreciation is permanent. This varies significantly by carrier and by state, so it's worth checking how a given carrier typically handles supplemental depreciation before setting expectations with the homeowner. This is a key point for negotiation.
+        </p>
+
+        <h2>How Depreciation Gets Applied</h2>
+        <p>
+          A typical claim payout looks like this. Original estimate: $20,000. Carrier's depreciation schedule shows 35 percent for a 12-year-old roof. Initial payout: $13,000. The $7,000 difference is recoverable depreciation if you're repairing the damage that triggered the claim.
+        </p>
+        <p>
+          Now you supplement with $2,000 in missed items like drip edge and ice and water shield. The question becomes: will the carrier depreciate those supplemental items? Some will. Some won't. Some will offer a split where you recover half. This is where your documentation, negotiation, and understanding of the claim becomes critical.
+        </p>
+
+        <h2>How to Recover Depreciation</h2>
+        <p>
+          The process is straightforward in theory but requires attention to detail. First, document everything. Take photos of completed work, keep invoices, and create a clear record showing what was done and what it cost. Second, submit proof of payment to the carrier. This triggers the release of recoverable depreciation. Third, follow up if the payment doesn't come within the expected timeframe.
+        </p>
+        <p>
+          For supplements, be strategic. If you're adding items that weren't damaged by the original loss, justify why they're necessary. Items like proper waterproofing, code upgrades, or items that failed due to the damage you're documenting are often easier to justify to carriers as part of the original loss.
+        </p>
+
+        <h2>Common Mistakes Contractors Make</h2>
+        <p>
+          The biggest mistake is assuming depreciation is gone forever. Many contractors don't even mention recoverable depreciation to homeowners, leaving money on the table. Another common mistake is billing the homeowner for the full supplemental amount and not negotiating depreciation terms with the carrier upfront. A third mistake is not keeping clear documentation of what was done, making it impossible to prove completion and trigger the depreciation release.
+        </p>
+
+        <h2>Make Sure Your Customer Gets What They're Owed</h2>
+        <p>
+          Understanding depreciation protects your relationship with your customer. They know their roof was damaged and needs to be fixed. When you explain that their carrier is withholding depreciation but that most of it will come back after the work is complete, they see you as someone who understands the process and is fighting for them.
+        </p>
+        <p>
+          Walk them through the math early. Show them the initial estimate, point out the depreciation line, explain which items are recoverable, and set clear expectations about when they'll see that money back. When you get the depreciation release after completion, their confidence in you stays high, and they're more likely to recommend you to neighbors and friends. That's the kind of repeat business that makes insurance work profitable in the long term.
+        </p>
+      </>
+    ),
+  },
   "how-roofing-companies-use-ai-for-supplements": {
     title: "How Roofing Companies Are Using AI to Speed Up the Supplement Process",
     excerpt: "From identifying missed line items to generating documentation, AI is changing how contractors approach insurance claims. Here's what that looks like in practice.",

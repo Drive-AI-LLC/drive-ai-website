@@ -21,6 +21,14 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "recoverable-vs-non-recoverable-depreciation",
+    title: "Understanding Depreciation: Recoverable vs. Non-Recoverable",
+    excerpt: "Carriers hold back depreciation on almost every claim. Here's how it works, what you can recover, and how to make sure your customers get what they're owed.",
+    category: "Supplements",
+    date: "June 30, 2026",
+    image: "/images/blog/recoverable-depreciation.png",
+  },
+  {
     slug: "how-roofing-companies-use-ai-for-supplements",
     title: "How Roofing Companies Are Using AI to Speed Up the Supplement Process",
     excerpt: "From identifying missed line items to generating documentation, AI is changing how contractors approach insurance claims. Here's what that looks like in practice.",
