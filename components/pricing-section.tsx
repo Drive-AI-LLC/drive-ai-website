@@ -31,9 +31,6 @@ export function PricingSection() {
             className={`reveal ${card.visible ? "is-visible" : ""} border border-border/60 rounded-lg p-5 sm:p-6 lg:p-7 flex flex-col items-center text-center max-w-2xl w-full`}
             style={{ backgroundColor: '#F7F8F8' }}
           >
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] mb-3 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#141C2E' }}>
-              Early Adopter Rate
-            </span>
             <p className="text-5xl lg:text-6xl font-bold tracking-[-0.03em] font-serif mb-1" style={{ color: '#141C2E' }}>
               $29
             </p>
