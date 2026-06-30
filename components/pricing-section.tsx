@@ -9,7 +9,7 @@ export function PricingSection() {
   const card = useScrollReveal(0.15)
 
   return (
-    <section className="pt-8 sm:pt-10 lg:pt-12 pb-12 sm:pb-16 lg:pb-20 bg-background border-t border-border/40">
+    <section className="pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-20 bg-background border-t border-border/40">
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
 
         <div
