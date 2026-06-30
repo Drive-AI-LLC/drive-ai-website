@@ -4,36 +4,9 @@ import { Button } from "@/components/ui/button"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 import React from "react"
 
-const plans = [
-  {
-    name: "Starter",
-    price: "$297/mo",
-    description: "Up to 10 supplements per month",
-    revenueShare: "5%",
-    popular: false,
-  },
-  {
-    name: "Growth",
-    price: "$497/mo",
-    description: "Up to 25 supplements per month",
-    revenueShare: "4%",
-    popular: true,
-  },
-  {
-    name: "Pro",
-    price: "$697/mo",
-    description: "Unlimited supplements per month",
-    revenueShare: "3%",
-    popular: false,
-  },
-]
-
 export function PricingSection() {
   const header = useScrollReveal(0.2)
-  const card0 = useScrollReveal(0.15)
-  const card1 = useScrollReveal(0.15)
-  const card2 = useScrollReveal(0.15)
-  const cardRefs = [card0, card1, card2]
+  const card = useScrollReveal(0.15)
 
   return (
     <section className="py-20 sm:py-24 lg:py-28 bg-background border-t border-border/40">
@@ -48,37 +21,25 @@ export function PricingSection() {
             Simple pricing. Locked in forever.
           </h2>
           <p className="text-sm text-muted-foreground max-w-2xl">
-            Your rate never increases. Whatever you pay on day one is your price for life.
+            Lock in your rate today. Whatever you pay now is your price for life.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5 lg:gap-7 mb-10">
-          {plans.map((plan, index) => (
-            <div
-              key={plan.name}
-              ref={cardRefs[index].ref as React.RefObject<HTMLDivElement>}
-              className={`reveal ${cardRefs[index].visible ? "is-visible" : ""} relative bg-background border rounded-lg p-8 flex flex-col ${plan.popular ? "border-primary" : "border-border"}`}
-              style={{ transitionDelay: cardRefs[index].visible ? `${index * 100}ms` : "0ms" }}
-            >
-              {plan.popular && (
-                <span className="absolute -top-3 left-8 text-[10px] font-semibold uppercase tracking-[0.2em] bg-primary text-primary-foreground px-3 py-1 rounded-full">
-                  Most Popular
-                </span>
-              )}
-              <p className="text-[10px] font-semibold text-primary uppercase tracking-[0.22em] mb-5">
-                {plan.name}
-              </p>
-              <p className="text-4xl font-bold text-foreground tracking-[-0.03em] font-serif mb-1">
-                {plan.price}
-              </p>
-              <p className="text-base text-foreground font-medium mb-4">
-                + {plan.revenueShare} revenue share
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {plan.description}
-              </p>
-            </div>
-          ))}
+        <div className="flex justify-center mb-10">
+          <div
+            ref={card.ref as React.RefObject<HTMLDivElement>}
+            className={`reveal ${card.visible ? "is-visible" : ""} bg-background border border-border rounded-lg p-8 flex flex-col items-center text-center max-w-md w-full`}
+          >
+            <p className="text-4xl font-bold text-foreground tracking-[-0.03em] font-serif mb-6">
+              $29<span className="text-lg text-muted-foreground font-normal"> per supplement</span>
+            </p>
+            <p className="text-sm text-foreground leading-relaxed mb-3">
+              Lock in your rate forever. Early adopters always pay $29 per supplement.
+            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              No subscription. Pay only for what you use.
+            </p>
+          </div>
         </div>
 
         <div className="flex flex-col items-center gap-4 text-center">
