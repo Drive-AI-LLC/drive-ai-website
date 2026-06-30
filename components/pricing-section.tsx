@@ -9,12 +9,12 @@ export function PricingSection() {
   const card = useScrollReveal(0.15)
 
   return (
-    <section className="py-20 sm:py-24 lg:py-28 bg-background border-t border-border/40">
+    <section className="py-12 sm:py-16 lg:py-20 bg-background border-t border-border/40">
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
 
         <div
           ref={header.ref as React.RefObject<HTMLDivElement>}
-          className={`mb-16 reveal ${header.visible ? "is-visible" : ""}`}
+          className={`mb-10 reveal ${header.visible ? "is-visible" : ""}`}
         >
           <p className="text-[10px] font-semibold text-primary/60 uppercase tracking-[0.3em] mb-4">Pricing</p>
           <h2 className="text-3xl sm:text-3xl lg:text-[2.625rem] font-bold text-foreground tracking-[-0.03em] font-serif leading-[1.05] mb-3">
