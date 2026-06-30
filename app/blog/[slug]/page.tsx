@@ -54,7 +54,7 @@ const blogPosts: Record<string, {
           Non-recoverable depreciation is the portion the homeowner simply cannot recover, no matter what. This usually applies to items that are considered part of the home's natural wear and tear, items that weren't part of the direct loss, or items that fall outside the policy coverage.
         </p>
         <p>
-          Some carriers also apply non-recoverable depreciation to supplemental items that are added after the initial estimate is written. The logic is that these items weren't damaged by the covered loss, so the depreciation is permanent. This is a key point for negotiation.
+          Some carriers also apply non-recoverable depreciation to supplemental items that are added after the initial estimate is written. The logic is that these items weren't damaged by the covered loss, so the depreciation is permanent. This varies significantly by carrier and by state, so it's worth checking how a given carrier typically handles supplemental depreciation before setting expectations with the homeowner. This is a key point for negotiation.
         </p>
 
         <h2>How Depreciation Gets Applied</h2>
@@ -70,7 +70,7 @@ const blogPosts: Record<string, {
           The process is straightforward in theory but requires attention to detail. First, document everything. Take photos of completed work, keep invoices, and create a clear record showing what was done and what it cost. Second, submit proof of payment to the carrier. This triggers the release of recoverable depreciation. Third, follow up if the payment doesn't come within the expected timeframe.
         </p>
         <p>
-          For supplements, be strategic. If you're adding items that weren't damaged by the original loss, justify why they're necessary. Items like proper waterproofing, code upgrades, or items that failed due to the damage you're documenting have a better chance of having their depreciation recovered.
+          For supplements, be strategic. If you're adding items that weren't damaged by the original loss, justify why they're necessary. Items like proper waterproofing, code upgrades, or items that failed due to the damage you're documenting are often easier to justify to carriers as part of the original loss.
         </p>
 
         <h2>Common Mistakes Contractors Make</h2>
