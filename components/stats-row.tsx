@@ -6,7 +6,7 @@ const stats = [
 
 export function StatsRow() {
   return (
-    <section className="py-6 sm:py-8 bg-primary">
+    <section className="py-10 sm:py-12 bg-primary">
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 divide-x divide-white/10">
           {stats.map((stat) => (
