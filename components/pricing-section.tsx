@@ -28,15 +28,26 @@ export function PricingSection() {
         <div className="flex justify-center mb-10">
           <div
             ref={card.ref as React.RefObject<HTMLDivElement>}
-            className={`reveal ${card.visible ? "is-visible" : ""} bg-background border border-border rounded-lg p-8 flex flex-col items-center text-center max-w-md w-full`}
+            className={`reveal ${card.visible ? "is-visible" : ""} rounded-lg p-10 lg:p-12 flex flex-col items-center text-center max-w-2xl w-full shadow-lg shadow-primary/10`}
+            style={{
+              backgroundColor: '#0F1419',
+              border: '1px solid rgba(102, 157, 113, 0.3)',
+              boxShadow: '0 0 20px rgba(102, 157, 113, 0.1)',
+            }}
           >
-            <p className="text-4xl font-bold text-foreground tracking-[-0.03em] font-serif mb-6">
-              $29<span className="text-lg text-muted-foreground font-normal"> per supplement</span>
+            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] mb-6 inline-block" style={{ color: '#7CB08F' }}>
+              Early Adopter Rate
+            </span>
+            <p className="text-7xl lg:text-8xl font-bold tracking-[-0.03em] font-serif mb-2" style={{ color: '#FFFFFF' }}>
+              $29
             </p>
-            <p className="text-sm text-foreground leading-relaxed mb-3">
+            <p className="text-base lg:text-lg font-normal mb-8" style={{ color: '#7CB08F' }}>
+              per supplement
+            </p>
+            <p className="text-sm leading-relaxed mb-4" style={{ color: '#FFFFFF' }}>
               Lock in your rate forever. Early adopters always pay $29 per supplement.
             </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm leading-relaxed" style={{ color: 'rgba(255, 255, 255, 0.7)' }}>
               No subscription. Pay only for what you use.
             </p>
           </div>
