@@ -40,9 +40,6 @@ export function PricingSection() {
             <p className="text-base lg:text-lg font-normal mb-8 text-muted-foreground">
               per supplement
             </p>
-            <p className="text-sm text-foreground leading-relaxed mb-4">
-              Lock in your rate forever. Early adopters always pay $29 per supplement.
-            </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
               No subscription. Pay only for what you use.
             </p>
