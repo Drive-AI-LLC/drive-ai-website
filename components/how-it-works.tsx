@@ -71,7 +71,7 @@ function StepItem({ item, index }: { item: typeof steps[0]; index: number }) {
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-12 sm:py-16 lg:py-20 bg-muted/30 border-t border-border/40">
+    <section id="how-it-works" className="pt-6 sm:pt-8 lg:pt-10 pb-12 sm:pb-16 lg:pb-20 bg-muted/30 border-t border-border/40">
       <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
 
         <div className="mb-14">
