@@ -16,7 +16,7 @@ const blogPosts: Record<string, {
 }> = {
   "how-to-read-adjuster-estimate": {
     title: "How to Read an Adjuster's Estimate Line by Line",
-    excerpt: "Most roofing contractors glance at the bottom line. Here's how to read the full estimate, spot what's missing, and know exactly where to push back.",
+    excerpt: "Most roofing contractors glance at the bottom line. Here's how to read the full estimate, spot what's missing, and know exactly what to submit.",
     category: "Supplements",
     date: "July 7, 2026",
     image: "/images/blog/how-to-read-adjuster-estimate.png",
@@ -84,7 +84,7 @@ const blogPosts: Record<string, {
           Even when the right items are included, the pricing can be wrong. Xactimate prices are based on regional cost data that updates periodically, but the adjuster's estimate may use an older price list, the wrong location, or a category that doesn't accurately reflect the actual material or labor involved.
         </p>
         <p>
-          When a unit price looks low, document the actual market rate for the item and include that in your supplement narrative. Carriers can and do adjust prices when you provide clear evidence that the estimate doesn't reflect actual costs in the local market.
+          When a unit price looks low, document the actual market rate for the item and include that in your supplement narrative. Carriers are often more willing to adjust prices when you provide clear evidence that the estimate doesn't reflect actual costs in the local market.
         </p>
 
         <h2>Document Your Findings Before You Call</h2>
