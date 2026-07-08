@@ -21,6 +21,14 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "how-to-read-adjuster-estimate",
+    title: "How to Read an Adjuster's Estimate Line by Line",
+    excerpt: "Most roofing contractors glance at the bottom line. Here's how to read the full estimate, spot what's missing, and know exactly where to push back.",
+    category: "Supplements",
+    date: "July 7, 2026",
+    image: "/images/blog/how-to-read-adjuster-estimate.png",
+  },
+  {
     slug: "recoverable-vs-non-recoverable-depreciation",
     title: "Understanding Depreciation: Recoverable vs. Non-Recoverable",
     excerpt: "Carriers hold back depreciation on almost every claim. Here's how it works, what you can recover, and how to make sure your customers get what they're owed.",

@@ -14,6 +14,89 @@ const blogPosts: Record<string, {
   image: string
   content: React.ReactNode
 }> = {
+  "how-to-read-adjuster-estimate": {
+    title: "How to Read an Adjuster's Estimate Line by Line",
+    excerpt: "Most roofing contractors glance at the bottom line. Here's how to read the full estimate, spot what's missing, and know exactly where to push back.",
+    category: "Supplements",
+    date: "July 7, 2026",
+    image: "/images/blog/how-to-read-adjuster-estimate.png",
+    content: (
+      <>
+        <p>
+          Most roofing contractors look at two numbers on an adjuster's estimate: the total and the deductible. Everything in between gets skimmed or ignored. That habit is expensive. The gaps in an adjuster's scope are almost never at the bottom of the page. They're buried in the line items, in the measurements, and in the things that simply aren't there at all.
+        </p>
+        <p>
+          Learning to read an estimate like an estimator, not a contractor, is one of the highest-value skills you can develop. Here's how to do it.
+        </p>
+
+        <h2>Start With the Summary Page</h2>
+        <p>
+          Before you go line by line, read the summary page first. This gives you the claim's total replacement cost value (RCV), the depreciation withheld, the actual cash value (ACV) payout, and the deductible. Understanding the structure of the estimate before reading the details helps you see where the money is and where it might be missing.
+        </p>
+        <p>
+          Note the trade breakdown. Most estimates separate the claim into sections by trade. For a roofing claim you should see a roofing section. If you also see sections for gutters, siding, or interior damage, read those too. Missed items in adjacent trades are common and often recoverable.
+        </p>
+
+        <h2>Check the Measurements First</h2>
+        <p>
+          Before reading a single line item, verify the measurements. The adjuster's square count drives everything. If the square footage is wrong, every line item calculated from it is also wrong. Pull your own measurements from the inspection or from a measurement report and compare them directly.
+        </p>
+        <p>
+          Common measurement errors include using only the field of the roof without including the waste factor, calculating a lower pitch than the roof actually has, and undercounting the number of penetrations, valleys, or hips. Each of these errors compounds across the estimate.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            A one-square measurement error on a 30-square roof might seem minor, but it affects the shingle count, the underlayment, the starter strip, and every other line item tied to area. Small measurement errors are rarely small dollar errors.
+          </p>
+        </div>
+
+        <h2>Read Every Line Item in the Roofing Section</h2>
+        <p>
+          Go through the estimate line by line and ask a simple question for each one: is this quantity correct, and is the scope complete? Common line items to scrutinize include:
+        </p>
+        <ul>
+          <li><strong>Shingles.</strong> Check the square count, the waste factor, and the unit price. Waste factors should account for hip and ridge complexity, valleys, and cut lines around penetrations.</li>
+          <li><strong>Underlayment.</strong> Confirm the type (synthetic or felt), the coverage area, and whether the estimate includes ice and water shield in the appropriate zones.</li>
+          <li><strong>Drip edge.</strong> This is one of the most commonly omitted items. It should appear on all eave and rake edges. Check the linear footage and confirm it's present.</li>
+          <li><strong>Starter strip.</strong> Often omitted or priced as shingles instead of starter-specific material. Verify it's included at the correct lineal footage.</li>
+          <li><strong>Ridge cap.</strong> Confirm the type (standard or high-profile) and the lineal footage across all ridges, hips, and any applicable dormers.</li>
+          <li><strong>Pipe boots and flashings.</strong> These are easy to undercount. Cross-reference against your inspection photos and note every penetration on the roof.</li>
+          <li><strong>Decking.</strong> If any decking needed replacement, confirm it's in the estimate at the correct square footage and board type.</li>
+        </ul>
+
+        <h2>Look for What Isn't There</h2>
+        <p>
+          Missing line items are a bigger source of underpayment than incorrect quantities. Run through this checklist against every estimate you receive:
+        </p>
+        <ul>
+          <li>Is O&P (overhead and profit) included? If a GC or specialty subcontractor is involved, O&P is typically owed.</li>
+          <li>Are there code upgrade line items? Many municipalities require permit fees, decking upgrades, or specific installation methods on replacement roofs.</li>
+          <li>Is there a line for roof deck nailing if the code requires ring-shank nails or a specific nailing pattern?</li>
+          <li>Is there a permit fee? Carriers should include the actual permit cost for the jurisdiction.</li>
+          <li>Are there charges for debris removal, dump fees, or haul-away? These are often missing or priced well below actual cost.</li>
+          <li>Is there a line for temporary protection or tarping if interim work was needed?</li>
+        </ul>
+
+        <h2>Check the Unit Prices</h2>
+        <p>
+          Even when the right items are included, the pricing can be wrong. Xactimate prices are based on regional cost data that updates periodically, but the adjuster's estimate may use an older price list, the wrong location, or a category that doesn't accurately reflect the actual material or labor involved.
+        </p>
+        <p>
+          When a unit price looks low, document the actual market rate for the item and include that in your supplement narrative. Carriers can and do adjust prices when you provide clear evidence that the estimate doesn't reflect actual costs in the local market.
+        </p>
+
+        <h2>Document Your Findings Before You Call</h2>
+        <p>
+          Once you've gone through the estimate, make a list of every discrepancy: wrong measurements, missing items, incorrect quantities, and pricing gaps. Assign a dollar figure to each one. This gives you a structured supplement rather than a general complaint, and it gives the adjuster something specific to respond to.
+        </p>
+        <p>
+          Adjusters are more receptive to a contractor who says "your measurement shows 28 squares but our certified report shows 31.4, and drip edge is missing from all four eave edges at 148 linear feet" than one who says the estimate seems low. Specificity wins. The line-by-line read is what makes specificity possible.
+        </p>
+      </>
+    ),
+  },
   "recoverable-vs-non-recoverable-depreciation": {
     title: "Understanding Depreciation: Recoverable vs. Non-Recoverable",
     excerpt: "Carriers hold back depreciation on almost every claim. Here's how it works, what you can recover, and how to make sure your customers get what they're owed.",
