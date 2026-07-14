@@ -21,6 +21,14 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "permit-fees-code-upgrades-insurance-claims",
+    title: "Permit Fees and Code Upgrades: Why Carriers Owe More Than They Pay",
+    excerpt: "Permit fees and code-required upgrades are legitimate claim items that adjusters routinely exclude. Here's how to document and argue for them.",
+    category: "Supplements",
+    date: "July 14, 2026",
+    image: "/images/blog/permit-fees-code-upgrades.png",
+  },
+  {
     slug: "how-to-read-adjuster-estimate",
     title: "How to Read an Adjuster's Estimate Line by Line",
     excerpt: "Most roofing contractors glance at the bottom line. Here's how to read the full estimate, spot what's missing, and know exactly where to push back.",

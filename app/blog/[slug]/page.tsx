@@ -14,6 +14,91 @@ const blogPosts: Record<string, {
   image: string
   content: React.ReactNode
 }> = {
+  "permit-fees-code-upgrades-insurance-claims": {
+    title: "Permit Fees and Code Upgrades: Why Carriers Owe More Than They Pay",
+    excerpt: "Permit fees and code-required upgrades are legitimate claim items that adjusters routinely exclude. Here's how to document and argue for them.",
+    category: "Supplements",
+    date: "July 14, 2026",
+    image: "/images/blog/permit-fees-code-upgrades.png",
+    content: (
+      <>
+        <p>
+          Adjusters are good at leaving money on the table. One of their favorite techniques is to ignore the costs that appear after the insurance claim. Permit fees, code-required upgrades, and the engineering work that goes with them are legitimate claim items that get denied or omitted from estimates with stunning regularity. The carrier wants you to believe these costs are your responsibility. They're not.
+        </p>
+        <p>
+          Understanding which code upgrades are insurance-covered and how to document permit fees is the difference between a break-even job and a profitable one. Here's how to protect your margin.
+        </p>
+
+        <h2>When Permit Fees Are Covered</h2>
+        <p>
+          A permit fee is a cost imposed by the local jurisdiction to allow construction work to happen. It's not optional and it's not something the homeowner can waive. If the roof is being replaced due to a covered loss, the permit is a necessary cost to complete the repair. Therefore, it's part of the claim.
+        </p>
+        <p>
+          Some adjusters argue that permit fees are overhead or the contractor's responsibility. This argument doesn't hold up. The homeowner didn't incur this cost before the loss occurred. It exists specifically because of the claim. It's directly caused by the loss, which makes it insurable. Carriers don't get to exclude costs just because they fall outside the typical category of materials and labor.
+        </p>
+
+        <h2>How to Document Permit Fees</h2>
+        <p>
+          The first step is to know what the actual permit fee is before you submit your estimate. Call the local building department, confirm the roof replacement requires a permit, get the fee in writing, and attach that documentation to your supplement. This is non-negotiable. A screenshot from a website or an estimate that says "typical permit fee is $150" is not sufficient.
+        </p>
+        <p>
+          When the adjuster denies the permit fee, you'll have proof that it's real, that it's required, and that it's the exact amount. You'll also have evidence that you did your homework, which makes the adjuster's job harder if they want to continue arguing. Most adjusters won't push back when presented with actual permit documentation.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            Some jurisdictions charge different permit fees based on the estimated project cost. If your bid is higher than the estimate the adjuster used, the permit fee might be higher too. Factor this into your calculations and document it.
+          </p>
+        </div>
+
+        <h2>Code Upgrades Are Claim Items, Not Change Orders</h2>
+        <p>
+          When a roof is damaged and needs replacement, the rebuild must comply with the building code currently in effect. If the original roof was built under an older code, and the new code requires a different installation method, a specific material type, additional structural support, or upgraded ventilation, those upgrades are driven by the loss, not by choice.
+        </p>
+        <p>
+          Common code-required upgrades on roof replacements include impact-resistant shingles in coastal zones, specific nailing patterns or fastener types, updated flashing standards, improved ventilation, and structural reinforcement if the inspector flags existing defects. These are not upgrades you're offering the homeowner. These are upgrades the jurisdiction requires.
+        </p>
+
+        <h2>Documenting Code Upgrades</h2>
+        <p>
+          Documentation is everything. When you identify a code upgrade, pull the actual code section that requires it. Most jurisdictions maintain online building code databases. Print or screenshot the relevant code language and attach it to your supplement. Include the specific code section number, the requirement, and a clear explanation of how the original roof violates that requirement.
+        </p>
+        <p>
+          In your estimate narrative, don't present this as a suggestion. Say something like: "Code Section [X] requires impact-resistant shingles for this risk address. The original roof does not meet this standard. Replacement roofing must comply with current code." This frames the upgrade as mandatory, not optional.
+        </p>
+
+        <h2>Common Code Upgrades You're Likely Missing</h2>
+        <p>
+          If your estimates don't regularly include code upgrade line items, you're leaving money on the table. Common code requirements that often get missed include:
+        </p>
+        <ul>
+          <li><strong>Wind or impact resistance.</strong> Coastal and high-wind areas often require rated shingles. High hail areas may require impact-resistant materials.</li>
+          <li><strong>Fastener specifications.</strong> Updated codes often require specific fastener types, sizes, or spacing patterns that differ from older installations.</li>
+          <li><strong>Ventilation upgrades.</strong> Modern codes require balanced ventilation and specific ratios of intake to exhaust. Older roofs often don't meet this standard.</li>
+          <li><strong>Flashing and water management.</strong> Updated flashing standards, ice and water barriers in specific zones, and gutter integration may be code-required in your jurisdiction.</li>
+          <li><strong>Deck nailing or reinforcement.</strong> Some jurisdictions require ring-shank nails or specific attachment methods if structural defects are discovered during removal.</li>
+          <li><strong>Seismic or snow-load upgrades.</strong> Areas with high seismic activity or heavy snow loads may require upgraded roof framing or attachment methods.</li>
+        </ul>
+
+        <h2>What to Say When the Adjuster Resists</h2>
+        <p>
+          Adjusters sometimes argue that code compliance is the contractor's responsibility, or that the homeowner should have upgraded years ago. Both arguments fail. The insurance contract covers the loss. The loss makes the work necessary. The code applies when the work is done. Therefore, the code cost is part of the claim.
+        </p>
+        <p>
+          If the adjuster continues to resist, escalate the claim. Request a supervisor review or offer to have the local building official weigh in on whether the upgrade is code-required. Very few adjusters will push back when a municipal official confirms the upgrade is mandatory. At that point, the carrier's position becomes untenable.
+        </p>
+
+        <h2>The Bottom Line</h2>
+        <p>
+          Permit fees and code upgrades are not negotiable items. They're driven by law and regulation, not choice. Your job is to identify them, document them clearly, and present them as what they are: mandatory costs to complete the repair within the bounds of the law.
+        </p>
+        <p>
+          When you include these items in your estimate and back them up with permit quotes and code citations, most adjusters will approve them. The ones who don't can be escalated. The point is to never leave this money off the table. Your margin depends on it.
+        </p>
+      </>
+    ),
+  },
   "how-to-read-adjuster-estimate": {
     title: "How to Read an Adjuster's Estimate Line by Line",
     excerpt: "Most roofing contractors glance at the bottom line. Here's how to read the full estimate, spot what's missing, and know exactly what to submit.",
