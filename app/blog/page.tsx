@@ -22,8 +22,8 @@ const categories = [
 const blogPosts = [
   {
     slug: "permit-fees-code-upgrades-insurance-claims",
-    title: "Permit Fees and Code Upgrades: Why Carriers Owe More Than They Pay",
-    excerpt: "Permit fees and code-required upgrades are legitimate claim items that adjusters routinely exclude. Here's how to document and argue for them.",
+    title: "Permit Fees and Code Upgrades: What You're Likely Leaving Off Your Estimate",
+    excerpt: "Permit fees and code-required upgrades are legitimate claim items that often get missed. Here's how to document and include them.",
     category: "Supplements",
     date: "July 14, 2026",
     image: "/images/blog/permit-fees-code-upgrades.png",

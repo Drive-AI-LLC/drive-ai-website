@@ -15,8 +15,8 @@ const blogPosts: Record<string, {
   content: React.ReactNode
 }> = {
   "permit-fees-code-upgrades-insurance-claims": {
-    title: "Permit Fees and Code Upgrades: Why Carriers Owe More Than They Pay",
-    excerpt: "Permit fees and code-required upgrades are legitimate claim items that adjusters routinely exclude. Here's how to document and argue for them.",
+    title: "Permit Fees and Code Upgrades: What You're Likely Leaving Off Your Estimate",
+    excerpt: "Permit fees and code-required upgrades are legitimate claim items that often get missed. Here's how to document and include them.",
     category: "Supplements",
     date: "July 14, 2026",
     image: "/images/blog/permit-fees-code-upgrades.png",
@@ -34,7 +34,7 @@ const blogPosts: Record<string, {
           A permit fee is a cost imposed by the local jurisdiction to allow construction work to happen. It's not optional and it's not something the homeowner can waive. If the roof is being replaced due to a covered loss, the permit is a necessary cost to complete the repair. Therefore, it's part of the claim.
         </p>
         <p>
-          Some adjusters argue that permit fees are overhead or the contractor's responsibility. This argument doesn't hold up. The homeowner didn't incur this cost before the loss occurred. It exists specifically because of the claim. It's directly caused by the loss, which makes it insurable. Carriers don't get to exclude costs just because they fall outside the typical category of materials and labor.
+          Permit fees are sometimes mistaken for contractor overhead. But the homeowner didn't incur this cost before the loss occurred; it exists specifically because of the claim. That makes it a cost directly tied to the loss, and a legitimate line item to include alongside materials and labor.
         </p>
 
         <h2>How to Document Permit Fees</h2>
