@@ -23,7 +23,7 @@ const blogPosts: Record<string, {
     content: (
       <>
         <p>
-          Adjusters are good at leaving money on the table. One of their favorite techniques is to ignore the costs that appear after the insurance claim. Permit fees, code-required upgrades, and the engineering work that goes with them are legitimate claim items that get denied or omitted from estimates with stunning regularity. The carrier wants you to believe these costs are your responsibility. They're not.
+          Permit fees and code-required upgrades are legitimate claim items that often get left off the initial estimate. This usually isn't a fight, it's a documentation gap. Adjusters work from what's submitted to them, and these costs frequently aren't part of the original scope until a contractor provides the paperwork to support them.
         </p>
         <p>
           Understanding which code upgrades are insurance-covered and how to document permit fees is the difference between a break-even job and a profitable one. Here's how to protect your margin.
@@ -42,7 +42,7 @@ const blogPosts: Record<string, {
           The first step is to know what the actual permit fee is before you submit your estimate. Call the local building department, confirm the roof replacement requires a permit, get the fee in writing, and attach that documentation to your supplement. This is non-negotiable. A screenshot from a website or an estimate that says "typical permit fee is $150" is not sufficient.
         </p>
         <p>
-          When the adjuster denies the permit fee, you'll have proof that it's real, that it's required, and that it's the exact amount. You'll also have evidence that you did your homework, which makes the adjuster's job harder if they want to continue arguing. Most adjusters won't push back when presented with actual permit documentation.
+          If the permit fee is questioned, you'll have proof that it's real, that it's required, and that it's the exact amount. Having this documentation ready upfront can help move the conversation along.           Adjusters are often more receptive when presented with actual permit documentation.
         </p>
 
         <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
@@ -81,20 +81,20 @@ const blogPosts: Record<string, {
           <li><strong>Seismic or snow-load upgrades.</strong> Areas with high seismic activity or heavy snow loads may require upgraded roof framing or attachment methods.</li>
         </ul>
 
-        <h2>What to Say When the Adjuster Resists</h2>
+        <h2>If the Code Upgrade Is Questioned</h2>
         <p>
-          Adjusters sometimes argue that code compliance is the contractor's responsibility, or that the homeowner should have upgraded years ago. Both arguments fail. The insurance contract covers the loss. The loss makes the work necessary. The code applies when the work is done. Therefore, the code cost is part of the claim.
+          Sometimes code compliance costs get questioned as the contractor's or homeowner's responsibility rather than the claim's. Whether they're covered typically depends on the policy's Ordinance or Law coverage, which many policies include with a set limit, often a percentage of the dwelling coverage. Confirming this coverage exists and understanding its limit is a useful first step before submitting code upgrade line items.
         </p>
         <p>
-          If the adjuster continues to resist, escalate the claim. Request a supervisor review or offer to have the local building official weigh in on whether the upgrade is code-required. Very few adjusters will push back when a municipal official confirms the upgrade is mandatory. At that point, the carrier's position becomes untenable.
+          If the code upgrade is still in question, requesting a supervisor review or having the local building official confirm the requirement in writing can help clarify things. Official documentation from the jurisdiction is often the clearest way to support the line item.
         </p>
 
         <h2>The Bottom Line</h2>
         <p>
-          Permit fees and code upgrades are not negotiable items. They're driven by law and regulation, not choice. Your job is to identify them, document them clearly, and present them as what they are: mandatory costs to complete the repair within the bounds of the law.
+          Permit fees and code upgrades are driven by law and regulation, not choice. Your job is to identify them, document them clearly, and present them as what they are: costs required to complete the repair within the bounds of the law.
         </p>
         <p>
-          When you include these items in your estimate and back them up with permit quotes and code citations, most adjusters will approve them. The ones who don't can be escalated. The point is to never leave this money off the table. Your margin depends on it.
+          When you include these items in your estimate and back them up with permit quotes, code citations, and confirmation of applicable Ordinance or Law coverage, you give the carrier what it needs to properly evaluate them. The point is to make sure this money isn't left off the table simply because it wasn't documented.
         </p>
       </>
     ),
