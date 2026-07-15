@@ -35,7 +35,7 @@ export function PricingSection() {
               Per Supplement
             </span>
             <p className="text-5xl lg:text-6xl font-bold tracking-[-0.03em] font-serif mb-4" style={{ color: '#141C2E' }}>
-              $29
+              $59
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
               No subscription. Pay only for what you use.
