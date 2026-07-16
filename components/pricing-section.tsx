@@ -65,7 +65,10 @@ export function PricingSection() {
                 Most Popular
               </span>
             </div>
-            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-1 mt-6" style={{ color: '#141C2E' }}>
+            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full mt-6" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
+              Pro
+            </span>
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-1" style={{ color: '#141C2E' }}>
               $899
             </p>
             <p className="text-xs text-muted-foreground mb-4">per month</p>
