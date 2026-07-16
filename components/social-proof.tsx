@@ -64,8 +64,8 @@ export function SocialProof() {
                 <Image
                   src={org.logo}
                   alt={org.name}
-                  width={160}
-                  height={64}
+                  width={120}
+                  height={48}
                   className={`${org.height} w-auto object-contain`}
                   style={{ mixBlendMode: "multiply", background: "transparent" }}
                 />

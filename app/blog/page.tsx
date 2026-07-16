@@ -21,6 +21,30 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "permit-fees-code-upgrades-insurance-claims",
+    title: "Permit Fees and Code Upgrades: What You're Likely Leaving Off Your Estimate",
+    excerpt: "Permit fees and code-required upgrades are legitimate claim items that often get missed. Here's how to document and include them.",
+    category: "Supplements",
+    date: "July 14, 2026",
+    image: "/images/blog/permit-fees-code-upgrades.png",
+  },
+  {
+    slug: "how-to-read-adjuster-estimate",
+    title: "How to Read an Adjuster's Estimate Line by Line",
+    excerpt: "Most roofing contractors glance at the bottom line. Here's how to read the full estimate, spot what's missing, and know exactly where to push back.",
+    category: "Supplements",
+    date: "July 7, 2026",
+    image: "/images/blog/how-to-read-adjuster-estimate.png",
+  },
+  {
+    slug: "recoverable-vs-non-recoverable-depreciation",
+    title: "Understanding Depreciation: Recoverable vs. Non-Recoverable",
+    excerpt: "Carriers hold back depreciation on almost every claim. Here's how it works, what you can recover, and how to make sure your customers get what they're owed.",
+    category: "Supplements",
+    date: "June 30, 2026",
+    image: "/images/blog/recoverable-depreciation.png",
+  },
+  {
     slug: "how-roofing-companies-use-ai-for-supplements",
     title: "How Roofing Companies Are Using AI to Speed Up the Supplement Process",
     excerpt: "From identifying missed line items to generating documentation, AI is changing how contractors approach insurance claims. Here's what that looks like in practice.",

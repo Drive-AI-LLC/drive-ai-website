@@ -14,6 +14,248 @@ const blogPosts: Record<string, {
   image: string
   content: React.ReactNode
 }> = {
+  "permit-fees-code-upgrades-insurance-claims": {
+    title: "Permit Fees and Code Upgrades: What You're Likely Leaving Off Your Estimate",
+    excerpt: "Permit fees and code-required upgrades are legitimate claim items that often get missed. Here's how to document and include them.",
+    category: "Supplements",
+    date: "July 14, 2026",
+    image: "/images/blog/permit-fees-code-upgrades.png",
+    content: (
+      <>
+        <p>
+          Permit fees and code-required upgrades are legitimate claim items that often get left off the initial estimate. This usually isn't a fight, it's a documentation gap. Adjusters work from what's submitted to them, and these costs frequently aren't part of the original scope until a contractor provides the paperwork to support them.
+        </p>
+        <p>
+          Understanding which code upgrades are insurance-covered and how to document permit fees is the difference between a break-even job and a profitable one. Here's how to protect your margin.
+        </p>
+
+        <h2>When Permit Fees Are Covered</h2>
+        <p>
+          A permit fee is a cost imposed by the local jurisdiction to allow construction work to happen. It's not optional and it's not something the homeowner can waive. If the roof is being replaced due to a covered loss, the permit is a necessary cost to complete the repair. Therefore, it's part of the claim.
+        </p>
+        <p>
+          Permit fees are sometimes mistaken for contractor overhead. But the homeowner didn't incur this cost before the loss occurred; it exists specifically because of the claim. That makes it a cost directly tied to the loss, and a legitimate line item to include alongside materials and labor.
+        </p>
+
+        <h2>How to Document Permit Fees</h2>
+        <p>
+          The first step is to know what the actual permit fee is before you submit your estimate. Call the local building department, confirm the roof replacement requires a permit, get the fee in writing, and attach that documentation to your supplement. This is non-negotiable. A screenshot from a website or an estimate that says "typical permit fee is $150" is not sufficient.
+        </p>
+        <p>
+          If the permit fee is questioned, you'll have proof that it's real, that it's required, and that it's the exact amount. Having this documentation ready upfront can help move the conversation along.           Adjusters are often more receptive when presented with actual permit documentation.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            Some jurisdictions charge different permit fees based on the estimated project cost. If your bid is higher than the estimate the adjuster used, the permit fee might be higher too. Factor this into your calculations and document it.
+          </p>
+        </div>
+
+        <h2>Code Upgrades Are Claim Items, Not Change Orders</h2>
+        <p>
+          When a roof is damaged and needs replacement, the rebuild must comply with the building code currently in effect. If the original roof was built under an older code, and the new code requires a different installation method, a specific material type, additional structural support, or upgraded ventilation, those upgrades are driven by the loss, not by choice.
+        </p>
+        <p>
+          Common code-required upgrades on roof replacements include impact-resistant shingles in coastal zones, specific nailing patterns or fastener types, updated flashing standards, improved ventilation, and structural reinforcement if the inspector flags existing defects. These are not upgrades you're offering the homeowner. These are upgrades the jurisdiction requires.
+        </p>
+
+        <h2>Documenting Code Upgrades</h2>
+        <p>
+          Documentation is everything. When you identify a code upgrade, pull the actual code section that requires it. Most jurisdictions maintain online building code databases. Print or screenshot the relevant code language and attach it to your supplement. Include the specific code section number, the requirement, and a clear explanation of how the original roof violates that requirement.
+        </p>
+        <p>
+          In your estimate narrative, don't present this as a suggestion. Say something like: "Code Section [X] requires impact-resistant shingles for this risk address. The original roof does not meet this standard. Replacement roofing must comply with current code." This frames the upgrade as mandatory, not optional.
+        </p>
+
+        <h2>Common Code Upgrades You're Likely Missing</h2>
+        <p>
+          If your estimates don't regularly include code upgrade line items, you're leaving money on the table. Common code requirements that often get missed include:
+        </p>
+        <ul>
+          <li><strong>Wind or impact resistance.</strong> Coastal and high-wind areas often require rated shingles. High hail areas may require impact-resistant materials.</li>
+          <li><strong>Fastener specifications.</strong> Updated codes often require specific fastener types, sizes, or spacing patterns that differ from older installations.</li>
+          <li><strong>Ventilation upgrades.</strong> Modern codes require balanced ventilation and specific ratios of intake to exhaust. Older roofs often don't meet this standard.</li>
+          <li><strong>Flashing and water management.</strong> Updated flashing standards, ice and water barriers in specific zones, and gutter integration may be code-required in your jurisdiction.</li>
+          <li><strong>Deck nailing or reinforcement.</strong> Some jurisdictions require ring-shank nails or specific attachment methods if structural defects are discovered during removal.</li>
+          <li><strong>Seismic or snow-load upgrades.</strong> Areas with high seismic activity or heavy snow loads may require upgraded roof framing or attachment methods.</li>
+        </ul>
+
+        <h2>If the Code Upgrade Is Questioned</h2>
+        <p>
+          Sometimes code compliance costs get questioned as the contractor's or homeowner's responsibility rather than the claim's. Whether they're covered typically depends on the policy's Ordinance or Law coverage, which many policies include with a set limit, often a percentage of the dwelling coverage. Confirming this coverage exists and understanding its limit is a useful first step before submitting code upgrade line items.
+        </p>
+        <p>
+          If the code upgrade is still in question, requesting a supervisor review or having the local building official confirm the requirement in writing can help clarify things. Official documentation from the jurisdiction is often the clearest way to support the line item.
+        </p>
+
+        <h2>The Bottom Line</h2>
+        <p>
+          Permit fees and code upgrades are driven by law and regulation, not choice. Your job is to identify them, document them clearly, and present them as what they are: costs required to complete the repair within the bounds of the law.
+        </p>
+        <p>
+          When you include these items in your estimate and back them up with permit quotes, code citations, and confirmation of applicable Ordinance or Law coverage, you give the carrier what it needs to properly evaluate them. The point is to make sure this money isn't left off the table simply because it wasn't documented.
+        </p>
+      </>
+    ),
+  },
+  "how-to-read-adjuster-estimate": {
+    title: "How to Read an Adjuster's Estimate Line by Line",
+    excerpt: "Most roofing contractors glance at the bottom line. Here's how to read the full estimate, spot what's missing, and know exactly what to submit.",
+    category: "Supplements",
+    date: "July 7, 2026",
+    image: "/images/blog/how-to-read-adjuster-estimate.png",
+    content: (
+      <>
+        <p>
+          Most roofing contractors look at two numbers on an adjuster's estimate: the total and the deductible. Everything in between gets skimmed or ignored. That habit is expensive. The gaps in an adjuster's scope are almost never at the bottom of the page. They're buried in the line items, in the measurements, and in the things that simply aren't there at all.
+        </p>
+        <p>
+          Learning to read an estimate like an estimator, not a contractor, is one of the highest-value skills you can develop. Here's how to do it.
+        </p>
+
+        <h2>Start With the Summary Page</h2>
+        <p>
+          Before you go line by line, read the summary page first. This gives you the claim's total replacement cost value (RCV), the depreciation withheld, the actual cash value (ACV) payout, and the deductible. Understanding the structure of the estimate before reading the details helps you see where the money is and where it might be missing.
+        </p>
+        <p>
+          Note the trade breakdown. Most estimates separate the claim into sections by trade. For a roofing claim you should see a roofing section. If you also see sections for gutters, siding, or interior damage, read those too. Missed items in adjacent trades are common and often recoverable.
+        </p>
+
+        <h2>Check the Measurements First</h2>
+        <p>
+          Before reading a single line item, verify the measurements. The adjuster's square count drives everything. If the square footage is wrong, every line item calculated from it is also wrong. Pull your own measurements from the inspection or from a measurement report and compare them directly.
+        </p>
+        <p>
+          Common measurement errors include using only the field of the roof without including the waste factor, calculating a lower pitch than the roof actually has, and undercounting the number of penetrations, valleys, or hips. Each of these errors compounds across the estimate.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            A one-square measurement error on a 30-square roof might seem minor, but it affects the shingle count, the underlayment, the starter strip, and every other line item tied to area. Small measurement errors are rarely small dollar errors.
+          </p>
+        </div>
+
+        <h2>Read Every Line Item in the Roofing Section</h2>
+        <p>
+          Go through the estimate line by line and ask a simple question for each one: is this quantity correct, and is the scope complete? Common line items to scrutinize include:
+        </p>
+        <ul>
+          <li><strong>Shingles.</strong> Check the square count, the waste factor, and the unit price. Waste factors should account for hip and ridge complexity, valleys, and cut lines around penetrations.</li>
+          <li><strong>Underlayment.</strong> Confirm the type (synthetic or felt), the coverage area, and whether the estimate includes ice and water shield in the appropriate zones.</li>
+          <li><strong>Drip edge.</strong> This is one of the most commonly omitted items. It should appear on all eave and rake edges. Check the linear footage and confirm it's present.</li>
+          <li><strong>Starter strip.</strong> Often omitted or priced as shingles instead of starter-specific material. Verify it's included at the correct lineal footage.</li>
+          <li><strong>Ridge cap.</strong> Confirm the type (standard or high-profile) and the lineal footage across all ridges, hips, and any applicable dormers.</li>
+          <li><strong>Pipe boots and flashings.</strong> These are easy to undercount. Cross-reference against your inspection photos and note every penetration on the roof.</li>
+          <li><strong>Decking.</strong> If any decking needed replacement, confirm it's in the estimate at the correct square footage and board type.</li>
+        </ul>
+
+        <h2>Look for What Isn't There</h2>
+        <p>
+          Missing line items are a bigger source of underpayment than incorrect quantities. Run through this checklist against every estimate you receive:
+        </p>
+        <ul>
+          <li>Is O&P (overhead and profit) included? If a GC or specialty subcontractor is involved, O&P is typically owed.</li>
+          <li>Are there code upgrade line items? Many municipalities require permit fees, decking upgrades, or specific installation methods on replacement roofs.</li>
+          <li>Is there a line for roof deck nailing if the code requires ring-shank nails or a specific nailing pattern?</li>
+          <li>Is there a permit fee? Carriers should include the actual permit cost for the jurisdiction.</li>
+          <li>Are there charges for debris removal, dump fees, or haul-away? These are often missing or priced well below actual cost.</li>
+          <li>Is there a line for temporary protection or tarping if interim work was needed?</li>
+        </ul>
+
+        <h2>Check the Unit Prices</h2>
+        <p>
+          Even when the right items are included, the pricing can be wrong. Xactimate prices are based on regional cost data that updates periodically, but the adjuster's estimate may use an older price list, the wrong location, or a category that doesn't accurately reflect the actual material or labor involved.
+        </p>
+        <p>
+          When a unit price looks low, document the actual market rate for the item and include that in your supplement narrative. Carriers are often more willing to adjust prices when you provide clear evidence that the estimate doesn't reflect actual costs in the local market.
+        </p>
+
+        <h2>Document Your Findings Before You Call</h2>
+        <p>
+          Once you've gone through the estimate, make a list of every discrepancy: wrong measurements, missing items, incorrect quantities, and pricing gaps. Assign a dollar figure to each one. This gives you a structured supplement rather than a general complaint, and it gives the adjuster something specific to respond to.
+        </p>
+        <p>
+          Adjusters are more receptive to a contractor who says "your measurement shows 28 squares but our certified report shows 31.4, and drip edge is missing from all four eave edges at 148 linear feet" than one who says the estimate seems low. Specificity wins. The line-by-line read is what makes specificity possible.
+        </p>
+      </>
+    ),
+  },
+  "recoverable-vs-non-recoverable-depreciation": {
+    title: "Understanding Depreciation: Recoverable vs. Non-Recoverable",
+    excerpt: "Carriers hold back depreciation on almost every claim. Here's how it works, what you can recover, and how to make sure your customers get what they're owed.",
+    category: "Supplements",
+    date: "June 30, 2026",
+    image: "/images/blog/recoverable-depreciation.png",
+    content: (
+      <>
+        <p>
+          Almost every homeowner gets confused when they receive their insurance payout. The estimate looks reasonable, but then they notice the carrier withheld thousands in depreciation. Your customers ask you why, and if you can't explain it clearly or recover it for them, they feel cheated. Understanding how depreciation works and what you can actually recover is one of the most important skills in roofing.
+        </p>
+
+        <h2>What Depreciation Is</h2>
+        <p>
+          Depreciation is the carrier's way of accounting for the reduced value of an existing roof due to age and wear. A brand new roof is worth 100 percent. A ten-year-old roof might be worth 70 percent of replacement cost, according to the carrier's schedule. When a loss occurs, the carrier pays for the damaged portion at its depreciated value, not full replacement cost.
+        </p>
+        <p>
+          This creates a gap between what the roof actually costs to replace and what the carrier initially pays. Recoverable depreciation is the portion of that gap the homeowner can get back. Non-recoverable depreciation is the portion they cannot.
+        </p>
+
+        <h2>Recoverable Depreciation</h2>
+        <p>
+          Recoverable depreciation is paid back when the homeowner actually completes the repairs. The carrier withholds it initially as an incentive for the work to be done. Once you invoice the homeowner for the completed job and they submit proof of payment to the carrier, the depreciation gets released.
+        </p>
+        <p>
+          This applies to the direct cost of the repairs themselves. If a roof replacement costs $15,000 and the carrier depreciates it by $3,000, making the initial payout $12,000, that $3,000 is recoverable. The homeowner pays their deductible, you do the work, and when the claim is settled and proof of completion is submitted, the $3,000 comes back to them.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            Recoverable depreciation only applies to the actual work that gets done. If you supplement items that weren't originally scoped and approved, the depreciation on those items typically won't be recoverable, because the homeowner wasn't charged for them in the initial estimate.
+          </p>
+        </div>
+
+        <h2>Non-Recoverable Depreciation</h2>
+        <p>
+          Non-recoverable depreciation is the portion the homeowner simply cannot recover, no matter what. This usually applies to items that are considered part of the home's natural wear and tear, items that weren't part of the direct loss, or items that fall outside the policy coverage.
+        </p>
+        <p>
+          Some carriers also apply non-recoverable depreciation to supplemental items that are added after the initial estimate is written. The logic is that these items weren't damaged by the covered loss, so the depreciation is permanent. This varies significantly by carrier and by state, so it's worth checking how a given carrier typically handles supplemental depreciation before setting expectations with the homeowner. This is a key point for negotiation.
+        </p>
+
+        <h2>How Depreciation Gets Applied</h2>
+        <p>
+          A typical claim payout looks like this. Original estimate: $20,000. Carrier's depreciation schedule shows 35 percent for a 12-year-old roof. Initial payout: $13,000. The $7,000 difference is recoverable depreciation if you're repairing the damage that triggered the claim.
+        </p>
+        <p>
+          Now you supplement with $2,000 in missed items like drip edge and ice and water shield. The question becomes: will the carrier depreciate those supplemental items? Some will. Some won't. Some will offer a split where you recover half. This is where your documentation, negotiation, and understanding of the claim becomes critical.
+        </p>
+
+        <h2>How to Recover Depreciation</h2>
+        <p>
+          The process is straightforward in theory but requires attention to detail. First, document everything. Take photos of completed work, keep invoices, and create a clear record showing what was done and what it cost. Second, submit proof of payment to the carrier. This triggers the release of recoverable depreciation. Third, follow up if the payment doesn't come within the expected timeframe.
+        </p>
+        <p>
+          For supplements, be strategic. If you're adding items that weren't damaged by the original loss, justify why they're necessary. Items like proper waterproofing, code upgrades, or items that failed due to the damage you're documenting are often easier to justify to carriers as part of the original loss.
+        </p>
+
+        <h2>Common Mistakes Contractors Make</h2>
+        <p>
+          The biggest mistake is assuming depreciation is gone forever. Many contractors don't even mention recoverable depreciation to homeowners, leaving money on the table. Another common mistake is billing the homeowner for the full supplemental amount and not negotiating depreciation terms with the carrier upfront. A third mistake is not keeping clear documentation of what was done, making it impossible to prove completion and trigger the depreciation release.
+        </p>
+
+        <h2>Make Sure Your Customer Gets What They're Owed</h2>
+        <p>
+          Understanding depreciation protects your relationship with your customer. They know their roof was damaged and needs to be fixed. When you explain that their carrier is withholding depreciation but that most of it will come back after the work is complete, they see you as someone who understands the process and is fighting for them.
+        </p>
+        <p>
+          Walk them through the math early. Show them the initial estimate, point out the depreciation line, explain which items are recoverable, and set clear expectations about when they'll see that money back. When you get the depreciation release after completion, their confidence in you stays high, and they're more likely to recommend you to neighbors and friends. That's the kind of repeat business that makes insurance work profitable in the long term.
+        </p>
+      </>
+    ),
+  },
   "how-roofing-companies-use-ai-for-supplements": {
     title: "How Roofing Companies Are Using AI to Speed Up the Supplement Process",
     excerpt: "From identifying missed line items to generating documentation, AI is changing how contractors approach insurance claims. Here's what that looks like in practice.",
