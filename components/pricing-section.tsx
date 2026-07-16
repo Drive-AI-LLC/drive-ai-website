@@ -60,12 +60,12 @@ export function PricingSection() {
             className="border-2 rounded-lg p-6 flex flex-col bg-background relative"
             style={{ borderColor: '#0F6E56' }}
           >
-            <div className="absolute -top-3 left-8">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] inline-block px-3 py-1 rounded-full bg-primary text-white" style={{ backgroundColor: '#0F6E56', color: 'white' }}>
+            <div className="absolute left-1/2 transform -translate-x-1/2" style={{ top: '-12px' }}>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] inline-block px-3 py-1 rounded-full text-white whitespace-nowrap" style={{ backgroundColor: '#0F6E56', color: 'white' }}>
                 Most Popular
               </span>
             </div>
-            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-2 inline-block px-3 py-1 rounded-full mt-3" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
+            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
               Pro
             </span>
             <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-1" style={{ color: '#141C2E' }}>
@@ -81,9 +81,10 @@ export function PricingSection() {
             <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
               Enterprise
             </span>
-            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-4" style={{ color: '#141C2E' }}>
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-1" style={{ color: '#141C2E' }}>
               Custom
             </p>
+            <p className="text-xs text-muted-foreground mb-4">per month</p>
             <p className="text-sm font-semibold text-foreground mb-2">For firms processing 30+ supplements/month</p>
             <p className="text-sm text-muted-foreground">Volume pricing, custom terms, dedicated onboarding</p>
           </div>
