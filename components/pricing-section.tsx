@@ -34,9 +34,10 @@ export function PricingSection() {
             <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
               A La Carte
             </span>
-            <p className="text-3xl lg:text-4xl font-bold tracking-[-0.03em] font-serif mb-2" style={{ color: '#141C2E' }}>
-              $59/supplement
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-1" style={{ color: '#141C2E' }}>
+              $59
             </p>
+            <p className="text-xs text-muted-foreground mb-4">per supplement</p>
             <p className="text-sm font-semibold text-foreground mb-2">No subscription required</p>
             <p className="text-sm text-muted-foreground">Pay only for what you use, no commitment</p>
           </div>
@@ -46,7 +47,7 @@ export function PricingSection() {
             <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
               Starter
             </span>
-            <p className="text-3xl lg:text-4xl font-bold tracking-[-0.03em] font-serif mb-2" style={{ color: '#141C2E' }}>
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-2" style={{ color: '#141C2E' }}>
               $499/mo
             </p>
             <p className="text-sm font-semibold text-foreground mb-2">15 supplements included</p>
@@ -56,17 +57,14 @@ export function PricingSection() {
           {/* Pro - Most Popular */}
           <div
             className="border-2 rounded-lg p-6 flex flex-col bg-background relative"
-            style={{ borderColor: '#5DCAA5' }}
+            style={{ borderColor: '#0F6E56' }}
           >
             <div className="absolute -top-3 left-8">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] inline-block px-3 py-1 rounded-full bg-primary text-white" style={{ backgroundColor: '#5DCAA5', color: 'white' }}>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] inline-block px-3 py-1 rounded-full bg-primary text-white" style={{ backgroundColor: '#0F6E56', color: 'white' }}>
                 Most Popular
               </span>
             </div>
-            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full mt-3" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
-              Pro
-            </span>
-            <p className="text-3xl lg:text-4xl font-bold tracking-[-0.03em] font-serif mb-2" style={{ color: '#141C2E' }}>
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-2 mt-6" style={{ color: '#141C2E' }}>
               $899/mo
             </p>
             <p className="text-sm font-semibold text-foreground mb-2">30 supplements included</p>
@@ -78,7 +76,7 @@ export function PricingSection() {
             <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
               Enterprise
             </span>
-            <p className="text-3xl lg:text-4xl font-bold tracking-[-0.03em] font-serif mb-2" style={{ color: '#141C2E' }}>
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-2" style={{ color: '#141C2E' }}>
               Custom
             </p>
             <p className="text-sm font-semibold text-foreground mb-2">For firms processing 30+ supplements/month</p>
