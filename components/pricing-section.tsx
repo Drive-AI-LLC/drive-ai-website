@@ -47,9 +47,10 @@ export function PricingSection() {
             <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
               Starter
             </span>
-            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-2" style={{ color: '#141C2E' }}>
-              $499/mo
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-1" style={{ color: '#141C2E' }}>
+              $499
             </p>
+            <p className="text-xs text-muted-foreground mb-4">per month</p>
             <p className="text-sm font-semibold text-foreground mb-2">15 supplements included</p>
             <p className="text-sm text-muted-foreground">Additional supplements $49 each</p>
           </div>
@@ -64,9 +65,10 @@ export function PricingSection() {
                 Most Popular
               </span>
             </div>
-            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-2 mt-6" style={{ color: '#141C2E' }}>
-              $899/mo
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-1 mt-6" style={{ color: '#141C2E' }}>
+              $899
             </p>
+            <p className="text-xs text-muted-foreground mb-4">per month</p>
             <p className="text-sm font-semibold text-foreground mb-2">30 supplements included</p>
             <p className="text-sm text-muted-foreground">Additional supplements $42 each, unused supplements roll over</p>
           </div>
@@ -76,9 +78,10 @@ export function PricingSection() {
             <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
               Enterprise
             </span>
-            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-2" style={{ color: '#141C2E' }}>
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-1" style={{ color: '#141C2E' }}>
               Custom
             </p>
+            <p className="text-xs text-muted-foreground mb-4">pricing</p>
             <p className="text-sm font-semibold text-foreground mb-2">For firms processing 30+ supplements/month</p>
             <p className="text-sm text-muted-foreground">Volume pricing, custom terms, dedicated onboarding</p>
           </div>
