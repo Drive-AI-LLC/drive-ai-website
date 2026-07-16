@@ -28,18 +28,37 @@ export function PricingSection() {
         <div className="flex justify-center mb-10">
           <div
             ref={card.ref as React.RefObject<HTMLDivElement>}
-            className={`reveal ${card.visible ? "is-visible" : ""} border border-border/60 rounded-lg p-5 sm:p-6 lg:p-7 flex flex-col items-center text-center max-w-2xl w-full`}
+            className={`reveal ${card.visible ? "is-visible" : ""} border border-border/60 rounded-lg p-5 sm:p-6 lg:p-8 flex flex-col sm:flex-row max-w-2xl w-full`}
             style={{ backgroundColor: '#F7F8F8' }}
           >
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] mb-3 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
-              Per Supplement
-            </span>
-            <p className="text-5xl lg:text-6xl font-bold tracking-[-0.03em] font-serif mb-4" style={{ color: '#141C2E' }}>
-              $59
-            </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              No subscription. Pay only for what you use.
-            </p>
+            {/* Left column */}
+            <div className="flex flex-col items-start justify-center sm:pr-8 pb-5 sm:pb-0 sm:min-w-[180px]">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] mb-3 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#141C2E' }}>
+                Early Adopter Rate
+              </span>
+              <p className="text-5xl lg:text-6xl font-bold tracking-[-0.03em] font-serif mb-1" style={{ color: '#141C2E' }}>
+                $29
+              </p>
+              <p className="text-base lg:text-lg font-normal text-muted-foreground">
+                per supplement
+              </p>
+            </div>
+
+            {/* Divider */}
+            <div className="hidden sm:block w-px bg-border/60 self-stretch mx-2" />
+            <div className="block sm:hidden h-px bg-border/60 w-full mb-5" />
+
+            {/* Right column */}
+            <div className="flex flex-col justify-center sm:pl-8">
+              <ul className="space-y-3">
+                {["No subscription required", "First supplement free", "Rate locked in forever"].map((item) => (
+                  <li key={item} className="flex items-center gap-2.5 text-sm text-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: '#141C2E' }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
