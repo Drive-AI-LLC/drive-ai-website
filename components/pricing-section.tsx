@@ -21,7 +21,7 @@ export function PricingSection() {
             Simple pricing. Locked in forever.
           </h2>
           <p className="text-sm text-muted-foreground max-w-2xl">
-            Rates shown are for new sign-ups. Early adopters keep their original locked-in rate.
+            Your rate never increases. Whatever you pay on day one is your price for life.
           </p>
         </div>
 
