@@ -21,25 +21,72 @@ export function PricingSection() {
             Simple pricing. Locked in forever.
           </h2>
           <p className="text-sm text-muted-foreground max-w-2xl">
-            Lock in your rate today. Whatever you pay now is your price for life.
+            Your rate never increases. Whatever you pay on day one is your price for life.
           </p>
         </div>
 
-        <div className="flex justify-center mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-4 mb-12">
+          {/* A la Carte */}
           <div
             ref={card.ref as React.RefObject<HTMLDivElement>}
-            className={`reveal ${card.visible ? "is-visible" : ""} border border-border/60 rounded-lg p-5 sm:p-6 lg:p-7 flex flex-col items-center text-center max-w-2xl w-full`}
-            style={{ backgroundColor: '#F7F8F8' }}
+            className={`reveal ${card.visible ? "is-visible" : ""} border border-border/60 rounded-lg p-6 flex flex-col bg-background`}
           >
-            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] mb-3 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
-              Per Supplement
+            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
+              A La Carte
             </span>
-            <p className="text-5xl lg:text-6xl font-bold tracking-[-0.03em] font-serif mb-4" style={{ color: '#141C2E' }}>
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-1" style={{ color: '#141C2E' }}>
               $59
             </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              No subscription. Pay only for what you use.
+            <p className="text-xs text-muted-foreground mb-4">per supplement</p>
+            <p className="text-sm font-semibold text-foreground mb-2">No subscription required</p>
+            <p className="text-sm text-muted-foreground">Pay only for what you use, no commitment</p>
+          </div>
+
+          {/* Starter */}
+          <div className={`reveal ${card.visible ? "is-visible" : ""} border border-border/60 rounded-lg p-6 flex flex-col bg-background`}>
+            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
+              Starter
+            </span>
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-1" style={{ color: '#141C2E' }}>
+              $499
             </p>
+            <p className="text-xs text-muted-foreground mb-4">per month</p>
+            <p className="text-sm font-semibold text-foreground mb-2">15 supplements included</p>
+            <p className="text-sm text-muted-foreground">Additional supplements $49 each</p>
+          </div>
+
+          {/* Pro - Most Popular */}
+          <div
+            className="border-2 rounded-lg p-6 flex flex-col bg-background relative"
+            style={{ borderColor: '#0F6E56' }}
+          >
+            <div className="absolute left-1/2 transform -translate-x-1/2" style={{ top: '-12px' }}>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.2em] inline-block px-3 py-1 rounded-full text-white whitespace-nowrap" style={{ backgroundColor: '#0F6E56', color: 'white' }}>
+                Most Popular
+              </span>
+            </div>
+            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
+              Pro
+            </span>
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-1" style={{ color: '#141C2E' }}>
+              $899
+            </p>
+            <p className="text-xs text-muted-foreground mb-4">per month</p>
+            <p className="text-sm font-semibold text-foreground mb-2">30 supplements included</p>
+            <p className="text-sm text-muted-foreground">Additional supplements $42 each, unused supplements roll over</p>
+          </div>
+
+          {/* Enterprise */}
+          <div className={`reveal ${card.visible ? "is-visible" : ""} border border-border/60 rounded-lg p-6 flex flex-col bg-background`}>
+            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] mb-4 inline-block px-3 py-1 rounded-full" style={{ backgroundColor: '#E8F3ED', color: '#2D5A3D' }}>
+              Enterprise
+            </span>
+            <p className="text-2xl font-bold tracking-[-0.03em] font-serif mb-1" style={{ color: '#141C2E' }}>
+              Custom
+            </p>
+            <p className="text-xs text-muted-foreground mb-4">per month</p>
+            <p className="text-sm font-semibold text-foreground mb-2">For firms processing 30+ supplements/month</p>
+            <p className="text-sm text-muted-foreground">Volume pricing, custom terms, dedicated onboarding</p>
           </div>
         </div>
 
