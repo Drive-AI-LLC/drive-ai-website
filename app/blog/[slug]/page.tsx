@@ -66,7 +66,7 @@ const blogPosts: Record<string, {
 
         <h2>Why the Framing Matters</h2>
         <p>
-          When you send a revised estimate without explanation, the adjuster has to go line by line comparing it to their original to figure out what changed. This work often falls to a junior staff member, and errors are common. Items get missed, math gets questioned, and the process drags on.
+          When you send a revised estimate without explanation, the adjuster has to go line by line comparing it to their original to figure out what changed. This work can fall through the cracks. Items get missed, math gets questioned, and the process drags on.
         </p>
         <p>
           When you send a proper supplement package, you're doing that work for them. You're saying "here's what was in the original, and here's what we found that needs to be added." This framing is more efficient and more persuasive. You're not arguing about the original scope; you're adding to it.
@@ -74,7 +74,7 @@ const blogPosts: Record<string, {
 
         <h2>The Adjuster's Perspective</h2>
         <p>
-          From the adjuster's side, a revised estimate feels like the contractor is questioning their work. It triggers a re-evaluation of everything. A supplement feels like new information that has come to light, which is a different mental frame. They're more likely to approve items quickly if they're clearly presented as additions rather than revisions.
+          From the adjuster's side, a revised estimate feels like the contractor is questioning their work. It triggers a re-evaluation of everything. A supplement feels like new information that has come to light, which is a different mental frame. They tend to move through additions faster when items are clearly presented that way, rather than as revisions.
         </p>
         <p>
           This isn't about tricking the adjuster. It's about using language and structure to accurately represent what actually happened. Most supplements are legitimate. Items were missed initially, damage was discovered during removal, or code requirements became clear once work started. Framing the submission appropriately reflects that reality.
@@ -90,7 +90,7 @@ const blogPosts: Record<string, {
 
         <h2>The Bottom Line</h2>
         <p>
-          A supplement package is a specific document type with specific requirements. It's not just a revised estimate by another name. When you understand the difference and submit supplements properly, the process moves faster and the approval rate goes up.
+          A supplement package is a specific document type with specific requirements. It's not just a revised estimate by another name. When you understand the difference and submit supplements properly, the process tends to move faster and with less back and forth.
         </p>
         <p>
           The key is clarity: be explicit about what's new, provide supporting evidence, and make the math easy for the adjuster to follow. That structure, more than anything else, determines whether your addition gets approved smoothly or gets caught up in back-and-forth correspondence.
