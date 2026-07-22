@@ -85,7 +85,7 @@ const blogPosts: Record<string, {
           Submit a revised estimate only if the original scope was fundamentally wrong and needs to be replaced entirely. This is rare. Most of the time, you're adding items, not replacing the original proposal.
         </p>
         <p>
-          Use a supplement package for everything else: items discovered during the work, code upgrades, permit fees, unforeseen damage, or anything that adds to the original scope. Structure it properly with supporting documentation, and you're far more likely to get approval without delays or pushback.
+          Use a supplement package for everything else: items discovered during the work, code upgrades, permit fees, unforeseen damage, or anything that adds to the original scope. Structure it properly with supporting documentation, and you'll generally see fewer delays and less pushback.
         </p>
 
         <h2>The Bottom Line</h2>
