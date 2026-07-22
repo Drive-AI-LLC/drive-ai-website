@@ -21,6 +21,14 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "estimate-vs-supplement-package",
+    title: "The Difference Between an Estimate and a Supplement Package",
+    excerpt: "Sending a revised estimate isn't the same as sending a proper supplement package. Here's what a complete submission actually includes and why it matters.",
+    category: "Supplements",
+    date: "July 21, 2026",
+    image: "/images/blog/estimate-vs-supplement-package.png",
+  },
+  {
     slug: "permit-fees-code-upgrades-insurance-claims",
     title: "Permit Fees and Code Upgrades: What You're Likely Leaving Off Your Estimate",
     excerpt: "Permit fees and code-required upgrades are legitimate claim items that often get missed. Here's how to document and include them.",

@@ -14,6 +14,90 @@ const blogPosts: Record<string, {
   image: string
   content: React.ReactNode
 }> = {
+  "estimate-vs-supplement-package": {
+    title: "The Difference Between an Estimate and a Supplement Package",
+    excerpt: "Sending a revised estimate isn't the same as sending a proper supplement package. Here's what a complete submission actually includes and why it matters.",
+    category: "Supplements",
+    date: "July 21, 2026",
+    image: "/images/blog/estimate-vs-supplement-package.png",
+    content: (
+      <>
+        <p>
+          Most contractors use the words "estimate" and "supplement" interchangeably. The insurance industry doesn't. Understanding the difference is critical, because adjusters treat submissions differently depending on what they're called, and the difference can cost you money.
+        </p>
+        <p>
+          A revised estimate and a supplement package look similar at first glance, but they're fundamentally different documents with different purposes. Here's what separates them and why it matters to your claim.
+        </p>
+
+        <h2>What an Estimate Is</h2>
+        <p>
+          An estimate is a contractor's proposed cost for completing a specific scope of work. It's typically the document you provide to a homeowner before starting a job, and it's what the original adjuster creates for the insurance claim. An estimate stands alone. It's a complete proposal.
+        </p>
+        <p>
+          When you send a "revised estimate" to an adjuster, you're proposing an entirely new scope. The adjuster will often treat it as a replacement for the original estimate rather than an addition to it. They'll compare your revised estimate to their original, identify the differences, and evaluate whether those differences are justified.
+        </p>
+
+        <h2>What a Supplement Package Is</h2>
+        <p>
+          A supplement package is different. It's explicitly submitted as additional work that wasn't included in the original estimate. It's framed as an addition, not a replacement. When structured properly, a supplement acknowledges the original estimate as valid and adds to it, rather than questioning it.
+        </p>
+        <p>
+          A proper supplement package includes more than just a price revision. It includes supporting documentation, photos, explanations, code citations, permit quotes, or whatever evidence is necessary to justify why the new items should be added to the claim. It's a proposal plus the case for the proposal.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            The way you frame your submission affects how the adjuster approaches it. Revised estimates invite re-evaluation of the entire scope. Supplements invite evaluation of additions. The framing matters more than you might think.
+          </p>
+        </div>
+
+        <h2>What Should Be in a Supplement Package</h2>
+        <p>
+          A complete supplement package isn't just a new price. It includes:
+        </p>
+        <ul>
+          <li><strong>A cover letter.</strong> This should clearly state that you're submitting supplemental items not included in the original estimate. Be specific about what's being added and why.</li>
+          <li><strong>Itemized line items.</strong> List each new item with material, quantity, unit price, and total. Don't lump additions together. Clarity helps.</li>
+          <li><strong>Supporting documentation.</strong> Include whatever justifies the addition. Photos showing the damage, permit quotes, code excerpts, or the explanation of why the item became necessary during the repair.</li>
+          <li><strong>A reference to the original estimate.</strong> Make it clear which items are from the original estimate and which are new. This prevents confusion.</li>
+          <li><strong>A revised total.</strong> Show the original estimate total, the supplemental addition, and the new grand total so the math is transparent.</li>
+        </ul>
+
+        <h2>Why the Framing Matters</h2>
+        <p>
+          When you send a revised estimate without explanation, the adjuster has to go line by line comparing it to their original to figure out what changed. This work can fall through the cracks. Items get missed, math gets questioned, and the process drags on.
+        </p>
+        <p>
+          When you send a proper supplement package, you're doing that work for them. You're saying "here's what was in the original, and here's what we found that needs to be added." This framing is more efficient and more persuasive. You're not arguing about the original scope; you're adding to it.
+        </p>
+
+        <h2>The Adjuster's Perspective</h2>
+        <p>
+          From the adjuster's side, a revised estimate feels like the contractor is questioning their work. It triggers a re-evaluation of everything. A supplement feels like new information that has come to light, which is a different mental frame. They tend to move through additions faster when items are clearly presented that way, rather than as revisions.
+        </p>
+        <p>
+          This isn't about tricking the adjuster. It's about using language and structure to accurately represent what actually happened. Most supplements are legitimate. Items were missed initially, damage was discovered during removal, or code requirements became clear once work started. Framing the submission appropriately reflects that reality.
+        </p>
+
+        <h2>When to Use an Estimate vs. a Supplement</h2>
+        <p>
+          Submit a revised estimate only if the original scope was fundamentally wrong and needs to be replaced entirely. This is rare. Most of the time, you're adding items, not replacing the original proposal.
+        </p>
+        <p>
+          Use a supplement package for everything else: items discovered during the work, code upgrades, permit fees, unforeseen damage, or anything that adds to the original scope. Structure it properly with supporting documentation, and you'll generally see fewer delays and less pushback.
+        </p>
+
+        <h2>The Bottom Line</h2>
+        <p>
+          A supplement package is a specific document type with specific requirements. It's not just a revised estimate by another name. When you understand the difference and submit supplements properly, the process tends to move faster and with less back and forth.
+        </p>
+        <p>
+          The key is clarity: be explicit about what's new, provide supporting evidence, and make the math easy for the adjuster to follow. That structure, more than anything else, determines whether your addition gets approved smoothly or gets caught up in back-and-forth correspondence.
+        </p>
+      </>
+    ),
+  },
   "permit-fees-code-upgrades-insurance-claims": {
     title: "Permit Fees and Code Upgrades: What You're Likely Leaving Off Your Estimate",
     excerpt: "Permit fees and code-required upgrades are legitimate claim items that often get missed. Here's how to document and include them.",
