@@ -14,6 +14,86 @@ const blogPosts: Record<string, {
   image: string
   content: React.ReactNode
 }> = {
+  "how-to-handle-partial-supplement-approval": {
+    title: "How to Handle a Partial Approval on a Supplement",
+    excerpt: "When a carrier approves some line items and denies others, most contractors take what they get. Here's how to professionally push back on the rest.",
+    category: "Supplements",
+    date: "July 28, 2026",
+    image: "/images/blog/how-to-handle-partial-approval.png",
+    content: (
+      <>
+        <p>
+          A partial approval on a supplement feels like a half-win. The carrier approved some items, denied others, and gave you a check for something less than you submitted. Most contractors cash the check and move on. That's leaving money on the table.
+        </p>
+        <p>
+          A partial approval isn't a final answer. It's an opening to a conversation. Here's how to approach the denials professionally and get the rest of what you submitted.
+        </p>
+
+        <h2>Why Carriers Partially Approve</h2>
+        <p>
+          Adjusters don't partially approve supplements to be difficult. They do it because they're uncertain about specific items or they need more information. An adjuster who approves 80 percent of your supplement is signaling that they found your documentation and presentation credible for those items. The ones they denied need more work, not acceptance.
+        </p>
+        <p>
+          Common reasons for partial denials include insufficient documentation, unclear line item descriptions, questions about whether an item is code-required, uncertainty about the price, or whether the damage actually justifies the item. None of these are reasons to accept the denial. They're reasons to provide more information.
+        </p>
+
+        <h2>Don't Accept the Partial Approval Silently</h2>
+        <p>
+          When you get a partial approval, the adjuster's letter or email typically explains what was approved and what wasn't. Read the rejection reasons carefully. If the adjuster says "insufficient documentation" or "not clearly code-required," they're telling you exactly what's missing. Your job is to provide it.
+        </p>
+        <p>
+          Don't respond to a partial approval by saying "okay, thanks." Send a follow-up message within a few days acknowledging the approved items and indicating that you'll be resubmitting the denied items with additional documentation. This signals that you're not done and keeps the conversation active.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            The longer you wait after a partial approval to resubmit, the easier it is for the claim to stall. Move quickly while the claim is still active in the adjuster's workflow.
+          </p>
+        </div>
+
+        <h2>Gather the Missing Documentation</h2>
+        <p>
+          For each denied item, figure out why it was denied and what would change the adjuster's mind. If the line item is for code-required work and the adjuster said it wasn't justified, pull the actual code section and include it. If the price was questioned, get a quote from a supplier or another contractor to support the number. If the item was dismissed as contractor overhead, explain why it's a legitimate claim cost tied directly to the damage.
+        </p>
+        <p>
+          The key is to respond to the specific objection, not to restate what you already submitted. If the adjuster said they needed better documentation, don't send the same documentation again. Send something different that actually addresses the concern.
+        </p>
+
+        <h2>Submit a Formal Resubmittal</h2>
+        <p>
+          Don't email the additional documentation as an attachment or a message. Submit it as a formal supplemental resubmittal, the same way you submitted the original supplement. Use a cover letter that explicitly references the partial approval and lists each denied item with the new supporting information.
+        </p>
+        <p>
+          Structure it like this: "In response to your partial approval dated [date], we are resubmitting the following denied items with additional documentation." Then list each item number, the original amount, the reason for denial (as stated by the adjuster), and the new supporting documentation. Make it easy for the adjuster to process.
+        </p>
+
+        <h2>Know When It's Time to Escalate</h2>
+        <p>
+          Sometimes additional documentation isn't enough. You provide code citations and the adjuster still says the upgrade isn't code-required. You provide supplier quotes and they say the price is too high. At that point, you're not dealing with a documentation issue. You're dealing with a disagreement about the claim.
+        </p>
+        <p>
+          This is when you escalate. Request a supervisor review or ask for a formal appeal process. Some carriers have specific procedures for appealing partial approvals. Know what yours requires and use it. Many contractors don't escalate because they assume it won't help. That assumption costs them money.
+        </p>
+
+        <h2>The Insurance Claim Is Not a Negotiation</h2>
+        <p>
+          One mental shift that helps: your claim isn't a negotiation where you split the difference. The insurance contract covers certain damages and costs. Either an item is covered or it isn't. Either the damage actually occurred or it didn't. Either the code requires an upgrade or it doesn't. These aren't judgment calls where partial approval is acceptable.
+        </p>
+        <p>
+          When a carrier partially approves a supplement, they're signaling uncertainty on specific items. Your job is to resolve that uncertainty, not to accept it. The partial approval is an invitation to provide more information, not a final decision.
+        </p>
+
+        <h2>The Bottom Line</h2>
+        <p>
+          Partial approvals happen because adjusters need more information or documentation to make a decision. This is fixable. The items the adjuster approved prove that they found your submission credible on most counts. The denied items just need better support.
+        </p>
+        <p>
+          Don't cash the check and move on. Respond promptly, gather the specific documentation the adjuster's rejection implies is missing, resubmit it formally, and escalate if necessary. Most contractors leave money on the table on partial approvals simply because they accept the first answer. You don't have to.
+        </p>
+      </>
+    ),
+  },
   "estimate-vs-supplement-package": {
     title: "The Difference Between an Estimate and a Supplement Package",
     excerpt: "Sending a revised estimate isn't the same as sending a proper supplement package. Here's what a complete submission actually includes and why it matters.",

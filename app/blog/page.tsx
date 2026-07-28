@@ -21,6 +21,14 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "how-to-handle-partial-supplement-approval",
+    title: "How to Handle a Partial Approval on a Supplement",
+    excerpt: "When a carrier approves some line items and denies others, most contractors take what they get. Here's how to professionally push back on the rest.",
+    category: "Supplements",
+    date: "July 28, 2026",
+    image: "/images/blog/how-to-handle-partial-approval.png",
+  },
+  {
     slug: "estimate-vs-supplement-package",
     title: "The Difference Between an Estimate and a Supplement Package",
     excerpt: "Sending a revised estimate isn't the same as sending a proper supplement package. Here's what a complete submission actually includes and why it matters.",
