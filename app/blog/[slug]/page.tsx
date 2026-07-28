@@ -31,7 +31,7 @@ const blogPosts: Record<string, {
 
         <h2>Why Carriers Partially Approve</h2>
         <p>
-          Adjusters don't partially approve supplements to be difficult. They do it because they're uncertain about specific items or they need more information. An adjuster who approves 80 percent of your supplement is signaling that they found your documentation and presentation credible for those items. The ones they denied need more work, not acceptance.
+          Adjusters don't partially approve supplements to be difficult. They do it because they're uncertain about specific items or they need more information. An adjuster who approves most of your supplement is signaling that they found your documentation and presentation credible for those items. The ones they denied need more work, not acceptance.
         </p>
         <p>
           Common reasons for partial denials include insufficient documentation, unclear line item descriptions, questions about whether an item is code-required, uncertainty about the price, or whether the damage actually justifies the item. None of these are reasons to accept the denial. They're reasons to provide more information.
@@ -68,17 +68,17 @@ const blogPosts: Record<string, {
           Structure it like this: "In response to your partial approval dated [date], we are resubmitting the following denied items with additional documentation." Then list each item number, the original amount, the reason for denial (as stated by the adjuster), and the new supporting documentation. Make it easy for the adjuster to process.
         </p>
 
-        <h2>Know When It's Time to Escalate</h2>
+        <h2>Know When to Keep Pushing</h2>
         <p>
           Sometimes additional documentation isn't enough. You provide code citations and the adjuster still says the upgrade isn't code-required. You provide supplier quotes and they say the price is too high. At that point, you're not dealing with a documentation issue. You're dealing with a disagreement about the claim.
         </p>
         <p>
-          This is when you escalate. Request a supervisor review or ask for a formal appeal process. Some carriers have specific procedures for appealing partial approvals. Know what yours requires and use it. Many contractors don't escalate because they assume it won't help. That assumption costs them money.
+          This is when it's worth requesting a supervisor review or asking about the carrier's formal appeal process. Some carriers have specific procedures for this. Know what yours requires and use it. Many contractors skip this step because they assume it won't help, but it often does.
         </p>
 
         <h2>The Insurance Claim Is Not a Negotiation</h2>
         <p>
-          One mental shift that helps: your claim isn't a negotiation where you split the difference. The insurance contract covers certain damages and costs. Either an item is covered or it isn't. Either the damage actually occurred or it didn't. Either the code requires an upgrade or it doesn't. These aren't judgment calls where partial approval is acceptable.
+          One mental shift that helps: the goal isn't to split the difference, it's to get to an accurate scope. The insurance contract covers certain damages and costs. An item is either covered or it isn't, the damage either occurred or it didn't, and the code either requires an upgrade or it doesn't. Partial approval usually means there's still information needed to answer those questions clearly.
         </p>
         <p>
           When a carrier partially approves a supplement, they're signaling uncertainty on specific items. Your job is to resolve that uncertainty, not to accept it. The partial approval is an invitation to provide more information, not a final decision.
