@@ -1530,7 +1530,7 @@ export default async function BlogPostPage({
         <section className="pb-12 lg:pb-20">
           <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h2 className="text-2xl sm:text-3xl font-bold font-serif text-foreground mb-8 pb-2 border-b border-border">
+              <h2 className="text-lg sm:text-xl font-bold font-serif text-foreground mb-6 pb-2 border-b border-border">
                 Frequently Asked Questions
               </h2>
 
@@ -1576,7 +1576,7 @@ export default async function BlogPostPage({
       {post.relatedPosts && post.relatedPosts.length > 0 && (
         <section className="pb-20 lg:pb-28">
           <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-foreground mb-8 pb-2 border-b border-border">
+            <h2 className="text-lg sm:text-xl font-bold font-serif text-foreground mb-6 pb-2 border-b border-border">
               Keep Reading
             </h2>
 
@@ -1590,16 +1590,6 @@ export default async function BlogPostPage({
                     key={relatedSlug}
                     className="group bg-background border border-border/50 rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-foreground/[0.03] hover:border-border transition-all duration-300"
                   >
-                    {/* Featured Image */}
-                    <div className="aspect-[16/10] bg-muted relative overflow-hidden">
-                      <Image
-                        src={relatedPost.image}
-                        alt={relatedPost.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-
                     {/* Content */}
                     <div className="p-5">
                       {/* Category & Date */}
