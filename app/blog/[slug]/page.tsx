@@ -112,6 +112,11 @@ const blogPosts: Record<string, {
         question: "Can I use Xactimate pricing discrepancies in my favor?",
         answer: "Yes—if there have been monthly updates since the original estimate, you have leverage. When submitting supplements with different pricing, cite the updated price list to frame the difference as market reality, not contractor inflation."
       }
+    ],
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "how-to-handle-partial-supplement-approval",
+      "permit-fees-code-upgrades-insurance-claims"
     ]
   },
   "how-to-handle-partial-supplement-approval": {
@@ -210,6 +215,11 @@ const blogPosts: Record<string, {
         question: "What if the adjuster keeps denying items even after I provide more documentation?",
         answer: "Request a supervisor review or ask about the carrier's formal appeal process. Many contractors skip escalation assuming it won't help, but it often does."
       }
+    ],
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "what-xactimate-pricing-means",
+      "permit-fees-code-upgrades-insurance-claims"
     ]
   },
   "estimate-vs-supplement-package": {
@@ -311,6 +321,11 @@ const blogPosts: Record<string, {
         question: "Can supplements be denied if they're properly structured?",
         answer: "Proper structure and documentation don't guarantee approval, but they make the process more efficient and reduce delays and pushback from adjusters."
       }
+    ],
+    relatedPosts: [
+      "how-to-handle-partial-supplement-approval",
+      "permit-fees-code-upgrades-insurance-claims",
+      "what-xactimate-pricing-means"
     ]
   },
   "permit-fees-code-upgrades-insurance-claims": {
@@ -410,6 +425,11 @@ const blogPosts: Record<string, {
         question: "What's the best way to argue for code-required items when adjusters question them?",
         answer: "Frame it as 'this isn't optional—the code requires it'—not as an upgrade request. Show the code requirement, explain how the damage triggered it, and document the cost to comply."
       }
+    ],
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "how-to-handle-partial-supplement-approval",
+      "what-xactimate-pricing-means"
     ]
   },
   "how-to-read-adjuster-estimate": {
