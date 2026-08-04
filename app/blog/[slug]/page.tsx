@@ -95,6 +95,24 @@ const blogPosts: Record<string, {
         </p>
       </>
     ),
+    faqs: [
+      {
+        question: "Are Xactimate prices the same everywhere?",
+        answer: "No, Xactimate prices vary by region to account for differences in material and labor costs. A bundle of shingles in a low-cost rural market can run significantly less than the same bundle in a major metro area."
+      },
+      {
+        question: "How often do Xactimate prices update?",
+        answer: "General pricing updates are published monthly, while vendor-specific pricing data updates nightly, so prices can shift many times throughout the year."
+      },
+      {
+        question: "Why does the adjuster's Xactimate version matter?",
+        answer: "The adjuster's estimate was created with a specific monthly price list. If you submit a supplement months later, you might be using several updates ahead, creating a pricing mismatch that makes your prices look high."
+      },
+      {
+        question: "Can I use Xactimate pricing discrepancies in my favor?",
+        answer: "Yes—if there have been monthly updates since the original estimate, you have leverage. When submitting supplements with different pricing, cite the updated price list to frame the difference as market reality, not contractor inflation."
+      }
+    ]
   },
   "how-to-handle-partial-supplement-approval": {
     title: "How to Handle a Partial Approval on a Supplement",
@@ -171,10 +189,28 @@ const blogPosts: Record<string, {
           Partial approvals happen because adjusters need more information or documentation to make a decision. This is fixable. The items the adjuster approved prove that they found your submission credible on most counts. The denied items just need better support.
         </p>
         <p>
-          Don't cash the check and move on. Respond promptly, gather the specific documentation the adjuster's rejection implies is missing, resubmit it formally, and escalate if necessary. Most contractors leave money on the table on partial approvals simply because they accept the first answer. You don't have to.
+          Don't cash the check and move on. Respond promptly, gather the specific documentation the adjuster's rejection implies is missing, resubmit it formally, and escalate if necessary.           Most contractors leave money on the table on partial approvals simply because they accept the first answer. You don't have to.
         </p>
       </>
     ),
+    faqs: [
+      {
+        question: "What does a partial approval mean?",
+        answer: "A partial approval means the carrier approved some line items and denied others, usually because they're uncertain about specific items or need more information."
+      },
+      {
+        question: "Should I accept a partial approval and move on?",
+        answer: "No—a partial approval signals that the adjuster found most of your submission credible. The denied items simply need more work and supporting documentation."
+      },
+      {
+        question: "How quickly should I respond to a partial approval?",
+        answer: "Move quickly while the claim is still active in the adjuster's workflow. Respond within a few days and indicate you'll be resubmitting the denied items with additional documentation."
+      },
+      {
+        question: "What if the adjuster keeps denying items even after I provide more documentation?",
+        answer: "Request a supervisor review or ask about the carrier's formal appeal process. Many contractors skip escalation assuming it won't help, but it often does."
+      }
+    ]
   },
   "estimate-vs-supplement-package": {
     title: "The Difference Between an Estimate and a Supplement Package",
@@ -255,10 +291,27 @@ const blogPosts: Record<string, {
           A supplement package is a specific document type with specific requirements. It's not just a revised estimate by another name. When you understand the difference and submit supplements properly, the process tends to move faster and with less back and forth.
         </p>
         <p>
-          The key is clarity: be explicit about what's new, provide supporting evidence, and make the math easy for the adjuster to follow. That structure, more than anything else, determines whether your addition gets approved smoothly or gets caught up in back-and-forth correspondence.
-        </p>
+          The key is clarity: be explicit about what's new, provide supporting evidence, and make the math easy for the adjuster to follow. That structure, more than anything else, determines whether your addition gets approved smoothly or gets caught up in back-and-forth correspondence.</p>
       </>
     ),
+    faqs: [
+      {
+        question: "What's the difference between a revised estimate and a supplement?",
+        answer: "A revised estimate proposes an entirely new scope and triggers re-evaluation of everything, while a supplement acknowledges the original estimate as valid and adds to it."
+      },
+      {
+        question: "Why does framing matter when submitting additional work?",
+        answer: "Adjusters are more likely to move through additions faster when items are clearly presented as additions rather than revisions. It signals new information rather than questioning their original work."
+      },
+      {
+        question: "What should a complete supplement package include?",
+        answer: "A cover letter stating this is supplemental work, itemized line items, supporting documentation (photos, code excerpts, permit quotes), a reference to the original estimate, and a revised total."
+      },
+      {
+        question: "Can supplements be denied if they're properly structured?",
+        answer: "Proper structure and documentation don't guarantee approval, but they make the process more efficient and reduce delays and pushback from adjusters."
+      }
+    ]
   },
   "permit-fees-code-upgrades-insurance-claims": {
     title: "Permit Fees and Code Upgrades: What You're Likely Leaving Off Your Estimate",
@@ -344,6 +397,20 @@ const blogPosts: Record<string, {
         </p>
       </>
     ),
+    faqs: [
+      {
+        question: "Are permit fees a legitimate claim item?",
+        answer: "Yes—permit fees are costs directly tied to the loss and didn't exist before the claim occurred, making them insurable and separate from contractor overhead."
+      },
+      {
+        question: "How do I document that code upgrades are required?",
+        answer: "Pull the actual code section requiring the upgrade and include it in your supplement. Link the specific code requirement to the damage that triggered the upgrade."
+      },
+      {
+        question: "What's the best way to argue for code-required items when adjusters question them?",
+        answer: "Frame it as 'this isn't optional—the code requires it'—not as an upgrade request. Show the code requirement, explain how the damage triggered it, and document the cost to comply."
+      }
+    ]
   },
   "how-to-read-adjuster-estimate": {
     title: "How to Read an Adjuster's Estimate Line by Line",
