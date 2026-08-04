@@ -7,6 +7,40 @@ import { ChevronDown } from 'lucide-react'
 
 const mentorMessages = [
   {
+    month: 'July 2026',
+    sections: [
+      {
+        title: 'Finalized Our Ideal Customer',
+        content: 'After two months of discovery calls and research, we\'ve landed on our ideal customers: roofing companies and public/fractional supplementers who already use Xactimate.'
+      },
+      {
+        title: 'A Quick Note on Xactimate',
+        content: 'Since we just mentioned Xactimate, and we\'ll bring it up again below, it\'s worth a quick explanation. Xactimate is the software most insurance carriers and contractors use to price out repair work. It\'s essentially where the official cost data for materials and labor lives. It is what determines how much a claim is worth. Symbility is a second, less common platform that some carriers use instead. Both platforms are important integrations that can take our product to the next level.'
+      },
+      {
+        title: 'Product',
+        content: 'Most of our time this past month has been spent on the product. We have done the following:',
+        points: [
+          'Prioritization: Narrowed down the features that matter most for our ICP, and cut ones that weren\'t impactful',
+          'Bug Fixes: Resolved a production issue that had been blocking new sign-ups',
+          '98% There: The app is almost out of waitlist mode and open to new users again'
+        ]
+      },
+      {
+        title: 'Revenue Runway Cohort',
+        content: 'We officially graduated from the Revenue Runway Founder Cohort this month. Looking back, it was a phenomenal experience. Three months of testing our ideas alongside other early-stage founders sharpened how we think about ICP, revenue, and building with intention. It\'s easily been one of the most valuable resources we\'ve had this summer.'
+      },
+      {
+        title: 'Our Roadmap',
+        content: 'As we look ahead, we\'re thinking about our roadmap in tiers. Deeper integrations like Xactimate and Symbility aren\'t required to get value from the product today, but they\'re upgrades that will make the product more powerful over time and open it up to an even wider set of contractors and supplementers who aren\'t in our reach yet. In other words, what we\'re building now works, and what we build next just grows how many people it can work for.'
+      },
+      {
+        title: 'What\'s Ahead',
+        content: 'In August, Danika heads to Madrid for a semester of study abroad, and Reid returns to Clemson. Danika will stay closely involved, but Reid will be stepping into more of the hands-on day-to-day role this fall as we head back to school.'
+      }
+    ]
+  },
+  {
     month: 'June 2026',
     sections: [
       {
