@@ -13,6 +13,8 @@ const blogPosts: Record<string, {
   date: string
   image: string
   content: React.ReactNode
+  faqs?: Array<{ question: string; answer: string }>
+  relatedPosts?: string[]
 }> = {
   "what-xactimate-pricing-means": {
     title: "What Xactimate Pricing Actually Means and Why It Changes",
@@ -1422,7 +1424,7 @@ export default async function BlogPostPage({
       </section>
 
       {/* Article Body */}
-      <section className="pb-20 lg:pb-28">
+      <section className="pb-12 lg:pb-20">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           <article className="max-w-3xl
             [&>p]:text-base [&>p]:text-muted-foreground [&>p]:leading-[1.85] [&>p]:mb-6
@@ -1435,6 +1437,113 @@ export default async function BlogPostPage({
           </article>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {post.faqs && post.faqs.length > 0 && (
+        <section className="pb-12 lg:pb-20">
+          <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <h2 className="text-2xl sm:text-3xl font-bold font-serif text-foreground mb-8 pb-2 border-b border-border">
+                Frequently Asked Questions
+              </h2>
+
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": post.faqs.map(faq => ({
+                      "@type": "Question",
+                      "name": faq.question,
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                      }
+                    }))
+                  })
+                }}
+              />
+
+              <div className="space-y-4">
+                {post.faqs.map((faq, idx) => (
+                  <details key={idx} className="border border-border rounded-lg p-4 cursor-pointer group hover:bg-muted/30 transition-colors">
+                    <summary className="font-serif font-semibold text-foreground text-base leading-relaxed flex justify-between items-start select-none">
+                      {faq.question}
+                      <span className="ml-4 text-primary group-open:rotate-180 transition-transform duration-200 flex-shrink-0">
+                        ▼
+                      </span>
+                    </summary>
+                    <p className="mt-4 text-muted-foreground text-base leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related Posts Section */}
+      {post.relatedPosts && post.relatedPosts.length > 0 && (
+        <section className="pb-20 lg:pb-28">
+          <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-foreground mb-8 pb-2 border-b border-border">
+              Keep Reading
+            </h2>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {post.relatedPosts.map((relatedSlug) => {
+                const relatedPost = blogPosts[relatedSlug]
+                if (!relatedPost) return null
+
+                return (
+                  <article
+                    key={relatedSlug}
+                    className="group bg-background border border-border/50 rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-foreground/[0.03] hover:border-border transition-all duration-300"
+                  >
+                    {/* Featured Image */}
+                    <div className="aspect-[16/10] bg-muted relative overflow-hidden">
+                      <Image
+                        src={relatedPost.image}
+                        alt={relatedPost.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-5">
+                      {/* Category & Date */}
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-xs font-medium uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                          {relatedPost.category}
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          {relatedPost.date}
+                        </span>
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-lg font-semibold text-foreground mb-2 leading-tight group-hover:text-primary transition-colors duration-200">
+                        <Link href={`/blog/${relatedSlug}`}>
+                          {relatedPost.title}
+                        </Link>
+                      </h3>
+
+                      {/* Excerpt */}
+                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                        {relatedPost.excerpt}
+                      </p>
+                    </div>
+                  </article>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       <CTASection
         headline="Explore what's next for roofing operations."
