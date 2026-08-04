@@ -84,11 +84,16 @@ export default function MentorMessagesPage() {
       <div className="flex-grow">
         <section className="pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 lg:pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-serif mb-4" style={{ color: '#141C2E' }}>
-            Mentor Updates
+            Monthly Mentor Messages
           </h1>
-          <p className="text-base sm:text-lg text-muted-foreground mb-12">
-            Monthly updates from the Drive AI team on company progress, learnings, and direction.
-          </p>
+          <div className="mb-12">
+            <p className="text-base sm:text-lg text-muted-foreground mb-2">
+              These are written by Reid and Danika, sharing Drive AI's progress.
+            </p>
+            <p className="text-base sm:text-lg text-muted-foreground">
+              We're grateful to have mentors like you in our corner. Thanks for following along.
+            </p>
+          </div>
 
           <div className="space-y-4">
             {mentorMessages.map((message, idx) => (
