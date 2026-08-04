@@ -434,6 +434,11 @@ const blogPosts: Record<string, {
   },
   "how-to-read-adjuster-estimate": {
     title: "How to Read an Adjuster's Estimate Line by Line",
+    relatedPosts: [
+      "most-commonly-missed-line-items-roofing-claims",
+      "why-op-is-the-most-argued-line-item",
+      "what-xactimate-pricing-means"
+    ],
     excerpt: "Most roofing contractors glance at the bottom line. Here's how to read the full estimate, spot what's missing, and know exactly what to submit.",
     category: "Supplements",
     date: "July 7, 2026",
@@ -517,6 +522,11 @@ const blogPosts: Record<string, {
   },
   "recoverable-vs-non-recoverable-depreciation": {
     title: "Understanding Depreciation: Recoverable vs. Non-Recoverable",
+    relatedPosts: [
+      "how-to-read-adjuster-estimate",
+      "why-roofing-companies-leave-money-on-the-table",
+      "most-commonly-missed-line-items-roofing-claims"
+    ],
     excerpt: "Carriers hold back depreciation on almost every claim. Here's how it works, what you can recover, and how to make sure your customers get what they're owed.",
     category: "Supplements",
     date: "June 30, 2026",
@@ -591,6 +601,11 @@ const blogPosts: Record<string, {
   },
   "how-roofing-companies-use-ai-for-supplements": {
     title: "How Roofing Companies Are Using AI to Speed Up the Supplement Process",
+    relatedPosts: [
+      "how-to-write-a-supplement-adjusters-approve",
+      "most-commonly-missed-line-items-roofing-claims",
+      "why-roofing-companies-leave-money-on-the-table"
+    ],
     excerpt: "From identifying missed line items to generating documentation, AI is changing how contractors approach insurance claims. Here's what that looks like in practice.",
     category: "Industry Trends",
     date: "June 23, 2026",
@@ -663,6 +678,11 @@ const blogPosts: Record<string, {
   },
   "what-to-do-when-adjuster-denies-supplement": {
     title: "What to Do When an Adjuster Denies Your Supplement",
+    relatedPosts: [
+      "how-to-handle-partial-supplement-approval",
+      "estimate-vs-supplement-package",
+      "supplement-email-to-adjuster"
+    ],
     excerpt: "A denial isn't the end of the road. Here's how to respond professionally, escalate when necessary, and get underpaid items reconsidered.",
     category: "Supplements",
     date: "June 16, 2026",
@@ -749,6 +769,11 @@ const blogPosts: Record<string, {
   },
   "supplement-email-to-adjuster": {
     title: "How to Write a Supplement Email That Gets a Response",
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "how-to-write-a-supplement-adjusters-approve",
+      "what-to-do-when-adjuster-denies-supplement"
+    ],
     excerpt: "Most supplement emails get ignored. Here's how to write one that's professional, specific, and actually moves the claim forward.",
     category: "Supplements",
     date: "June 9, 2026",
@@ -825,6 +850,11 @@ const blogPosts: Record<string, {
   },
   "why-op-is-the-most-argued-line-item": {
     title: "Why O&P Is the Most Argued Line Item in Every Roofing Claim",
+    relatedPosts: [
+      "how-to-read-adjuster-estimate",
+      "most-commonly-missed-line-items-roofing-claims",
+      "how-to-write-a-supplement-adjusters-approve"
+    ],
     excerpt: "Carriers default to 10% when industry standard is 20/10. Here's what overhead and profit actually means and how to argue it professionally.",
     category: "Supplements",
     date: "June 2, 2026",
@@ -884,6 +914,11 @@ const blogPosts: Record<string, {
   },
   "how-to-write-a-supplement-adjusters-approve": {
     title: "How to Write a Supplement That Adjusters Actually Approve",
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "most-commonly-missed-line-items-roofing-claims",
+      "supplement-email-to-adjuster"
+    ],
     excerpt: "Xactimate codes, building citations, NOAA storm data, and what a complete supplement package looks like from start to finish.",
     category: "Supplements",
     date: "May 26, 2026",
@@ -937,6 +972,11 @@ const blogPosts: Record<string, {
   },
   "most-commonly-missed-line-items-roofing-claims": {
     title: "The Most Commonly Missed Line Items in Roofing Insurance Claims",
+    relatedPosts: [
+      "how-to-read-adjuster-estimate",
+      "permit-fees-code-upgrades-insurance-claims",
+      "why-roofing-companies-leave-money-on-the-table"
+    ],
     excerpt: "Ice and water shield, drip edge, ridge cap, permits, and O&P. Why adjusters miss these and how to catch them every time.",
     category: "Supplements",
     date: "May 19, 2026",
@@ -991,6 +1031,11 @@ const blogPosts: Record<string, {
   },
   "what-is-a-roofing-supplement": {
     title: "What Is a Roofing Supplement and Why Does It Matter?",
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "how-to-write-a-supplement-adjusters-approve",
+      "most-commonly-missed-line-items-roofing-claims"
+    ],
     excerpt: "What a supplement is, why adjusters underpay initial estimates, and how much roofers leave behind by not supplementing.",
     category: "Supplements",
     date: "May 12, 2026",
@@ -1046,6 +1091,11 @@ const blogPosts: Record<string, {
   },
   "crew-scheduling-mistakes-costing-you-time": {
     title: "Crew Scheduling Mistakes Costing You Time and Money",
+    relatedPosts: [
+      "production-bottlenecks-killing-your-margins",
+      "why-roofing-companies-leave-money-on-the-table",
+      "automating-lead-follow-up-without-losing-the-human-touch"
+    ],
     excerpt: "Poor scheduling creates downtime and travel gaps. Here's how to optimize crew allocation.",
     category: "Operations",
     date: "May 5, 2026",
@@ -1112,6 +1162,11 @@ const blogPosts: Record<string, {
   },
   "why-roofing-companies-leave-money-on-the-table": {
     title: "Why Roofing Companies Leave Money on the Table",
+    relatedPosts: [
+      "most-commonly-missed-line-items-roofing-claims",
+      "estimate-vs-supplement-package",
+      "how-to-read-adjuster-estimate"
+    ],
     excerpt: "Most roofers miss supplement opportunities on every claim. Here's how to identify gaps and recover what you're owed.",
     category: "Supplements",
     date: "April 28, 2026",
@@ -1171,6 +1226,11 @@ const blogPosts: Record<string, {
   },
   "storm-response-speed-matters": {
     title: "Storm Response: Why Speed Matters More Than You Think",
+    relatedPosts: [
+      "automating-lead-follow-up-without-losing-the-human-touch",
+      "production-bottlenecks-killing-your-margins",
+      "crew-scheduling-mistakes-costing-you-time"
+    ],
     excerpt: "The first 48 hours after a storm determine who wins the neighborhood.",
     category: "Storm Response",
     date: "April 21, 2026",
@@ -1216,6 +1276,11 @@ const blogPosts: Record<string, {
   },
   "production-bottlenecks-killing-your-margins": {
     title: "5 Production Bottlenecks Killing Your Margins",
+    relatedPosts: [
+      "crew-scheduling-mistakes-costing-you-time",
+      "storm-response-speed-matters",
+      "automating-lead-follow-up-without-losing-the-human-touch"
+    ],
     excerpt: "From sales-to-production handoffs to scheduling gaps, these issues cost roofing companies thousands every month.",
     category: "Operations",
     date: "April 14, 2026",
@@ -1271,6 +1336,11 @@ const blogPosts: Record<string, {
   },
   "automating-lead-follow-up-without-losing-the-human-touch": {
     title: "Automating Lead Follow-Up Without Losing the Human Touch",
+    relatedPosts: [
+      "storm-response-speed-matters",
+      "production-bottlenecks-killing-your-margins",
+      "crew-scheduling-mistakes-costing-you-time"
+    ],
     excerpt: "Homeowners want fast responses. They also want to feel heard. Here's how to balance both.",
     category: "Workflows",
     date: "April 7, 2026",
@@ -1318,6 +1388,11 @@ const blogPosts: Record<string, {
   },
   "xactimate-cross-reference-explained": {
     title: "Xactimate Cross-Reference: What Most Adjusters Miss",
+    relatedPosts: [
+      "most-commonly-missed-line-items-roofing-claims",
+      "how-to-read-adjuster-estimate",
+      "what-xactimate-pricing-means"
+    ],
     excerpt: "A breakdown of commonly missed line items and how systematic cross-referencing increases claim value.",
     category: "Supplements",
     date: "March 30, 2026",
@@ -1373,6 +1448,11 @@ const blogPosts: Record<string, {
   },
   "roofing-industry-trends-2026": {
     title: "Roofing Industry Trends to Watch in 2026",
+    relatedPosts: [
+      "how-roofing-companies-use-ai-for-supplements",
+      "production-bottlenecks-killing-your-margins",
+      "why-roofing-companies-leave-money-on-the-table"
+    ],
     excerpt: "From labor shortages to insurance tightening, here are the shifts every roofing company should prepare for.",
     category: "Industry Trends",
     date: "March 22, 2026",
