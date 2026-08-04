@@ -16,7 +16,7 @@ const blogPosts: Record<string, {
 }> = {
   "what-xactimate-pricing-means": {
     title: "What Xactimate Pricing Actually Means and Why It Changes",
-    excerpt: "Xactimate prices vary by region, update quarterly, and are often misunderstood by both contractors and adjusters. Here's how the pricing system actually works.",
+    excerpt: "Xactimate prices vary by region, update monthly, and are often misunderstood by both contractors and adjusters. Here's how the pricing system actually works.",
     category: "Industry Trends",
     date: "August 4, 2026",
     image: "/images/blog/what-xactimate-pricing-means.png",
@@ -31,7 +31,7 @@ const blogPosts: Record<string, {
 
         <h2>Xactimate Pricing Is Regional</h2>
         <p>
-          Xactimate prices are not national. The cost of materials and labor varies dramatically by region, and Xactimate accounts for this. A bundle of shingles might cost $35 in rural Mississippi but $65 in New York City. Labor rates follow the same pattern. A roofer's hourly rate in Atlanta is different from Los Angeles.
+          Xactimate prices are not national. The cost of materials and labor varies dramatically by region, and Xactimate accounts for this.           A bundle of shingles in a low-cost rural market can run significantly less than the same bundle in a major metro area. Labor rates follow the same pattern. A roofer's hourly rate in Atlanta is different from Los Angeles.
         </p>
         <p>
           This is why the adjuster's estimate from Xactimate is specific to the zip code where the damage occurred. If you submit a supplement with a price that doesn't align with the regional cost in that specific zip, the adjuster will question it. It's not that your price is wrong for your market; it's that you're asking the carrier to pay outside the Xactimate price for that region.
@@ -42,17 +42,17 @@ const blogPosts: Record<string, {
           Xactimate doesn't make up prices. They collect real data from suppliers, contractors, and labor markets across the country. They track what materials actually cost at suppliers like Home Depot, Lowes, and specialty distributors. They track labor rates from payroll data and contractor surveys. They track regional variations in those costs.
         </p>
         <p>
-          This data gathering is continuous, but the official pricing updates happen quarterly. Every quarter, Xactimate publishes new pricing based on the data they've collected. This means prices can shift three, four, or more times per year depending on market conditions.
+          This data gathering is continuous, and general pricing updates are published monthly. Vendor-specific pricing data updates even more frequently, on a nightly basis. This means prices can shift many times throughout the year depending on market conditions.
         </p>
 
         <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
           <p className="font-semibold text-foreground mb-2">Worth Noting</p>
           <p className="text-muted-foreground m-0">
-            The quarterly updates don't always mean prices go up. Sometimes they go down if material costs drop. But adjusters using older versions of Xactimate may have lower prices than the current version, which is why date discrepancies matter in supplements.
+            The monthly updates don't always mean prices go up. Sometimes they go down if material costs drop. But adjusters using older versions of Xactimate may have lower prices than the current version, which is why date discrepancies matter in supplements.
           </p>
         </div>
 
-        <h2>Why Prices Change Between Quarters</h2>
+        <h2>Why Prices Change Over Time</h2>
         <p>
           Material costs fluctuate based on commodity prices, shipping costs, supply and demand, and market conditions. When the price of oil goes up, shipping costs increase, and material prices often follow. When there's a supply shortage, prices spike. When markets settle, they may come back down.
         </p>
@@ -62,7 +62,7 @@ const blogPosts: Record<string, {
 
         <h2>What Version of Xactimate Is the Adjuster Using?</h2>
         <p>
-          This is a critical question that few contractors ask. The adjuster's estimate was created on a specific date using a specific version of Xactimate with a specific quarterly update built in. If you submit a supplement six months later using current market prices, you might be referencing a version of Xactimate that's two or three updates ahead of what the adjuster used.
+          This is a critical question that few contractors ask. The adjuster's estimate was created on a specific date using a specific version of Xactimate with a specific monthly price list built in. If you submit a supplement even a few months later using current market prices, you might be referencing a price list that's several updates ahead of what the adjuster used.
         </p>
         <p>
           This creates a pricing mismatch. The adjuster sees your price and compares it to their Xactimate prices, which are out of date. Your price looks high. You look like you're trying to get extra money. In reality, you're using current market data and they're comparing you to old data.
@@ -70,10 +70,10 @@ const blogPosts: Record<string, {
 
         <h2>How to Use Xactimate Pricing in Your Favor</h2>
         <p>
-          Know the Xactimate version the adjuster used. Ask for the date of the estimate and cross-reference it with the quarterly Xactimate update that would have been in effect on that date. If there have been quarterly updates since the original estimate, you have leverage.
+          Know the Xactimate version the adjuster used. Ask for the date of the estimate and cross-reference it with the monthly Xactimate price list that would have been in effect on that date. If there have been multiple monthly updates since the original estimate, you have leverage.
         </p>
         <p>
-          When you submit a supplement with pricing that differs from the adjuster's estimate, cite the quarterly update. Say something like: "The original estimate used Q2 2026 Xactimate pricing. Our supplement reflects current Q3 2026 pricing, which includes a $4.50 increase in shingle pricing due to material cost increases." This frames the price difference as market reality, not contractor inflation.
+          When you submit a supplement with pricing that differs from the adjuster's estimate, cite the updated price list. Say something like: "The original estimate was written off an earlier monthly Xactimate price list. Our supplement reflects the current price list, which accounts for updated material and labor costs since that estimate was written." This frames the price difference as market reality, not contractor inflation.
         </p>
 
         <h2>Regional Price Variations and Your Market</h2>
@@ -86,10 +86,10 @@ const blogPosts: Record<string, {
 
         <h2>The Bottom Line</h2>
         <p>
-          Xactimate pricing is a system, not a black box. It's regional, it updates quarterly, and it's based on real market data. When you understand how the system works, you can use it to support your supplements more effectively. You can explain pricing differences, cite quarterly updates, and provide regional data when your market doesn't align with Xactimate's regional pricing.
+          Xactimate pricing is a system, not a black box. It's regional, it updates monthly, and it's based on real market data. When you understand how the system works, you can use it to support your supplements more effectively. You can explain pricing differences, cite monthly updates, and provide regional data when your market doesn't align with Xactimate's regional pricing.
         </p>
         <p>
-          Most contractors never dig into how Xactimate pricing works. That's an advantage for the ones who do. The next time a price is questioned, you'll know exactly where it came from and why it's right for your region and the current quarter.
+          Most contractors never dig into how Xactimate pricing works. That's an advantage for the ones who do. The next time a price is questioned, you'll know exactly where it came from and why it's right for your region and the current price list.
         </p>
       </>
     ),
