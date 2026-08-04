@@ -7,7 +7,7 @@ import { ChevronDown } from 'lucide-react'
 
 const mentorMessages = [
   {
-    month: 'June 2025',
+    month: 'June 2026',
     sections: [
       {
         title: 'Going Deep in the Industry',
@@ -37,7 +37,7 @@ const mentorMessages = [
     ]
   },
   {
-    month: 'May 2025',
+    month: 'May 2026',
     sections: [
       {
         title: 'Narrowing Our Niche & Product Development',
@@ -82,7 +82,7 @@ export default function MentorMessagesPage() {
     <main className="min-h-screen flex flex-col">
       <Navbar />
       <div className="flex-grow">
-        <section className="pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 lg:pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <section className="pt-24 sm:pt-32 lg:pt-40 pb-16 sm:pb-20 lg:pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-serif mb-4" style={{ color: '#141C2E' }}>
             Monthly Mentor Messages
           </h1>
@@ -99,14 +99,14 @@ export default function MentorMessagesPage() {
             {mentorMessages.map((message, idx) => (
               <div
                 key={idx}
-                className="border border-border/60 rounded-lg overflow-hidden"
+                className="border border-border/60 rounded-lg overflow-hidden bg-muted/20"
               >
                 <button
                   onClick={() => setExpandedMonth(expandedMonth === idx ? -1 : idx)}
-                  className="w-full flex items-center justify-between p-6 hover:bg-muted/50 transition-colors"
+                  className="w-full flex items-center justify-between p-6 hover:bg-muted/40 transition-colors"
                 >
-                  <h2 className="text-2xl font-serif font-bold" style={{ color: '#141C2E' }}>
-                    {message.month}
+                  <h2 className="text-2xl font-serif font-bold hover:text-opacity-100 transition-colors" style={{ color: '#141C2E' }}>
+                    <span className="hover:text-[#0F6E56] transition-colors">{message.month}</span>
                   </h2>
                   <ChevronDown
                     className={`w-6 h-6 transition-transform duration-200 ${
