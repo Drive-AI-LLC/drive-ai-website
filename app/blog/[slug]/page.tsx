@@ -13,6 +13,8 @@ const blogPosts: Record<string, {
   date: string
   image: string
   content: React.ReactNode
+  faqs?: Array<{ question: string; answer: string }>
+  relatedPosts?: string[]
 }> = {
   "what-xactimate-pricing-means": {
     title: "What Xactimate Pricing Actually Means and Why It Changes",
@@ -93,6 +95,29 @@ const blogPosts: Record<string, {
         </p>
       </>
     ),
+    faqs: [
+      {
+        question: "Are Xactimate prices the same everywhere?",
+        answer: "No, Xactimate prices vary by region to account for differences in material and labor costs. A bundle of shingles in a low-cost rural market can run significantly less than the same bundle in a major metro area."
+      },
+      {
+        question: "How often do Xactimate prices update?",
+        answer: "General pricing updates are published monthly, while vendor-specific pricing data updates nightly, so prices can shift many times throughout the year."
+      },
+      {
+        question: "Why does the adjuster's Xactimate version matter?",
+        answer: "The adjuster's estimate was created with a specific monthly price list. If you submit a supplement months later, you might be using several updates ahead, creating a pricing mismatch that makes your prices look high."
+      },
+      {
+        question: "Can I use Xactimate pricing discrepancies in my favor?",
+        answer: "Yes—if there have been monthly updates since the original estimate, you have leverage. When submitting supplements with different pricing, cite the updated price list to frame the difference as market reality, not contractor inflation."
+      }
+    ],
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "how-to-handle-partial-supplement-approval",
+      "permit-fees-code-upgrades-insurance-claims"
+    ]
   },
   "how-to-handle-partial-supplement-approval": {
     title: "How to Handle a Partial Approval on a Supplement",
@@ -169,10 +194,33 @@ const blogPosts: Record<string, {
           Partial approvals happen because adjusters need more information or documentation to make a decision. This is fixable. The items the adjuster approved prove that they found your submission credible on most counts. The denied items just need better support.
         </p>
         <p>
-          Don't cash the check and move on. Respond promptly, gather the specific documentation the adjuster's rejection implies is missing, resubmit it formally, and escalate if necessary. Most contractors leave money on the table on partial approvals simply because they accept the first answer. You don't have to.
+          Don't cash the check and move on. Respond promptly, gather the specific documentation the adjuster's rejection implies is missing, resubmit it formally, and escalate if necessary.           Most contractors leave money on the table on partial approvals simply because they accept the first answer. You don't have to.
         </p>
       </>
     ),
+    faqs: [
+      {
+        question: "What does a partial approval mean?",
+        answer: "A partial approval means the carrier approved some line items and denied others, usually because they're uncertain about specific items or need more information."
+      },
+      {
+        question: "Should I accept a partial approval and move on?",
+        answer: "No—a partial approval signals that the adjuster found most of your submission credible. The denied items simply need more work and supporting documentation."
+      },
+      {
+        question: "How quickly should I respond to a partial approval?",
+        answer: "Move quickly while the claim is still active in the adjuster's workflow. Respond within a few days and indicate you'll be resubmitting the denied items with additional documentation."
+      },
+      {
+        question: "What if the adjuster keeps denying items even after I provide more documentation?",
+        answer: "Request a supervisor review or ask about the carrier's formal appeal process. Many contractors skip escalation assuming it won't help, but it often does."
+      }
+    ],
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "what-xactimate-pricing-means",
+      "permit-fees-code-upgrades-insurance-claims"
+    ]
   },
   "estimate-vs-supplement-package": {
     title: "The Difference Between an Estimate and a Supplement Package",
@@ -253,10 +301,32 @@ const blogPosts: Record<string, {
           A supplement package is a specific document type with specific requirements. It's not just a revised estimate by another name. When you understand the difference and submit supplements properly, the process tends to move faster and with less back and forth.
         </p>
         <p>
-          The key is clarity: be explicit about what's new, provide supporting evidence, and make the math easy for the adjuster to follow. That structure, more than anything else, determines whether your addition gets approved smoothly or gets caught up in back-and-forth correspondence.
-        </p>
+          The key is clarity: be explicit about what's new, provide supporting evidence, and make the math easy for the adjuster to follow. That structure, more than anything else, determines whether your addition gets approved smoothly or gets caught up in back-and-forth correspondence.</p>
       </>
     ),
+    faqs: [
+      {
+        question: "What's the difference between a revised estimate and a supplement?",
+        answer: "A revised estimate proposes an entirely new scope and triggers re-evaluation of everything, while a supplement acknowledges the original estimate as valid and adds to it."
+      },
+      {
+        question: "Why does framing matter when submitting additional work?",
+        answer: "Adjusters are more likely to move through additions faster when items are clearly presented as additions rather than revisions. It signals new information rather than questioning their original work."
+      },
+      {
+        question: "What should a complete supplement package include?",
+        answer: "A cover letter stating this is supplemental work, itemized line items, supporting documentation (photos, code excerpts, permit quotes), a reference to the original estimate, and a revised total."
+      },
+      {
+        question: "Can supplements be denied if they're properly structured?",
+        answer: "Proper structure and documentation don't guarantee approval, but they make the process more efficient and reduce delays and pushback from adjusters."
+      }
+    ],
+    relatedPosts: [
+      "how-to-handle-partial-supplement-approval",
+      "permit-fees-code-upgrades-insurance-claims",
+      "what-xactimate-pricing-means"
+    ]
   },
   "permit-fees-code-upgrades-insurance-claims": {
     title: "Permit Fees and Code Upgrades: What You're Likely Leaving Off Your Estimate",
@@ -342,9 +412,33 @@ const blogPosts: Record<string, {
         </p>
       </>
     ),
+    faqs: [
+      {
+        question: "Are permit fees a legitimate claim item?",
+        answer: "Yes—permit fees are costs directly tied to the loss and didn't exist before the claim occurred, making them insurable and separate from contractor overhead."
+      },
+      {
+        question: "How do I document that code upgrades are required?",
+        answer: "Pull the actual code section requiring the upgrade and include it in your supplement. Link the specific code requirement to the damage that triggered the upgrade."
+      },
+      {
+        question: "What's the best way to argue for code-required items when adjusters question them?",
+        answer: "Frame it as 'this isn't optional—the code requires it'—not as an upgrade request. Show the code requirement, explain how the damage triggered it, and document the cost to comply."
+      }
+    ],
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "how-to-handle-partial-supplement-approval",
+      "what-xactimate-pricing-means"
+    ]
   },
   "how-to-read-adjuster-estimate": {
     title: "How to Read an Adjuster's Estimate Line by Line",
+    relatedPosts: [
+      "most-commonly-missed-line-items-roofing-claims",
+      "why-op-is-the-most-argued-line-item",
+      "what-xactimate-pricing-means"
+    ],
     excerpt: "Most roofing contractors glance at the bottom line. Here's how to read the full estimate, spot what's missing, and know exactly what to submit.",
     category: "Supplements",
     date: "July 7, 2026",
@@ -428,6 +522,11 @@ const blogPosts: Record<string, {
   },
   "recoverable-vs-non-recoverable-depreciation": {
     title: "Understanding Depreciation: Recoverable vs. Non-Recoverable",
+    relatedPosts: [
+      "how-to-read-adjuster-estimate",
+      "why-roofing-companies-leave-money-on-the-table",
+      "most-commonly-missed-line-items-roofing-claims"
+    ],
     excerpt: "Carriers hold back depreciation on almost every claim. Here's how it works, what you can recover, and how to make sure your customers get what they're owed.",
     category: "Supplements",
     date: "June 30, 2026",
@@ -502,6 +601,11 @@ const blogPosts: Record<string, {
   },
   "how-roofing-companies-use-ai-for-supplements": {
     title: "How Roofing Companies Are Using AI to Speed Up the Supplement Process",
+    relatedPosts: [
+      "how-to-write-a-supplement-adjusters-approve",
+      "most-commonly-missed-line-items-roofing-claims",
+      "why-roofing-companies-leave-money-on-the-table"
+    ],
     excerpt: "From identifying missed line items to generating documentation, AI is changing how contractors approach insurance claims. Here's what that looks like in practice.",
     category: "Industry Trends",
     date: "June 23, 2026",
@@ -574,6 +678,11 @@ const blogPosts: Record<string, {
   },
   "what-to-do-when-adjuster-denies-supplement": {
     title: "What to Do When an Adjuster Denies Your Supplement",
+    relatedPosts: [
+      "how-to-handle-partial-supplement-approval",
+      "estimate-vs-supplement-package",
+      "supplement-email-to-adjuster"
+    ],
     excerpt: "A denial isn't the end of the road. Here's how to respond professionally, escalate when necessary, and get underpaid items reconsidered.",
     category: "Supplements",
     date: "June 16, 2026",
@@ -660,6 +769,11 @@ const blogPosts: Record<string, {
   },
   "supplement-email-to-adjuster": {
     title: "How to Write a Supplement Email That Gets a Response",
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "how-to-write-a-supplement-adjusters-approve",
+      "what-to-do-when-adjuster-denies-supplement"
+    ],
     excerpt: "Most supplement emails get ignored. Here's how to write one that's professional, specific, and actually moves the claim forward.",
     category: "Supplements",
     date: "June 9, 2026",
@@ -736,6 +850,11 @@ const blogPosts: Record<string, {
   },
   "why-op-is-the-most-argued-line-item": {
     title: "Why O&P Is the Most Argued Line Item in Every Roofing Claim",
+    relatedPosts: [
+      "how-to-read-adjuster-estimate",
+      "most-commonly-missed-line-items-roofing-claims",
+      "how-to-write-a-supplement-adjusters-approve"
+    ],
     excerpt: "Carriers default to 10% when industry standard is 20/10. Here's what overhead and profit actually means and how to argue it professionally.",
     category: "Supplements",
     date: "June 2, 2026",
@@ -795,6 +914,11 @@ const blogPosts: Record<string, {
   },
   "how-to-write-a-supplement-adjusters-approve": {
     title: "How to Write a Supplement That Adjusters Actually Approve",
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "most-commonly-missed-line-items-roofing-claims",
+      "supplement-email-to-adjuster"
+    ],
     excerpt: "Xactimate codes, building citations, NOAA storm data, and what a complete supplement package looks like from start to finish.",
     category: "Supplements",
     date: "May 26, 2026",
@@ -848,6 +972,11 @@ const blogPosts: Record<string, {
   },
   "most-commonly-missed-line-items-roofing-claims": {
     title: "The Most Commonly Missed Line Items in Roofing Insurance Claims",
+    relatedPosts: [
+      "how-to-read-adjuster-estimate",
+      "permit-fees-code-upgrades-insurance-claims",
+      "why-roofing-companies-leave-money-on-the-table"
+    ],
     excerpt: "Ice and water shield, drip edge, ridge cap, permits, and O&P. Why adjusters miss these and how to catch them every time.",
     category: "Supplements",
     date: "May 19, 2026",
@@ -902,6 +1031,11 @@ const blogPosts: Record<string, {
   },
   "what-is-a-roofing-supplement": {
     title: "What Is a Roofing Supplement and Why Does It Matter?",
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "how-to-write-a-supplement-adjusters-approve",
+      "most-commonly-missed-line-items-roofing-claims"
+    ],
     excerpt: "What a supplement is, why adjusters underpay initial estimates, and how much roofers leave behind by not supplementing.",
     category: "Supplements",
     date: "May 12, 2026",
@@ -957,6 +1091,11 @@ const blogPosts: Record<string, {
   },
   "crew-scheduling-mistakes-costing-you-time": {
     title: "Crew Scheduling Mistakes Costing You Time and Money",
+    relatedPosts: [
+      "production-bottlenecks-killing-your-margins",
+      "why-roofing-companies-leave-money-on-the-table",
+      "automating-lead-follow-up-without-losing-the-human-touch"
+    ],
     excerpt: "Poor scheduling creates downtime and travel gaps. Here's how to optimize crew allocation.",
     category: "Operations",
     date: "May 5, 2026",
@@ -1023,6 +1162,11 @@ const blogPosts: Record<string, {
   },
   "why-roofing-companies-leave-money-on-the-table": {
     title: "Why Roofing Companies Leave Money on the Table",
+    relatedPosts: [
+      "most-commonly-missed-line-items-roofing-claims",
+      "estimate-vs-supplement-package",
+      "how-to-read-adjuster-estimate"
+    ],
     excerpt: "Most roofers miss supplement opportunities on every claim. Here's how to identify gaps and recover what you're owed.",
     category: "Supplements",
     date: "April 28, 2026",
@@ -1082,6 +1226,11 @@ const blogPosts: Record<string, {
   },
   "storm-response-speed-matters": {
     title: "Storm Response: Why Speed Matters More Than You Think",
+    relatedPosts: [
+      "automating-lead-follow-up-without-losing-the-human-touch",
+      "production-bottlenecks-killing-your-margins",
+      "crew-scheduling-mistakes-costing-you-time"
+    ],
     excerpt: "The first 48 hours after a storm determine who wins the neighborhood.",
     category: "Storm Response",
     date: "April 21, 2026",
@@ -1127,6 +1276,11 @@ const blogPosts: Record<string, {
   },
   "production-bottlenecks-killing-your-margins": {
     title: "5 Production Bottlenecks Killing Your Margins",
+    relatedPosts: [
+      "crew-scheduling-mistakes-costing-you-time",
+      "storm-response-speed-matters",
+      "automating-lead-follow-up-without-losing-the-human-touch"
+    ],
     excerpt: "From sales-to-production handoffs to scheduling gaps, these issues cost roofing companies thousands every month.",
     category: "Operations",
     date: "April 14, 2026",
@@ -1182,6 +1336,11 @@ const blogPosts: Record<string, {
   },
   "automating-lead-follow-up-without-losing-the-human-touch": {
     title: "Automating Lead Follow-Up Without Losing the Human Touch",
+    relatedPosts: [
+      "storm-response-speed-matters",
+      "production-bottlenecks-killing-your-margins",
+      "crew-scheduling-mistakes-costing-you-time"
+    ],
     excerpt: "Homeowners want fast responses. They also want to feel heard. Here's how to balance both.",
     category: "Workflows",
     date: "April 7, 2026",
@@ -1229,6 +1388,11 @@ const blogPosts: Record<string, {
   },
   "xactimate-cross-reference-explained": {
     title: "Xactimate Cross-Reference: What Most Adjusters Miss",
+    relatedPosts: [
+      "most-commonly-missed-line-items-roofing-claims",
+      "how-to-read-adjuster-estimate",
+      "what-xactimate-pricing-means"
+    ],
     excerpt: "A breakdown of commonly missed line items and how systematic cross-referencing increases claim value.",
     category: "Supplements",
     date: "March 30, 2026",
@@ -1284,6 +1448,11 @@ const blogPosts: Record<string, {
   },
   "roofing-industry-trends-2026": {
     title: "Roofing Industry Trends to Watch in 2026",
+    relatedPosts: [
+      "how-roofing-companies-use-ai-for-supplements",
+      "production-bottlenecks-killing-your-margins",
+      "why-roofing-companies-leave-money-on-the-table"
+    ],
     excerpt: "From labor shortages to insurance tightening, here are the shifts every roofing company should prepare for.",
     category: "Industry Trends",
     date: "March 22, 2026",
@@ -1422,7 +1591,7 @@ export default async function BlogPostPage({
       </section>
 
       {/* Article Body */}
-      <section className="pb-20 lg:pb-28">
+      <section className="pb-12 lg:pb-20">
         <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
           <article className="max-w-3xl
             [&>p]:text-base [&>p]:text-muted-foreground [&>p]:leading-[1.85] [&>p]:mb-6
@@ -1435,6 +1604,103 @@ export default async function BlogPostPage({
           </article>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {post.faqs && post.faqs.length > 0 && (
+        <section className="pb-12 lg:pb-20">
+          <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <h2 className="text-lg sm:text-xl font-bold font-serif text-foreground mb-6 pb-2 border-b border-border">
+                Frequently Asked Questions
+              </h2>
+
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": post.faqs.map(faq => ({
+                      "@type": "Question",
+                      "name": faq.question,
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                      }
+                    }))
+                  })
+                }}
+              />
+
+              <div className="space-y-4">
+                {post.faqs.map((faq, idx) => (
+                  <details key={idx} className="border border-border rounded-lg p-4 cursor-pointer group hover:bg-muted/30 transition-colors">
+                    <summary className="font-serif font-semibold text-foreground text-base leading-relaxed flex justify-between items-start select-none">
+                      {faq.question}
+                      <span className="ml-4 text-primary group-open:rotate-180 transition-transform duration-200 flex-shrink-0">
+                        ▼
+                      </span>
+                    </summary>
+                    <p className="mt-4 text-muted-foreground text-base leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related Posts Section */}
+      {post.relatedPosts && post.relatedPosts.length > 0 && (
+        <section className="pb-20 lg:pb-28">
+          <div className="max-w-[1080px] mx-auto px-5 sm:px-6 lg:px-8">
+            <h2 className="text-lg sm:text-xl font-bold font-serif text-foreground mb-6 pb-2 border-b border-border">
+              Keep Reading
+            </h2>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {post.relatedPosts.map((relatedSlug) => {
+                const relatedPost = blogPosts[relatedSlug]
+                if (!relatedPost) return null
+
+                return (
+                  <article
+                    key={relatedSlug}
+                    className="group bg-background border border-border/50 rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-foreground/[0.03] hover:border-border transition-all duration-300"
+                  >
+                    {/* Content */}
+                    <div className="p-5">
+                      {/* Category & Date */}
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-xs font-medium uppercase tracking-wider text-primary bg-primary/10 px-2 py-0.5 rounded-full">
+                          {relatedPost.category}
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          {relatedPost.date}
+                        </span>
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-lg font-semibold text-foreground mb-2 leading-tight group-hover:text-primary transition-colors duration-200">
+                        <Link href={`/blog/${relatedSlug}`}>
+                          {relatedPost.title}
+                        </Link>
+                      </h3>
+
+                      {/* Excerpt */}
+                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                        {relatedPost.excerpt}
+                      </p>
+                    </div>
+                  </article>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       <CTASection
         headline="Explore what's next for roofing operations."
