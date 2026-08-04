@@ -76,14 +76,14 @@ const mentorMessages = [
 ]
 
 export default function MentorMessagesPage() {
-  const [expandedMonth, setExpandedMonth] = useState(0)
+  const [expandedMonth, setExpandedMonth] = useState(-1)
 
   return (
     <main className="min-h-screen flex flex-col">
       <Navbar />
       <div className="flex-grow">
-        <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif mb-4" style={{ color: '#141C2E' }}>
+        <section className="pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 lg:pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-serif mb-4" style={{ color: '#141C2E' }}>
             Mentor Updates
           </h1>
           <p className="text-base sm:text-lg text-muted-foreground mb-12">
