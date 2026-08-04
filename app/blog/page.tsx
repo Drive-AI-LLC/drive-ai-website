@@ -21,6 +21,14 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "what-xactimate-pricing-means",
+    title: "What Xactimate Pricing Actually Means and Why It Changes",
+    excerpt: "Xactimate prices vary by region, update quarterly, and are often misunderstood by both contractors and adjusters. Here's how the pricing system actually works.",
+    category: "Industry Trends",
+    date: "August 4, 2026",
+    image: "/images/blog/what-xactimate-pricing-means.png",
+  },
+  {
     slug: "how-to-handle-partial-supplement-approval",
     title: "How to Handle a Partial Approval on a Supplement",
     excerpt: "When a carrier approves some line items and denies others, most contractors take what they get. Here's how to professionally push back on the rest.",
