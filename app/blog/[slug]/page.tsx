@@ -103,6 +103,28 @@ const blogPosts: Record<string, {
         </p>
       </>
     ),
+    faqs: [
+      {
+        question: "When should I start documenting storm damage?",
+        answer: "Ideally before the claim is filed. Photos, measurements, and field notes taken right after the storm event give the adjuster the clearest picture and set the foundation for both the initial estimate and any supplement."
+      },
+      {
+        question: "How many photos of the roof do I actually need?",
+        answer: "Enough to cover every roof plane, not just the damaged areas. Take wide establishing shots of each slope plus closer photos of individual damaged components, and pair every close-up with a wider photo showing where it sits on the roof."
+      },
+      {
+        question: "What if I can't safely access part of the roof?",
+        answer: "Document the limitation. Note that the area was unsafe to walk, explain how you inspected it instead, such as from a ladder or the ground, and include that in your field notes so the file explains the gap rather than leaving it unexplained."
+      },
+      {
+        question: "Do I need a roof measurement report, or are field measurements enough?",
+        answer: "Field measurements are important, but if a measurement report is available, compare it against your notes before submitting. Discrepancies between the two can raise unnecessary questions about the scope."
+      },
+      {
+        question: "What besides photos should be included in the documentation package?",
+        answer: "Written field notes, including the inspection date, weather conditions, who was present, areas inspected, visible and pre-existing conditions, measurements, applicable code or permit references, and material or supplier information. Photos alone don't tell the full story."
+      }
+    ],
     relatedPosts: [
       "storm-response-speed-matters",
       "most-commonly-missed-line-items-roofing-claims",
