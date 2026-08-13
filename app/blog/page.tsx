@@ -21,6 +21,14 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "how-to-document-storm-damage",
+    title: "How to Document Storm Damage the Right Way Before Filing a Claim",
+    excerpt: "What you photograph, measure, and record before filing directly affects what an adjuster approves. Here's the documentation process that sets your supplement up for success.",
+    category: "Storm Response",
+    date: "August 11, 2026",
+    image: "/images/blog/how-to-document-storm-damage.png",
+  },
+  {
     slug: "what-xactimate-pricing-means",
     title: "What Xactimate Pricing Actually Means and Why It Changes",
     excerpt: "Xactimate prices vary by region, update quarterly, and are often misunderstood by both contractors and adjusters. Here's how the pricing system actually works.",
