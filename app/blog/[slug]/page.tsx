@@ -16,6 +16,228 @@ const blogPosts: Record<string, {
   faqs?: Array<{ question: string; answer: string }>
   relatedPosts?: string[]
 }> = {
+  "why-some-roofers-supplement-every-job": {
+    title: "Why Some Roofing Companies Supplement Every Job and Others Never Do",
+    excerpt: "The gap between contractors who consistently recover full claim value and those who don't usually comes down to one thing: process. Here's what separates them.",
+    category: "Operations",
+    date: "August 18, 2026",
+    image: "/images/blog/why-some-roofers-supplement-every-job.png",
+    content: (
+      <>
+        <p>
+          Two roofing companies can inspect the same storm-damaged house, see the same missing items, and produce completely different results. One consistently recovers the full value of the work. The other accepts the carrier's first estimate and moves on. The difference usually isn't experience, effort, or even estimating software. It is process.
+        </p>
+        <p>
+          Companies that supplement every eligible job have built a repeatable way to find missed scope, document it, and submit it. Companies that never supplement tend to rely on memory, individual judgment, or the hope that the original estimate is complete. Here is what separates the two approaches.
+        </p>
+
+        <h2>They Treat the First Estimate as a Starting Point</h2>
+        <p>
+          A carrier estimate is an important starting document, but it is not automatically a complete scope of work. The adjuster may have limited time on site, may not have access to every roof area, or may not know the contractor's planned means and methods. The estimate reflects what was visible and documented at that inspection, not necessarily everything required to complete the repair.
+        </p>
+        <p>
+          Contractors who supplement consistently review the estimate against their own inspection. They compare quantities, components, access conditions, code requirements, and the actual repair plan. They are not looking for ways to inflate a claim. They are checking whether the scope accurately reflects the work the property needs.
+        </p>
+
+        <h2>They Use a Standard Inspection Checklist</h2>
+        <p>
+          The most reliable supplement process starts in the field. A checklist keeps the inspection from depending on which technician happens to visit the property or how busy the day is. It prompts the team to document each roof plane, measurements, steep access, flashing, ventilation, underlayment, detach and reset items, permits, and other commonly missed components.
+        </p>
+        <p>
+          A checklist also creates consistency across jobs. When the same questions are asked every time, missed scope becomes easier to identify and trainable for new team members. The goal is not to make every inspection feel bureaucratic. It is to make the important steps hard to forget.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            A process does not need to be complicated to be effective. A one-page inspection checklist used on every job is more valuable than a sophisticated system nobody follows.
+          </p>
+        </div>
+
+        <h2>They Separate Discovery From Submission</h2>
+        <p>
+          Strong supplementing has two distinct stages. First, the contractor discovers and documents the full repair scope. Second, the office team organizes that information into a clear submission. Keeping those stages separate prevents the rush to write an estimate from causing important field details to disappear.
+        </p>
+        <p>
+          It also gives the reviewer a chance to catch gaps before the package reaches the adjuster. Are the photos labeled? Do the measurements match the quantities? Is every code-required item supported? Does each requested line item connect to a documented condition? A short review before submission can prevent a long back-and-forth afterward.
+        </p>
+
+        <h2>They Document Reasons, Not Just Items</h2>
+        <p>
+          Listing an item is not the same as explaining why it belongs in the scope. Contractors who recover more consistently document the condition that makes the item necessary. They show the damaged component, explain the repair method, cite the relevant code or manufacturer requirement when applicable, and include the cost support needed to evaluate the request.
+        </p>
+        <p>
+          This gives the adjuster a clear path from observation to line item. It is much easier to approve a request when the documentation answers the likely follow-up question before it has to be asked.
+        </p>
+
+        <h2>They Track Every Submission</h2>
+        <p>
+          A supplement process does not end when an email is sent. Consistent companies track when each package was submitted, what it included, who received it, and when a response is due. They record approvals, partial approvals, denials, and outstanding questions so nothing disappears into an inbox.
+        </p>
+        <p>
+          This follow-up discipline matters because even a well-supported supplement can stall. A simple tracker makes the status visible to the team and gives the contractor a professional basis for checking in with the carrier.
+        </p>
+
+        <h2>They Learn From Patterns</h2>
+        <p>
+          Companies that supplement every job use their results to improve the process. They look for recurring omissions, carriers that request certain documentation, code items that are regularly questioned, and roof components that estimators tend to overlook. Then they update their checklist, templates, and training around those patterns.
+        </p>
+        <p>
+          Over time, the process becomes faster and more accurate. The team is not reinventing the supplement on every claim. It is applying what the company has already learned and making the next submission stronger.
+        </p>
+
+        <h2>The Bottom Line</h2>
+        <p>
+          The contractors who supplement consistently are not necessarily more aggressive. They are more systematic. They inspect every job the same way, document the reasons behind the requested work, review the package before submission, and follow up until each item has a clear outcome.
+        </p>
+        <p>
+          If your company rarely supplements, start with one repeatable checklist and one simple tracking process. Make the review part of the job rather than an optional extra. Recovering the full value of a claim is not about hoping someone catches what was missed. It is about building a process that makes missing scope visible.
+        </p>
+      </>
+    ),
+    faqs: [
+      {
+        question: "What does it mean for a roofing company to supplement a claim?",
+        answer: "Supplementing means reviewing the carrier's original estimate against the contractor's own inspection and submitting any missed scope, quantities, or components the initial estimate didn't capture."
+      },
+      {
+        question: "Why isn't the carrier's original estimate always the complete scope of work?",
+        answer: "The adjuster's estimate reflects what was visible and documented during a single inspection. Limited time on site, restricted access to certain roof areas, or unfamiliarity with the contractor's planned repair methods can all leave items out."
+      },
+      {
+        question: "What should a roof inspection checklist cover?",
+        answer: "A reliable checklist prompts documentation of each roof plane, measurements, steep access, flashing, ventilation, underlayment, detach and reset items, permits, and other components that commonly get missed."
+      },
+      {
+        question: "Why does documenting the reason for a line item matter as much as listing it?",
+        answer: "Explaining the damaged condition, the repair method, and any relevant code or manufacturer requirement gives the adjuster a clear path from observation to approval, which helps prevent back-and-forth after submission."
+      },
+      {
+        question: "How do companies that supplement consistently improve their process over time?",
+        answer: "They track outcomes, look for recurring omissions, note which carriers request certain documentation, and update their checklists and templates based on those patterns."
+      }
+    ],
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "how-to-write-a-supplement-adjusters-approve",
+      "most-commonly-missed-line-items-roofing-claims"
+    ]
+  },
+  "how-to-document-storm-damage": {
+    title: "How to Document Storm Damage the Right Way Before Filing a Claim",
+    excerpt: "What you photograph, measure, and record before filing directly affects what an adjuster approves. Here's the documentation process that sets your supplement up for success.",
+    category: "Storm Response",
+    date: "August 11, 2026",
+    image: "/images/blog/how-to-document-storm-damage.png",
+    content: (
+      <>
+        <p>
+          The strongest supplement usually starts before the insurance claim is filed. Once a storm passes, the photos you take, the measurements you record, and the details you preserve become the foundation for the adjuster's scope and any supplemental work that follows.
+        </p>
+        <p>
+          Good documentation does more than prove that a roof is damaged. It connects the storm event to specific conditions, shows the full extent of the loss, and gives the adjuster enough information to make a decision without guessing. Here's the process residential roofing contractors can use to document storm damage the right way.
+        </p>
+
+        <h2>Start With the Property and the Storm</h2>
+        <p>
+          Before getting close to the roof, document the property as a whole. Take photos showing the street address, the front elevation, the roof lines, nearby trees, and any visible storm conditions. If the area experienced hail, high winds, or tornado activity, record the date of the storm and preserve any available weather information for the property location.
+        </p>
+        <p>
+          Wide establishing photos help connect the damage to the correct property and show the overall context. They also make your closer damage photos easier for an adjuster to understand later.
+        </p>
+
+        <h2>Photograph Every Roof Plane</h2>
+        <p>
+          Walk the entire roof and photograph each plane, not just the areas with the most obvious damage. Include full-plane photos that show orientation and coverage, then take closer photos of individual damaged components. A photo of one cracked shingle is useful. A photo showing where that shingle sits on the roof is better.
+        </p>
+        <p>
+          Keep your photos organized by elevation and roof plane. Use a consistent sequence, such as front slope, right slope, rear slope, and left slope. This makes it easier to match photos to line items and prevents important areas from being overlooked.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            A close-up without context can be challenged as isolated or unrelated. Pair every important damage photo with a wider image that shows its location on the roof.
+          </p>
+        </div>
+
+        <h2>Show Damage With a Reference Point</h2>
+        <p>
+          For hail damage, include a common object or measuring reference when it helps show scale. For wind damage, photograph lifted, creased, missing, or displaced materials from multiple angles. For impact damage to vents, flashing, gutters, or siding, capture both the damaged component and its relationship to the roof system.
+        </p>
+        <p>
+          Avoid relying on blurry zoomed-in photos or images where the damage is hidden by glare and shadow. Retake anything that is hard to interpret on a phone screen. The goal is to make the condition clear to someone who wasn't at the property.
+        </p>
+
+        <h2>Measure Before You Estimate</h2>
+        <p>
+          Record the roof dimensions, pitch, stories, waste factors, valleys, hips, ridges, eaves, rakes, penetrations, and other features that affect the scope. Note the number and size of roof planes, as well as accessories that may need removal and replacement during the repair.
+        </p>
+        <p>
+          Measurements should be consistent with your photos and estimate. If a roof report or measurement service is available, compare it with your field notes before submitting. Small discrepancies can create unnecessary questions about the entire scope.
+        </p>
+
+        <h2>Document Code and Material Conditions</h2>
+        <p>
+          Look for conditions that affect how the work must be performed, including multiple layers, steep access, special underlayment, ventilation requirements, flashing details, and code-required upgrades. Photograph the condition that triggers the requirement and record the applicable local code or permit information.
+        </p>
+        <p>
+          Also document the existing materials. Note the shingle type, profile, color, manufacturer if known, metal types, ventilation components, and any discontinued or specialty products. If matching materials are unavailable, gather supplier information or written confirmation instead of waiting until the adjuster asks for it.
+        </p>
+
+        <h2>Record What You Found in the Field</h2>
+        <p>
+          Photos are essential, but they are not the whole file. Write down the date of inspection, weather conditions, who was present, areas inspected, visible damage, pre-existing conditions, and any limitations that prevented access. If a roof area was unsafe to walk, say so and explain how you inspected it from a safe position.
+        </p>
+        <p>
+          These notes preserve details that may not be obvious in the photos. They also give your supplement a clear timeline and show that the scope came from a documented inspection rather than assumptions.
+        </p>
+
+        <h2>Build the File Before Filing</h2>
+        <p>
+          Before submitting the claim or supplement, organize the documentation into a simple package. Use clear file names, group photos by elevation or roof plane, and place measurements, weather records, code references, and supplier documentation where they can be found quickly.
+        </p>
+        <p>
+          Review the package as if you were the adjuster seeing the property for the first time. Can you identify the address, understand the storm event, locate every damaged area, verify the measurements, and see why each requested line item is necessary? If not, fill the gap before filing.
+        </p>
+
+        <h2>The Bottom Line</h2>
+        <p>
+          Documentation is not an administrative step that happens after the real work. It is what turns observed damage into a scope an adjuster can evaluate. Complete photos, accurate measurements, code support, material details, and field notes give your supplement a much stronger foundation.
+        </p>
+        <p>
+          Document the whole property, organize the evidence by roof area, and connect every requested item to something you observed and recorded. When the file tells a clear story before the adjuster ever opens the estimate, you're giving the claim its best chance to move forward without unnecessary back and forth.
+        </p>
+      </>
+    ),
+    faqs: [
+      {
+        question: "When should I start documenting storm damage?",
+        answer: "Ideally before the claim is filed. Photos, measurements, and field notes taken right after the storm event give the adjuster the clearest picture and set the foundation for both the initial estimate and any supplement."
+      },
+      {
+        question: "How many photos of the roof do I actually need?",
+        answer: "Enough to cover every roof plane, not just the damaged areas. Take wide establishing shots of each slope plus closer photos of individual damaged components, and pair every close-up with a wider photo showing where it sits on the roof."
+      },
+      {
+        question: "What if I can't safely access part of the roof?",
+        answer: "Document the limitation. Note that the area was unsafe to walk, explain how you inspected it instead, such as from a ladder or the ground, and include that in your field notes so the file explains the gap rather than leaving it unexplained."
+      },
+      {
+        question: "Do I need a roof measurement report, or are field measurements enough?",
+        answer: "Field measurements are important, but if a measurement report is available, compare it against your notes before submitting. Discrepancies between the two can raise unnecessary questions about the scope."
+      },
+      {
+        question: "What besides photos should be included in the documentation package?",
+        answer: "Written field notes, including the inspection date, weather conditions, who was present, areas inspected, visible and pre-existing conditions, measurements, applicable code or permit references, and material or supplier information. Photos alone don't tell the full story."
+      }
+    ],
+    relatedPosts: [
+      "storm-response-speed-matters",
+      "most-commonly-missed-line-items-roofing-claims",
+      "how-to-handle-partial-supplement-approval"
+    ]
+  },
   "what-xactimate-pricing-means": {
     title: "What Xactimate Pricing Actually Means and Why It Changes",
     excerpt: "Xactimate prices vary by region, update monthly, and are often misunderstood by both contractors and adjusters. Here's how the pricing system actually works.",

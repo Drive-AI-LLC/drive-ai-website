@@ -21,6 +21,22 @@ const categories = [
 
 const blogPosts = [
   {
+    slug: "why-some-roofers-supplement-every-job",
+    title: "Why Some Roofing Companies Supplement Every Job and Others Never Do",
+    excerpt: "The gap between contractors who consistently recover full claim value and those who don't usually comes down to one thing: process. Here's what separates them.",
+    category: "Operations",
+    date: "August 18, 2026",
+    image: "/images/blog/why-some-roofers-supplement-every-job.png",
+  },
+  {
+    slug: "how-to-document-storm-damage",
+    title: "How to Document Storm Damage the Right Way Before Filing a Claim",
+    excerpt: "What you photograph, measure, and record before filing directly affects what an adjuster approves. Here's the documentation process that sets your supplement up for success.",
+    category: "Storm Response",
+    date: "August 11, 2026",
+    image: "/images/blog/how-to-document-storm-damage.png",
+  },
+  {
     slug: "what-xactimate-pricing-means",
     title: "What Xactimate Pricing Actually Means and Why It Changes",
     excerpt: "Xactimate prices vary by region, update quarterly, and are often misunderstood by both contractors and adjusters. Here's how the pricing system actually works.",
