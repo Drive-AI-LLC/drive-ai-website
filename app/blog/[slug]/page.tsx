@@ -95,6 +95,28 @@ const blogPosts: Record<string, {
         </p>
       </>
     ),
+    faqs: [
+      {
+        question: "What does it mean for a roofing company to supplement a claim?",
+        answer: "Supplementing means reviewing the carrier's original estimate against the contractor's own inspection and submitting any missed scope, quantities, or components the initial estimate didn't capture."
+      },
+      {
+        question: "Why isn't the carrier's original estimate always the complete scope of work?",
+        answer: "The adjuster's estimate reflects what was visible and documented during a single inspection. Limited time on site, restricted access to certain roof areas, or unfamiliarity with the contractor's planned repair methods can all leave items out."
+      },
+      {
+        question: "What should a roof inspection checklist cover?",
+        answer: "A reliable checklist prompts documentation of each roof plane, measurements, steep access, flashing, ventilation, underlayment, detach and reset items, permits, and other components that commonly get missed."
+      },
+      {
+        question: "Why does documenting the reason for a line item matter as much as listing it?",
+        answer: "Explaining the damaged condition, the repair method, and any relevant code or manufacturer requirement gives the adjuster a clear path from observation to approval, which helps prevent back-and-forth after submission."
+      },
+      {
+        question: "How do companies that supplement consistently improve their process over time?",
+        answer: "They track outcomes, look for recurring omissions, note which carriers request certain documentation, and update their checklists and templates based on those patterns."
+      }
+    ],
     relatedPosts: [
       "estimate-vs-supplement-package",
       "how-to-write-a-supplement-adjusters-approve",
