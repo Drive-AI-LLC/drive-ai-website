@@ -16,6 +16,91 @@ const blogPosts: Record<string, {
   faqs?: Array<{ question: string; answer: string }>
   relatedPosts?: string[]
 }> = {
+  "why-some-roofers-supplement-every-job": {
+    title: "Why Some Roofing Companies Supplement Every Job and Others Never Do",
+    excerpt: "The gap between contractors who consistently recover full claim value and those who don't usually comes down to one thing: process. Here's what separates them.",
+    category: "Operations",
+    date: "August 18, 2026",
+    image: "/images/blog/why-some-roofers-supplement-every-job.png",
+    content: (
+      <>
+        <p>
+          Two roofing companies can inspect the same storm-damaged house, see the same missing items, and produce completely different results. One consistently recovers the full value of the work. The other accepts the carrier's first estimate and moves on. The difference usually isn't experience, effort, or even estimating software. It is process.
+        </p>
+        <p>
+          Companies that supplement every eligible job have built a repeatable way to find missed scope, document it, and submit it. Companies that never supplement tend to rely on memory, individual judgment, or the hope that the original estimate is complete. Here is what separates the two approaches.
+        </p>
+
+        <h2>They Treat the First Estimate as a Starting Point</h2>
+        <p>
+          A carrier estimate is an important starting document, but it is not automatically a complete scope of work. The adjuster may have limited time on site, may not have access to every roof area, or may not know the contractor's planned means and methods. The estimate reflects what was visible and documented at that inspection, not necessarily everything required to complete the repair.
+        </p>
+        <p>
+          Contractors who supplement consistently review the estimate against their own inspection. They compare quantities, components, access conditions, code requirements, and the actual repair plan. They are not looking for ways to inflate a claim. They are checking whether the scope accurately reflects the work the property needs.
+        </p>
+
+        <h2>They Use a Standard Inspection Checklist</h2>
+        <p>
+          The most reliable supplement process starts in the field. A checklist keeps the inspection from depending on which technician happens to visit the property or how busy the day is. It prompts the team to document each roof plane, measurements, steep access, flashing, ventilation, underlayment, detach and reset items, permits, and other commonly missed components.
+        </p>
+        <p>
+          A checklist also creates consistency across jobs. When the same questions are asked every time, missed scope becomes easier to identify and trainable for new team members. The goal is not to make every inspection feel bureaucratic. It is to make the important steps hard to forget.
+        </p>
+
+        <div className="bg-primary/5 border-l-4 border-primary p-6 my-8 rounded-r-lg">
+          <p className="font-semibold text-foreground mb-2">Worth Noting</p>
+          <p className="text-muted-foreground m-0">
+            A process does not need to be complicated to be effective. A one-page inspection checklist used on every job is more valuable than a sophisticated system nobody follows.
+          </p>
+        </div>
+
+        <h2>They Separate Discovery From Submission</h2>
+        <p>
+          Strong supplementing has two distinct stages. First, the contractor discovers and documents the full repair scope. Second, the office team organizes that information into a clear submission. Keeping those stages separate prevents the rush to write an estimate from causing important field details to disappear.
+        </p>
+        <p>
+          It also gives the reviewer a chance to catch gaps before the package reaches the adjuster. Are the photos labeled? Do the measurements match the quantities? Is every code-required item supported? Does each requested line item connect to a documented condition? A short review before submission can prevent a long back-and-forth afterward.
+        </p>
+
+        <h2>They Document Reasons, Not Just Items</h2>
+        <p>
+          Listing an item is not the same as explaining why it belongs in the scope. Contractors who recover more consistently document the condition that makes the item necessary. They show the damaged component, explain the repair method, cite the relevant code or manufacturer requirement when applicable, and include the cost support needed to evaluate the request.
+        </p>
+        <p>
+          This gives the adjuster a clear path from observation to line item. It is much easier to approve a request when the documentation answers the likely follow-up question before it has to be asked.
+        </p>
+
+        <h2>They Track Every Submission</h2>
+        <p>
+          A supplement process does not end when an email is sent. Consistent companies track when each package was submitted, what it included, who received it, and when a response is due. They record approvals, partial approvals, denials, and outstanding questions so nothing disappears into an inbox.
+        </p>
+        <p>
+          This follow-up discipline matters because even a well-supported supplement can stall. A simple tracker makes the status visible to the team and gives the contractor a professional basis for checking in with the carrier.
+        </p>
+
+        <h2>They Learn From Patterns</h2>
+        <p>
+          Companies that supplement every job use their results to improve the process. They look for recurring omissions, carriers that request certain documentation, code items that are regularly questioned, and roof components that estimators tend to overlook. Then they update their checklist, templates, and training around those patterns.
+        </p>
+        <p>
+          Over time, the process becomes faster and more accurate. The team is not reinventing the supplement on every claim. It is applying what the company has already learned and making the next submission stronger.
+        </p>
+
+        <h2>The Bottom Line</h2>
+        <p>
+          The contractors who supplement consistently are not necessarily more aggressive. They are more systematic. They inspect every job the same way, document the reasons behind the requested work, review the package before submission, and follow up until each item has a clear outcome.
+        </p>
+        <p>
+          If your company rarely supplements, start with one repeatable checklist and one simple tracking process. Make the review part of the job rather than an optional extra. Recovering the full value of a claim is not about hoping someone catches what was missed. It is about building a process that makes missing scope visible.
+        </p>
+      </>
+    ),
+    relatedPosts: [
+      "estimate-vs-supplement-package",
+      "how-to-write-a-supplement-adjusters-approve",
+      "most-commonly-missed-line-items-roofing-claims"
+    ]
+  },
   "how-to-document-storm-damage": {
     title: "How to Document Storm Damage the Right Way Before Filing a Claim",
     excerpt: "What you photograph, measure, and record before filing directly affects what an adjuster approves. Here's the documentation process that sets your supplement up for success.",
