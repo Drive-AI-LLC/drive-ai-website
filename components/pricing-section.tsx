@@ -93,7 +93,7 @@ export function PricingSection() {
         <div className="flex flex-col items-center gap-4 text-center">
           <p className="text-sm text-muted-foreground">First supplement free. No card required.</p>
           <Button asChild size="lg" className="h-11 text-sm px-7 shadow-lg shadow-primary/20">
-            <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer">
+            <a href="/waitlist" target="_blank" rel="noopener noreferrer">
               Try It Free
             </a>
           </Button>

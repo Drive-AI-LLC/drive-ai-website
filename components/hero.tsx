@@ -31,7 +31,7 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "160ms" }}>
             <Button asChild size="lg" className="h-12 sm:h-14 text-base px-6 sm:px-8 shadow-lg shadow-primary/20">
-              <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer">Try It Free <ArrowRight className="ml-2 w-4 h-4" /></a>
+              <a href="/waitlist" target="_blank" rel="noopener noreferrer">Try It Free <ArrowRight className="ml-2 w-4 h-4" /></a>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-12 sm:h-14 text-base px-6 sm:px-8 border-border hover:bg-muted/50">
               <Link href="/contact">Book a Call</Link>
@@ -68,7 +68,7 @@ export function Hero() {
             </p>
             <div className="flex flex-row gap-4 animate-fade-up" style={{ animationDelay: "160ms" }}>
               <Button asChild size="lg" className="h-14 xl:h-16 text-base xl:text-lg px-8 xl:px-10 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">
-                <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer">Try It Free <ArrowRight className="ml-2 w-4 h-4" /></a>
+                <a href="/waitlist" target="_blank" rel="noopener noreferrer">Try It Free <ArrowRight className="ml-2 w-4 h-4" /></a>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-14 xl:h-16 text-base xl:text-lg px-8 xl:px-10 border-border hover:bg-muted/50 transition-all duration-300">
                 <Link href="/contact">Book a Call</Link>

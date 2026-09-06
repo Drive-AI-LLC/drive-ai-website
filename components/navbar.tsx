@@ -57,7 +57,7 @@ export function Navbar() {
 
           <div className="hidden lg:block">
             <Button asChild className="px-5 h-9 text-sm hover:-translate-y-1">
-              <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer">Try It Free</a>
+              <a href="/waitlist" target="_blank" rel="noopener noreferrer">Try It Free</a>
             </Button>
           </div>
 
@@ -95,7 +95,7 @@ export function Navbar() {
                 )
               })}
               <Button asChild className="mt-3 text-sm h-10">
-                <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
+                <a href="/waitlist" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
                   Try It Free
                 </a>
               </Button>
