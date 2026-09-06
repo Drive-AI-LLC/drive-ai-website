@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
 const WAITLIST_ENDPOINT =
-  "https://script.google.com/macros/s/AKfycbxZx8BkMKe1d9bOy9ea908PjdPQ_HB1DFM85OBG6abl-H8FkGDPVj5uI4QQ-KVnG4XD/exec"
+  "https://script.google.com/macros/s/AKfycbxwRr4z47xGuS60VX0-GJ5UqlgVk4Av8kDRRzSlPnVJgt6eLRLk6h849JgcH-ugK8t3/exec"
 
 export default function WaitlistPage() {
   const [email, setEmail] = useState("")
