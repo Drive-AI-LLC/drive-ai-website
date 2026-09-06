@@ -34,7 +34,7 @@ export default function WaitlistPage() {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: `email=${encodeURIComponent(normalizedEmail)}`,
+        body: new URLSearchParams({ email: normalizedEmail }).toString(),
       })
       setSubmitted(true)
     } catch {
