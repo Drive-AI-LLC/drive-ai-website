@@ -58,7 +58,7 @@ export default function WaitlistPage() {
 
           {submitted ? (
             <p className="mt-10 font-serif text-xl font-bold text-primary">
-              Thanks — we&apos;ll be in touch.
+              {"Thanks, we'll be in touch!"}
             </p>
           ) : (
             <form onSubmit={handleSubmit} className="mx-auto mt-10 flex w-full max-w-md flex-col gap-3 sm:flex-row">
