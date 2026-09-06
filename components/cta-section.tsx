@@ -20,7 +20,7 @@ export function CTASection({ headline, supporting }: CTASectionProps) {
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Button asChild size="lg" variant="secondary" className="h-11 text-sm px-7 shadow-sm whitespace-nowrap">
-            <a href="https://supplement.driveai.llc" target="_blank" rel="noopener noreferrer">
+            <a href="/waitlist" target="_blank" rel="noopener noreferrer">
               Try It Free
               <ArrowRight className="ml-2 w-3.5 h-3.5" />
             </a>
